@@ -180,17 +180,25 @@ submit
 
 9. macros
 
-local system macros
+   local system macros
 
-   1. name
-   2. content
+      1. name
+      2. content
+      3. [c()](https://www.stata.com/manuals/gsub.pdf)
+      4. r()
 
-   [c()](https://www.stata.com/manuals/gsub.pdf)
+   user-defined 
 
-   r()
+      local, e.g. `m_iqr'
 
-user-defined 
+      global, e.g. ${workdir}
 
-   local 
+10. servers
 
-   global
+   1. Need two more local servers
+   2. Designing, running apps, websites
+   3. Part of grant but unanticipaited needs
+   4. Caffo class and multiple gitHub accounts proof!
+
+
+    
