@@ -84,7 +84,7 @@ Kayla (pyt, front desk)
 2. atc annual fee
 3. hotel
 4. flights
-5. euro aging conference
+5. euro aging conferences (get sharon's link)
 6. tuition remission confirmation
 7. vincent offer
 8. etc...
@@ -125,6 +125,8 @@ rstudio -> vscode
 2. [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
 3. [muzaale/book](https://muzaale.github.io/book/intro.html)
 
+deleted jhustata/kitabo; but restore repo with no book!
+
 5. code
 
 ```
@@ -140,3 +142,55 @@ git push
 ghp-import -n -p -f _built/html
 ```
 
+6. r(mean)
+
+In this class: clarify the difference betweeen r() & c().
+Say r(N) vs. c(N)
+Return vs. current
+One returns values after some command
+While the other is just the current status
+As such, a multivariable regression with missingness in its variables
+May yield r(N) $\neq$ c(N)
+
+7. ph.340.700
+
+```
+global home ~/dropbox/7a.τάξη,α/4.aesthetic/ 
+1. https://www.stata.com/manuals/gsub.pdf
+2. /users/d/stata/profile.do
+```
+
+8. hierarchy
+
+General Steps we can strive for as analysts (depending on your role in the project) 
+
+initial results to present to your co-lead or immediate mentor
+	
+work iteratively with co-lead mentor to finalize the analysis/figures/tables (be writing methods now too)
+	
+present to a higher mentor like Bill, Christine, the PI on the proposal (these are more polished slides with title slide, motivation, objectives, methods, and results)
+	
+if approved, finalize the methods/results text in paper draft 
+	
+start writing intro/discussion (if first author, its time to start on these), if not first, make sure first author has everything they need to write the rest of the paper (sometimes we write results as well- we are the most familiar with how our results should be interpreted, so i recommend writing the results)
+	
+send to co-authors
+	
+submit
+
+9. macros
+
+local system macros
+
+   1. name
+   2. content
+
+   [c()](https://www.stata.com/manuals/gsub.pdf)
+
+   r()
+
+user-defined 
+
+   local 
+
+   global
