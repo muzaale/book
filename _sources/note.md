@@ -170,6 +170,25 @@ May yield r(N) $\neq$ c(N)
          #delimit cr
 ```
 
+Topics discussed in class:
+
+      1. profile.do
+      2. content up to you!
+      3. for me: pwd & shell
+      4. batch mode, remote computing
+      5. runtime, memory, disk usage
+      6. smart approaches to problem
+      7. raw.githubusercontent.com for tasks
+      8. get -b & stata commands to work on terminal
+      9. .html and how it is basis of course book
+      10. why stata? its expensive and i used jupyter/python for book on stata!
+      11. perks of workflow: git -> vscode -> hub
+      12. set up in reverse order: hub -> vscode -> git
+      13. zoom video link for session -> class book
+      14. https://jhjhm.zoom.us/rec/share/VVsgzwzUkaYQJHR4R5_bp0kf8GvoBszDD3bMax0kuSC_PeGUaeLX1ZwcV7Rhwa41.PjOE99QxZeyqB84a?startTime=1680639414000
+      25. Passcode: !$.0*zwy
+
+
 8. hierarchy
 
 ```
