@@ -194,3 +194,13 @@ user-defined
    local 
 
    global
+
+10. servers
+
+   1. Need two more local servers
+   2. Designing, running apps, websites
+   3. Part of grant but unanticipaited needs
+   4. Caffo class and multiple gitHub accounts proof!
+
+
+    
