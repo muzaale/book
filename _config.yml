@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Class Notes
-author: Abimereki Muzaale
+title: Kisoga Idioms
+author: Patrick Muzaale
 logo: dadlogo.png
 
 # Force re-execution of notebooks on each build.
