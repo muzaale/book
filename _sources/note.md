@@ -125,6 +125,8 @@ rstudio -> vscode
 2. [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
 3. [muzaale/book](https://muzaale.github.io/book/intro.html)
 
+deleted jhustata/kitabo; but restore repo with no book!
+
 5. code
 
 ```
@@ -139,4 +141,5 @@ git commit -m "context"
 git push
 ghp-import -n -p -f _built/html
 ```
+
 
