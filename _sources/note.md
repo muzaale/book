@@ -80,14 +80,16 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
 
 *04/15/23*
 
-   1. gaby/andrew papers
-   2. atc annual fee
-   3. hotel
-   4. flights
-   5. euro aging conferences (get sharon's link)
-   6. tuition remission confirmation
-   7. vincent offer
-   8. etc...
+```
+    1. gaby/andrew papers
+    2. atc annual fee
+    3. hotel
+    4. flights
+    5. euro aging conferences (get sharon's link)
+    6. tuition remission confirmation
+    7. vincent offer
+    8. etc...
+
 
 006. jupyter
 
@@ -162,45 +164,49 @@ May yield r(N) $\neq$ c(N)
 
 8. hierarchy
 
-General Steps we can strive for as analysts (depending on your role in the project) 
+```
+1. General Steps we can strive for as analysts (depending on your role in the project) 
 
-initial results to present to your co-lead or immediate mentor
+2. initial results to present to your co-lead or immediate mentor
 	
-work iteratively with co-lead mentor to finalize the analysis/figures/tables (be writing methods now too)
+3. work iteratively with co-lead mentor to finalize the analysis/figures/tables (be writing methods now too)
 	
-present to a higher mentor like Bill, Christine, the PI on the proposal (these are more polished slides with title slide, motivation, objectives, methods, and results)
+4. present to a higher mentor like Bill, Christine, the PI on the proposal (these are more polished slides with title slide, motivation, objectives, methods, and results)
 	
-if approved, finalize the methods/results text in paper draft 
+5. if approved, finalize the methods/results text in paper draft 
 	
-start writing intro/discussion (if first author, its time to start on these), if not first, make sure first author has everything they need to write the rest of the paper (sometimes we write results as well- we are the most familiar with how our results should be interpreted, so i recommend writing the results)
+6. start writing intro/discussion (if first author, its time to start on these), if not first, make sure first author has everything they need to write the rest of the paper (sometimes we write results as well- we are the most familiar with how our results should be interpreted, so i recommend writing the results)
 	
-send to co-authors
+7. send to co-authors
 	
-submit
+8. submit
+```
 
 9. macros
 
-local system macros
+```
+   local system macros
 
-   1. name
-   2. content
+      1. name
+      2. content
+      3. [c()](https://www.stata.com/manuals/gsub.pdf)
+      4. r()
 
-   [c()](https://www.stata.com/manuals/gsub.pdf)
+   user-defined 
 
-   r()
+      local, e.g. `m_iqr'
 
-user-defined 
-
-   local 
-
-   global
+      global, e.g. ${workdir}
+```
 
 10. servers
 
+```
    1. Need two more local servers
    2. Designing, running apps, websites
    3. Part of grant but unanticipaited needs
    4. Caffo class and multiple gitHub accounts proof!
+```
 
 
     
