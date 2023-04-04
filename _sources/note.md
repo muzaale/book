@@ -218,5 +218,13 @@ May yield r(N) $\neq$ c(N)
      4. Caffo class and multiple gitHub accounts proof!
 ```
 
+11. % batch
+
+how to approach [wk1.ph.340.700](https://jhustata.github.io/book/jjj.html):
+
+```
+     % stata -b do bigjob
+```
+
 
     
