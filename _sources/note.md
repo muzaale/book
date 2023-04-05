@@ -245,5 +245,31 @@ how to approach [wk1.ph.340.700](https://jhustata.github.io/book/jjj.html):
      % stata -b do bigjob
 ```
 
+11. argggh
 
+`book %` git add ./*
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+```
+git rm practice.png notebooks.ipynb markdown.md markdown-notebooks.md logo.png hub.ipynb generalpj2jpg.jpeg dadlogo.png dadlogo.jpg
+```
     
+```
+Based on the input provided, it appears that you are trying to use the git rm command to remove multiple files from a Git repository. The list of files you provided includes various image files (practice.png, generalpj2jpg.jpeg, dadlogo.png, dadlogo.jpg), notebook files (notebooks.ipynb, hub.ipynb), markdown files (markdown.md, markdown-notebooks.md), and a log file (log).
+
+The error message xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun is related to the Command Line Tools for Xcode, which are required for some Git operations on macOS. It seems that the Command Line Tools are not properly installed or configured on your system.
+
+To fix this issue, you can try reinstalling the Command Line Tools for Xcode using the following steps:
+
+Open Terminal on your macOS system.
+Run the following command: xcode-select --install. This will prompt you to install the Command Line Tools for Xcode.
+Follow the on-screen instructions to complete the installation.
+Once the installation is complete, try running your git rm command again.
+If the issue persists, you may need to check your Xcode installation and make sure it is properly configured. You can also try resetting the developer path using the following command: sudo xcode-select --reset.
+
+Note: You may need administrative privileges to install or configure the Command Line Tools for Xcode. If you encounter any issues or need further assistance, it's recommended to consult the official documentation or seek help from a qualified macOS expert. Remember to always backup your important files before making any changes to your system. <|endoftext|>
+```
+
+12. push
+
+The human race is frantically pushing its knowledge accumulated over millenia to the cloud (e.g., `git -> vscode -> hub`). Artificial intelligence has a lot of data to train on!!
