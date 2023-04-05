@@ -29,6 +29,12 @@
    2. resorted to blending the beans with trail mix
    3. and grinding them by a process I one might refer to as `chewing`
 
+004. sankey
+
+   1. very well received gtpci phd presentation (q&a from faculty, peers)
+   2. sankey is now colorful, interactive (thanks to chatgpt)
+   3. reveals to me that populations very imbalanced in size  
+
 #
 
 **10:00 AM 04/04/23**
@@ -160,15 +166,15 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
       5. [jhustata/notes](https://jhustata.github.io/notes/intro.html) *
       
       6. [jhutrc/github.io](https://jhutrc.github.io)
-      7. [jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) *
-      8. jhutrc/tasks *
+      7. [jhutrc/book](https://jhutrc.github.io/book)
+      8. [jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) *
 
-      4. [muzaale/github.io](https://muzaale.github.io) *
-      5. [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
-      6. [muzaale/book](https://muzaale.github.io/book/intro.html)
-      7. [muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
+      9. [muzaale/github.io](https://muzaale.github.io) *
+      10. [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
+      11. [muzaale/book](https://muzaale.github.io/book/intro.html)
+      12. [muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
 
-      8. [iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) *
+      13. [iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) *
 
 5. code
 
