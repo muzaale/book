@@ -6,7 +6,7 @@ unsure & mortal -> will
 
 beastly oblivion -> cause
 
-... and means `to do.`
+..[.](note.md) and means `to do`
 
 ```{tableofcontents}
 ```
