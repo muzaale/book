@@ -2,8 +2,27 @@
 
 **12:31 AM 04/05/23**
 
-~/dropbox/../note.md: WARNING: document isn't included in any toctree
+001. git
 
+     ~/dropbox/../note.md: WARNING: document isn't included in any toctree
+
+002. push
+
+     name.github.io (READ.ME or index.html)
+     repo (collaborators may push)
+     book
+     git clone
+     cp -r master/* origin
+     cd origin
+
+     git rm
+     git add
+     git commit -m
+     git push (error about access rights)
+
+     ghp-import
+     settings > gh-pages > branch ghp (if no page appears)
+     
 #
 
 **10:00 AM 04/04/23**
