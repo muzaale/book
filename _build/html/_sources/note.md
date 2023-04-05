@@ -1,6 +1,12 @@
 # notes 
 
-10:00 AM *04/04/23*
+**12:31 AM 04/05/23**
+
+~/dropbox/../note.md: WARNING: document isn't included in any toctree
+
+#
+
+**10:00 AM 04/04/23**
 
 001. hub
 
@@ -102,7 +108,6 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
 
      2. vscode
 
-
       mouse -> linux
       terminal -> vscode
       colab -> vscode
@@ -121,14 +126,24 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
       7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @
       8. ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @
 ```
-
    4. pages
 
-      1. [jhustata/book](https://jhustata.github.io/book/intro.html)
-      2. [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
-      3. [muzaale/book](https://muzaale.github.io/book/intro.html)
+      1. [jhustata/github.io](https://jhustata.github.io)
+      2. [jhustata/book](https://jhustata.github.io/book/intro.html)
+      3. [jhustata/libro](https://jhustata.github.io/libro/intro.html)
+      4. jhustata/kitabo * 
+      5. [jhustata/notes](https://jhustata.github.io/notes/intro.html) *
+      
+      6. [jhutrc/github.io](https://jhutrc.github.io)
+      7. [jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) *
+      8. jhutrc/tasks *
 
-   deleted jhustata/kitabo; but restore repo with no book!
+      4. [muzaale/github.io](https://muzaale.github.io) *
+      5. [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
+      6. [muzaale/book](https://muzaale.github.io/book/intro.html)
+      7. [muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
+
+      8. [iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) *
 
 5. code
 
@@ -242,19 +257,18 @@ Topics discussed in class:
 how to approach [wk1.ph.340.700](https://jhustata.github.io/book/jjj.html):
 
 ```
-     % stata -b do bigjob
+     % stata -b do wk1.ph.340.700.do
 ```
 
-11. argggh
+11. chatgpt
 
-`book %` git add ./*
-xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+`book %`
 
-```
-git rm practice.png notebooks.ipynb markdown.md markdown-notebooks.md logo.png hub.ipynb generalpj2jpg.jpeg dadlogo.png dadlogo.jpg
-```
-    
-```
+      xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)
+
+      missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+
 Based on the input provided, it appears that you are trying to use the git rm command to remove multiple files from a Git repository. The list of files you provided includes various image files (practice.png, generalpj2jpg.jpeg, dadlogo.png, dadlogo.jpg), notebook files (notebooks.ipynb, hub.ipynb), markdown files (markdown.md, markdown-notebooks.md), and a log file (log).
 
 The error message xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun is related to the Command Line Tools for Xcode, which are required for some Git operations on macOS. It seems that the Command Line Tools are not properly installed or configured on your system.
@@ -268,8 +282,9 @@ Once the installation is complete, try running your git rm command again.
 If the issue persists, you may need to check your Xcode installation and make sure it is properly configured. You can also try resetting the developer path using the following command: sudo xcode-select --reset.
 
 Note: You may need administrative privileges to install or configure the Command Line Tools for Xcode. If you encounter any issues or need further assistance, it's recommended to consult the official documentation or seek help from a qualified macOS expert. Remember to always backup your important files before making any changes to your system. <|endoftext|>
-```
+
+problem solved!
 
 12. push
 
-The human race is frantically pushing its knowledge accumulated over millenia to the cloud (e.g., `git -> vscode -> hub`). Artificial intelligence has a lot of data to train on!!
+The human race is frantically pushing its accumulated knowledge to the cloud (e.g., `git -> vscode -> hub`). Artificial intelligence, as it were, is frantically training on it!!

@@ -66,6 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'note';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="prudence" href="prudence.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,10 +157,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="verbs.html">verbs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="means.html">means</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prudence.html">prudence</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">notes</a></li>
+
 </ul>
 
     </div>
@@ -330,7 +333,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -346,6 +351,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -357,7 +372,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="notes">
 <h1>notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
-<p>10:00 AM <em>04/04/23</em></p>
+<p><strong>12:31 AM 04/05/23</strong></p>
+<p>~/dropbox/../note.md: WARNING: document isn’t included in any toctree</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p><strong>10:00 AM 04/04/23</strong></p>
 <ol class="arabic simple">
 <li><p>hub</p></li>
 </ol>
@@ -473,14 +493,21 @@ rstudio -&gt; vscode</p>
 <ol class="arabic simple" start="4">
 <li><p>pages</p>
 <ol class="arabic simple">
+<li><p><a class="reference external" href="https://jhustata.github.io">jhustata/github.io</a></p></li>
 <li><p><a class="reference external" href="https://jhustata.github.io/book/intro.html">jhustata/book</a></p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/libro/intro.html">jhustata/libro</a></p></li>
+<li><p>jhustata/kitabo *</p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/notes/intro.html">jhustata/notes</a> *</p></li>
+<li><p><a class="reference external" href="https://jhutrc.github.io">jhutrc/github.io</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jhutrc/manuscripts">jhutrc/manuscripts</a> *</p></li>
+<li><p>jhutrc/tasks *</p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io">muzaale/github.io</a> *</p></li>
 <li><p><a class="reference external" href="https://muzaale.github.io/idioms/intro.html">muzaale/idioms</a></p></li>
 <li><p><a class="reference external" href="https://muzaale.github.io/book/intro.html">muzaale/book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/muzaale/ds4ph-bme">muzaale/ds4ph-bme</a></p></li>
+<li><p><a class="reference external" href="https://iagouganda.github.io/iago.github.io/">iagouganda/iago.github.com</a> *</p></li>
 </ol>
 </li>
-</ol>
-<p>deleted jhustata/kitabo; but restore repo with no book!</p>
-<ol class="arabic simple" start="5">
 <li><p>code</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">gitname</span>
@@ -590,36 +617,32 @@ May yield r(N) <span class="math notranslate nohighlight">\(\neq\)</span> c(N)</
 <li></li>
 </ol>
 <p>how to approach <a class="reference external" href="https://jhustata.github.io/book/jjj.html">wk1.ph.340.700</a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">%</span> <span class="n">stata</span> <span class="o">-</span><span class="n">b</span> <span class="n">do</span> <span class="n">bigjob</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">%</span> <span class="n">stata</span> <span class="o">-</span><span class="n">b</span> <span class="n">do</span> <span class="n">wk1</span><span class="o">.</span><span class="n">ph</span><span class="mf">.340.700</span><span class="o">.</span><span class="n">do</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="11">
-<li><p>argggh</p></li>
+<li><p>chatgpt</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">book</span> <span class="pre">%</span></code> git add ./*
-xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="n">practice</span><span class="o">.</span><span class="n">png</span> <span class="n">notebooks</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">markdown</span><span class="o">.</span><span class="n">md</span> <span class="n">markdown</span><span class="o">-</span><span class="n">notebooks</span><span class="o">.</span><span class="n">md</span> <span class="n">logo</span><span class="o">.</span><span class="n">png</span> <span class="n">hub</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">generalpj2jpg</span><span class="o">.</span><span class="n">jpeg</span> <span class="n">dadlogo</span><span class="o">.</span><span class="n">png</span> <span class="n">dadlogo</span><span class="o">.</span><span class="n">jpg</span>
+<p><code class="docutils literal notranslate"><span class="pre">book</span> <span class="pre">%</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)
+
+  missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Based</span> <span class="n">on</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">provided</span><span class="p">,</span> <span class="n">it</span> <span class="n">appears</span> <span class="n">that</span> <span class="n">you</span> <span class="n">are</span> <span class="n">trying</span> <span class="n">to</span> <span class="n">use</span> <span class="n">the</span> <span class="n">git</span> <span class="n">rm</span> <span class="n">command</span> <span class="n">to</span> <span class="n">remove</span> <span class="n">multiple</span> <span class="n">files</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">Git</span> <span class="n">repository</span><span class="o">.</span> <span class="n">The</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">files</span> <span class="n">you</span> <span class="n">provided</span> <span class="n">includes</span> <span class="n">various</span> <span class="n">image</span> <span class="n">files</span> <span class="p">(</span><span class="n">practice</span><span class="o">.</span><span class="n">png</span><span class="p">,</span> <span class="n">generalpj2jpg</span><span class="o">.</span><span class="n">jpeg</span><span class="p">,</span> <span class="n">dadlogo</span><span class="o">.</span><span class="n">png</span><span class="p">,</span> <span class="n">dadlogo</span><span class="o">.</span><span class="n">jpg</span><span class="p">),</span> <span class="n">notebook</span> <span class="n">files</span> <span class="p">(</span><span class="n">notebooks</span><span class="o">.</span><span class="n">ipynb</span><span class="p">,</span> <span class="n">hub</span><span class="o">.</span><span class="n">ipynb</span><span class="p">),</span> <span class="n">markdown</span> <span class="n">files</span> <span class="p">(</span><span class="n">markdown</span><span class="o">.</span><span class="n">md</span><span class="p">,</span> <span class="n">markdown</span><span class="o">-</span><span class="n">notebooks</span><span class="o">.</span><span class="n">md</span><span class="p">),</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">log</span> <span class="n">file</span> <span class="p">(</span><span class="n">log</span><span class="p">)</span><span class="o">.</span>
-
-<span class="n">The</span> <span class="n">error</span> <span class="n">message</span> <span class="n">xcrun</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">active</span> <span class="n">developer</span> <span class="n">path</span> <span class="p">(</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CommandLineTools</span><span class="p">),</span> <span class="n">missing</span> <span class="n">xcrun</span> <span class="n">at</span><span class="p">:</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CommandLineTools</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">xcrun</span> <span class="ow">is</span> <span class="n">related</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Command</span> <span class="n">Line</span> <span class="n">Tools</span> <span class="k">for</span> <span class="n">Xcode</span><span class="p">,</span> <span class="n">which</span> <span class="n">are</span> <span class="n">required</span> <span class="k">for</span> <span class="n">some</span> <span class="n">Git</span> <span class="n">operations</span> <span class="n">on</span> <span class="n">macOS</span><span class="o">.</span> <span class="n">It</span> <span class="n">seems</span> <span class="n">that</span> <span class="n">the</span> <span class="n">Command</span> <span class="n">Line</span> <span class="n">Tools</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">properly</span> <span class="n">installed</span> <span class="ow">or</span> <span class="n">configured</span> <span class="n">on</span> <span class="n">your</span> <span class="n">system</span><span class="o">.</span>
-
-<span class="n">To</span> <span class="n">fix</span> <span class="n">this</span> <span class="n">issue</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="k">try</span> <span class="n">reinstalling</span> <span class="n">the</span> <span class="n">Command</span> <span class="n">Line</span> <span class="n">Tools</span> <span class="k">for</span> <span class="n">Xcode</span> <span class="n">using</span> <span class="n">the</span> <span class="n">following</span> <span class="n">steps</span><span class="p">:</span>
-
-<span class="n">Open</span> <span class="n">Terminal</span> <span class="n">on</span> <span class="n">your</span> <span class="n">macOS</span> <span class="n">system</span><span class="o">.</span>
-<span class="n">Run</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span><span class="p">:</span> <span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span><span class="o">.</span> <span class="n">This</span> <span class="n">will</span> <span class="n">prompt</span> <span class="n">you</span> <span class="n">to</span> <span class="n">install</span> <span class="n">the</span> <span class="n">Command</span> <span class="n">Line</span> <span class="n">Tools</span> <span class="k">for</span> <span class="n">Xcode</span><span class="o">.</span>
-<span class="n">Follow</span> <span class="n">the</span> <span class="n">on</span><span class="o">-</span><span class="n">screen</span> <span class="n">instructions</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">the</span> <span class="n">installation</span><span class="o">.</span>
-<span class="n">Once</span> <span class="n">the</span> <span class="n">installation</span> <span class="ow">is</span> <span class="n">complete</span><span class="p">,</span> <span class="k">try</span> <span class="n">running</span> <span class="n">your</span> <span class="n">git</span> <span class="n">rm</span> <span class="n">command</span> <span class="n">again</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">issue</span> <span class="n">persists</span><span class="p">,</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">check</span> <span class="n">your</span> <span class="n">Xcode</span> <span class="n">installation</span> <span class="ow">and</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">properly</span> <span class="n">configured</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">also</span> <span class="k">try</span> <span class="n">resetting</span> <span class="n">the</span> <span class="n">developer</span> <span class="n">path</span> <span class="n">using</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span><span class="p">:</span> <span class="n">sudo</span> <span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">reset</span><span class="o">.</span>
-
-<span class="n">Note</span><span class="p">:</span> <span class="n">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">administrative</span> <span class="n">privileges</span> <span class="n">to</span> <span class="n">install</span> <span class="ow">or</span> <span class="n">configure</span> <span class="n">the</span> <span class="n">Command</span> <span class="n">Line</span> <span class="n">Tools</span> <span class="k">for</span> <span class="n">Xcode</span><span class="o">.</span> <span class="n">If</span> <span class="n">you</span> <span class="n">encounter</span> <span class="nb">any</span> <span class="n">issues</span> <span class="ow">or</span> <span class="n">need</span> <span class="n">further</span> <span class="n">assistance</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s recommended to consult the official documentation or seek help from a qualified macOS expert. Remember to always backup your important files before making any changes to your system. &lt;|endoftext|&gt;</span>
-</pre></div>
-</div>
+<p>Based on the input provided, it appears that you are trying to use the git rm command to remove multiple files from a Git repository. The list of files you provided includes various image files (practice.png, generalpj2jpg.jpeg, dadlogo.png, dadlogo.jpg), notebook files (notebooks.ipynb, hub.ipynb), markdown files (<a class="reference external" href="http://markdown.md">markdown.md</a>, <a class="reference external" href="http://markdown-notebooks.md">markdown-notebooks.md</a>), and a log file (log).</p>
+<p>The error message xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun is related to the Command Line Tools for Xcode, which are required for some Git operations on macOS. It seems that the Command Line Tools are not properly installed or configured on your system.</p>
+<p>To fix this issue, you can try reinstalling the Command Line Tools for Xcode using the following steps:</p>
+<p>Open Terminal on your macOS system.
+Run the following command: xcode-select –install. This will prompt you to install the Command Line Tools for Xcode.
+Follow the on-screen instructions to complete the installation.
+Once the installation is complete, try running your git rm command again.
+If the issue persists, you may need to check your Xcode installation and make sure it is properly configured. You can also try resetting the developer path using the following command: sudo xcode-select –reset.</p>
+<p>Note: You may need administrative privileges to install or configure the Command Line Tools for Xcode. If you encounter any issues or need further assistance, it’s recommended to consult the official documentation or seek help from a qualified macOS expert. Remember to always backup your important files before making any changes to your system. &lt;|endoftext|&gt;</p>
+<p>problem solved!</p>
 <ol class="arabic simple" start="12">
 <li><p>push</p></li>
 </ol>
-<p>The human race is frantically pushing its knowledge accumulated over millenia to the cloud (e.g., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">-&gt;</span> <span class="pre">vscode</span> <span class="pre">-&gt;</span> <span class="pre">hub</span></code>). Artificial intelligence has a lot of data to train on!!</p>
+<p>The human race is frantically pushing its accumulated knowledge to the cloud (e.g., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">-&gt;</span> <span class="pre">vscode</span> <span class="pre">-&gt;</span> <span class="pre">hub</span></code>). Artificial intelligence, as it were, is frantically training on it!!</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -653,6 +676,15 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="prudence.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">prudence</p>
+      </div>
+    </a>
 </div></div>
   
 </div>
@@ -662,6 +694,22 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
