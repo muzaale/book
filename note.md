@@ -13,14 +13,14 @@ I may never use my iMac's terminal again! This is a sweet and beautiful medium b
 003. local
 
 ```
-     1. ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread->libro@
-     2. ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata->book@jhustata
-     3. ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad->idioms@muzaalefamily
-     4. ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook->book@muzaale
-     5. ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary->criticism@muzaale
-     6. ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life->iago.github.io@iagouganda
-     7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @
-     8. ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @
+     1. ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread->libro @jhustata
+     2. ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata->book @jhustata
+     3. ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad->idioms @muzaalefamily
+     4. ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook->boo k@muzaale
+     5. ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary->criticis m@muzaale
+     6. ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life->iago.github.io @iagouganda
+     7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @jhustata
+     8. ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @jhustata
 ```
 Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio_book): [zoom](https://jh.zoom.us/j/4109553504?pwd=amdidU82QTc2QTRmdkpDSkd3RU5pZz09) but that its not good for life since its python focused. His `qbook` runs on a [quarto](https://quarto.org) platform, which is multilingual like emacs and the right stuff for life. I'll stick to the shallow jupyter waters for now, thank you!
 
