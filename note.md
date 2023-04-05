@@ -96,18 +96,18 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
 
      1. hub
 
-```
+
       repo -> utimately the name of jupyter-book
-```
+
 
      2. vscode
 
-```
+
       mouse -> linux
       terminal -> vscode
       colab -> vscode
       rstudio -> vscode
-```
+
 
    3. git
 
