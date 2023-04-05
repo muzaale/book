@@ -8,21 +8,27 @@
 
 002. push
 
-     name.github.io (READ.ME or index.html)
-     repo (collaborators may push)
-     book
-     git clone
-     cp -r master/* origin
-     cd origin
+     1. name.github.io (READ.ME or index.html)
+     2. repo (collaborators may push)
+     3. book
+     4. git clone
+     5. cp -r master/* origin
+     6. cd origin
 
-     git rm
-     git add
-     git commit -m
-     git push (error about access rights)
+     7. git rm
+     8. git add
+     9. git commit -m
+     10. git push (error about access rights)
 
-     ghp-import
-     settings > gh-pages > branch ghp (if no page appears)
-     
+     11. ghp-import
+     12. settings > gh-pages > branch ghp (if no page appears)
+
+003. grinder
+
+   1. simple manual coffee grounder dead
+   2. resorted to blending the beans with trail mix
+   3. and grinding them by a process I one might refer to as `chewing`
+
 #
 
 **10:00 AM 04/04/23**
