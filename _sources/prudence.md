@@ -15,8 +15,10 @@ kernelspec:
 # prudence
 
 tameth
+
 whineth
+
 hideth[^1]
 
-[1^]: `prov 27:12
+[^1]: `prov 27:12`
 
