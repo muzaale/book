@@ -1,5 +1,55 @@
 # notes 
 
+**07:58 AM 04/06/23**
+
+001. swim
+
+     1. best swim ever (i seem to say this every day)
+     2. the under-water month of march has paid off
+     3. however, there's still lots of room for improvement!
+
+002. gtpci 
+
+       Dear GTPCI Friends and Family,
+ 
+       We hope you are doing well!  Thanks for being part of the GTPCI Program.  We need your help.  This should take about 10 minutes of your time. Attached is a summary of the curriculum update that we are planning for AY 23-24.
+       
+       Based on the GTPCI Curriculum Retreat held in December at Mt. Washington, the GTPCI Program is introducing 4 pathways next year.  A summary of those 4 pathways is attached.
+ 
+       As a reminder, all GTPCI students (independent of their chosen pathway) will be taking a set of Foundational Courses consisting of 51 credits (see attached handout page 4).
+ 
+       MHS students will need to take an additional 19 credits that are pathway-specific to achieve a total of 70 credits to graduate.
+       
+       PhD students will need to take at least 14 credits in their 1st year and 5 additional courses in their 2nd/3rd years to graduate.
+
+       These additional credits will be coming from pathway-specific courses.  Some of these pathway-specific courses are required (for either MHS, PhD, or both) and some are electives.
+ 
+       For all the courses listed, we are creating a master document that lists the term that each course is offered and the pre-requisites for that course (an example is listed in the Appendix of the attached document- it is still incomplete).
+ 
+       Please look at the attached summary for each of the pathways (feel free to focus on the pathway that is relevant to you) and help us answer the following questions:
+ 
+       Are the pathway competencies listed reasonable?  Did we miss any important competency for that pathway? [remember that there are general competencies for GTPCI that apply to students of all pathways; the competencies listed here are pathway-specific competencies].
+       
+       Are the required pathway-specific courses (if any) for MHS and PhD students acceptable?  Do you think we should require any additional courses for either MHS or PhD (please specify if you think a course should be required for MHS, PhD, or both).
+       
+       Are the pathway-specific elective courses reasonable?  Did we miss an important class for that pathway?
+ 
+       We know that we will experience some unanticipated obstacles when we introduce the pathways next year.  We will learn from them to ensure a smooth transition for the following year.
+ 
+       Thanks so much! 
+       XXX and XXX
+ 
+ 
+       XXX XXX, MD, PhD
+       Professor of XXX
+       Division of XXX
+       XXX XXX University School of Medicine
+
+003.   **Backgound:** Pathophysiology
+       **Methods:** Datascience 
+       **Results:** Clinicaltrials
+       **Conclusions:** Healthservicesresearch
+
 **12:31 AM 04/05/23**
 
 001. git
