@@ -50,6 +50,14 @@
        **Results:** Clinicaltrials
        **Conclusions:** Healthservicesresearch
 
+004.   gitcodehub
+
+       1. git branch
+       2. git branch --set-upstream-to=origin/main
+       3. git pull --allow-unrelated-histories
+       4. git push
+       5. ghp-import -n -p -f _build/html
+
 **12:31 AM 04/05/23**
 
 001. git
