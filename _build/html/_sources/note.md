@@ -25,15 +25,45 @@
 
 003. grinder
 
-   1. simple manual coffee grounder dead
-   2. resorted to blending the beans with trail mix
-   3. and grinding them by a process I one might refer to as `chewing`
+      1. simple manual coffee grounder dead
+      2. resorted to blending the beans with trail mix
+      3. and grinding them by a process I one might refer to as `chewing`
 
 004. sankey
 
-   1. very well received gtpci phd presentation (q&a from faculty, peers)
-   2. sankey is now colorful, interactive (thanks to chatgpt)
-   3. reveals to me that populations very imbalanced in size  
+      1. very well received gtpci phd presentation (q&a from faculty, peers)
+      2. sankey is now colorful, interactive (thanks to chatgpt)
+      3. reveals to me that populations very imbalanced in size  
+
+005. cltx
+
+      1. https://mc.manuscriptcentral.com/cltx
+      2. denominator (kidney transplant recipients); person-place
+      3. numerator (outcomes: dgf, graft failure, death); time
+      4. hypothesized risk-factor
+      5. methods to hold everything else constant, as 'twere
+      6. too many moving parts and no clear narrative... 
+
+006. -b
+
+      1.[Stata](https://www.stata.com/support/faqs/mac/advanced-topics/) [-option [-option [...]]] [stata_command]
+      2. powerful command: sudo find / -name StataSE -type f
+      3. Password:
+      4. find: /Library/Application Support/com.apple.TCC: Operation not permitted
+      5. sudo find / -name StataSE -type f 2>/dev/null
+      6. /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE
+/Applications/Stata/StataSE.app/Contents/MacOS/StataSE
+7. not a directory!
+      8. /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE [arguments]
+      9. MacOS % ./StataSE -e "di 1+1"
+      10.chmod +x ./StataSE
+
+      11. cd /Applications/Stata/StataSE.app/Contents/MacOS
+      16. ls -l
+      17. stata-se -e "di 1+1"
+      18. ls -l
+      19. cat stata.log
+      20. stata-se -e  "di c(current_date)"
 
 #
 
