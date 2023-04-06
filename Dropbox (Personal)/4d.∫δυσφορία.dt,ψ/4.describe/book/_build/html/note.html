@@ -1,0 +1,810 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>notes &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'note';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="verbs.html">verbs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="means.html">means</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prudence.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnote.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/note.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>notes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="notes">
+<h1>notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
+<p><strong>12:31 AM 04/05/23</strong></p>
+<ol class="arabic">
+<li><p>git</p>
+<p>~/dropbox/../note.md: WARNING: document isn’t included in any toctree</p>
+</li>
+<li><p>push</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="http://name.github.io">name.github.io</a> (<a class="reference external" href="http://READ.ME">READ.ME</a> or index.html)</p></li>
+<li><p>repo (collaborators may push)</p></li>
+<li><p>book</p></li>
+<li><p>git clone</p></li>
+<li><p>cp -r master/* origin</p></li>
+<li><p>cd origin</p></li>
+<li><p>git rm</p></li>
+<li><p>git add</p></li>
+<li><p>git commit -m</p></li>
+<li><p>git push (error about access rights)</p></li>
+<li><p>ghp-import</p></li>
+<li><p>settings &gt; gh-pages &gt; branch ghp (if no page appears)</p></li>
+</ol>
+</li>
+<li><p>grinder</p>
+<ol class="arabic simple">
+<li><p>simple manual coffee grounder dead</p></li>
+<li><p>resorted to blending the beans with trail mix</p></li>
+<li><p>and grinding them by a process I one might refer to as <code class="docutils literal notranslate"><span class="pre">chewing</span></code></p></li>
+</ol>
+</li>
+<li><p>sankey</p>
+<ol class="arabic simple">
+<li><p>very well received gtpci phd presentation (q&amp;a from faculty, peers)</p></li>
+<li><p>sankey is now colorful, interactive (thanks to chatgpt)</p></li>
+<li><p>reveals to me that populations very imbalanced in size</p></li>
+</ol>
+</li>
+<li><p>cltx</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://mc.manuscriptcentral.com/cltx">https://mc.manuscriptcentral.com/cltx</a></p></li>
+<li><p>denominator (kidney transplant recipients); person-place</p></li>
+<li><p>numerator (outcomes: dgf, graft failure, death); time</p></li>
+<li><p>hypothesized risk-factor</p></li>
+<li><p>methods to hold everything else constant, as ‘twere</p></li>
+<li><p>too many moving parts and no clear narrative…</p></li>
+</ol>
+</li>
+<li><p>-b</p>
+<p>1.<a class="reference external" href="https://www.stata.com/support/faqs/mac/advanced-topics/">Stata</a> [-option [-option […]]] [stata_command]
+2. powerful command: sudo find / -name StataSE -type f
+3. Password:
+4. find: /Library/Application Support/com.apple.TCC: Operation not permitted
+5. sudo find / -name StataSE -type f 2&gt;/dev/null
+6. /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE
+/Applications/Stata/StataSE.app/Contents/MacOS/StataSE</p>
+</li>
+<li><p>not a directory!
+8. /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE [arguments]
+9. MacOS % ./StataSE -e “di 1+1”
+10.chmod +x ./StataSE</p>
+<ol class="arabic simple" start="11">
+<li><p>cd /Applications/Stata/StataSE.app/Contents/MacOS</p></li>
+<li><p>ls -l</p></li>
+<li><p>stata-se -e “di 1+1”</p></li>
+<li><p>ls -l</p></li>
+<li><p>cat stata.log</p></li>
+<li><p>stata-se -e  “di c(current_date)”</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p><strong>10:00 AM 04/04/23</strong></p>
+<ol class="arabic simple">
+<li><p>hub</p></li>
+</ol>
+<p>Only learned about GitHub it in my data science class by Caffo in the winter/spring of 2023. I’m now in the moving all my documents online. Not to be beholden of any local machine or the the software packages installed on it!</p>
+<ol class="arabic simple" start="2">
+<li><p>vscode</p></li>
+</ol>
+<p>I may never use my iMac’s terminal again! This is a sweet and beautiful medium between git &amp; hub</p>
+<ol class="arabic simple" start="3">
+<li><p>local</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     1. ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread-&gt;libro @jhustata
+     2. ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata-&gt;book @jhustata
+     3. ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad-&gt;idioms @muzaalefamily
+     4. ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook-&gt;boo k@muzaale
+     5. ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary-&gt;criticis m@muzaale
+     6. ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life-&gt;iago.github.io @iagouganda
+     7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata-&gt;kitabo @jhustata
+     8. ~/dropbox/7a.τάξη,α/1.epistemology/class-&gt;notes @jhustata
+</pre></div>
+</div>
+<p>Caffo’s says Jupyter is ok for his <a class="reference external" href="https://github.com/smart-stats/ds4bio_book">class</a>: <a class="reference external" href="https://jh.zoom.us/j/4109553504?pwd=amdidU82QTc2QTRmdkpDSkd3RU5pZz09">zoom</a> but that its not good for life since its python focused. His <code class="docutils literal notranslate"><span class="pre">qbook</span></code> runs on a <a class="reference external" href="https://quarto.org">quarto</a> platform, which is multilingual like emacs and the right stuff for life. I’ll stick to the shallow jupyter waters for now, thank you!</p>
+<ol class="arabic simple" start="4">
+<li><p>y</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+     Ms. Linder (Senior-most fitness instructor)
+     Romeko Morton (City of Baltimore Engineer)
+     Tommy (ShaQ Doppelgänger, Pelvic radiation)
+     Frank (Similar Dx, 65yo)
+     Daytona (Lifeguard)
+     Nina (Lifeguard, Tips for Dolphin 🐬)
+     Daytona (Swimmer, Black weights) ** Mixup with a one Nina? 
+     Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD) [^1]
+     Aiko (ie Geiko, Japanese-American at SICU)
+     Buddy (Jeffs Buddy
+     Jeff (Red head swims with Buddy)
+     Hugh (remembers me pretty well)
+     Patrick (Towson psy professor, ☘️ tattoo on deltoid)
+     Ed (Lime hair, student )
+     Luke (Wishes to have a coffee with me, but is distractible)
+     Julie (Flowery purple/blue/red swim cap, from Duluth, MN)
+     Maggie (Sky-blue swim cap, smiling, is not Julie and is younger)
+     David (CMS but retiring this year!!)
+     Natalie (Sister, tattoos, earplugs, nose-ring)
+     Valentine (redhead, off-white, dreads, with Nat)
+     Weiwei (Infectious diseases postdoc, 8th floor)
+     Arthur (Liberia, Texas)
+     Jeremiah (Son is a swimmer)
+     Ethan (Salt &amp; pepper, Bushy beard, congenital arthritis)
+     Ray (Somali/Asian, young, swim team, knew me!!)
+     Dialo (Lifeguard, chill, quiet)
+     Eric (Lifeguard, weekdays)
+     Sean (Lifeguard, weekends) 
+     Vincent (Bold, regular, introverted, only recently exchanged names, wishes to learn flip)
+     Lauren (super consistent swimmer, in her 40s?)
+     Todd (talk lawyer from old swim team)
+     Stephen (Emory MPH, BSPH PHD, EH)
+     Keith (Biker, had herniotomy at Hopkins)
+     Brian (young fella, struck my head, made progress)
+     Calvin (singing lifeguard) 
+     Monica1 (stress fracture metatarsal) 
+     Ron (Mistook him for Patrick) 
+     Gary (Talks of Idi Amin, friend Muwanga)
+     Sali/Abi/Sali/Abi/Monica2 (partner)
+     Chris (Teacher, goatee, tattoo “)
+     Miriam (Nickname4me: splasher; “it’s enjoyable watching you swim; ~60yoWW)
+     Mack (72yo,ggranddad, borat assistant?)
+     Kayla (pyt, front desk)
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>todoby</p></li>
+</ol>
+<p><em>04/15/23</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      <span class="mf">1.</span> <span class="n">gaby</span><span class="o">/</span><span class="n">andrew</span> <span class="n">papers</span>
+      <span class="mf">2.</span> <span class="n">atc</span> <span class="n">annual</span> <span class="n">fee</span>
+      <span class="mf">3.</span> <span class="n">hotel</span>
+      <span class="mf">4.</span> <span class="n">flights</span>
+      <span class="mf">5.</span> <span class="n">euro</span> <span class="n">aging</span> <span class="n">conferences</span> <span class="p">(</span><span class="n">get</span> <span class="n">sharon</span><span class="s1">&#39;s link)</span>
+      <span class="mf">6.</span> <span class="n">tuition</span> <span class="n">remission</span> <span class="n">confirmation</span>
+      <span class="mf">7.</span> <span class="n">vincent</span> <span class="n">offer</span>
+      <span class="mf">8.</span> <span class="n">etc</span><span class="o">...</span>
+</pre></div>
+</div>
+<ol class="arabic" start="6">
+<li><p>jupyter</p>
+<ol class="arabic simple">
+<li><p>hub</p></li>
+</ol>
+<p>repo -&gt; utimately the name of jupyter-book</p>
+<ol class="arabic simple" start="2">
+<li><p>vscode</p></li>
+</ol>
+<p>mouse -&gt; linux
+terminal -&gt; vscode
+colab -&gt; vscode
+rstudio -&gt; vscode</p>
+</li>
+<li><p>git</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      1. ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread-&gt;libro@
+      2. ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata-&gt;book@jhustata
+      3. ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad-&gt;idioms@muzaalefamily
+      4. ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook-&gt;book@muzaale
+      5. ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary-&gt;criticism@muzaale
+      6. ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life-&gt;iago.github.io@iagouganda
+      7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata-&gt;kitabo @
+      8. ~/dropbox/7a.τάξη,α/1.epistemology/class-&gt;notes @
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>pages</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://jhustata.github.io">jhustata/github.io</a></p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/book/intro.html">jhustata/book</a></p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/libro/intro.html">jhustata/libro</a></p></li>
+<li><p>jhustata/kitabo *</p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/notes/intro.html">jhustata/notes</a> *</p></li>
+<li><p><a class="reference external" href="https://jhutrc.github.io">jhutrc/github.io</a></p></li>
+<li><p><a class="reference external" href="https://jhutrc.github.io/book">jhutrc/book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jhutrc/manuscripts">jhutrc/manuscripts</a> *</p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io">muzaale/github.io</a> *</p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io/idioms/intro.html">muzaale/idioms</a></p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io/book/intro.html">muzaale/book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/muzaale/ds4ph-bme">muzaale/ds4ph-bme</a></p></li>
+<li><p><a class="reference external" href="https://iagouganda.github.io/iago.github.io/">iagouganda/iago.github.com</a> *</p></li>
+</ol>
+</li>
+<li><p>code</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">gitname</span>
+     <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">book</span>
+     <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">gitname</span><span class="o">/*</span> <span class="n">book</span>
+     <span class="n">cd</span> <span class="n">book</span>
+
+     <span class="n">git</span> <span class="n">rm</span> <span class="n">old1</span><span class="o">.</span><span class="n">file</span> <span class="n">old2</span><span class="o">.</span><span class="n">file</span> <span class="n">old3</span><span class="o">..</span><span class="n">file</span>
+     <span class="n">git</span> <span class="n">add</span> <span class="o">./*</span>
+     <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;context&quot;</span>
+     <span class="n">git</span> <span class="n">push</span>
+     <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_built</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>r(mean)</p></li>
+</ol>
+<p>In this class: clarify the difference betweeen r() &amp; c().
+Say r(N) vs. c(N)
+Return vs. current
+One returns values after some command
+While the other is just the current status
+As such, a multivariable regression with missingness in its variables
+May yield r(N) <span class="math notranslate nohighlight">\(\neq\)</span> c(N)</p>
+<ol class="arabic simple" start="7">
+<li><p>ph.340.700</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     1. global workdir ~/dropbox/7a.τάξη,α/4.aesthetic/ 
+     2. https://www.stata.com/manuals/gsub.pdf
+     3. /users/d/stata/profile.do
+     4. content: 
+         #delimit ;
+         log using `: display %tCCCYY-NN-DD-HH-MM-SS  
+             Clock(&quot;`c(current_date)&#39; `c(current_time)&#39;&quot;,&quot;DMYhms&quot;)&#39;,  
+             Clock(&quot;`c(current_date)&#39; `c(current_time)&#39;&quot;,&quot;DMYhms&quot;)&#39;,  
+             name(default_log_file)
+         #delimit cr
+</pre></div>
+</div>
+<p>Topics discussed in class:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  1. profile.do
+  2. content up to you!
+  3. for me: pwd &amp; shell
+  4. batch mode, remote computing
+  5. runtime, memory, disk usage
+  6. smart approaches to problem
+  7. raw.githubusercontent.com for tasks
+  8. get -b &amp; stata commands to work on terminal
+  9. .html and how it is basis of course book
+  10. why stata? its expensive and i used jupyter/python for book on stata!
+  11. perks of workflow: git -&gt; vscode -&gt; hub
+  12. set up in reverse order: hub -&gt; vscode -&gt; git
+  13. zoom video link for session -&gt; class book
+  14. https://jhjhm.zoom.us/rec/share/VVsgzwzUkaYQJHR4R5_bp0kf8GvoBszDD3bMax0kuSC_PeGUaeLX1ZwcV7Rhwa41.PjOE99QxZeyqB84a?startTime=1680639414000
+  25. Passcode: !$.0*zwy
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>hierarchy</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="mf">1.</span> <span class="n">General</span> <span class="n">Steps</span> <span class="n">we</span> <span class="n">can</span> <span class="n">strive</span> <span class="k">for</span> <span class="k">as</span> <span class="n">analysts</span> <span class="p">(</span><span class="n">depending</span> <span class="n">on</span> <span class="n">your</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">project</span><span class="p">)</span> 
+
+     <span class="mf">2.</span> <span class="n">initial</span> <span class="n">results</span> <span class="n">to</span> <span class="n">present</span> <span class="n">to</span> <span class="n">your</span> <span class="n">co</span><span class="o">-</span><span class="n">lead</span> <span class="ow">or</span> <span class="n">immediate</span> <span class="n">mentor</span>
+	
+     <span class="mf">3.</span> <span class="n">work</span> <span class="n">iteratively</span> <span class="k">with</span> <span class="n">co</span><span class="o">-</span><span class="n">lead</span> <span class="n">mentor</span> <span class="n">to</span> <span class="n">finalize</span> <span class="n">the</span> <span class="n">analysis</span><span class="o">/</span><span class="n">figures</span><span class="o">/</span><span class="n">tables</span> <span class="p">(</span><span class="n">be</span> <span class="n">writing</span> <span class="n">methods</span> <span class="n">now</span> <span class="n">too</span><span class="p">)</span>
+	
+     <span class="mf">4.</span> <span class="n">present</span> <span class="n">to</span> <span class="n">a</span> <span class="n">higher</span> <span class="n">mentor</span> <span class="n">like</span> <span class="n">Bill</span><span class="p">,</span> <span class="n">Christine</span><span class="p">,</span> <span class="n">the</span> <span class="n">PI</span> <span class="n">on</span> <span class="n">the</span> <span class="n">proposal</span> <span class="p">(</span><span class="n">these</span> <span class="n">are</span> <span class="n">more</span> <span class="n">polished</span> <span class="n">slides</span> <span class="k">with</span> <span class="n">title</span> <span class="n">slide</span><span class="p">,</span> <span class="n">motivation</span><span class="p">,</span> <span class="n">objectives</span><span class="p">,</span> <span class="n">methods</span><span class="p">,</span> <span class="ow">and</span> <span class="n">results</span><span class="p">)</span>
+	
+     <span class="mf">5.</span> <span class="k">if</span> <span class="n">approved</span><span class="p">,</span> <span class="n">finalize</span> <span class="n">the</span> <span class="n">methods</span><span class="o">/</span><span class="n">results</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">paper</span> <span class="n">draft</span> 
+	
+     <span class="mf">6.</span> <span class="n">start</span> <span class="n">writing</span> <span class="n">intro</span><span class="o">/</span><span class="n">discussion</span> <span class="p">(</span><span class="k">if</span> <span class="n">first</span> <span class="n">author</span><span class="p">,</span> <span class="n">its</span> <span class="n">time</span> <span class="n">to</span> <span class="n">start</span> <span class="n">on</span> <span class="n">these</span><span class="p">),</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">first</span><span class="p">,</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">first</span> <span class="n">author</span> <span class="n">has</span> <span class="n">everything</span> <span class="n">they</span> <span class="n">need</span> <span class="n">to</span> <span class="n">write</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">the</span> <span class="n">paper</span> <span class="p">(</span><span class="n">sometimes</span> <span class="n">we</span> <span class="n">write</span> <span class="n">results</span> <span class="k">as</span> <span class="n">well</span><span class="o">-</span> <span class="n">we</span> <span class="n">are</span> <span class="n">the</span> <span class="n">most</span> <span class="n">familiar</span> <span class="k">with</span> <span class="n">how</span> <span class="n">our</span> <span class="n">results</span> <span class="n">should</span> <span class="n">be</span> <span class="n">interpreted</span><span class="p">,</span> <span class="n">so</span> <span class="n">i</span> <span class="n">recommend</span> <span class="n">writing</span> <span class="n">the</span> <span class="n">results</span><span class="p">)</span>
+	
+     <span class="mf">7.</span> <span class="n">send</span> <span class="n">to</span> <span class="n">co</span><span class="o">-</span><span class="n">authors</span>
+	
+     <span class="mf">8.</span> <span class="n">submit</span>
+</pre></div>
+</div>
+<ol class="arabic" start="9">
+<li><p>macros</p>
+<p><a class="reference external" href="https://www.stata.com/manuals/pmacro.pdf">definition</a> &amp; <a class="reference external" href="https://www.stata.com/manuals/gsub.pdf">more…</a></p>
+</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   local system macros
+
+      1. name
+      2. content
+      3. c() 
+      4. r()
+
+   user-defined macros
+
+      local, e.g. `m_iqr&#39;
+
+      global, e.g. ${workdir}
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>servers</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     1. Need two more local servers
+     2. Designing, running apps, websites
+     3. Part of grant but unanticipaited needs
+     4. Caffo class and multiple gitHub accounts proof!
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li></li>
+</ol>
+<p>how to approach <a class="reference external" href="https://jhustata.github.io/book/jjj.html">wk1.ph.340.700</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">%</span> <span class="n">stata</span> <span class="o">-</span><span class="n">b</span> <span class="n">do</span> <span class="n">wk1</span><span class="o">.</span><span class="n">ph</span><span class="mf">.340.700</span><span class="o">.</span><span class="n">do</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>chatgpt</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">book</span> <span class="pre">%</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)
+
+  missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+</pre></div>
+</div>
+<p>Based on the input provided, it appears that you are trying to use the git rm command to remove multiple files from a Git repository. The list of files you provided includes various image files (practice.png, generalpj2jpg.jpeg, dadlogo.png, dadlogo.jpg), notebook files (notebooks.ipynb, hub.ipynb), markdown files (<a class="reference external" href="http://markdown.md">markdown.md</a>, <a class="reference external" href="http://markdown-notebooks.md">markdown-notebooks.md</a>), and a log file (log).</p>
+<p>The error message xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun is related to the Command Line Tools for Xcode, which are required for some Git operations on macOS. It seems that the Command Line Tools are not properly installed or configured on your system.</p>
+<p>To fix this issue, you can try reinstalling the Command Line Tools for Xcode using the following steps:</p>
+<p>Open Terminal on your macOS system.
+Run the following command: xcode-select –install. This will prompt you to install the Command Line Tools for Xcode.
+Follow the on-screen instructions to complete the installation.
+Once the installation is complete, try running your git rm command again.
+If the issue persists, you may need to check your Xcode installation and make sure it is properly configured. You can also try resetting the developer path using the following command: sudo xcode-select –reset.</p>
+<p>Note: You may need administrative privileges to install or configure the Command Line Tools for Xcode. If you encounter any issues or need further assistance, it’s recommended to consult the official documentation or seek help from a qualified macOS expert. Remember to always backup your important files before making any changes to your system. &lt;|endoftext|&gt;</p>
+<p>problem solved!</p>
+<ol class="arabic simple" start="12">
+<li><p>push</p></li>
+</ol>
+<p>The human race is frantically pushing its accumulated knowledge to the cloud (e.g., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">-&gt;</span> <span class="pre">vscode</span> <span class="pre">-&gt;</span> <span class="pre">hub</span></code>). Artificial intelligence, as it were, is frantically training on it!!</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">notes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
