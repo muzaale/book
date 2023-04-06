@@ -45,18 +45,26 @@
        Division of XXX
        XXX XXX University School of Medicine
 
-003.   **Backgound:** Pathophysiology
-       **Methods:** Datascience 
-       **Results:** Clinicaltrials
-       **Conclusions:** Healthservicesresearch
+003.   structure
 
-004.   gitcodehub
+       **1. Backgound:** Pathophysiology
+       **2. Methods:** Datascience 
+       **3. Results:** Clinicaltrials
+       **4. Conclusions:** Healthservicesresearch
 
+004.   gitcodehub [^1]
+```
        1. git branch
        2. git branch --set-upstream-to=origin/main
        3. git pull --allow-unrelated-histories
        4. git push
        5. ghp-import -n -p -f _build/html
+```
+       [^1]: solution to a most vexing problem
+
+005.   rasheeda
+
+       1. work on project this weekend!
 
 **12:31 AM 04/05/23**
 
@@ -65,14 +73,14 @@
      ~/dropbox/../note.md: WARNING: document isn't included in any toctree
 
 002. push
-
+```
      1. name.github.io (READ.ME or index.html)
      2. repo (collaborators may push)
      3. book
      4. git clone
      5. cp -r master/* origin
      6. cd origin
-
+```
      7. git rm
      8. git add
      9. git commit -m
@@ -103,8 +111,8 @@
       6. too many moving parts and no clear narrative... 
 
 006. -b
-
-      1.[Stata](https://www.stata.com/support/faqs/mac/advanced-topics/) [-option [-option [...]]] [stata_command]
+```
+      1. [Stata](https://www.stata.com/support/faqs/mac/advanced-topics/) [-option [-option [...]]] [stata_command]
       2. powerful command: sudo find / -name StataSE -type f
       3. Password:
       4. find: /Library/Application Support/com.apple.TCC: Operation not permitted
@@ -122,7 +130,7 @@
       18. ls -l
       19. cat stata.log
       20. stata-se -e  "di c(current_date)"
-
+```
 #
 
 **10:00 AM 04/04/23**
