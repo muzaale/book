@@ -1,6 +1,6 @@
 # man
 
-delicate & tender -> strength
+ambition puff'd -> strength
 
 unsure & mortal -> will
 

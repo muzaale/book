@@ -48,8 +48,11 @@
 003.   structure
 
        **1. Backgound:** Pathophysiology
+
        **2. Methods:** Datascience 
+
        **3. Results:** Clinicaltrials
+       
        **4. Conclusions:** Healthservicesresearch
 
 004.   gitcodehub [^1]
@@ -60,7 +63,8 @@
        4. git push
        5. ghp-import -n -p -f _build/html
 ```
-       [^1]: solution to a most vexing problem
+
+[^1]: solution to a most vexing problem
 
 005.   rasheeda
 
