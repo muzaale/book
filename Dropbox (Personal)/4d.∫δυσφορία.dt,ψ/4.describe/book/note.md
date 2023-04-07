@@ -1,5 +1,13 @@
 # notes 
 
+**06:51 PM 04/07/23**
+
+001. nhanes
+
+   1. nhanes.ado
+   2. rudimentary
+   3. vincent to improve it
+
 **07:58 AM 04/06/23**
 
 001. swim
