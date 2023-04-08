@@ -536,3 +536,35 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; medium: time?
          phase of career
          epoch of life
+
+### 31. ascesis
+
+3e.ἄσκησις,μ
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to live on $5/d
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from 04/09/23 - 04/14/23
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while breaking records in the pool
+
+### 32. kipchoge
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4:33:93/Mile over 27 miles
+
+### 33. smoke
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; what a [melody](https://www.youtube.com/watch?v=cD0dy_1FsT0)!
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initially got me thinking suspended 4th
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; but later it occured to me that its [founded on the 9th](https://www.reddit.com/r/musictheory/comments/221bid/whats_the_difference_between_sus4_and_11th_chords/)!
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; What's the difference between sus4 and 11th chords?
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The sus4 chord implies no 3rd in the chord. So the notes in the chord are 1-4-5. The 11th chord implies a 3rd (and a 7th and a 9th), so the tones are 1-3-5-7-9-11.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The 6 chord implies no extensions beyond the 6, so the notes are 1-3-5-6. The 13th chord implies the 7th, 9th, and 11th extensions, so the notes are 1-3-5-7-9-11-13.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Likewise, the sus2 chord implies 1-2-5, whereas the 9th chord implies 1-3-5-7-9.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you play a C major triad on the piano and continue playing every other white key above the triad, you'll get the (major) 7th, 9th, 11th, and 13th extensions
