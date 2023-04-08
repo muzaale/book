@@ -1,12 +1,32 @@
 # notes 
 
+**01:30 AM 04/08/23**
+
+001. patton
+
+   1. übermensch
+   2. people
+   3. time
+
+002. nhanes
+
+   1. github.com/jhustata/nhanes
+   2. https://jhustata.github.io/nhanes/
+   3. collaborative, didactic, template 
+
+003. vincent
+
+   1. charm offensive
+   2. betsy, durand
+   3. most value!
+
 **06:51 PM 04/07/23**
 
 001. nhanes
 
    1. nhanes.ado
    2. rudimentary
-   3. vincent to improve it
+   3. advanced class?
 
 **07:58 AM 04/06/23**
 
