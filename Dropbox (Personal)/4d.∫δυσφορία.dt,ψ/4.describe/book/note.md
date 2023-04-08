@@ -252,9 +252,11 @@ how to approach [wk1.ph.340.700](https://jhustata.github.io/book/jjj.html):
 ```
 
 &nbsp;&nbsp;&nbsp; **Background**
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; advanced Stata project 
 
 &nbsp;&nbsp;&nbsp; **Methods** 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stata code 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Md, .html output 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; post to class book 
@@ -263,13 +265,16 @@ how to approach [wk1.ph.340.700](https://jhustata.github.io/book/jjj.html):
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joint project by entire class 
 
 &nbsp;&nbsp;&nbsp; **Results**
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://jhustata.github.io/nhanes
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~/nhanes/2023
 
 &nbsp;&nbsp;&nbsp; **Conclusion**
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; must be improvement on previous year! 
 
 &nbsp;&nbsp;&nbsp; **Acknowledgements** 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; previous cohort 
 
 &nbsp;&nbsp;&nbsp; **References**
@@ -336,7 +341,9 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 ### 18. sankey
 
 &nbsp;&nbsp;&nbsp; very well received gtpci phd presentation (q&a from faculty, peers)
+
 &nbsp;&nbsp;&nbsp; sankey is now colorful, interactive (thanks to chatgpt)
+
 &nbsp;&nbsp;&nbsp; reveals to me that populations very imbalanced in size  
 
 ### 19. cltx
@@ -349,7 +356,7 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 &nbsp;&nbsp;&nbsp; too many moving parts and no clear narrative... 
 
 ### 20. -b
-```
+
 &nbsp;&nbsp;&nbsp; [Stata](https://www.stata.com/support/faqs/mac/advanced-topics/) [-option [-option [...]]] [stata_command]
 &nbsp;&nbsp;&nbsp; powerful command: sudo find / -name StataSE -type f
 &nbsp;&nbsp;&nbsp; Password:
@@ -368,20 +375,23 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 &nbsp;&nbsp;&nbsp; ls -l
 &nbsp;&nbsp;&nbsp; cat stata.log
 &nbsp;&nbsp;&nbsp; stata-se -e  "di c(current_date)"
-```
 
 ## 04/06/23
 
 ### 21. nhanes
 
 &nbsp;&nbsp;&nbsp; nhanes.ado
+
 &nbsp;&nbsp;&nbsp;rudimentary
+
 &nbsp;&nbsp;&nbsp;advanced class?
 
 ### 22. swim
 
 &nbsp;&nbsp;&nbsp; best swim ever (i seem to say this every day)
+
 &nbsp;&nbsp;&nbsp; the under-water month of march has paid off
+
 &nbsp;&nbsp;&nbsp; however, there's still lots of room for improvement!
 
 ### 23. gtpci 
@@ -438,9 +448,13 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 ### 25. itcodehub [^1]
 
 &nbsp;&nbsp;&nbsp; git branch
+
 &nbsp;&nbsp;&nbsp; git branch --set-upstream-to=origin/main
+
 &nbsp;&nbsp;&nbsp; git pull --allow-unrelated-histories
+
 &nbsp;&nbsp;&nbsp; git push
+
 &nbsp;&nbsp;&nbsp; ghp-import -n -p -f _build/html
 
 
@@ -461,13 +475,17 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 ### 28. nhanes
 
 &nbsp;&nbsp;&nbsp; github.com/jhustata/nhanes
+
 &nbsp;&nbsp;&nbsp; https://jhustata.github.io/nhanes/
+
 &nbsp;&nbsp;&nbsp; collaborative, didactic, template 
 
 ### 29. vincent
 
 &nbsp;&nbsp;&nbsp; charm offensive
+
 &nbsp;&nbsp;&nbsp; betsy, durand
+
 &nbsp;&nbsp;&nbsp; most value!
 
 ### 30. artists
@@ -475,15 +493,21 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 &nbsp;&nbsp;&nbsp; use forebears as scaffold on which to plant their delicate new ideas
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; medium: cosmic sound, chaos, noise
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; corelli, vivaldi
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; handel, bach
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hadyn, mozart, beethoven
       
 &nbsp;&nbsp;&nbsp; type 2 artists only find forebears useful as a source of building blocks
       
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; medium: metaphysics
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; karl marx
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; friedrich nietzche
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oscar wilde
 
 &nbsp;&nbsp;&nbsp; in this type on witnesses transition from 1->2 or 2->1 or a cycle of such
