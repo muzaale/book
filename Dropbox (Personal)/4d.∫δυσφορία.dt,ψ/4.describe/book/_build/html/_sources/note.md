@@ -568,3 +568,31 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Likewise, the sus2 chord implies 1-2-5, whereas the 9th chord implies 1-3-5-7-9.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If you play a C major triad on the piano and continue playing every other white key above the triad, you'll get the (major) 7th, 9th, 11th, and 13th extensions
+
+### 34. charmoffensive
+
+Hi Betsy & Christine,
+
+I’d like to pitch to you the idea of hiring an exceptional graduating student from the Bloomberg School.
+
+Vincent Jin was the top student in my Stata class in the academic year 2021/2022. As such, you can identify him in this figure:
+
+      https://jhustata.github.io/book/ddd.html
+
+For a class of 150 brilliant students, emerging as the very best is non-trivial. But beyond this class, I’ve spent 12 months working very closely with Vincent to completely overhaul the Stata class that Dorry & Allan taught. This year marks the classes’ 10th anniversary and with the help of Vincent we’ve updated the teaching format and the medium of instruction to reflect the current times.
+
+What Vincent can bring to the TRC is something we should talk about on a separate occasion. But in a nutshell, its upgrading TRC to a 21st century research lab. One thing that is characteristic of a truly 21st century lab is the concept of “version control” of documents and analytic code used by an organization. I’ll not get into the detail of what version control is and its relevance to progress, but will point out that GitHub is the most famous platform on which “version control” of an organizations workflow is housed.
+
+My vision for Vincent is that of a generalist, not committed to any specific project, but who will bring substantive upgrades to the analytic team at TRC (including setting all analysts up on GitHub), provide technical support to all analysts who are committed to specific projects including clinical trials, letting them know that whenever they feel like they’re facing a challenge, Vincent (and by extension, myself) will be there for them.
+
+He is a most amiable individual, approachable, hardworking, humble, but beneath all that are 3-sigma technical and analytic skills. Such individuals are not easy to come by.
+
+Please let me know what you think! He is presently my lead teaching assistant in the Stata class. Simply outstanding!!!
+
+Abi
+
+
+
+
+
+
