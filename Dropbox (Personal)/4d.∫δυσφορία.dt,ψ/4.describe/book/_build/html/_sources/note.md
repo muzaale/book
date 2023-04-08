@@ -573,7 +573,7 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 
 Hi Betsy & Christine,
 
-I’d like to pitch to you the idea of hiring an exceptional graduating student from the Bloomberg School.
+I’d like to [pitch](charm.offensive.pdf) to you the idea of hiring an exceptional graduating student from the Bloomberg School.
 
 Vincent Jin was the top student in my Stata class in the academic year 2021/2022. As such, you can identify him in this figure:
 
