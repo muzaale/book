@@ -258,10 +258,15 @@ how to approach [wk1.ph.340.700](https://jhustata.github.io/book/jjj.html):
 &nbsp;&nbsp;&nbsp; **Methods** 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stata code 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Md, .html output 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; post to class book 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Guided by teaching team 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Guided by teaching team
+ 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From week 3-8
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joint project by entire class 
 
 &nbsp;&nbsp;&nbsp; **Results**
@@ -335,7 +340,9 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 ### 17. grinder
 
 &nbsp;&nbsp;&nbsp; simple manual coffee grounder dead
+
 &nbsp;&nbsp;&nbsp; resorted to blending the beans with trail mix
+
 &nbsp;&nbsp;&nbsp;. and grinding them by a process I one might refer to as `chewing`
 
 ### 18. sankey
@@ -358,22 +365,36 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 ### 20. -b
 
 &nbsp;&nbsp;&nbsp; [Stata](https://www.stata.com/support/faqs/mac/advanced-topics/) [-option [-option [...]]] [stata_command]
+
 &nbsp;&nbsp;&nbsp; powerful command: sudo find / -name StataSE -type f
+
 &nbsp;&nbsp;&nbsp; Password:
+
 &nbsp;&nbsp;&nbsp; find: /Library/Application Support/com.apple.TCC: Operation not permitted
+
 &nbsp;&nbsp;&nbsp; sudo find / -name StataSE -type f 2>/dev/null
-&nbsp;&nbsp;&nbsp;. /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE
+&nbsp;&nbsp;&nbsp;.
+
+ /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE
 /Applications/Stata/StataSE.app/Contents/MacOS/StataSE
+
 &nbsp;&nbsp;&nbsp; not a directory!
 &nbsp;&nbsp;&nbsp; /System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE [arguments]
+
 &nbsp;&nbsp;&nbsp; MacOS % ./StataSE -e "di 1+1"
+
 &nbsp;&nbsp;&nbsp;chmod +x ./StataSE
 
 &nbsp;&nbsp;&nbsp; cd /Applications/Stata/StataSE.app/Contents/MacOS
+
 &nbsp;&nbsp;&nbsp; ls -l
+
 &nbsp;&nbsp;&nbsp; stata-se -e "di 1+1"
+
 &nbsp;&nbsp;&nbsp; ls -l
+
 &nbsp;&nbsp;&nbsp; cat stata.log
+
 &nbsp;&nbsp;&nbsp; stata-se -e  "di c(current_date)"
 
 ## 04/06/23
