@@ -591,7 +591,31 @@ Please let me know what you think! He is presently my lead teaching assistant in
 
 Abi
 
+## 04/09/23
 
+### 35. ds4ph.hw7
+
+This will be my first assignment done in a purely git -> vscode -> hub workflow:
+
+Return an ipython notebook and python dash app with the following:
+
+0. Write a python function that takes an X and Y vector and returns an estimated $\beta_0$ and $\beta_1$ from linear regression. Check your function versus one of the prewritten ones. Include this in code cells of your ipython notebook.
+1. Using Python and basic numpy functions, fit a linear regression model to the kirby 21 dataset into colab for the left telencelphalon (predictor) to the right telencephalon (outcome). Also, do the same reversing the predictor and response relationship. Do a scatterplot of the left telencephalon (type 1 level 1) volume by the right. Do not hold out any data (there's only 21 observations).
+2. Consider a regression through the origin model  Y=BX . What would be the impact on the estimate of  B  if we replaced  X  by  cX  where  c  is a positive constant? Write your answer in a markdown cell of your ipython notebook.
+3. Let  $X_i$  be a group indicator so that $x_i=I(i\in G_1)$ 
+I.e. takes the value  1  when  $i$  is in group 1 and 0 if  i  is in group 0. Consider optimizing $\sum_i \frac{1}{n}(Y_i − \beta_0 - \beta_1 X_i)^2$. 
+If $\hat Y = \hat \beta_0 + \hat \beta_1 X$, argue that $\hat Y$ is the group mean for group 1 if $X=1$ and the group mean for group 0 if $X=0$. You can either make a text argument in a markdown cell, or create a simulated example and show that the results holds. 
+4. Argue that if you take the vectors $Y$ and $X$ and divide them by their standard deviations (respectively), the slope for either regressing $Y$ on $X$ or $X$ on $Y$ is simply the correlation. 
+5. Consider the logistic curve 
+$$
+f(x) = \frac{e^{\beta_0 + \beta_1x}}{1 + e^{\beta_0 + \beta_1 x}}.
+$$
+Use streamlit to create a web page that shows the impact of changing $\beta_0$ and $\beta_1$. That is, it takes in two inputs, as sliders, $\beta_0$ and $\beta_1$, and plots the resulting logistic curve.
+
+```
+~/dropbox/2.../3.../vscode.ds4ph/vscode.vscode.202305/hw7
+"Abimereki Muzaale" > hw7.ipynb
+```
 
 
 
