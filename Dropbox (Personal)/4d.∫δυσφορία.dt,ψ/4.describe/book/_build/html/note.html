@@ -927,14 +927,15 @@ epoch of life</p>
 I.e. takes the value  1  when  <span class="math notranslate nohighlight">\(i\)</span>  is in group 1 and 0 if  i  is in group 0. Consider optimizing <span class="math notranslate nohighlight">\(\sum_i \frac{1}{n}(Y_i − \beta_0 - \beta_1 X_i)^2\)</span>.
 If <span class="math notranslate nohighlight">\(\hat Y = \hat \beta_0 + \hat \beta_1 X\)</span>, argue that <span class="math notranslate nohighlight">\(\hat Y\)</span> is the group mean for group 1 if <span class="math notranslate nohighlight">\(X=1\)</span> and the group mean for group 0 if <span class="math notranslate nohighlight">\(X=0\)</span>. You can either make a text argument in a markdown cell, or create a simulated example and show that the results holds.</p></li>
 <li><p>Argue that if you take the vectors <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(X\)</span> and divide them by their standard deviations (respectively), the slope for either regressing <span class="math notranslate nohighlight">\(Y\)</span> on <span class="math notranslate nohighlight">\(X\)</span> or <span class="math notranslate nohighlight">\(X\)</span> on <span class="math notranslate nohighlight">\(Y\)</span> is simply the correlation.</p></li>
-<li><p>Consider the logistic curve
-$<span class="math notranslate nohighlight">\(
-f(x) = \frac{e^{\beta_0 + \beta_1x}}{1 + e^{\beta_0 + \beta_1 x}}.
-\)</span><span class="math notranslate nohighlight">\(
-Use streamlit to create a web page that shows the impact of changing \)</span>\beta_0<span class="math notranslate nohighlight">\( and \)</span>\beta_1<span class="math notranslate nohighlight">\(. That is, it takes in two inputs, as sliders, \)</span>\beta_0<span class="math notranslate nohighlight">\( and \)</span>\beta_1$, and plots the resulting logistic curve.</p></li>
+<li><p>Consider the logistic curve</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mf">2.</span><span class="o">../</span><span class="mf">3.</span><span class="o">../</span><span class="n">vscode</span><span class="o">.</span><span class="n">ds4ph</span><span class="o">/</span><span class="n">vscode</span><span class="o">.</span><span class="n">vscode</span><span class="mf">.202305</span><span class="o">/</span><span class="n">hw7</span>
-<span class="s2">&quot;Abimereki Muzaale&quot;</span> <span class="o">&gt;</span> <span class="n">hw7</span><span class="o">.</span><span class="n">ipynb</span>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \frac{e^{\beta_0 + \beta_1x}}{1 + e^{\beta_0 + \beta_1 x}}.
+\]</div>
+<p>Use streamlit to create a web page that shows the impact of changing <span class="math notranslate nohighlight">\(\beta_0\)</span> and <span class="math notranslate nohighlight">\(\beta_1\)</span>. That is, it takes in two inputs, as sliders, <span class="math notranslate nohighlight">\(\beta_0\)</span> and <span class="math notranslate nohighlight">\(\beta_1\)</span>, and plots the resulting logistic curve.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cd</span> <span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mf">2.</span><span class="o">../</span><span class="mf">3.</span><span class="o">../</span><span class="n">vscode</span><span class="o">.</span><span class="n">ds4ph</span><span class="o">/</span><span class="n">vscode</span><span class="o">.</span><span class="n">vscode</span><span class="mf">.202305</span><span class="o">/</span><span class="n">hw7</span>
+<span class="o">%</span> <span class="n">echo</span> <span class="s2">&quot;Abimereki Muzaale&quot;</span> <span class="o">&gt;</span> <span class="n">hw7</span><span class="o">.</span><span class="n">ipynb</span>
 </pre></div>
 </div>
 <hr class="footnotes docutils" />
