@@ -607,14 +607,16 @@ I.e. takes the value  1  when  $i$  is in group 1 and 0 if  i  is in group 0. Co
 If $\hat Y = \hat \beta_0 + \hat \beta_1 X$, argue that $\hat Y$ is the group mean for group 1 if $X=1$ and the group mean for group 0 if $X=0$. You can either make a text argument in a markdown cell, or create a simulated example and show that the results holds. 
 4. Argue that if you take the vectors $Y$ and $X$ and divide them by their standard deviations (respectively), the slope for either regressing $Y$ on $X$ or $X$ on $Y$ is simply the correlation. 
 5. Consider the logistic curve 
+
 $$
 f(x) = \frac{e^{\beta_0 + \beta_1x}}{1 + e^{\beta_0 + \beta_1 x}}.
 $$
+
 Use streamlit to create a web page that shows the impact of changing $\beta_0$ and $\beta_1$. That is, it takes in two inputs, as sliders, $\beta_0$ and $\beta_1$, and plots the resulting logistic curve.
 
 ```
-~/dropbox/2.../3.../vscode.ds4ph/vscode.vscode.202305/hw7
-"Abimereki Muzaale" > hw7.ipynb
+% cd ~/dropbox/2.../3.../vscode.ds4ph/vscode.vscode.202305/hw7
+% echo "Abimereki Muzaale" > hw7.ipynb
 ```
 
 
