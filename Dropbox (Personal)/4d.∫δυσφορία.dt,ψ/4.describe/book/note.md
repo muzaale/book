@@ -13,14 +13,14 @@ I may never use my iMac's terminal again! This is a sweet and beautiful medium b
 ### 3. local
 
 ```
-     1. ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread->libro @jhustata
-     2. ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata->book @jhustata
-     3. ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad->idioms @muzaalefamily
-     4. ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook->boo k@muzaale
-     5. ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary->criticis m@muzaale
-     6. ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life->iago.github.io @iagouganda
-     7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @jhustata
-     8. ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @jhustata
+     ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread->libro @jhustata
+     ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata->book @jhustata
+     ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad->idioms @muzaalefamily
+     ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook->boo k@muzaale
+     ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary->criticis m@muzaale
+     ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life->iago.github.io @iagouganda
+     ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @jhustata
+     ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @jhustata
 ```
 Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio_book): [zoom](https://jh.zoom.us/j/4109553504?pwd=amdidU82QTc2QTRmdkpDSkd3RU5pZz09) but that its not good for life since its python focused. His `qbook` runs on a [quarto](https://quarto.org) platform, which is multilingual like emacs and the right stuff for life. I'll stick to the shallow jupyter waters for now, thank you!
 
@@ -105,34 +105,34 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
     c). git
 
 ```
-      1. ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread->libro@
-      2. ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata->book@jhustata
-      3. ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad->idioms@muzaalefamily
-      4. ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook->book@muzaale
-      5. ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary->criticism@muzaale
-      6. ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life->iago.github.io@iagouganda
-      7. ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @
-      8. ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @
+      ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread->libro@
+      ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata->book@jhustata
+      ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad->idioms@muzaalefamily
+      ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook->book@muzaale
+      ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary->criticism@muzaale
+      ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life->iago.github.io@iagouganda
+      ~/dropbox/7a.τάξη,α/4.aesthetic/stata->kitabo @
+      ~/dropbox/7a.τάξη,α/1.epistemology/class->notes @
       
 ```
 ### 7. pages
 
-      a) [jhustata/github.io](https://jhustata.github.io)
-      b) [jhustata/book](https://jhustata.github.io/book/intro.html)
-      c) [jhustata/libro](https://jhustata.github.io/libro/intro.html)
-      d) jhustata/kitabo * 
-      e) [jhustata/notes](https://jhustata.github.io/notes/intro.html) 
+&nbsp;&nbsp;&nbsp; [jhustata/github.io](https://jhustata.github.io)
+&nbsp;&nbsp;&nbsp; [jhustata/book](https://jhustata.github.io/book/intro.html)
+&nbsp;&nbsp;&nbsp; [jhustata/libro](https://jhustata.github.io/libro/intro.html)
+jhustata/kitabo 
+&nbsp;&nbsp;&nbsp; [jhustata/notes](https://jhustata.github.io/notes/intro.html) 
       
-      f) [jhutrc/github.io](https://jhutrc.github.io)
-      g) [jhutrc/book](https://jhutrc.github.io/book)
-      h) [jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) 
+&nbsp;&nbsp;&nbsp; [jhutrc/github.io](https://jhutrc.github.io)
+&nbsp;&nbsp;&nbsp; [jhutrc/book](https://jhutrc.github.io/book)
+&nbsp;&nbsp;&nbsp; [jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) 
 
-      i) [muzaale/github.io](https://muzaale.github.io) 
-      j) [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
-      k. [muzaale/book](https://muzaale.github.io/book/intro.html)
-      l. [muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
+&nbsp;&nbsp;&nbsp; [muzaale/github.io](https://muzaale.github.io) 
+&nbsp;&nbsp;&nbsp; [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
+&nbsp;&nbsp;&nbsp; [muzaale/book](https://muzaale.github.io/book/intro.html)
+&nbsp;&nbsp;&nbsp; [muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
 
-      m. [iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) *
+&nbsp;&nbsp;&nbsp; [iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) 
 
 ### 8. code
 
@@ -162,10 +162,10 @@ May yield r(N) $\neq$ c(N)
 ### 10. ph.340.700
 
 ```
-     1. global workdir ~/dropbox/7a.τάξη,α/4.aesthetic/ 
-     2. https://www.stata.com/manuals/gsub.pdf
-     3. /users/d/stata/profile.do
-     4. content: 
+     global workdir ~/dropbox/7a.τάξη,α/4.aesthetic/ 
+     https://www.stata.com/manuals/gsub.pdf
+     /users/d/stata/profile.do
+     content: 
          #delimit ;
          log using `: display %tCCCYY-NN-DD-HH-MM-SS  
              Clock("`c(current_date)' `c(current_time)'","DMYhms")',  
