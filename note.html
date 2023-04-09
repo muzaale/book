@@ -404,6 +404,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charmoffensive">34. charmoffensive</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/09/23</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ds4ph-hw7">35. ds4ph.hw7</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -822,7 +826,7 @@ If the issue persists, you may need to check your Xcode installation and make su
 <p>    <strong>References:</strong> XXX</p>
 </section>
 <section id="itcodehub-1">
-<h3>25. itcodehub <a class="footnote-reference brackets" href="#id9" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#itcodehub-1" title="Permalink to this heading">#</a></h3>
+<h3>25. itcodehub <a class="footnote-reference brackets" href="#id10" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="headerlink" href="#itcodehub-1" title="Permalink to this heading">#</a></h3>
 <p>    git branch</p>
 <p>    git branch –set-upstream-to=origin/main</p>
 <p>    git pull –allow-unrelated-histories</p>
@@ -907,8 +911,34 @@ epoch of life</p>
 <p>He is a most amiable individual, approachable, hardworking, humble, but beneath all that are 3-sigma technical and analytic skills. Such individuals are not easy to come by.</p>
 <p>Please let me know what you think! He is presently my lead teaching assistant in the Stata class. Simply outstanding!!!</p>
 <p>Abi</p>
+</section>
+</section>
+<section id="id9">
+<h2>04/09/23<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="ds4ph-hw7">
+<h3>35. ds4ph.hw7<a class="headerlink" href="#ds4ph-hw7" title="Permalink to this heading">#</a></h3>
+<p>This will be my first assignment done in a purely git -&gt; vscode -&gt; hub workflow:</p>
+<p>Return an ipython notebook and python dash app with the following:</p>
+<ol class="arabic simple" start="0">
+<li><p>Write a python function that takes an X and Y vector and returns an estimated <span class="math notranslate nohighlight">\(\beta_0\)</span> and <span class="math notranslate nohighlight">\(\beta_1\)</span> from linear regression. Check your function versus one of the prewritten ones. Include this in code cells of your ipython notebook.</p></li>
+<li><p>Using Python and basic numpy functions, fit a linear regression model to the kirby 21 dataset into colab for the left telencelphalon (predictor) to the right telencephalon (outcome). Also, do the same reversing the predictor and response relationship. Do a scatterplot of the left telencephalon (type 1 level 1) volume by the right. Do not hold out any data (there’s only 21 observations).</p></li>
+<li><p>Consider a regression through the origin model  Y=BX . What would be the impact on the estimate of  B  if we replaced  X  by  cX  where  c  is a positive constant? Write your answer in a markdown cell of your ipython notebook.</p></li>
+<li><p>Let  <span class="math notranslate nohighlight">\(X_i\)</span>  be a group indicator so that <span class="math notranslate nohighlight">\(x_i=I(i\in G_1)\)</span>
+I.e. takes the value  1  when  <span class="math notranslate nohighlight">\(i\)</span>  is in group 1 and 0 if  i  is in group 0. Consider optimizing <span class="math notranslate nohighlight">\(\sum_i \frac{1}{n}(Y_i − \beta_0 - \beta_1 X_i)^2\)</span>.
+If <span class="math notranslate nohighlight">\(\hat Y = \hat \beta_0 + \hat \beta_1 X\)</span>, argue that <span class="math notranslate nohighlight">\(\hat Y\)</span> is the group mean for group 1 if <span class="math notranslate nohighlight">\(X=1\)</span> and the group mean for group 0 if <span class="math notranslate nohighlight">\(X=0\)</span>. You can either make a text argument in a markdown cell, or create a simulated example and show that the results holds.</p></li>
+<li><p>Argue that if you take the vectors <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(X\)</span> and divide them by their standard deviations (respectively), the slope for either regressing <span class="math notranslate nohighlight">\(Y\)</span> on <span class="math notranslate nohighlight">\(X\)</span> or <span class="math notranslate nohighlight">\(X\)</span> on <span class="math notranslate nohighlight">\(Y\)</span> is simply the correlation.</p></li>
+<li><p>Consider the logistic curve
+$<span class="math notranslate nohighlight">\(
+f(x) = \frac{e^{\beta_0 + \beta_1x}}{1 + e^{\beta_0 + \beta_1 x}}.
+\)</span><span class="math notranslate nohighlight">\(
+Use streamlit to create a web page that shows the impact of changing \)</span>\beta_0<span class="math notranslate nohighlight">\( and \)</span>\beta_1<span class="math notranslate nohighlight">\(. That is, it takes in two inputs, as sliders, \)</span>\beta_0<span class="math notranslate nohighlight">\( and \)</span>\beta_1$, and plots the resulting logistic curve.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mf">2.</span><span class="o">../</span><span class="mf">3.</span><span class="o">../</span><span class="n">vscode</span><span class="o">.</span><span class="n">ds4ph</span><span class="o">/</span><span class="n">vscode</span><span class="o">.</span><span class="n">vscode</span><span class="mf">.202305</span><span class="o">/</span><span class="n">hw7</span>
+<span class="s2">&quot;Abimereki Muzaale&quot;</span> <span class="o">&gt;</span> <span class="n">hw7</span><span class="o">.</span><span class="n">ipynb</span>
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id9" role="note">
+<aside class="footnote brackets" id="id10" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">1</a><span class="fn-bracket">]</span></span>
 <p>Her thoughts echo these: The Malcontent. — He is one of the brave old warriors: angry with civilisation because he believes that its object is to make all good things — honour, rewards, and fair women — accessible even to cowards.</p>
 </aside>
@@ -1008,6 +1038,10 @@ epoch of life</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kipchoge">32. kipchoge</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smoke">33. smoke</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charmoffensive">34. charmoffensive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/09/23</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ds4ph-hw7">35. ds4ph.hw7</a></li>
 </ul>
 </li>
 </ul>
