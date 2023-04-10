@@ -619,6 +619,92 @@ Use streamlit to create a web page that shows the impact of changing $\beta_0$ a
 % echo "Abimereki Muzaale" > hw7.ipynb
 ```
 
+### 36. 340.700
 
+notebook
 
+html 
+
+website
+
+sharing
+
+documentation: markdown
+
+code: python, stata?
+
+reproducibility:
+
+### 37. nhanes-alpha
+
+tailoring it to Stata version: BE vs. SE
+
+### 38. babysteps
+
+jupyter nbconvert --to html --no-input ggg.ipynb
+
+### 39. jason haw
+
+what a perfect fit for 340.700!!!
+
+python vs. r vs. stata
+
+collaboration,publication,etc
+
+Stata admit that they're behind in the game
+
+What about SAS?
+
+These platforms are open, thus the exponential growth of their communities
+
+And contributors!!!
+
+For this class: jupyter-book and bookdown will "challenge" the advanced students to explore and test the very limits of Stata :)
+
+Each year will have access to the online books of the previous years
+
+No reinventing the wheel!!!!
+
+### 40. todoby031023
+
+340.700 book
+    a) articulate group task
+    b) collaboration
+    c) github
+    d) publishing: jupyter-book, bookup
+    e) where does stata stand?
+    
+### 41. tight-structure
+
+background: turning point in the history of HCV Rx in 2013. AT $95k for curative dose, was clear to all insurance providers that this was cheaper than low cost, ineffective, drugs for life
+
+methods: durand concurred that in her practice everyone eventually received treatment inspite of initial delays for SOME. So what would motivate a qualitative study when everything was pointing towards taking the new meds???
+
+results: what is reported is plausible and consistent with what we've known from 2013-2023. so what exactly was the knowledge gap?
+
+conclusion: and that is my question. maybe the background and intro should better align with anxiety about access to what is without a doubt a "miracle" cure!
+
+acknowledgments: quantiative research? qualitative cannot keep on failing to acknowledge this!
+
+references: providers, providers who themselves received an HCV organ, etc,
+
+x
+
+Made no mention of the HCV Rx
+
+Hepatitis C infection is treated with antiviral medications intended to clear the virus from your body. The goal of treatment is to have no hepatitis C virus detected in your body at least 12 weeks after you complete treatment
+
+persons: English-speaking patients
+place: jhh
+time: 2017-2021
+
+Deep dive? Semi-structured interviews?
+ZERO mention of the Rx????
+Curative Rx arrived in 2013!!
+
+Basically this study found that patients were motivated by the efficacy of HCV Rx
+That they faced no alternative but death
+
+Nadine Brown
+Hannah Sung
 
