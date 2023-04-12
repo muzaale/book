@@ -673,6 +673,7 @@ No reinventing the wheel!!!!
     c) github
     d) publishing: jupyter-book, bookup
     e) where does stata stand?
+    f) jupyter-book create & build 100% from terminal
     
 ### 41. tight-structure
 
@@ -708,3 +709,58 @@ That they faced no alternative but death
 Nadine Brown
 Hannah Sung
 
+### 42. conferences
+
+```Stata
+2023 Stata Conference
+StataCorp
+20–21 July 2023, Stanford, CA
+
+APHA 2023 Annual Meeting
+American Public Health Association
+12–15 November 2023, Atlanta, GA
+Booths: 905, 907, 909 
+
+2023 SER Conference
+Society for Epidemiologic Research
+13–16 June 2023, Portland, OR
+Attending from StataCorp: Chuck Huber, Director of Statistical Outreach
+
+https://www.nature.com/nataging/conferences
+```
+
+### 43. wk3 ph340600
+
+creat dofile: structure, indentation, annotation
+run the script: do dofile.do or click do
+find your output: pwd or cd /path/outputfolder
+macros: name, content (some derivative of a return value)
+programs: 
+
+### 44. crunchtime 
+
+atc membership
+flight 
+hotel
+
+bge 98 ooo
+att 98 ooo
+
+comcast 123 xxx
+gs -> 155.60 xxx
+visa -> 169.00 xxx
+
+### 45. musik
+
+Annuŋŋamya
+ 
+theme & variations:
+
+[theme](https://www.youtube.com/watch?v=9IZcnRVdLtk)
+[variation1](https://www.youtube.com/watch?v=qdoeiy2-oFw)
+[variation2](https://www.youtube.com/watch?v=y86kwKByJJE)
+[variation3](3399 Frisby St 42.m4a)
+
+invite ugandan artists to contribute variations
+
+we need to reach 99 *sui generis* variations on this most beautiful theme from inspired by Psalm 23
