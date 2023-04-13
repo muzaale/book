@@ -117,22 +117,24 @@ Caffo's says Jupyter is ok for his [class](https://github.com/smart-stats/ds4bio
 ```
 ### 7. pages
 
-&nbsp;&nbsp;&nbsp; [jhustata/github.io](https://jhustata.github.io)
-&nbsp;&nbsp;&nbsp; [jhustata/book](https://jhustata.github.io/book/intro.html)
-&nbsp;&nbsp;&nbsp; [jhustata/libro](https://jhustata.github.io/libro/intro.html)
+```stata
+[jhustata/github.io](https://jhustata.github.io)
+[jhustata/book](https://jhustata.github.io/book/intro.html)
+[jhustata/libro](https://jhustata.github.io/libro/intro.html)
 jhustata/kitabo 
-&nbsp;&nbsp;&nbsp; [jhustata/notes](https://jhustata.github.io/notes/intro.html) 
+[jhustata/notes](https://jhustata.github.io/notes/intro.html) 
       
-&nbsp;&nbsp;&nbsp; [jhutrc/github.io](https://jhutrc.github.io)
-&nbsp;&nbsp;&nbsp; [jhutrc/book](https://jhutrc.github.io/book)
-&nbsp;&nbsp;&nbsp; [jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) 
+[jhutrc/github.io](https://jhutrc.github.io)
+[jhutrc/book](https://jhutrc.github.io/book)
+[jhutrc/manuscripts](https://github.com/jhutrc/manuscripts) 
 
-&nbsp;&nbsp;&nbsp; [muzaale/github.io](https://muzaale.github.io) 
-&nbsp;&nbsp;&nbsp; [muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
-&nbsp;&nbsp;&nbsp; [muzaale/book](https://muzaale.github.io/book/intro.html)
-&nbsp;&nbsp;&nbsp; [muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
+[muzaale/github.io](https://muzaale.github.io) 
+[muzaale/idioms](https://muzaale.github.io/idioms/intro.html)
+[muzaale/book](https://muzaale.github.io/book/intro.html)
+[muzaale/ds4ph-bme](https://github.com/muzaale/ds4ph-bme)
 
-&nbsp;&nbsp;&nbsp; [iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) 
+[iagouganda/iago.github.com](https://iagouganda.github.io/iago.github.io/) 
+```
 
 ### 8. code
 
@@ -572,6 +574,7 @@ The human race is frantically pushing its accumulated knowledge to the cloud (e.
 ### 34. charmoffensive
 
 [charm-offensive](https://muzaale.github.io/book/_downloads/1f7448068ee5d001ee7d51a08f05b73e/charm.offensive.pdf)
+
 charm offensive 
 
 ## 04/09/23
@@ -651,6 +654,7 @@ No reinventing the wheel!!!!
 ### 40. todoby031023
 
 340.700 book
+
     a) articulate group task
     b) collaboration
     c) github
