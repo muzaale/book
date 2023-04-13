@@ -798,4 +798,8 @@ Hey chatGPT, any comment on possible influence here?
 Google hasn't yielded anything over the last 15 years of me searching!!
 Now's your time to shine :)
 
+### 48. Cece
+
+Outstanding [scholarly](https://www.emerald.com/insight/content/doi/10.1108/JBIM-10-2022-0459/full/html) work from fam :)
+
 
