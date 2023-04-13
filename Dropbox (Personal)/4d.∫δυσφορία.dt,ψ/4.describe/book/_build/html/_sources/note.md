@@ -732,22 +732,31 @@ https://www.nature.com/nataging/conferences
 ### 43. wk3 ph340600
 
 creat dofile: structure, indentation, annotation
+
 run the script: do dofile.do or click do
+
 find your output: pwd or cd /path/outputfolder
+
 macros: name, content (some derivative of a return value)
+
 programs: 
 
 ### 44. crunchtime 
 
 atc membership
+
 flight 
+
 hotel
 
 bge 98 ooo
+
 att 98 ooo
 
 comcast 123 xxx
+
 gs -> 155.60 xxx
+
 visa -> 169.00 xxx
 
 ### 45. musik
@@ -762,8 +771,20 @@ theme & variations:
 
 [variation2](https://www.youtube.com/watch?v=y86kwKByJJE)
 
-[variation3](arpeggiovariation.m4a)
+[variation3](https://muzaale.github.io/book/_downloads/2812646d9eb356cd85149abbb8b4fad1/arpeggiovariation.m4a)
 
 invite ugandan artists to contribute variations
 
 we need to reach 99 *sui generis* variations on this most beautiful theme from inspired by Psalm 23
+
+### 46. Amy
+
+Kyle Jackson, Characterizing the landscape and impact of infections following kidney transplantation. 2021
+
+Supermario game
+
+Almost dead, out of juice
+
+Then hit this coin -- Abi -- that completely changed the game!
+
+
