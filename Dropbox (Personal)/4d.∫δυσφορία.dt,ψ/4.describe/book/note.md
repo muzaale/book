@@ -789,9 +789,9 @@ Then hit this coin -- Abi -- that completely changed the game!
 
 ### 47. Usurp
 
-Beethoven's [coda](https://www.youtube.com/watch?v=oPQbCIjmEPU)
+Beethoven's [coda](https://www.youtube.com/watch?v=LDTn10XeCmU) :12:00/15:34 
 
-Mozart's [aria](https://www.youtube.com/watch?v=J4_1TWxlmQE)
+Mozart's [aria](https://www.youtube.com/watch?v=J4_1TWxlmQE) : 1:15/2:22
 
 Hey chatGPT, any comment on possible influence here?
 
