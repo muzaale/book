@@ -787,4 +787,15 @@ Almost dead, out of juice
 
 Then hit this coin -- Abi -- that completely changed the game!
 
+### 47. Usurp
+
+Beethoven's [coda](https://www.youtube.com/watch?v=oPQbCIjmEPU)
+
+Mozart's [aria](https://www.youtube.com/watch?v=J4_1TWxlmQE)
+
+Hey chatGPT, any comment on possible influence here?
+
+Google hasn't yielded anything over the last 15 years of me searching!!
+Now's your time to shine :)
+
 
