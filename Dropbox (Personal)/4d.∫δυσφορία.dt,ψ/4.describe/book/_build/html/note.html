@@ -428,8 +428,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#love-control">55. love, control</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#honesty">56. Honesty</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#killing-me-softly">57. killing me softly</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-wk3">58. edit wk3</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aries">aries</a></li>
 </ul>
             </nav>
         </div>
@@ -1053,6 +1055,7 @@ https:<span class="o">//</span>www<span class="m">.</span>nature<span class="m">
 <p>comcast 123 xxx</p>
 <p>gs -&gt; 155.60 xxx</p>
 <p>visa -&gt; 169.00 xxx</p>
+<p><strong>04/13/2023</strong></p>
 </section>
 <section id="musik">
 <h3>45. musik<a class="headerlink" href="#musik" title="Permalink to this heading">#</a></h3>
@@ -1095,6 +1098,7 @@ Now’s your time to shine :)</p>
 </ol>
 <p>Baltimore</p>
 <p>09:24 PM 04/13/2023</p>
+<p><strong>04/14/2023</strong></p>
 </section>
 <section id="webapp">
 <h3>50. webapp<a class="headerlink" href="#webapp" title="Permalink to this heading">#</a></h3>
@@ -1109,6 +1113,7 @@ Would you want me to make some revisions to the existing Aims 3 and then have yo
 <p>An individual who rose to power via unconstitutional or illegitimate means, usually not being an heir to an existing throne.</p>
 <p>Such individuals were perceived negatively by political philosophers such as Socrates, Plato and Aristotle.</p>
 <p>You betcha Nietzsche held these as the highest type: the übermensch!</p>
+<p><strong>04/15/2023</strong></p>
 </section>
 <section id="numero-uno">
 <h3>52. numero-uno<a class="headerlink" href="#numero-uno" title="Permalink to this heading">#</a></h3>
@@ -1137,6 +1142,7 @@ Would you want me to make some revisions to the existing Aims 3 and then have yo
 <h3>56. Honesty<a class="headerlink" href="#honesty" title="Permalink to this heading">#</a></h3>
 <p>Open up to <strong>both</strong> Vincent &amp; Johnathan about my preferences, constraints, vision vs. what is best for them.</p>
 <p>Who knows where this conversation will lead???</p>
+<p><strong>04/16/2023</strong></p>
 </section>
 <section id="killing-me-softly">
 <h3>57. killing me softly<a class="headerlink" href="#killing-me-softly" title="Permalink to this heading">#</a></h3>
@@ -1145,12 +1151,67 @@ Would you want me to make some revisions to the existing Aims 3 and then have yo
 <li><p><strong>Robert Flack:</strong> Restructured Lori’s <a class="reference external" href="https://en.wikipedia.org/wiki/Kadongo_Kamu">kadongo kamu</a>, opening with the F-minor chorus in a brief circle-of-fifths progression, which comes off as <em>a capella-like</em> given the subtle <a class="reference external" href="https://en.wikipedia.org/wiki/Rhodes_piano">Rhodes Piano</a> but prominent Roberta vocals, initially solo-like, but ~~gradually &amp;~~ magically suffusing the air with delicate harmonies from 9ths to 15ths, as we are ushered into a word-less wailing session, where a 1970s-style bass is fixed on the E-Flat dominant, accompanied by drums that skip a beat as they do in reggae.</p></li>
 <li><p><strong>Lauren Hill:</strong> Ancestral worship session. No worthy innovation or attempt at usurping Roberta!</p></li>
 </ol>
+</section>
+<section id="edit-wk3">
+<h3>58. edit wk3<a class="headerlink" href="#edit-wk3" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#import numpy as np</span>
+<span class="c1">#import sklearn as skl</span>
+<span class="c1"># </span>
+
+<span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="c1">#G.add_node(&quot; &quot;,  pos = (0, 3) )</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;regress&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;lincom&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;r()&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;r()*&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;embed&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span>      <span class="p">(</span><span class="s2">&quot;regress&quot;</span><span class="p">,</span> <span class="s2">&quot;lincom&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;r()&quot;</span><span class="p">),</span>     <span class="p">(</span><span class="s2">&quot;lincom&quot;</span><span class="p">,</span> <span class="s2">&quot;r()*&quot;</span><span class="p">)</span> <span class="p">])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;r()&quot;</span><span class="p">,</span> <span class="s2">&quot;local&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;r()*&quot;</span><span class="p">,</span> <span class="s2">&quot;local&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span><span class="s2">&quot;embed&quot;</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
+        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
+        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">3500</span><span class="p">,</span>
+        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/e2a55f333fd7453daee96712e1bb698e6be9d129e284361c3c7151d9bdbc2a09.png" src="_images/e2a55f333fd7453daee96712e1bb698e6be9d129e284361c3c7151d9bdbc2a09.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="aries">
+<h2>aries<a class="headerlink" href="#aries" title="Permalink to this heading">#</a></h2>
+<p><a class="reference download internal" download="" href="_downloads/ae316e902f67bf58c6f29ac5f3f28a89/marc.bday.PNG"><span class="xref download myst">trip</span></a></p>
+<p><a class="reference download internal" download="" href="_downloads/d4e3170696863ac9a7d8fcb9a64e7258/dc.bday.jpeg"><span class="xref download myst">plot</span></a></p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id12" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">1</a><span class="fn-bracket">]</span></span>
 <p>Her thoughts echo these: The Malcontent. — He is one of the brave old warriors: angry with civilisation because he believes that its object is to make all good things — honour, rewards, and fair women — accessible even to cowards.</p>
 </aside>
-</section>
 </section>
 </section>
 
@@ -1272,8 +1333,10 @@ Would you want me to make some revisions to the existing Aims 3 and then have yo
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#love-control">55. love, control</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#honesty">56. Honesty</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#killing-me-softly">57. killing me softly</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-wk3">58. edit wk3</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aries">aries</a></li>
 </ul>
   </nav></div>
 
