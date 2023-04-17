@@ -451,6 +451,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hilger">63. hilger</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#death-on-the-nile">64. death on the nile</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt-wharts-all">65. chatGPT, wharts &amp; all…</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baptiste">66. baptiste</a></li>
 </ul>
 </li>
 </ul>
@@ -1337,11 +1338,185 @@ So push for October: so that 1-year notice grabs you with estimate…</p>
 
 <span class="c1"># Define column labels</span>
 <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SEQN&quot;</span><span class="p">,</span> <span class="s2">&quot;DMPFSEQ&quot;</span><span class="p">,</span> <span class="s2">&quot;DMPSTAT&quot;</span><span class="p">,</span> <span class="s2">&quot;DMARETHN&quot;</span><span class="p">,</span> <span class="s2">&quot;DMARACER&quot;</span><span class="p">,</span> <span class="s2">&quot;DMAETHNR&quot;</span><span class="p">,</span> <span class="s2">&quot;HSSEX&quot;</span><span class="p">,</span> <span class="s2">&quot;HSDOIMO&quot;</span><span class="p">,</span> <span class="s2">&quot;HSAGEIR&quot;</span><span class="p">]</span>
+
+<span class="c1"># Growing pains</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SEQN</th>
+      <th>DMPFSEQ</th>
+      <th>DMPSTAT</th>
+      <th>DMARETHN</th>
+      <th>DMARACER</th>
+      <th>DMAETHNR</th>
+      <th>HSSEX</th>
+      <th>HSDOIMO</th>
+      <th>HSAGEIR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>F</td>
+      <td>ILENA</td>
+      <td>M</td>
+      <td>E</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>D</td>
+      <td>UL</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>*</td>
+      <td>** LR</td>
+      <td>E</td>
+      <td>C</td>
+      <td>L</td>
+      <td>NaN</td>
+      <td>i</td>
+      <td>nc</td>
+      <td>lu</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>D</td>
+      <td>ATA W</td>
+      <td>O</td>
+      <td>R</td>
+      <td>K</td>
+      <td>;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NaN</td>
+      <td>INFI</td>
+      <td>L</td>
+      <td>E</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>D</td>
+      <td>UL</td>
+      <td>T</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NaN</td>
+      <td>LENG</td>
+      <td>T</td>
+      <td>H</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3860</th>
+      <td>NaN</td>
+      <td>HA</td>
+      <td>Z</td>
+      <td>M</td>
+      <td>N</td>
+      <td>K</td>
+      <td>1</td>
+      <td>R</td>
+      <td>=</td>
+    </tr>
+    <tr>
+      <th>3861</th>
+      <td>NaN</td>
+      <td>HA</td>
+      <td>Z</td>
+      <td>N</td>
+      <td>O</td>
+      <td>K</td>
+      <td>1</td>
+      <td>R</td>
+      <td>=</td>
+    </tr>
+    <tr>
+      <th>3862</th>
+      <td>NaN</td>
+      <td>HA</td>
+      <td>Z</td>
+      <td>M</td>
+      <td>N</td>
+      <td>K</td>
+      <td>5</td>
+      <td>R</td>
+      <td>=</td>
+    </tr>
+    <tr>
+      <th>3863</th>
+      <td>NaN</td>
+      <td>HA</td>
+      <td>Z</td>
+      <td>N</td>
+      <td>O</td>
+      <td>K</td>
+      <td>5</td>
+      <td>R</td>
+      <td>=</td>
+    </tr>
+    <tr>
+      <th>3864</th>
+      <td></td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>3865 rows × 9 columns</p>
+</div></div></div>
 </div>
+</section>
+<section id="baptiste">
+<h3>66. baptiste<a class="headerlink" href="#baptiste" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm">long</a> <a class="reference external" href="https://www.youtube.com/watch?v=WhsX_OA6KAo">legs</a> 3:00/7.59</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id18" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -1496,6 +1671,7 @@ So push for October: so that 1-year notice grabs you with estimate…</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hilger">63. hilger</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#death-on-the-nile">64. death on the nile</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt-wharts-all">65. chatGPT, wharts &amp; all…</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baptiste">66. baptiste</a></li>
 </ul>
 </li>
 </ul>
