@@ -450,6 +450,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ibtl">62. ibtl</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hilger">63. hilger</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#death-on-the-nile">64. death on the nile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt-wharts-all">65. chatGPT, wharts &amp; all…</a></li>
 </ul>
 </li>
 </ul>
@@ -1307,6 +1308,97 @@ So push for October: so that 1-year notice grabs you with estimate…</p>
 <li><p>motive</p></li>
 </ol>
 <p>&amp; means</p>
+</section>
+<section id="chatgpt-wharts-all">
+<h3>65. chatGPT, wharts &amp; all…<a class="headerlink" href="#chatgpt-wharts-all" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Background: r(mean)</span>
+<span class="c1"># Stata/BE or IC</span>
+<span class="c1"># r(k) &lt; 2048</span>
+<span class="c1"># exam.DAT: r(k) == 2368</span>
+<span class="c1"># inaccessible to jhustata</span>
+<span class="c1"># program to grant access</span>
+<span class="c1"># chatGPTs Stata -&gt; Python</span>
+<span class="c1"># https://jhustata.github.io/book/fff.html</span>
+
+<span class="c1"># Methods: $keepvars</span>
+<span class="n">github</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/&quot;</span>
+<span class="n">jhustata</span> <span class="o">=</span> <span class="s2">&quot;jhustata/book/main/&quot;</span>
+<span class="n">keepvars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HSAGEIR&quot;</span><span class="p">,</span> <span class="s2">&quot;BMPHT&quot;</span><span class="p">,</span> <span class="s2">&quot;BMPWT&quot;</span><span class="p">,</span> <span class="s2">&quot;HAZA8AK1&quot;</span><span class="p">,</span> <span class="s2">&quot;CEP&quot;</span><span class="p">,</span> <span class="s2">&quot;GHP&quot;</span><span class="p">,</span> <span class="s2">&quot;HAB1&quot;</span><span class="p">]</span>
+
+<span class="c1"># Results: .dofiles</span>
+<span class="n">clear</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">c</span><span class="p">(</span><span class="n">edition_real</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;BE&quot;</span> <span class="ow">or</span> <span class="n">c</span><span class="p">(</span><span class="n">edition_real</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;IC&quot;</span><span class="p">:</span>
+    <span class="n">dofile</span> <span class="o">=</span> <span class="n">github</span> <span class="o">+</span> <span class="n">jhustata</span> <span class="o">+</span> <span class="s2">&quot;nhanes-alpha-if2.do&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">dofile</span> <span class="o">=</span> <span class="n">github</span> <span class="o">+</span> <span class="n">jhustata</span> <span class="o">+</span> <span class="s2">&quot;nhanes-alpha-if0.do&quot;</span>
+<span class="n">do</span><span class="p">(</span><span class="n">dofile</span><span class="p">)</span>
+
+<span class="c1"># Conclusions: queueing</span>
+<span class="n">clear</span><span class="p">()</span>
+<span class="n">do</span><span class="p">(</span><span class="s2">&quot;adult.do&quot;</span><span class="p">)</span>
+<span class="n">df_adult</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;adult.dta&quot;</span><span class="p">)</span>
+<span class="n">df_adult</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df_adult</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">df_adult</span><span class="o">.</span><span class="n">to_stata</span><span class="p">(</span><span class="s2">&quot;adult.dta&quot;</span><span class="p">,</span> <span class="n">write_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">clear</span><span class="p">()</span>
+<span class="n">do</span><span class="p">(</span><span class="s2">&quot;exam.do&quot;</span><span class="p">)</span>
+<span class="n">df_exam</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;exam.dta&quot;</span><span class="p">)</span>
+<span class="n">df_exam</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df_exam</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">df_exam</span><span class="o">.</span><span class="n">to_stata</span><span class="p">(</span><span class="s2">&quot;exam.dta&quot;</span><span class="p">,</span> <span class="n">write_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">clear</span><span class="p">()</span>
+<span class="n">do</span><span class="p">(</span><span class="s2">&quot;lab.do&quot;</span><span class="p">)</span>
+<span class="n">df_lab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;lab.dta&quot;</span><span class="p">)</span>
+<span class="n">df_lab</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df_lab</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">df_lab</span><span class="o">.</span><span class="n">to_stata</span><span class="p">(</span><span class="s2">&quot;lab.dta&quot;</span><span class="p">,</span> <span class="n">write_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Acknowledge: linkage</span>
+<span class="n">df_adult</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;adult.dta&quot;</span><span class="p">)</span>
+<span class="n">df_exam</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;exam.dta&quot;</span><span class="p">)</span>
+<span class="n">df_lab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;lab.dta&quot;</span><span class="p">)</span>
+<span class="n">df_nh3mort</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;nh3mort.dta&quot;</span><span class="p">)</span>
+
+<span class="n">df_merged</span> <span class="o">=</span> <span class="n">df_adult</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_exam</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;seqn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_lab</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;seqn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_nh3mort</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;seqn&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">df_matched</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="o">~</span><span class="n">df_merged</span><span class="p">[</span><span class="s2">&quot;matched&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
+<span class="n">df_matched</span><span class="o">.</span><span class="n">to_stata</span><span class="p">(</span><span class="s2">&quot;matched.dta&quot;</span><span class="p">,</span> <span class="n">write_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Dataset4class</span>
+<span class="n">df_matched</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;matched.dta&quot;</span><span class="p">)</span>
+<span class="n">df_matched</span><span class="o">.</span><span class="n">compress</span><span class="p">()</span>
+<span class="n">df_matched</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;nh3andmort.dta&quot;</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Survival analysis</span>
+<span class="n">df_matched</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s2">&quot;matched.dta&quot;</span><span class="p">)</span>
+<span class="c1"># Lookfor, codebook, stset, sts graph, stcox, etc. are Stata commands and need to be translated into equivalent Python code using appropriate libraries such as pandas, numpy, matplotlib, and statsmodels.</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">keepvars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HSAGEIR&quot;</span><span class="p">,</span> <span class="s2">&quot;BMPHT&quot;</span><span class="p">,</span> <span class="s2">&quot;BMPWT&quot;</span><span class="p">,</span> <span class="s2">&quot;HAZA8AK1&quot;</span><span class="p">,</span> <span class="s2">&quot;CEP&quot;</span><span class="p">,</span> <span class="s2">&quot;GHP&quot;</span><span class="p">,</span> <span class="s2">&quot;HAB1&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Results: .dofiles</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">clear</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="k">if</span> <span class="n">c</span><span class="p">(</span><span class="n">edition_real</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;BE&quot;</span> <span class="ow">or</span> <span class="n">c</span><span class="p">(</span><span class="n">edition_real</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;IC&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">dofile</span> <span class="o">=</span> <span class="n">github</span> <span class="o">+</span> <span class="n">jhustata</span> <span class="o">+</span> <span class="s2">&quot;nhanes-alpha-if2.do&quot;</span>
+
+<span class="ne">NameError</span>: name &#39;clear&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id18" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -1460,6 +1552,7 @@ So push for October: so that 1-year notice grabs you with estimate…</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ibtl">62. ibtl</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hilger">63. hilger</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#death-on-the-nile">64. death on the nile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt-wharts-all">65. chatGPT, wharts &amp; all…</a></li>
 </ul>
 </li>
 </ul>
