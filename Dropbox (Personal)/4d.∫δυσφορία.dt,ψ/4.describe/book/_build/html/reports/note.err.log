@@ -1,4 +1,15 @@
 Traceback (most recent call last):
+  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 730, in _async_poll_for_reply
+    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
+  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/util.py", line 96, in ensure_async
+    result = await obj
+  File "/Users/d/miniconda3/lib/python3.10/site-packages/jupyter_client/channels.py", line 315, in get_msg
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/Users/d/miniconda3/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
   File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
@@ -11,85 +22,25 @@ Traceback (most recent call last):
     return future.result()
   File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
-    await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
-    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
-nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
-------------------
+  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 949, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 754, in _async_poll_for_reply
+    await self._async_handle_timeout(timeout, cell)
+  File "/Users/d/miniconda3/lib/python3.10/site-packages/nbclient/client.py", line 801, in _async_handle_timeout
+    raise CellTimeoutError.error_from_timeout_and_cell(
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
+The message was: Cell execution timed out.
+Here is a preview of the cell contents:
+-------------------
 import pandas as pd
-
-# Background: r(mean)
-# Stata/BE or IC
-# r(k) < 2048
-# exam.DAT: r(k) == 2368
-# inaccessible to jhustata
-# program to grant access
-# chatGPTs Stata -> Python
-# https://jhustata.github.io/book/fff.html
-
-# Methods: $keepvars
-github = "https://raw.githubusercontent.com/"
-jhustata = "jhustata/book/main/"
-keepvars = ["HSAGEIR", "BMPHT", "BMPWT", "HAZA8AK1", "CEP", "GHP", "HAB1"]
-
-# Results: .dofiles
-clear()
-
-if c(edition_real) == "BE" or c(edition_real) == "IC":
-    dofile = github + jhustata + "nhanes-alpha-if2.do"
-else:
-    dofile = github + jhustata + "nhanes-alpha-if0.do"
-do(dofile)
-
-# Conclusions: queueing
-clear()
-do("adult.do")
-df_adult = pd.read_stata("adult.dta")
-df_adult.columns = df_adult.columns.str.lower()
-df_adult.to_stata("adult.dta", write_index=False)
-
-clear()
-do("exam.do")
-df_exam = pd.read_stata("exam.dta")
-df_exam.columns = df_exam.columns.str.lower()
-df_exam.to_stata("exam.dta", write_index=False)
-
-clear()
-do("lab.do")
-df_lab = pd.read_stata("lab.dta")
-df_lab.columns = df_lab.columns.str.lower()
-df_lab.to_stata("lab.dta", write_index=False)
-
-# Acknowledge: linkage
-df_adult = pd.read_stata("adult.dta")
-df_exam = pd.read_stata("exam.dta")
-df_lab = pd.read_stata("lab.dta")
-df_nh3mort = pd.read_stata("nh3mort.dta")
-
-df_merged = df_adult.merge(df_exam, on="seqn").merge(df_lab, on="seqn").merge(df_nh3mort, on="seqn", how="left")
-df_matched = df_merged[~df_merged["matched"].isnull()]
-df_matched.to_stata("matched.dta", write_index=False)
-
-# Dataset4class
-df_matched = pd.read_stata("matched.dta")
-df_matched.compress()
-df_matched.save("nh3andmort.dta", replace=True)
-
-# Survival analysis
-df_matched = pd.read_stata("matched.dta")
-# Lookfor, codebook, stset, sts graph, stcox, etc. are Stata commands and need to be translated into equivalent Python code using appropriate libraries such as pandas, numpy, matplotlib, and statsmodels.
-------------------
-
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[2], line 18[0m
-[1;32m     15[0m keepvars [38;5;241m=[39m [[38;5;124m"[39m[38;5;124mHSAGEIR[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mBMPHT[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mBMPWT[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mHAZA8AK1[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mCEP[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mGHP[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mHAB1[39m[38;5;124m"[39m]
-[1;32m     17[0m [38;5;66;03m# Results: .dofiles[39;00m
-[0;32m---> 18[0m [43mclear[49m()
-[1;32m     20[0m [38;5;28;01mif[39;00m c(edition_real) [38;5;241m==[39m [38;5;124m"[39m[38;5;124mBE[39m[38;5;124m"[39m [38;5;129;01mor[39;00m c(edition_real) [38;5;241m==[39m [38;5;124m"[39m[38;5;124mIC[39m[38;5;124m"[39m:
-[1;32m     21[0m     dofile [38;5;241m=[39m github [38;5;241m+[39m jhustata [38;5;241m+[39m [38;5;124m"[39m[38;5;124mnhanes-alpha-if2.do[39m[38;5;124m"[39m
-
-[0;31mNameError[0m: name 'clear' is not defined
-NameError: name 'clear' is not defined
+import requests
+url = "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat"
+response = requests.get(url)
+with open('adult.dat', 'wb') as f:
+    f.write(response.content)
+filename = "adult.dat"
+df = pd.read_fwf(filename, widths=[5,2,1,2], header=None, encoding="utf-8")
+df.columns = ["SEQN","DMARETHN","HSSEX","HSAGEIR"]
+print(df)
+-------------------
 
