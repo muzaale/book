@@ -37,7 +37,7 @@ import pandas as pd
 import requests
 
 url = "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat"
-response = requests.get(url)
+response = requests.get(url, timeout=50) # does this timeout fix my issues?
 content = io.StringIO(response.text)
 df = pd.read_fwf(content, widths=[5,2,1,2], header=None, encoding="utf-8")
 df.columns = ["SEQN","DMARETHN","HSSEX","HSAGEIR"]
