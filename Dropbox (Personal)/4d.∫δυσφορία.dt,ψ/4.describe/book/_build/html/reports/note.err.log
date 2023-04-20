@@ -32,8 +32,15 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['import io', 'import pandas as pd', 'import requests', '', 'url = "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat"']
-...
-['', '# Load the data from the StringIO object into a pandas DataFrame', 'df = pd.read_fwf(content, widths=[5,2,1,2], header=None, encoding="utf-8")', 'df.columns = ["SEQN","DMARETHN","HSSEX","HSAGEIR"]', 'df.head(4)']
+import io
+import pandas as pd  
+import requests
+
+url = "https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat"
+response = requests.get(url)
+content = io.StringIO(response.text)
+df = pd.read_fwf(content, widths=[5,2,1,2], header=None, encoding="utf-8")
+df.columns = ["SEQN","DMARETHN","HSSEX","HSAGEIR"]
+df.head()
 -------------------
 
