@@ -520,6 +520,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diamonds">111. diamonds</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-hodgkins">112. non-Hodgkins</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">113. ds4ph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch">114. torch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autencoders">115. autencoders</a></li>
 </ul>
 </li>
 </ul>
@@ -2459,6 +2461,68 @@ df.head()</p>
 <li><p><a class="reference external" href="https://smart-stats.github.io/advanced_ds4bio_book/qbook/_book/intro.html">advanced</a></p></li>
 <li><p>more</p></li>
 </ul>
+</section>
+<section id="torch">
+<h3>114. torch<a class="headerlink" href="#torch" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">PIL</span>
+<span class="kn">import</span> <span class="nn">requests</span> <span class="c1">#from chatGPT</span>
+
+<span class="c1">## Read in and organize the data</span>
+<span class="n">imgURL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/larvalabs/cryptopunks/master/punks.png&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">imgURL</span><span class="p">)</span>
+
+<span class="c1"># inserted by chatGPT</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;cryptoPunksAll.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;cryptoPunksAll.jpg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">)</span>
+<span class="n">imgArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<span class="n">finalArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  
+    <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">j</span><span class="p">,</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> 
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">finalArray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">0</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">imgArray</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">finalArray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">1</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">imgArray</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">finalArray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">2</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">imgArray</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">finalArray</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">x_real</span> <span class="o">=</span> <span class="n">finalArray</span> <span class="o">/</span> <span class="mi">255</span>
+<span class="n">x_real</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">x_real</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+<span class="n">x_real</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>torch.Size([10000, 3, 24, 24])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="autencoders">
+<h3>115. autencoders<a class="headerlink" href="#autencoders" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>missing data</p></li>
+<li><p>cryptography</p></li>
+<li><p>disclosure risk</p></li>
+</ul>
+<p>review 04/25/23 ds4ph recording</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id28" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -2682,6 +2746,8 @@ df.head()</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diamonds">111. diamonds</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-hodgkins">112. non-Hodgkins</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">113. ds4ph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch">114. torch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autencoders">115. autencoders</a></li>
 </ul>
 </li>
 </ul>
