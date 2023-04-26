@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,8 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -521,7 +521,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-hodgkins">112. non-Hodgkins</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">113. ds4ph</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch">114. torch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autencoders">115. autencoders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoencoders">115. autoencoders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cobb">116. cobb</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">04/26/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arsenal">117. arsenal</a></li>
 </ul>
 </li>
 </ul>
@@ -583,7 +588,7 @@ document.write(`
 <li><p>Daytona (Lifeguard)</p></li>
 <li><p>Nina (Lifeguard, Tips for Dolphin 🐬)</p></li>
 <li><p>Daytona (Swimmer, Black weights) ** Mixup with a one Nina?</p></li>
-<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id28" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id29" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 <li><p>Aiko (ie Geiko, Japanese-American at SICU, dob 04/24***)</p></li>
 <li><p>Buddy (Jeffs Buddy)</p></li>
 <li><p>Jeff (Red head swims with Buddy)</p></li>
@@ -966,7 +971,7 @@ XXX XXX University School of Medicine\</p>
 </ol>
 </section>
 <section id="gitcodehub-2">
-<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id29" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
+<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id30" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span>
 <span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">unrelated</span><span class="o">-</span><span class="n">histories</span>
@@ -2471,64 +2476,129 @@ df.head()</p>
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
-<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
-<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="kn">import</span> <span class="nn">PIL</span>
-<span class="kn">import</span> <span class="nn">requests</span> <span class="c1">#from chatGPT</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">skl</span>
 
-<span class="c1">## Read in and organize the data</span>
-<span class="n">imgURL</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/larvalabs/cryptopunks/master/punks.png&quot;</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">imgURL</span><span class="p">)</span>
+<span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
 
-<span class="c1"># inserted by chatGPT</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;cryptoPunksAll.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-<span class="n">img</span> <span class="o">=</span> <span class="n">PIL</span><span class="o">.</span><span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;cryptoPunksAll.jpg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">)</span>
-<span class="n">imgArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-<span class="n">finalArray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  
-    <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">j</span><span class="p">,</span> <span class="mi">24</span> <span class="o">*</span> <span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> 
-    <span class="n">idx</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">finalArray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">0</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">imgArray</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">finalArray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">1</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">imgArray</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">finalArray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="mi">2</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="n">imgArray</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">:</span><span class="n">d</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H11&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H12&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H13&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H14&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
 
-<span class="n">n</span> <span class="o">=</span> <span class="n">finalArray</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">x_real</span> <span class="o">=</span> <span class="n">finalArray</span> <span class="o">/</span> <span class="mi">255</span>
-<span class="n">x_real</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">x_real</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
-<span class="n">x_real</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.9</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H41&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H42&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H43&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H44&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H45&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H46&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H47&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H48&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H11&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H11&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H12&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H12&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H13&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H13&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H14&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H14&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H31&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H32&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H33&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H34&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H31&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H32&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H33&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H34&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+
+
+<span class="c1">#G.add_edges_from([(&quot;H11&quot;, &quot;H21&quot;), (&quot;H11&quot;, &quot;H22&quot;), (&quot;H12&quot;, &quot;H21&quot;), (&quot;H12&quot;, &quot;H22&quot;)])</span>
+<span class="c1">#G.add_edges_from([(&quot;H21&quot;, &quot;Y&quot;), (&quot;H22&quot;, &quot;Y&quot;)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
+        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
+        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>torch.Size([10000, 3, 24, 24])
-</pre></div>
-</div>
+<img alt="_images/504efc9a9a91f301869022c1581f22270a569082f39e43ec8d610ed3cc654c0a.png" src="_images/504efc9a9a91f301869022c1581f22270a569082f39e43ec8d610ed3cc654c0a.png" />
 </div>
 </div>
 </section>
-<section id="autencoders">
-<h3>115. autencoders<a class="headerlink" href="#autencoders" title="Permalink to this heading">#</a></h3>
+<section id="autoencoders">
+<h3>115. autoencoders<a class="headerlink" href="#autoencoders" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>missing data</p></li>
-<li><p>cryptography</p></li>
-<li><p>disclosure risk</p></li>
+<li><p>bootstrap</p></li>
+<li><p>cryptography/disclosure risk</p></li>
 </ul>
 <p>review 04/25/23 ds4ph recording</p>
+</section>
+<section id="cobb">
+<h3>116. cobb<a class="headerlink" href="#cobb" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cobb_salad">delicous</a></p></li>
+<li><p>convert</p></li>
+<li><p>best!</p></li>
+</ul>
+</section>
+</section>
+<section id="id28">
+<h2>04/26/2023<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h2>
+<section id="arsenal">
+<h3>117. arsenal<a class="headerlink" href="#arsenal" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>today: 1 -182 x +350 2 +450</p></li>
+<li><p>epl: -450 man city, +333 arsenal</p></li>
+<li><p>and the streets have spoke</p></li>
+</ul>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id28" role="note">
+<aside class="footnote brackets" id="id29" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p>Her thoughts echo these: The Malcontent. — He is one of the brave old warriors: angry with civilisation because he believes that its object is to make all good things — honour, rewards, and fair women — accessible even to cowards.</p>
 </aside>
-<aside class="footnote brackets" id="id29" role="note">
+<aside class="footnote brackets" id="id30" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
 <p>solution to a most vexing problem</p>
 </aside>
@@ -2562,9 +2632,15 @@ df.head()</p>
               
               
                 <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -2747,7 +2823,12 @@ df.head()</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-hodgkins">112. non-Hodgkins</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">113. ds4ph</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#torch">114. torch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autencoders">115. autencoders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoencoders">115. autoencoders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cobb">116. cobb</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">04/26/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arsenal">117. arsenal</a></li>
 </ul>
 </li>
 </ul>
@@ -2758,7 +2839,7 @@ df.head()</p>
             
           </div>
           <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
+            
 <div class="bd-footer-content__inner container">
   
   <div class="footer-item">
@@ -2788,7 +2869,7 @@ By Abimereki Muzaale
     
   </div>
   
-</div></div>
+</div>
           </footer>
         
 
@@ -2797,8 +2878,8 @@ By Abimereki Muzaale
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
