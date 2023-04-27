@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="verbs.html">verbs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="means.html">means</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object.html">object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prudence.html">prudence</a></li>
 </ul>
 
@@ -534,6 +534,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xenotransplantation">122. xenotransplantation</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">04/27/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text">123. text</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -593,7 +597,7 @@ document.write(`
 <li><p>Daytona (Lifeguard)</p></li>
 <li><p>Nina (Lifeguard, Tips for Dolphin 🐬)</p></li>
 <li><p>Daytona (Swimmer, Black weights) ** Mixup with a one Nina?</p></li>
-<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id29" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id30" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 <li><p>Aiko (ie Geiko, Japanese-American at SICU, dob 04/24***)</p></li>
 <li><p>Buddy (Jeffs Buddy)</p></li>
 <li><p>Jeff (Red head swims with Buddy)</p></li>
@@ -976,7 +980,7 @@ XXX XXX University School of Medicine\</p>
 </ol>
 </section>
 <section id="gitcodehub-2">
-<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id30" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
+<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id31" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span>
 <span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">unrelated</span><span class="o">-</span><span class="n">histories</span>
@@ -2597,6 +2601,7 @@ df.head()</p>
 <li><p>today: 1 -182 x +350 2 +450</p></li>
 <li><p>epl: -450 man city, +333 arsenal</p></li>
 <li><p>and the streets have spoke</p></li>
+<li><p>they were right: 4-1</p></li>
 </ul>
 </section>
 <section id="mylife">
@@ -2673,12 +2678,33 @@ df.head()</p>
 <li><p>12-1pm</p></li>
 <li><p><a class="reference external" href="https://jhjhm.zoom.us/j/91938551726?pwd=eStqNVBmUDJxZUh2WVlZbWFiQjZPQT09">zoom</a></p></li>
 </ul>
+</section>
+</section>
+<section id="id29">
+<h2>04/27/2023<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h2>
+<section id="text">
+<h3>123. text<a class="headerlink" href="#text" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>import <a class="reference external" href="https://smart-stats.github.io/advanced_ds4bio_book/qbook/_book/nlp.html">nltk</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sentences</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>identify geriatric syndromes</p></li>
+<li><p>ehr from 2013-2023 (e.g. Kaiser Permanente, Hopkins)</p></li>
+<li><p>footprints left in large databases not available for most research</p></li>
+<li><p>this is a major innovation that i’ve gots to master!</p></li>
+</ul>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id29" role="note">
+<aside class="footnote brackets" id="id30" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p>Her thoughts echo these: The Malcontent. — He is one of the brave old warriors: angry with civilisation because he believes that its object is to make all good things — honour, rewards, and fair women — accessible even to cowards.</p>
 </aside>
-<aside class="footnote brackets" id="id30" role="note">
+<aside class="footnote brackets" id="id31" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
 <p>solution to a most vexing problem</p>
 </aside>
@@ -2914,6 +2940,10 @@ df.head()</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-homme">120. l’homme</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eli">121. eli</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xenotransplantation">122. xenotransplantation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">04/27/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text">123. text</a></li>
 </ul>
 </li>
 </ul>
