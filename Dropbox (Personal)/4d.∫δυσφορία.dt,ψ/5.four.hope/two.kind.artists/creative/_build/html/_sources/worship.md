@@ -1,0 +1,23 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+# worship
+
+Reverence isn't the same as ancestral worship. Ludwig inspired worship rather than the spirit of reverence of forebears in the totality of their lineage. Thus the 19th century witnesses geniuses, showmen, and the like -- who had no ancestors: Wagner, Liszt, etc.
+
+Chopin must never be included in this list. His tributes to Polish folklore say it all.
+
+The worshiper never considers usurpation. And that is why Beethoven's place in the pantheon is secure. He inspired worship. But the type-I artist who reveres without worshiping will, ultimately, usurp his forebears. And one senses a dwindling regard of the [forebear](https://muzaale.github.io/destruction/networks.html) as this artists reputation grows.
+
+Just think: Corelli-Handel, Vivaldi-Bach, and Haydn-Mozart. Posterity is the benefactor in all of this!
