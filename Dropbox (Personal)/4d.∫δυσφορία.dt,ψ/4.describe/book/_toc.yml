@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: verbs
+- file: verb
 - file: object
 - file: prudence
