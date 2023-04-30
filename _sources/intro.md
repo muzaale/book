@@ -6,7 +6,7 @@ unsure & mortal [-](https://en.wikipedia.org/wiki/Trilemma)> will
 
 beastly oblivion -> cause
 
-..[.](note.md) and means `to do`
+..[.](bilowozo.md) and means `to do`
 
 ```{tableofcontents}
 ```
