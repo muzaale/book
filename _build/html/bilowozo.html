@@ -3057,9 +3057,10 @@ df.head()</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">*/</span></code> style line-continuation in <code class="docutils literal notranslate"><span class="pre">stcox.ado</span></code> v 06mar2023</p></li>
 <li><p>spurred even more innovations including:</p></li>
 </ul>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">local</span> q1p1:<span class="k"> di</span> <span class="s">&quot;string1&quot;</span>
-<span class="k">local</span> q1pw:<span class="k"> di</span> <span class="s">&quot;string2&quot;</span>
-<span class="k">di</span> <span class="s">&quot;</span><span class="nv">`string1` `string2`&quot;</span>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">local</span> q1p1:<span class="k"> di</span> <span class="s">&quot;a very long string1, the first half of one mega string&quot;</span>
+<span class="k">local</span> q1p2:<span class="k"> di</span> <span class="s">&quot;a very long string2, the second half of one mega string&quot;</span>
+
+<span class="k">di</span> <span class="s">&quot;</span><span class="nv">`q1p1` `q1p2`&quot; //concatenate</span>
 </pre></div>
 </div>
 <ul class="simple">
