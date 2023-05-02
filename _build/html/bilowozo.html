@@ -586,6 +586,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">156. learning</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">157. mgb</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuition">158. tuition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cluster">159. cluster</a></li>
 </ul>
 </li>
 </ul>
@@ -3364,6 +3365,23 @@ df.head()</p>
 <li><p><a class="reference external" href="https://seam.jhu.edu/billing/">seam</a></p></li>
 <li><p><a class="reference external" href="https://support.sis.jhu.edu/my-cases">jhusis</a></p></li>
 </ul>
+</section>
+<section id="cluster">
+<h3>159. cluster<a class="headerlink" href="#cluster" title="Permalink to this heading">#</a></h3>
+<div class="highlight-linux notranslate"><div class="highlight"><pre><span></span>ssh amuzaal1@jhpce01.jhsph.edu
+ls -alh
+qrsh -l h_vmem=17G
+stata-mp
+echo stata-mp -b do my.nber.data.do -&gt; my.nber.data.sh
+qsub -l mem_free=17G,h_vmem=17G,h_fsize=17G my.nber.data.sh
+qstat
+qdel 
+qacct -f /cm/shared/apps/sge/sge-8.1.9/default/common/accounFng_20230220_0300.txt -j JOBID
+scp /users/d/desktop/my.nber.data.do amuzaal1@jhpce01.jhsph.edu:/users/amuzaal1/
+/users/amuzaal1/
+/dcs04/legacy-dcs01-igm/segevlab/data
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id38" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -3659,6 +3677,7 @@ df.head()</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">156. learning</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">157. mgb</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuition">158. tuition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cluster">159. cluster</a></li>
 </ul>
 </li>
 </ul>
