@@ -9,7 +9,9 @@ logo: practicing.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
-
+  timeout: 600
+  notebook_interface: jupyter
+  
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
