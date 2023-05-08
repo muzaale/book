@@ -646,6 +646,8 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">05/08/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">202. rasheeda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content">203. content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frustrated">204. frustrated</a></li>
 </ul>
 </li>
 </ul>
@@ -6057,6 +6059,75 @@ view deployment
 <li><p>move on to students</p></li>
 <li><p>the ds4ph hw</p></li>
 </ul>
+</section>
+<section id="content">
+<h3>203. content<a class="headerlink" href="#content" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>.ipynb does always save</p></li>
+<li><p>have lost lots of content</p></li>
+<li><p>but why does this happe? how?</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">jupyter</span><span class="w"> </span><span class="nt">nbconvert</span><span class="w"> </span><span class="nt">--to</span><span class="w"> </span><span class="nt">notebook</span><span class="w"> </span><span class="nt">--execute</span><span class="w"> </span><span class="nt">bilowozo</span><span class="p">.</span><span class="nc">ipynb</span>
+</pre></div>
+</div>
+<p>This will execute the notebook and save any changes you have made.</p>
+</section>
+<section id="frustrated">
+<h3>204. frustrated<a class="headerlink" href="#frustrated" title="Permalink to this heading">#</a></h3>
+<p>step-by-step guide to pushing a jupyter-book to gh-pages on a new windows machine with no software installed</p>
+<p>Sure! Here is a step-by-step guide for pushing a Jupyter-Book to GitHub Pages on a new Windows machine with no software installed:</p>
+<ol class="arabic simple">
+<li><p>Install Git for Windows by downloading and running the Git for Windows installer from the official website: <a class="reference external" href="https://gitforwindows.org/">https://gitforwindows.org/</a></p></li>
+<li><p>Install Miniconda by downloading the Miniconda installer from the official website: <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#windows-installers">https://docs.conda.io/en/latest/miniconda.html#windows-installers</a></p></li>
+<li><p>Open the Anaconda Prompt by searching for “Anaconda Prompt” in the Start Menu.</p></li>
+<li><p>Create a new Conda environment by running the following command in the Anaconda Prompt:</p></li>
+</ol>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="c1">--name mybook python=3.8</span>
+</pre></div>
+</div>
+<p>This will create a new Conda environment named “mybook” with Python version 3.8.</p>
+<ol class="arabic simple" start="5">
+<li><p>Activate the Conda environment by running the following command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">mybook</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Install Jupyter-Book and other required packages by running the following command:</p></li>
+</ol>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span><span class="w"> </span><span class="n">ghp</span><span class="o">-</span><span class="k">import</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Create a new Jupyter-Book project by running the following command:</p></li>
+</ol>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">mybook</span>
+</pre></div>
+</div>
+<p>This will create a new directory named “mybook” with the basic structure for a Jupyter-Book project.</p>
+<ol class="arabic simple" start="8">
+<li><p>Add some content to your Jupyter-Book by creating one or more Jupyter Notebooks in the “mybook” directory.</p></li>
+<li><p>Build the Jupyter-Book to create an HTML site by running the following command:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">mybook</span>
+
+</pre></div>
+</div>
+<p>This will create an HTML site in the “_build/html” directory inside your “mybook” directory.</p>
+<ol class="arabic simple" start="10">
+<li><p>Create a new GitHub repository or go to an existing one where you want to push the Jupyter-Book.</p></li>
+<li><p>Go to the Settings tab of your repository and scroll down to the GitHub Pages section. Select “Master branch” as the source and save the changes.</p></li>
+<li><p>In the Anaconda Prompt, navigate to the directory containing your Jupyter-Book project.</p></li>
+<li><p>Run the following command to publish the HTML site to the GitHub Pages site:</p></li>
+</ol>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">ghp-import</span><span class="w"> </span><span class="nt">-n</span><span class="w"> </span><span class="nt">-p</span><span class="w"> </span><span class="nt">-f</span><span class="w"> </span><span class="nt">_build</span><span class="o">/</span><span class="nt">html</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="14">
+<li><p>Wait a few minutes for the changes to propagate to the GitHub Pages site. You should be able to see your Jupyter-Book live on the internet at <a class="reference external" href="https://username.github.io/repositoryname">https://username.github.io/repositoryname</a>.</p></li>
+</ol>
+<p>That’s it! You have successfully pushed a Jupyter-Book to GitHub. Pages on a new Windows machine with no software installed.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id54" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -6412,6 +6483,8 @@ view deployment
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id52">05/08/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">202. rasheeda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#content">203. content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frustrated">204. frustrated</a></li>
 </ul>
 </li>
 </ul>
