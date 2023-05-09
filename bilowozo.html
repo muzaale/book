@@ -651,7 +651,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">05/09/2023</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">usrds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">205. usrds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-pages">206. gh-pages</a></li>
 </ul>
 </li>
 </ul>
@@ -6137,7 +6138,7 @@ view deployment
 <section id="id54">
 <h2>05/09/2023<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h2>
 <section id="usrds">
-<h3>usrds<a class="headerlink" href="#usrds" title="Permalink to this heading">#</a></h3>
+<h3>205. usrds<a class="headerlink" href="#usrds" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>usrds_id srvc_dt gnn, 01/01/2013-12/31/2014</p></li>
 <li><p>g antihist16=(strpos(gnn,”BROMPHENIRAMINE”)!=0)</p></li>
@@ -6147,6 +6148,34 @@ view deployment
 <li><p>unique usrds_id 177,471</p></li>
 <li><p>cd /dcs04/legacy-dcs01-igm/segevlab/data/usrds2015/claims/pd/pde2013</p></li>
 </ul>
+</section>
+<section id="gh-pages">
+<h3>206. gh-pages<a class="headerlink" href="#gh-pages" title="Permalink to this heading">#</a></h3>
+<p>jupyter-book git push works, but ghp-import -n -p -f _build/html gives an error. And when we got to the GitHub repo to manually activate gh-pages, we find “No results for pages build and deployment workflow run failed main branch. help!!!!!!!!!</p>
+<p>It sounds like there might be an issue with the deployment workflow on your GitHub repository. Here are a few things you can try to resolve the issue:</p>
+<p>Check your GitHub Actions logs:
+Go to the “Actions” tab in your GitHub repository.
+Look for the latest run of the “pages” workflow.
+Click on the run to view the logs.
+Look for any error messages or indications of what might have gone wrong.
+Double-check your repository settings:
+Make sure that the “GitHub Pages” section in your repository settings is set to use the “gh-pages” branch.
+Check that the correct source directory is specified (i.e., the directory where your built HTML files are located).
+Check your build files:
+Make sure that your Jupyter Book has been built successfully and that the HTML files are located in the correct directory.
+Check that you are running the ghp-import command from the correct directory.
+Try a manual deployment:
+You can manually deploy your built HTML files to the “gh-pages” branch by creating the branch and pushing your files to it.
+Here’s an example of how to do this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>--orphan<span class="w"> </span>gh-pages
+git<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>.
+cp<span class="w"> </span>-R<span class="w"> </span>_build/html/.<span class="w"> </span>.
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial gh-pages commit&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</pre></div>
+</div>
+<p>If none of these steps work, you may need to seek additional help from the Jupyter Book or GitHub support communities.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id55" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -6507,7 +6536,8 @@ view deployment
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">05/09/2023</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">usrds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">205. usrds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-pages">206. gh-pages</a></li>
 </ul>
 </li>
 </ul>
