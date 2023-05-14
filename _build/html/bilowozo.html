@@ -6753,6 +6753,12 @@ except intro.html</p>
 otherwise i’m not able to build and push a .git
 while in a completely different location!</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">book</span><span class="o">/*</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="n">book</span><span class="o">/*</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;remote commit&quot;</span>
+
+<span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="o">../</span><span class="n">note</span>
+<span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">../</span><span class="n">note</span><span class="o">/*</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">./*</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;remote commit, take3&quot;</span>
 </pre></div>
 </div>
 <hr class="footnotes docutils" />
