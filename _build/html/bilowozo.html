@@ -9386,7 +9386,7 @@ It&#39;s fascinating to explore the connections and parallels between different 
 <span class="n">I</span> <span class="n">apologize</span> <span class="k">for</span> <span class="n">the</span> <span class="n">incomplete</span> <span class="nb">list</span><span class="o">.</span> <span class="n">As</span> <span class="n">an</span> <span class="n">AI</span> <span class="n">language</span> <span class="n">model</span><span class="p">,</span> <span class="n">I</span> <span class="n">don</span><span class="s1">&#39;t have real-time access to the internet or external sources like Wikipedia. However, I can provide you with a Python program that scrapes Woody Allen&#39;</span><span class="n">s</span> <span class="n">filmography</span> <span class="kn">from</span> <span class="nn">Wikipedia</span> <span class="ow">and</span> <span class="n">generates</span> <span class="n">a</span> <span class="n">table</span><span class="o">.</span> <span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">beautifulsoup4</span> <span class="ow">and</span> <span class="n">requests</span> <span class="n">libraries</span> <span class="n">installed</span> <span class="n">before</span> <span class="n">running</span> <span class="n">the</span> <span class="n">code</span><span class="o">.</span> <span class="n">Here</span><span class="s1">&#39;s an example:</span>
 </pre></div>
 </div>
-<div class="cell tag_hide-input docutils container">
+<div class="cell tag_hide-input tag_show-output docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
 <span class="collapsed">Show code cell source</span>
@@ -9434,6 +9434,63 @@ It&#39;s fascinating to explore the connections and parallels between different 
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Title                    Year                                                                      Genre    Director
+-----------------------  ------------------------------------------------------------------------  -------  -----------
+1966                     What&#39;s Up, Tiger Lily?                                                    Yes      Woody Allen
+1969                     Take the Money and Run                                                    Yes      Woody Allen
+1971                     Bananas                                                                   Yes      Woody Allen
+1972                     Everything You Always Wanted to Know About Sex*(*But Were Afraid to Ask)  Yes      Woody Allen
+1973                     Sleeper                                                                   Yes      Woody Allen
+1975                     Love and Death                                                            Yes      Woody Allen
+1977                     Annie Hall                                                                Yes      Woody Allen
+1978                     Interiors                                                                 Yes      Woody Allen
+1979                     Manhattan                                                                 Yes      Woody Allen
+1980                     Stardust Memories                                                         Yes      Woody Allen
+1982                     A Midsummer Night&#39;s Sex Comedy                                            Yes      Woody Allen
+1983                     Zelig                                                                     Yes      Woody Allen
+1984                     Broadway Danny Rose                                                       Yes      Woody Allen
+1985                     The Purple Rose of Cairo                                                  Yes      Woody Allen
+1986                     Hannah and Her Sisters                                                    Yes      Woody Allen
+1987                     Radio Days                                                                Yes      Woody Allen
+September                Yes                                                                       Yes      Woody Allen
+1988                     Another Woman                                                             Yes      Woody Allen
+1989                     New York Stories                                                          Partial  Woody Allen
+Crimes and Misdemeanors  Yes                                                                       Yes      Woody Allen
+1990                     Alice                                                                     Yes      Woody Allen
+1991                     Shadows and Fog                                                           Yes      Woody Allen
+1992                     Husbands and Wives                                                        Yes      Woody Allen
+1993                     Manhattan Murder Mystery                                                  Yes      Woody Allen
+1994                     Bullets Over Broadway                                                     Yes      Woody Allen
+1995                     Mighty Aphrodite                                                          Yes      Woody Allen
+1996                     Everyone Says I Love You                                                  Yes      Woody Allen
+1997                     Deconstructing Harry                                                      Yes      Woody Allen
+1998                     Celebrity                                                                 Yes      Woody Allen
+1999                     Sweet and Lowdown                                                         Yes      Woody Allen
+2000                     Small Time Crooks                                                         Yes      Woody Allen
+2001                     The Curse of the Jade Scorpion                                            Yes      Woody Allen
+2002                     Hollywood Ending                                                          Yes      Woody Allen
+2003                     Anything Else                                                             Yes      Woody Allen
+2004                     Melinda and Melinda                                                       Yes      Woody Allen
+2005                     Match Point                                                               Yes      Woody Allen
+2006                     Scoop                                                                     Yes      Woody Allen
+2007                     Cassandra&#39;s Dream                                                         Yes      Woody Allen
+2008                     Vicky Cristina Barcelona                                                  Yes      Woody Allen
+2009                     Whatever Works                                                            Yes      Woody Allen
+2010                     You Will Meet a Tall Dark Stranger                                        Yes      Woody Allen
+2011                     Midnight in Paris                                                         Yes      Woody Allen
+2012                     To Rome with Love                                                         Yes      Woody Allen
+2013                     Blue Jasmine                                                              Yes      Woody Allen
+2014                     Magic in the Moonlight                                                    Yes      Woody Allen
+2015                     Irrational Man                                                            Yes      Woody Allen
+2016                     Café Society                                                              Yes      Woody Allen
+2017                     Wonder Wheel                                                              Yes      Woody Allen
+2019                     A Rainy Day in New York                                                   Yes      Woody Allen
+2020                     Rifkin&#39;s Festival                                                         Yes      Woody Allen
+TBA                      Coup de Chance                                                            Yes      Woody Allen
+</pre></div>
+</div>
+</div>
 </div>
 <p>This program uses the requests library to send a GET request to Woody Allen’s filmography page on Wikipedia and retrieves the HTML content. It then uses the beautifulsoup4 library to parse the HTML and extract the film data from the table on the page. The film details are stored in a list of lists, and the tabulate function is used to format and print the filmography table.</p>
 <p>Please note that web scraping can be subject to changes in the target website’s structure, so the code may need adjustments if the Wikipedia page layout or class names change.</p>
