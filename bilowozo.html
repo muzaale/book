@@ -839,6 +839,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weinberg">323. weinberg</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monica">324. monica</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id85">325. autoencoder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#babyapp">326. babyapp</a></li>
 </ul>
 </li>
 </ul>
@@ -9135,6 +9136,92 @@ Join us today at 3:30pm for our Center on Aging &amp; Health Scientific Seminar 
 <li><p>compressed</p></li>
 <li><p>representation</p></li>
 </ul>
+</section>
+<section id="babyapp">
+<h3>326. babyapp<a class="headerlink" href="#babyapp" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Initiate <a class="reference external" href="http://chat.openai.com">chat.openai.com</a> 9:05 PM</p></li>
+<li><p>Project Folder</p>
+<ul>
+<li><p>Input Folder</p></li>
+<li><p>Output Folder</p></li>
+</ul>
+</li>
+<li><p>Complete enhancement &amp; upload 9:33 PM</p></li>
+<li><p>Was that simple &amp; I don’t exaggerate</p></li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">input_folder</span> <span class="o">=</span> <span class="s1">&#39;/Users/d/Dropbox (Personal)/0g.κοσμογονία,γ/2.pantheon/input_folder&#39;</span>
+<span class="n">output_folder</span> <span class="o">=</span> <span class="s1">&#39;/Users/d/Dropbox (Personal)/0g.κοσμογονία,γ/2.pantheon/output_folder&#39;</span>
+
+<span class="c1"># Iterate over images in the input folder</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">input_folder</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.PNG&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.PNG&#39;</span><span class="p">):</span>
+        <span class="c1"># Read the image</span>
+        <span class="n">image_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+
+        <span class="c1"># Apply image processing techniques</span>
+        <span class="c1"># Adjust contrast and brightness</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.5</span>  <span class="c1"># Contrast control (1.0 for no change)</span>
+        <span class="n">beta</span> <span class="o">=</span> <span class="mi">10</span>    <span class="c1"># Brightness control (0 for no change)</span>
+        <span class="n">adjusted_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">convertScaleAbs</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">)</span>
+
+        <span class="c1"># Increase saturation</span>
+        <span class="n">hsv_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">adjusted_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2HSV</span><span class="p">)</span>
+        <span class="n">hsv_image</span> <span class="o">=</span> <span class="n">hsv_image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+        <span class="n">hsv_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">1.2</span>  <span class="c1"># Increase saturation by 20%</span>
+        <span class="n">hsv_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">hsv_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>  <span class="c1"># Clip values to valid range</span>
+        <span class="n">hsv_image</span> <span class="o">=</span> <span class="n">hsv_image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+        <span class="n">saturated_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">hsv_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_HSV2BGR</span><span class="p">)</span>
+
+        <span class="c1"># Apply adaptive histogram equalization</span>
+        <span class="n">clahe</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">createCLAHE</span><span class="p">(</span><span class="n">clipLimit</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">tileGridSize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+        <span class="n">lab_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">saturated_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2LAB</span><span class="p">)</span>
+        <span class="n">lab_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">clahe</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">lab_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">equalized_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">lab_image</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_LAB2BGR</span><span class="p">)</span>
+
+        <span class="c1"># Correct white balance using Gray World assumption</span>
+        <span class="n">avg_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">equalized_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">avg_g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">equalized_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">avg_r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">equalized_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">])</span>
+        <span class="n">avg_gray</span> <span class="o">=</span> <span class="p">(</span><span class="n">avg_b</span> <span class="o">+</span> <span class="n">avg_g</span> <span class="o">+</span> <span class="n">avg_r</span><span class="p">)</span> <span class="o">/</span> <span class="mf">3.0</span>
+        <span class="n">corrected_image</span> <span class="o">=</span> <span class="n">equalized_image</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">corrected_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">corrected_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">avg_gray</span> <span class="o">/</span> <span class="n">avg_b</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="n">corrected_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">corrected_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">avg_gray</span> <span class="o">/</span> <span class="n">avg_g</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="n">corrected_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">corrected_image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">avg_gray</span> <span class="o">/</span> <span class="n">avg_r</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+
+        <span class="c1"># Sharpening using unsharp masking</span>
+        <span class="n">blurred_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">corrected_image</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">sharpened_image</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">addWeighted</span><span class="p">(</span><span class="n">corrected_image</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="n">blurred_image</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Save the refined image to the output folder</span>
+        <span class="n">output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_folder</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">sharpened_image</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s1"> processe d and saved.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Image processing complete.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>This script adjusts contrast and brightness, increases saturation, applies adaptive histogram equalization, corrects white balance, and performs sharpening using unsharp masking. The processed image is then saved in the output folder.</p>
+<p>input:</p>
+<p><img alt="" src="_images/IMG_0697o.PNG" /></p>
+<p>output:</p>
+<p><img alt="" src="_images/IMG_0697e.PNG" /></p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id86" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -9687,6 +9774,7 @@ Join us today at 3:30pm for our Center on Aging &amp; Health Scientific Seminar 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weinberg">323. weinberg</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monica">324. monica</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id85">325. autoencoder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#babyapp">326. babyapp</a></li>
 </ul>
 </li>
 </ul>
