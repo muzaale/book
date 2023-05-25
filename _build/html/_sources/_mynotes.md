@@ -1,19 +1,19 @@
-# pantheon
-
-## 1. photo enhancing 
-
-- Project Folder
-  - Input Folder
-  - Output Folder
-
-  ```
-
 import os
 import cv2
 import numpy as np
 
 input_folder = '/Users/d/Dropbox (Personal)/0g.κοσμογονία,γ/2.pantheon/input_folder'
 output_folder = '/Users/d/Dropbox (Personal)/0g.κοσμογονία,γ/2.pantheon/output_folder'
+
+# Define the parameters for image processing
+brightness = 16.18  # Adjust brightness (0 for no change)
+contrast = 0.618  # Adjust contrast (1.0 for no change)
+saturation_increase = 1.1  # Increase saturation (1.0 for no change)
+clip_limit = 2.5  # Clip limit for adaptive histogram equalization
+tile_grid_size = (4, 4)  # Tile grid size for adaptive histogram equalization
+unsharp_masking_sigma = 30  # Sigma parameter for Gaussian blur in unsharp masking
+unsharp_masking_alpha = 1.5  # Alpha parameter for unsharp masking
+unsharp_masking_beta = -.2  # Beta parameter for unsharp masking; 10 in first iteration
 
 # Iterate over images in the input folder
 for filename in os.listdir(input_folder):
@@ -23,38 +23,26 @@ for filename in os.listdir(input_folder):
         image = cv2.imread(image_path)
 
         # Apply image processing techniques
-        # Adjust contrast and brightness
-        alpha = 1.5  # Contrast control (1.0 for no change)
-        beta = 10    # Brightness control (0 for no change)
-        adjusted_image = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
+        # Adjust brightness and contrast
+        adjusted_image = cv2.convertScaleAbs(image, alpha=contrast, beta=brightness)
 
         # Increase saturation
         hsv_image = cv2.cvtColor(adjusted_image, cv2.COLOR_BGR2HSV)
         hsv_image = hsv_image.astype(float)
-        hsv_image[:, :, 1] *= 1.2  # Increase saturation by 20%
-        hsv_image[:, :, 1] = np.clip(hsv_image[:, :, 1], 0, 255)  # Clip values to valid range
+        hsv_image[:, :, 1] *= saturation_increase
+        hsv_image[:, :, 1] = np.clip(hsv_image[:, :, 1], 0, 255)
         hsv_image = hsv_image.astype(np.uint8)
         saturated_image = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2BGR)
 
         # Apply adaptive histogram equalization
-        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_grid_size)
         lab_image = cv2.cvtColor(saturated_image, cv2.COLOR_BGR2LAB)
         lab_image[:, :, 0] = clahe.apply(lab_image[:, :, 0])
         equalized_image = cv2.cvtColor(lab_image, cv2.COLOR_LAB2BGR)
 
-        # Correct white balance using Gray World assumption
-        avg_b = np.mean(equalized_image[:, :, 0])
-        avg_g = np.mean(equalized_image[:, :, 1])
-        avg_r = np.mean(equalized_image[:, :, 2])
-        avg_gray = (avg_b + avg_g + avg_r) / 3.0
-        corrected_image = equalized_image.copy()
-        corrected_image[:, :, 0] = np.clip(corrected_image[:, :, 0] * (avg_gray / avg_b), 0, 255)
-        corrected_image[:, :, 1] = np.clip(corrected_image[:, :, 1] * (avg_gray / avg_g), 0, 255)
-        corrected_image[:, :, 2] = np.clip(corrected_image[:, :, 2] * (avg_gray / avg_r), 0, 255)
-
-        # Sharpening using unsharp masking
-        blurred_image = cv2.GaussianBlur(corrected_image, (0, 0), 3)
-        sharpened_image = cv2.addWeighted(corrected_image, 1.5, blurred_image, -0.5, 0)
+        # Unsharp masking for sharpening
+        blurred_image = cv2.GaussianBlur(equalized_image, (0, 0), unsharp_masking_sigma)
+        sharpened_image = cv2.addWeighted(equalized_image, unsharp_masking_alpha, blurred_image, unsharp_masking_beta, 0)
 
         # Save the refined image to the output folder
         output_path = os.path.join(output_folder, filename)
@@ -63,47 +51,3 @@ for filename in os.listdir(input_folder):
         print(f'{filename} processed and saved.')
 
 print('Image processing complete.')
-
-
-  ```
- 
-This script adjusts contrast and brightness, increases saturation, applies adaptive histogram equalization, corrects white balance, and performs sharpening using unsharp masking. The processed image is then saved in the output folder.
-
-Let me know if you need any further assistance!
-
-
-
- 
-
-```
-cp python.ipynb ../3.dna.origins/training/chapter5.ipynb
-jupyter-book build ../3.dna.origins/training
-cp -r ../3.dna.origins/training ../3.dna.origins/bcmodel
-git add ../3.dna.origins/bcmodel/*
-git commit -m "bestworkflowever,take1"
-git push ../3.dna.origins/bctraining/
-```
-
-https://github.com/ds4ph-bme/ds4ph-spring-hw-7-muzaale
-
-
-
-
-
-```stata
-streamlit run capstone.py
-```
-
-
-graduating students
-Zhou, Bill - CoursePlus wouldn't allow a 10% for participating
-
-Outstanding
-Ramanfaur, Diego -- HW2
-Lin, Shanshan -- Perfect score across all homeworks
-
-From single disease reductionist research to informed Machine Learning for research on multimorbidity
-
-1. What strack me about the title of your topic is "reductionist" research + machine learning
-2. In this context it appears that reductionist is pejorative
-3. But from the perspective of autoencoding, isn't it a necessary step? 
