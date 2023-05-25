@@ -846,6 +846,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id86">05/25/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#babygirl">328. babygirl</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#credo">329. credo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beautifulsoup">330. beautifulsoup</a></li>
 </ul>
 </li>
 </ul>
@@ -9373,6 +9374,69 @@ While the methodologies and contexts differ, both a Credo and an autoencoder sha
 It&#39;s fascinating to explore the connections and parallels between different domains, such as theology, philosophy, and machine learning, as they can offer insights and new perspectives.
 </pre></div>
 </div>
+</section>
+<section id="beautifulsoup">
+<h3>330. beautifulsoup<a class="headerlink" href="#beautifulsoup" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">could</span> <span class="n">you</span> <span class="n">write</span> <span class="n">me</span> <span class="n">a</span> <span class="n">python</span> <span class="n">program</span> <span class="n">that</span> <span class="n">outputs</span> <span class="n">a</span> <span class="n">table</span> <span class="n">of</span> <span class="n">woody</span> <span class="n">Allen</span><span class="s1">&#39;s entire filmography?</span>
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(\vdots\)</span></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">very</span> <span class="n">incomplete</span> <span class="nb">list</span><span class="o">.</span> <span class="n">check</span> <span class="n">wikipedia</span>
+
+<span class="n">I</span> <span class="n">apologize</span> <span class="k">for</span> <span class="n">the</span> <span class="n">incomplete</span> <span class="nb">list</span><span class="o">.</span> <span class="n">As</span> <span class="n">an</span> <span class="n">AI</span> <span class="n">language</span> <span class="n">model</span><span class="p">,</span> <span class="n">I</span> <span class="n">don</span><span class="s1">&#39;t have real-time access to the internet or external sources like Wikipedia. However, I can provide you with a Python program that scrapes Woody Allen&#39;</span><span class="n">s</span> <span class="n">filmography</span> <span class="kn">from</span> <span class="nn">Wikipedia</span> <span class="ow">and</span> <span class="n">generates</span> <span class="n">a</span> <span class="n">table</span><span class="o">.</span> <span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">beautifulsoup4</span> <span class="ow">and</span> <span class="n">requests</span> <span class="n">libraries</span> <span class="n">installed</span> <span class="n">before</span> <span class="n">running</span> <span class="n">the</span> <span class="n">code</span><span class="o">.</span> <span class="n">Here</span><span class="s1">&#39;s an example:</span>
+</pre></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="k">def</span> <span class="nf">scrape_filmography</span><span class="p">():</span>
+    <span class="c1"># URL of Woody Allen&#39;s filmography on Wikipedia</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/Woody_Allen_filmography&quot;</span>
+
+    <span class="c1"># Send a GET request to the URL and retrieve the content</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="c1"># Create a BeautifulSoup object to parse the HTML content</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Find the table containing the filmography</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;wikitable&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Extract the film data from the table</span>
+    <span class="n">filmography</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Exclude the header row</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="n">columns</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">year</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">genre</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">director</span> <span class="o">=</span> <span class="s2">&quot;Woody Allen&quot;</span>
+            <span class="n">filmography</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">title</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">genre</span><span class="p">,</span> <span class="n">director</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">filmography</span>
+
+<span class="c1"># Scrape Woody Allen&#39;s filmography</span>
+<span class="n">filmography_table</span> <span class="o">=</span> <span class="n">scrape_filmography</span><span class="p">()</span>
+
+<span class="c1"># Print the filmography table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">filmography_table</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Genre&quot;</span><span class="p">,</span> <span class="s2">&quot;Director&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>This program uses the requests library to send a GET request to Woody Allen’s filmography page on Wikipedia and retrieves the HTML content. It then uses the beautifulsoup4 library to parse the HTML and extract the film data from the table on the page. The film details are stored in a list of lists, and the tabulate function is used to format and print the filmography table.</p>
+<p>Please note that web scraping can be subject to changes in the target website’s structure, so the code may need adjustments if the Wikipedia page layout or class names change.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id87" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -9932,6 +9996,7 @@ It&#39;s fascinating to explore the connections and parallels between different 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id86">05/25/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#babygirl">328. babygirl</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#credo">329. credo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beautifulsoup">330. beautifulsoup</a></li>
 </ul>
 </li>
 </ul>
