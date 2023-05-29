@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Define the parameters for image processing &#8212; Nothin&#39;</title>
+    <title>&lt;no title&gt; &#8212; Nothin&#39;</title>
   
   
   
@@ -341,7 +341,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Define the parameters for image processing</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -350,9 +350,7 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Define the parameters for image processing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate-over-images-in-the-input-folder">Iterate over images in the input folder</a></li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
 
             </nav>
@@ -365,60 +363,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>import os
-import cv2
-import numpy as np</p>
-<p>input_folder = ‘/Users/d/Dropbox (Personal)/0g.κοσμογονία,γ/2.pantheon/input_folder’
-output_folder = ‘/Users/d/Dropbox (Personal)/0g.κοσμογονία,γ/2.pantheon/output_folder’</p>
-<section class="tex2jax_ignore mathjax_ignore" id="define-the-parameters-for-image-processing">
-<h1>Define the parameters for image processing<a class="headerlink" href="#define-the-parameters-for-image-processing" title="Permalink to this heading">#</a></h1>
-<p>brightness = 16.18  # Adjust brightness (0 for no change)
-contrast = 0.618  # Adjust contrast (1.0 for no change)
-saturation_increase = 1.1  # Increase saturation (1.0 for no change)
-clip_limit = 2.5  # Clip limit for adaptive histogram equalization
-tile_grid_size = (4, 4)  # Tile grid size for adaptive histogram equalization
-unsharp_masking_sigma = 30  # Sigma parameter for Gaussian blur in unsharp masking
-unsharp_masking_alpha = 1.5  # Alpha parameter for unsharp masking
-unsharp_masking_beta = -.2  # Beta parameter for unsharp masking; 10 in first iteration</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="iterate-over-images-in-the-input-folder">
-<h1>Iterate over images in the input folder<a class="headerlink" href="#iterate-over-images-in-the-input-folder" title="Permalink to this heading">#</a></h1>
-<p>for filename in os.listdir(input_folder):
-if filename.endswith(‘.PNG’) or filename.endswith(‘.PNG’):
-# Read the image
-image_path = os.path.join(input_folder, filename)
-image = cv2.imread(image_path)</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    # Apply image processing techniques
-    # Adjust brightness and contrast
-    adjusted_image = cv2.convertScaleAbs(image, alpha=contrast, beta=brightness)
-
-    # Increase saturation
-    hsv_image = cv2.cvtColor(adjusted_image, cv2.COLOR_BGR2HSV)
-    hsv_image = hsv_image.astype(float)
-    hsv_image[:, :, 1] *= saturation_increase
-    hsv_image[:, :, 1] = np.clip(hsv_image[:, :, 1], 0, 255)
-    hsv_image = hsv_image.astype(np.uint8)
-    saturated_image = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2BGR)
-
-    # Apply adaptive histogram equalization
-    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=tile_grid_size)
-    lab_image = cv2.cvtColor(saturated_image, cv2.COLOR_BGR2LAB)
-    lab_image[:, :, 0] = clahe.apply(lab_image[:, :, 0])
-    equalized_image = cv2.cvtColor(lab_image, cv2.COLOR_LAB2BGR)
-
-    # Unsharp masking for sharpening
-    blurred_image = cv2.GaussianBlur(equalized_image, (0, 0), unsharp_masking_sigma)
-    sharpened_image = cv2.addWeighted(equalized_image, unsharp_masking_alpha, blurred_image, unsharp_masking_beta, 0)
-
-    # Save the refined image to the output folder
-    output_path = os.path.join(output_folder, filename)
-    cv2.imwrite(output_path, sharpened_image)
-
-    print(f&#39;{filename} processed and saved.&#39;)
-</pre></div>
-</div>
-<p>print(‘Image processing complete.’)</p>
-</section>
+  <p>Darien</p>
+<ol class="arabic simple">
+<li><p>Run very smoothly</p></li>
+<li><p>Answers keys earlier for TAs</p></li>
+<li><p>Wish could attend in person (didn’t get a chance to watch recordings)</p></li>
+<li><p>Book</p></li>
+</ol>
 
     <script type="text/x-thebe-config">
     {
@@ -468,9 +419,7 @@ image = cv2.imread(image_path)</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Define the parameters for image processing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#iterate-over-images-in-the-input-folder">Iterate over images in the input folder</a></li>
+    <ul class="simple visible nav section-nav flex-column">
 </ul>
 
   </nav></div>
