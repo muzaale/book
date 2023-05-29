@@ -463,6 +463,796 @@ TBA                      Coup de Chance                                         
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/wiki/Woody_Allen_filmography&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;wikitable&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;table class=&quot;wikitable&quot;&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;th&gt;Year
+&lt;/th&gt;
+&lt;th&gt;Title
+&lt;/th&gt;
+&lt;th width=&quot;65&quot;&gt;&lt;a href=&quot;/wiki/Film_director&quot; title=&quot;Film director&quot;&gt;Director&lt;/a&gt;
+&lt;/th&gt;
+&lt;th width=&quot;65&quot;&gt;&lt;a href=&quot;/wiki/Screenwriter&quot; title=&quot;Screenwriter&quot;&gt;Writer&lt;/a&gt;
+&lt;/th&gt;
+&lt;th width=&quot;65&quot;&gt;&lt;a href=&quot;/wiki/Actor&quot; title=&quot;Actor&quot;&gt;Actor&lt;/a&gt;
+&lt;/th&gt;
+&lt;th&gt;Role
+&lt;/th&gt;
+&lt;th&gt;&lt;abbr title=&quot;Reference(s)&quot;&gt;Ref.&lt;/abbr&gt;
+&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1966
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/What%27s_Up,_Tiger_Lily%3F&quot; title=&quot;What&#39;s Up, Tiger Lily?&quot;&gt;What&#39;s Up, Tiger Lily?&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Himself / Various voices
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-0&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1969
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Take_the_Money_and_Run_(film)&quot; title=&quot;Take the Money and Run (film)&quot;&gt;Take the Money and Run&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Virgil Starkwell
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-1&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1971
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Bananas_(film)&quot; title=&quot;Bananas (film)&quot;&gt;Bananas&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Fielding Mellish
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-2&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1972
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Everything_You_Always_Wanted_to_Know_About_Sex*_(*But_Were_Afraid_to_Ask)_(film)&quot; title=&quot;Everything You Always Wanted to Know About Sex* (*But Were Afraid to Ask) (film)&quot;&gt;Everything You Always Wanted to Know About Sex*&lt;br/&gt;(*But Were Afraid to Ask)&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Victor Shakapopulis / Fabrizio / The Fool / Sperm #1
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-3&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1973
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Sleeper_(1973_film)&quot; title=&quot;Sleeper (1973 film)&quot;&gt;Sleeper&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Miles Monroe
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-4&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1975
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Love_and_Death&quot; title=&quot;Love and Death&quot;&gt;Love and Death&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Boris Grushenko
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-5&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1977
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Annie_Hall&quot; title=&quot;Annie Hall&quot;&gt;Annie Hall&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Alvy Singer
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-6&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1978
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Interiors&quot; title=&quot;Interiors&quot;&gt;Interiors&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-7&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1979
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Manhattan_(1979_film)&quot; title=&quot;Manhattan (1979 film)&quot;&gt;Manhattan&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Isaac Davis
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-8&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1980
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Stardust_Memories&quot; title=&quot;Stardust Memories&quot;&gt;Stardust Memories&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Sandy Bates
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-9&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1982
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;span data-sort-value=&quot;mids !&quot;&gt;&lt;a href=&quot;/wiki/A_Midsummer_Night%27s_Sex_Comedy&quot; title=&quot;A Midsummer Night&#39;s Sex Comedy&quot;&gt;A Midsummer Night&#39;s Sex Comedy&lt;/a&gt;&lt;/span&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Andrew
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-10&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1983
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Zelig&quot; title=&quot;Zelig&quot;&gt;Zelig&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Leonard Zelig
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-11&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1984
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Broadway_Danny_Rose&quot; title=&quot;Broadway Danny Rose&quot;&gt;Broadway Danny Rose&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Danny Rose
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-12&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1985
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/The_Purple_Rose_of_Cairo&quot; title=&quot;The Purple Rose of Cairo&quot;&gt;The Purple Rose of Cairo&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-13&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1986
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Hannah_and_Her_Sisters&quot; title=&quot;Hannah and Her Sisters&quot;&gt;Hannah and Her Sisters&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Mickey Sachs
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-14&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&quot;2&quot;&gt;1987
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Radio_Days&quot; title=&quot;Radio Days&quot;&gt;Radio Days&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Joe (voice)
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-15&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/September_(1987_film)&quot; title=&quot;September (1987 film)&quot;&gt;September&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-16&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1988
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Another_Woman_(1988_film)&quot; title=&quot;Another Woman (1988 film)&quot;&gt;Another Woman&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-17&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan=&quot;2&quot;&gt;1989
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/New_York_Stories&quot; title=&quot;New York Stories&quot;&gt;New York Stories&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-partial&quot; style=&quot;background:#FFB;vertical-align:middle;text-align:center;&quot;&gt;Partial
+&lt;/td&gt;
+&lt;td class=&quot;table-partial&quot; style=&quot;background:#FFB;vertical-align:middle;text-align:center;&quot;&gt;Partial
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Sheldon Mills
+&lt;/td&gt;
+&lt;td&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Crimes_and_Misdemeanors&quot; title=&quot;Crimes and Misdemeanors&quot;&gt;Crimes and Misdemeanors&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Cliff Stern
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-18&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1990
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Alice_(1990_film)&quot; title=&quot;Alice (1990 film)&quot;&gt;Alice&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-19&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1991
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Shadows_and_Fog&quot; title=&quot;Shadows and Fog&quot;&gt;Shadows and Fog&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Kleinman
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-20&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1992
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Husbands_and_Wives&quot; title=&quot;Husbands and Wives&quot;&gt;Husbands and Wives&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Gabe Roth
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-21&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1993
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Manhattan_Murder_Mystery&quot; title=&quot;Manhattan Murder Mystery&quot;&gt;Manhattan Murder Mystery&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Larry Lipton
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-22&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1994
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Bullets_Over_Broadway&quot; title=&quot;Bullets Over Broadway&quot;&gt;Bullets Over Broadway&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-23&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1995
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Mighty_Aphrodite&quot; title=&quot;Mighty Aphrodite&quot;&gt;Mighty Aphrodite&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Lenny Weinrib
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-24&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1996
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Everyone_Says_I_Love_You&quot; title=&quot;Everyone Says I Love You&quot;&gt;Everyone Says I Love You&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Joe Berlin
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-25&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Deconstructing_Harry&quot; title=&quot;Deconstructing Harry&quot;&gt;Deconstructing Harry&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Harry Block
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-26&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Celebrity_(1998_film)&quot; title=&quot;Celebrity (1998 film)&quot;&gt;Celebrity&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-27&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1999
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Sweet_and_Lowdown&quot; title=&quot;Sweet and Lowdown&quot;&gt;Sweet and Lowdown&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Himself
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-28&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2000
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Small_Time_Crooks&quot; title=&quot;Small Time Crooks&quot;&gt;Small Time Crooks&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Ray
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-29&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2001
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;span data-sort-value=&quot;curse !&quot;&gt;&lt;a href=&quot;/wiki/The_Curse_of_the_Jade_Scorpion&quot; title=&quot;The Curse of the Jade Scorpion&quot;&gt;The Curse of the Jade Scorpion&lt;/a&gt;&lt;/span&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;C.W. Briggs
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-30&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2002
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Hollywood_Ending&quot; title=&quot;Hollywood Ending&quot;&gt;Hollywood Ending&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Val Waxman
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-31&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2003
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Anything_Else&quot; title=&quot;Anything Else&quot;&gt;Anything Else&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;David Dobel
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-32&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Melinda_and_Melinda&quot; title=&quot;Melinda and Melinda&quot;&gt;Melinda and Melinda&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-33&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2005
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Match_Point&quot; title=&quot;Match Point&quot;&gt;Match Point&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-34&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Scoop_(2006_film)&quot; title=&quot;Scoop (2006 film)&quot;&gt;Scoop&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Sid Waterman
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-35&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2007
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Cassandra%27s_Dream&quot; title=&quot;Cassandra&#39;s Dream&quot;&gt;Cassandra&#39;s Dream&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-36&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2008
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Vicky_Cristina_Barcelona&quot; title=&quot;Vicky Cristina Barcelona&quot;&gt;Vicky Cristina Barcelona&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-37&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2009
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Whatever_Works&quot; title=&quot;Whatever Works&quot;&gt;Whatever Works&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-38&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2010
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/You_Will_Meet_a_Tall_Dark_Stranger&quot; title=&quot;You Will Meet a Tall Dark Stranger&quot;&gt;You Will Meet a Tall Dark Stranger&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-39&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2011
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Midnight_in_Paris&quot; title=&quot;Midnight in Paris&quot;&gt;Midnight in Paris&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-2&quot;&gt;&lt;a href=&quot;#cite_note-2&quot;&gt;[2]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2012
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/To_Rome_with_Love_(film)&quot; title=&quot;To Rome with Love (film)&quot;&gt;To Rome with Love&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Jerry
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-40&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2013
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Blue_Jasmine&quot; title=&quot;Blue Jasmine&quot;&gt;Blue Jasmine&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-3&quot;&gt;&lt;a href=&quot;#cite_note-3&quot;&gt;[3]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2014
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Magic_in_the_Moonlight&quot; title=&quot;Magic in the Moonlight&quot;&gt;Magic in the Moonlight&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-41&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2015
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Irrational_Man_(film)&quot; title=&quot;Irrational Man (film)&quot;&gt;Irrational Man&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-Telegraph_1-42&quot;&gt;&lt;a href=&quot;#cite_note-Telegraph-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Caf%C3%A9_Society_(2016_film)&quot; title=&quot;Café Society (2016 film)&quot;&gt;Café Society&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td&gt;Narrator (voice)
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-4&quot;&gt;&lt;a href=&quot;#cite_note-4&quot;&gt;[4]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2017
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Wonder_Wheel_(film)&quot; title=&quot;Wonder Wheel (film)&quot;&gt;Wonder Wheel&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-5&quot;&gt;&lt;a href=&quot;#cite_note-5&quot;&gt;[5]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/A_Rainy_Day_in_New_York&quot; title=&quot;A Rainy Day in New York&quot;&gt;A Rainy Day in New York&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-6&quot;&gt;&lt;a href=&quot;#cite_note-6&quot;&gt;[6]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2020
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Rifkin%27s_Festival&quot; title=&quot;Rifkin&#39;s Festival&quot;&gt;Rifkin&#39;s Festival&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-7&quot;&gt;&lt;a href=&quot;#cite_note-7&quot;&gt;[7]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TBA
+&lt;/td&gt;
+&lt;td&gt;&lt;i&gt;&lt;a href=&quot;/wiki/Coup_de_Chance&quot; title=&quot;Coup de Chance&quot;&gt;Coup de Chance&lt;/a&gt;&lt;/i&gt;
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-yes&quot; style=&quot;background:#9EFF9E;vertical-align:middle;text-align:center;&quot;&gt;Yes
+&lt;/td&gt;
+&lt;td class=&quot;table-no&quot; style=&quot;background:#FFC7C7;vertical-align:middle;text-align:center;&quot;&gt;No
+&lt;/td&gt;
+&lt;td class=&quot;table-na&quot; data-sort-value=&quot;&quot; style=&quot;background: #ececec; color: #2C2C2C; vertical-align: middle; text-align: center;&quot;&gt;—
+&lt;/td&gt;
+&lt;td&gt;&lt;sup class=&quot;reference&quot; id=&quot;cite_ref-8&quot;&gt;&lt;a href=&quot;#cite_note-8&quot;&gt;[8]&lt;/a&gt;&lt;/sup&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+</pre></div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
