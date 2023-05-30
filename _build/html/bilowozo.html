@@ -861,7 +861,20 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id90">05/30/2023</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimentionality">339. dimentionality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimentionality">339. dimentionality</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take1">339.1 take1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take2">339.2 take2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take3">339.3 take3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take4">339.4 take4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take5">339.5 take5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take6">393.6 take6</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take7">393.7 take7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take8">393.8 take8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take9">393.9 take9</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -9922,6 +9935,464 @@ O still, small voice of calm.</p>
 </ul>
 </li>
 </ul>
+<section id="take1">
+<h4>339.1 take1<a class="headerlink" href="#take1" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of particles and calendar time</span>
+<span class="n">particles</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="mi">400</span><span class="p">]</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1700</span><span class="p">,</span> <span class="mi">1800</span><span class="p">,</span> <span class="mi">1900</span><span class="p">,</span> <span class="mi">1950</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2050</span><span class="p">,</span> <span class="mi">2100</span><span class="p">]</span>
+
+<span class="c1"># Event details</span>
+<span class="n">event_time</span> <span class="o">=</span> <span class="mi">1950</span>
+<span class="n">event_particles</span> <span class="o">=</span> <span class="mi">250</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">particles</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Particles&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Reduction&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow for the event</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Event&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">event_particles</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">event_particles</span><span class="o">+</span><span class="mi">50</span><span class="p">),</span>
+             <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5e9ad9ee2665bd111a76e0c64279841e1a0757771749ea984c487a5a037f154d.png" src="_images/5e9ad9ee2665bd111a76e0c64279841e1a0757771749ea984c487a5a037f154d.png" />
+</div>
+</div>
+</section>
+<section id="take2">
+<h4>339.2 take2<a class="headerlink" href="#take2" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Democritus)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">400</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1803</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>   <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="mi">1869</span><span class="p">:</span> <span class="mi">118</span><span class="p">,</span>  <span class="c1"># Dmitri Mendeleev&#39;s periodic table (118 elements)</span>
+    <span class="mi">1926</span><span class="p">:</span> <span class="mi">3</span>    <span class="c1"># Schrödinger&#39;s wave equation (electron orbitals)</span>
+<span class="p">}</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event_dimensions</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_dimensions</span><span class="p">)</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event_dimensions</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">event_dimensions</span><span class="si">}</span><span class="s1"> particles&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">event_dimensions</span><span class="p">),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">event_dimensions</span><span class="o">+</span><span class="mi">10</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0f4bcc6ffc4f95d948c2d894a8ec9c2b80c2141910b51ec00601f1529a43410c.png" src="_images/0f4bcc6ffc4f95d948c2d894a8ec9c2b80c2141910b51ec00601f1529a43410c.png" />
+</div>
+</div>
+</section>
+<section id="take3">
+<h4>339.3 take3<a class="headerlink" href="#take3" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Democritus)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">400</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">440</span><span class="p">:</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">,</span>   <span class="c1"># Empedocles proposes four elements</span>
+    <span class="mi">400</span><span class="p">:</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">,</span>   <span class="c1"># Democritus proposes atomos</span>
+    <span class="mi">1803</span><span class="p">:</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">,</span>      <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="mi">1821</span><span class="p">:</span> <span class="s2">&quot;Faraday&quot;</span><span class="p">,</span>     <span class="c1"># Michael Faraday&#39;s discovery of electromagnetic induction</span>
+    <span class="mi">1911</span><span class="p">:</span> <span class="s2">&quot;Rutherford&quot;</span><span class="p">,</span>  <span class="c1"># Ernest Rutherford&#39;s model of the atomic nucleus</span>
+    <span class="mi">1926</span><span class="p">:</span> <span class="s2">&quot;Schrödinger&quot;</span>  <span class="c1"># Erwin Schrödinger&#39;s wave equation (electron orbitals)</span>
+<span class="p">}</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment dimensions based on previous value</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3e1b10c61886795bc8fce4409e09b0df3845e0f6075bef8b10127877bfc7250b.png" src="_images/3e1b10c61886795bc8fce4409e09b0df3845e0f6075bef8b10127877bfc7250b.png" />
+</div>
+</div>
+</section>
+<section id="take4">
+<h4>339.4 take4<a class="headerlink" href="#take4" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Democritus)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">400</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events in chronological order</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">440</span><span class="p">,</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">),</span>    <span class="c1"># Empedocles proposes four elements</span>
+    <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">),</span>    <span class="c1"># Democritus proposes atomos</span>
+    <span class="p">(</span><span class="mi">1803</span><span class="p">,</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">),</span>       <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="p">(</span><span class="mi">1821</span><span class="p">,</span> <span class="s2">&quot;Faraday&quot;</span><span class="p">),</span>      <span class="c1"># Michael Faraday&#39;s discovery of electromagnetic induction</span>
+    <span class="p">(</span><span class="mi">1911</span><span class="p">,</span> <span class="s2">&quot;Rutherford&quot;</span><span class="p">),</span>   <span class="c1"># Ernest Rutherford&#39;s model of the atomic nucleus</span>
+    <span class="p">(</span><span class="mi">1926</span><span class="p">,</span> <span class="s2">&quot;Schrödinger&quot;</span><span class="p">)</span>   <span class="c1"># Erwin Schrödinger&#39;s wave equation (electron orbitals)</span>
+<span class="p">]</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment dimensions based on previous value</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3e1b10c61886795bc8fce4409e09b0df3845e0f6075bef8b10127877bfc7250b.png" src="_images/3e1b10c61886795bc8fce4409e09b0df3845e0f6075bef8b10127877bfc7250b.png" />
+</div>
+</div>
+</section>
+<section id="take5">
+<h4>339.5 take5<a class="headerlink" href="#take5" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>thales</p></li>
+<li><p>empedocles</p></li>
+<li><p>democrites</p></li>
+<li><p>lavoisier</p></li>
+<li><p>proust</p></li>
+<li><p>dalton</p></li>
+<li><p>thompson</p></li>
+<li><p>rutherford</p></li>
+<li><p>chadwick</p></li>
+<li><p>bohr</p></li>
+<li><p>higgs</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Thales)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events in chronological order</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="s2">&quot;Thales&quot;</span><span class="p">),</span>              <span class="c1"># Thales proposes fundamental element (water)</span>
+    <span class="p">(</span><span class="mi">440</span><span class="p">,</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">),</span>          <span class="c1"># Empedocles proposes four elements</span>
+    <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">),</span>          <span class="c1"># Democritus proposes atomos</span>
+    <span class="p">(</span><span class="mi">1789</span><span class="p">,</span> <span class="s2">&quot;Lavoisier&quot;</span><span class="p">),</span>           <span class="c1"># Antoine Lavoisier&#39;s law of conservation of mass</span>
+    <span class="p">(</span><span class="mi">1794</span><span class="p">,</span> <span class="s2">&quot;Proust&quot;</span><span class="p">),</span>              <span class="c1"># Joseph Proust&#39;s law of definite proportions</span>
+    <span class="p">(</span><span class="mi">1803</span><span class="p">,</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">),</span>             <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="p">(</span><span class="mi">1897</span><span class="p">,</span> <span class="s2">&quot;Thomson&quot;</span><span class="p">),</span>            <span class="c1"># J.J. Thomson discovers the electron</span>
+    <span class="p">(</span><span class="mi">1911</span><span class="p">,</span> <span class="s2">&quot;Rutherford&quot;</span><span class="p">),</span>         <span class="c1"># Ernest Rutherford&#39;s model of the atomic nucleus</span>
+    <span class="p">(</span><span class="mi">1932</span><span class="p">,</span> <span class="s2">&quot;Chadwick&quot;</span><span class="p">),</span>           <span class="c1"># James Chadwick discovers the neutron</span>
+    <span class="p">(</span><span class="mi">1913</span><span class="p">,</span> <span class="s2">&quot;Bohr&quot;</span><span class="p">),</span>               <span class="c1"># Niels Bohr&#39;s model of the atom</span>
+    <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;Higgs&quot;</span><span class="p">)</span>               <span class="c1"># Discovery of the Higgs boson</span>
+<span class="p">]</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment dimensions based on previous value</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d7104b093ac3009087254029cdf3ebd498da903520435054c5e423f1e7a3ed85.png" src="_images/d7104b093ac3009087254029cdf3ebd498da903520435054c5e423f1e7a3ed85.png" />
+</div>
+</div>
+</section>
+<section id="take6">
+<h4>393.6 take6<a class="headerlink" href="#take6" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Thales)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mi">600</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events in chronological order</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="s2">&quot;Thales&quot;</span><span class="p">),</span>              <span class="c1"># Thales proposes fundamental element (water)</span>
+    <span class="p">(</span><span class="mi">440</span><span class="p">,</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">),</span>          <span class="c1"># Empedocles proposes four elements</span>
+    <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">),</span>          <span class="c1"># Democritus proposes atomos</span>
+    <span class="p">(</span><span class="mi">1789</span><span class="p">,</span> <span class="s2">&quot;Lavoisier&quot;</span><span class="p">),</span>           <span class="c1"># Antoine Lavoisier&#39;s law of conservation of mass</span>
+    <span class="p">(</span><span class="mi">1794</span><span class="p">,</span> <span class="s2">&quot;Proust&quot;</span><span class="p">),</span>              <span class="c1"># Joseph Proust&#39;s law of definite proportions</span>
+    <span class="p">(</span><span class="mi">1803</span><span class="p">,</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">),</span>             <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="p">(</span><span class="mi">1897</span><span class="p">,</span> <span class="s2">&quot;Thomson&quot;</span><span class="p">),</span>            <span class="c1"># J.J. Thomson discovers the electron</span>
+    <span class="p">(</span><span class="mi">1911</span><span class="p">,</span> <span class="s2">&quot;Rutherford&quot;</span><span class="p">),</span>         <span class="c1"># Ernest Rutherford&#39;s model of the atomic nucleus</span>
+    <span class="p">(</span><span class="mi">1932</span><span class="p">,</span> <span class="s2">&quot;Chadwick&quot;</span><span class="p">),</span>           <span class="c1"># James Chadwick discovers the neutron</span>
+    <span class="p">(</span><span class="mi">1913</span><span class="p">,</span> <span class="s2">&quot;Bohr&quot;</span><span class="p">),</span>               <span class="c1"># Niels Bohr&#39;s model of the atom</span>
+    <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;Higgs&quot;</span><span class="p">)</span>               <span class="c1"># Discovery of the Higgs boson</span>
+<span class="p">]</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Empedocles has four elements</span>
+    <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Democritus proposes atomos (one dimension)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment dimensions based on previous value</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/88e8e65e692be46a096bdd0254979c7f12d27deac5bc1516991b4cf14e66d01a.png" src="_images/88e8e65e692be46a096bdd0254979c7f12d27deac5bc1516991b4cf14e66d01a.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="take7">
+<h3>393.7 take7<a class="headerlink" href="#take7" title="Permalink to this heading">#</a></h3>
+<p>I think I’ve figured out the problem. could you place all calendar times before CHRIST as negative? And all those after the common time as positive? this will fix the issue</p>
+<p>Certainly! I apologize for any confusion caused. To represent calendar times before the Common Era (B.C.) as negative and those after as positive, we can modify the code as follows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Thales)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">600</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events in chronological order</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">600</span><span class="p">,</span> <span class="s2">&quot;Thales&quot;</span><span class="p">),</span>             <span class="c1"># Thales proposes fundamental element (water)</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">440</span><span class="p">,</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">),</span>         <span class="c1"># Empedocles proposes four elements</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">),</span>         <span class="c1"># Democritus proposes atomos</span>
+    <span class="p">(</span><span class="mi">1789</span><span class="p">,</span> <span class="s2">&quot;Lavoisier&quot;</span><span class="p">),</span>           <span class="c1"># Antoine Lavoisier&#39;s law of conservation of mass</span>
+    <span class="p">(</span><span class="mi">1794</span><span class="p">,</span> <span class="s2">&quot;Proust&quot;</span><span class="p">),</span>              <span class="c1"># Joseph Proust&#39;s law of definite proportions</span>
+    <span class="p">(</span><span class="mi">1803</span><span class="p">,</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">),</span>             <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="p">(</span><span class="mi">1897</span><span class="p">,</span> <span class="s2">&quot;Thomson&quot;</span><span class="p">),</span>            <span class="c1"># J.J. Thomson discovers the electron</span>
+    <span class="p">(</span><span class="mi">1911</span><span class="p">,</span> <span class="s2">&quot;Rutherford&quot;</span><span class="p">),</span>         <span class="c1"># Ernest Rutherford&#39;s model of the atomic nucleus</span>
+    <span class="p">(</span><span class="mi">1932</span><span class="p">,</span> <span class="s2">&quot;Chadwick&quot;</span><span class="p">),</span>           <span class="c1"># James Chadwick discovers the neutron</span>
+    <span class="p">(</span><span class="mi">1913</span><span class="p">,</span> <span class="s2">&quot;Bohr&quot;</span><span class="p">),</span>               <span class="c1"># Niels Bohr&#39;s model of the atom</span>
+    <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;Higgs&quot;</span><span class="p">)</span>               <span class="c1"># Discovery of the Higgs boson</span>
+<span class="p">]</span>
+
+<span class="c1"># Sort events based on chronological order</span>
+<span class="n">events</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Empedocles has four elements</span>
+    <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Democritus proposes atomos (one dimension)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment dimensions based on previous value</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">),</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/04f176d7404477c6e851ac7b1988aa2cb1bfeb4a4c4526cedc59acc4da24a062.png" src="_images/04f176d7404477c6e851ac7b1988aa2cb1bfeb4a4c4526cedc59acc4da24a062.png" />
+</div>
+</div>
+<section id="take8">
+<h4>393.8 take8<a class="headerlink" href="#take8" title="Permalink to this heading">#</a></h4>
+<p>great! but this figure suggests a monotonic increase in number of particles. didn’t the number ever drop to, say, three at some point? protons, neutrons, electrons?</p>
+<p>Apologies for the oversight. You’re correct that the number of particles can decrease at certain stages, such as in the case of protons, neutrons, and electrons. To accurately represent such cases, we can modify the code to reflect the fluctuations in the number of particles. Here’s the updated code:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data points for number of dimensions (particles) and calendar time</span>
+<span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Starting with one dimension (Thales)</span>
+<span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">600</span><span class="p">]</span>      <span class="c1"># Corresponding time period</span>
+
+<span class="c1"># Add more data points for significant events in chronological order</span>
+<span class="n">events</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">600</span><span class="p">,</span> <span class="s2">&quot;Thales&quot;</span><span class="p">),</span>             <span class="c1"># Thales proposes fundamental element (water)</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">440</span><span class="p">,</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">),</span>         <span class="c1"># Empedocles proposes four elements</span>
+    <span class="p">(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">),</span>         <span class="c1"># Democritus proposes atomos</span>
+    <span class="p">(</span><span class="mi">1789</span><span class="p">,</span> <span class="s2">&quot;Lavoisier&quot;</span><span class="p">),</span>           <span class="c1"># Antoine Lavoisier&#39;s law of conservation of mass</span>
+    <span class="p">(</span><span class="mi">1794</span><span class="p">,</span> <span class="s2">&quot;Proust&quot;</span><span class="p">),</span>              <span class="c1"># Joseph Proust&#39;s law of definite proportions</span>
+    <span class="p">(</span><span class="mi">1803</span><span class="p">,</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">),</span>             <span class="c1"># John Dalton&#39;s atomic theory (nucleus, protons, electrons)</span>
+    <span class="p">(</span><span class="mi">1897</span><span class="p">,</span> <span class="s2">&quot;Thomson&quot;</span><span class="p">),</span>            <span class="c1"># J.J. Thomson discovers the electron</span>
+    <span class="p">(</span><span class="mi">1911</span><span class="p">,</span> <span class="s2">&quot;Rutherford&quot;</span><span class="p">),</span>         <span class="c1"># Ernest Rutherford&#39;s model of the atomic nucleus</span>
+    <span class="p">(</span><span class="mi">1932</span><span class="p">,</span> <span class="s2">&quot;Chadwick&quot;</span><span class="p">),</span>           <span class="c1"># James Chadwick discovers the neutron</span>
+    <span class="p">(</span><span class="mi">1913</span><span class="p">,</span> <span class="s2">&quot;Bohr&quot;</span><span class="p">),</span>               <span class="c1"># Niels Bohr&#39;s model of the atom</span>
+    <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;Higgs&quot;</span><span class="p">)</span>               <span class="c1"># Discovery of the Higgs boson</span>
+<span class="p">]</span>
+
+<span class="c1"># Sort events based on chronological order</span>
+<span class="n">events</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1"># Extend the data points with events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Empedocles&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Empedocles has four elements</span>
+    <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Democritus&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Democritus proposes atomos (one dimension)</span>
+    <span class="k">elif</span> <span class="n">event</span> <span class="o">==</span> <span class="s2">&quot;Dalton&quot;</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Dalton&#39;s atomic theory: nucleus, protons, electrons (three dimensions)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dimensions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dimensions</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Increment dimensions based on previous value</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Dimensions (Particles)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adding arrow annotations for events</span>
+<span class="k">for</span> <span class="n">event_time</span><span class="p">,</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]),</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span> <span class="n">dimensions</span><span class="p">[</span><span class="n">time</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">event_time</span><span class="p">)]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">),</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/05208f705da80a3f09661a51bee98f6058f0c3e8b88d89d5799e569d251d05b6.png" src="_images/05208f705da80a3f09661a51bee98f6058f0c3e8b88d89d5799e569d251d05b6.png" />
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(\vdots\)</span></p>
+<p>good. now incorporate that data creation step into one script that also produces the graph. then I’ll update the code as I find the actual data MYSELF, given your failure to find it in your archives..</p>
+<p>Certainly! Here’s a script that incorporates the data creation step and produces the graph using the generated dataset:</p>
+</section>
+<section id="take9">
+<h4>393.9 take9<a class="headerlink" href="#take9" title="Permalink to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Generate the dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Calendar Year&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">600</span><span class="p">,</span> <span class="o">-</span><span class="mi">440</span><span class="p">,</span> <span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1789</span><span class="p">,</span> <span class="mi">1794</span><span class="p">,</span> <span class="mi">1803</span><span class="p">,</span> <span class="mi">1897</span><span class="p">,</span> <span class="mi">1911</span><span class="p">,</span> <span class="mi">1932</span><span class="p">,</span> <span class="mi">1913</span><span class="p">,</span> <span class="mi">2012</span><span class="p">],</span>
+    <span class="s1">&#39;Number of Particles&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Save the dataset to a CSV file</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;particle_dimensions.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Plotting the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Calendar Year&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Number of Particles&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calendar Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Particles (Dimensions)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Dimensionality Evolution&#39;</span><span class="p">)</span>
+
+<span class="c1"># Display the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1cc11803d8888cfd805ad3c71b59d5a2a6c20643fc88070b50f158267a38f06f.png" src="_images/1cc11803d8888cfd805ad3c71b59d5a2a6c20643fc88070b50f158267a38f06f.png" />
+</div>
+</div>
+<p>In this script, the dataset is generated using a dictionary data that contains the values for “Calendar Year” and “Number of Particles”. The dataset is then saved to a CSV file named “particle_dimensions.csv”.</p>
+<p>You can run this script to create the dataset file and visualize the graph. Once you obtain the actual data you want to use, you can replace the generated dataset with your own data by modifying the data dictionary accordingly.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id91" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -9935,6 +10406,7 @@ O still, small voice of calm.</p>
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id84">3</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://www.gutenberg.org/files/52263/52263-h/52263-h.htm">egyptianism</a></p>
 </aside>
+</section>
 </section>
 </section>
 </section>
@@ -10496,7 +10968,20 @@ O still, small voice of calm.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id90">05/30/2023</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimentionality">339. dimentionality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dimentionality">339. dimentionality</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take1">339.1 take1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take2">339.2 take2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take3">339.3 take3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take4">339.4 take4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take5">339.5 take5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take6">393.6 take6</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#take7">393.7 take7</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take8">393.8 take8</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#take9">393.9 take9</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
