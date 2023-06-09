@@ -996,13 +996,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychology">443. psychology</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program">444. program</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata-i-basic-stata-340-600">444.1 stata i (basic stata 340.600)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#foreach-v-of-varlist-intermediate-stata-340-700">444.2 foreach v of varlist (intermediate stata 340.700)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#do-url-ado-advanced-stata-340-800">444.3 do url.ado (advanced stata 340.800)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata-ii-intermediate-stata-340-700">444.2 stata ii (intermediate stata 340.700)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata-iii-advanced-stata-340-800">444.3 stata iii (advanced stata 340.800)</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-person">445. in-person</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#will-to-power">446. will-to-power</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-other-words">447. in-other-words</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoencode-cipher">448. autoencode-cipher</a></li>
 </ul>
 </li>
 </ul>
@@ -12404,8 +12405,8 @@ my first<span class="k"> program</span>
 </pre></div>
 </div>
 </section>
-<section id="foreach-v-of-varlist-intermediate-stata-340-700">
-<h4>444.2 foreach v of varlist (intermediate stata 340.700)<a class="headerlink" href="#foreach-v-of-varlist-intermediate-stata-340-700" title="Permalink to this heading">#</a></h4>
+<section id="stata-ii-intermediate-stata-340-700">
+<h4>444.2 stata ii (intermediate stata 340.700)<a class="headerlink" href="#stata-ii-intermediate-stata-340-700" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">program</span> define mysecond
 <span class="k">    foreach</span> v of<span class="k"> varlist</span> init_age peak_pra prev female receiv {
 <span class="k">		qui sum</span> <span class="nv">`v&#39;</span>,<span class="k"> d</span> 
@@ -12444,8 +12445,8 @@ my first<span class="k"> program</span>
 </pre></div>
 </div>
 </section>
-<section id="do-url-ado-advanced-stata-340-800">
-<h4>444.3 do url.ado (advanced stata 340.800)<a class="headerlink" href="#do-url-ado-advanced-stata-340-800" title="Permalink to this heading">#</a></h4>
+<section id="stata-iii-advanced-stata-340-800">
+<h4>444.3 stata iii (advanced stata 340.800)<a class="headerlink" href="#stata-iii-advanced-stata-340-800" title="Permalink to this heading">#</a></h4>
 <p>qui do <a class="reference external" href="https://raw.githubusercontent.com/jhustata/book/main/mysecond.ado">https://raw.githubusercontent.com/jhustata/book/main/mysecond.ado</a></p>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> clear</span> 
 
@@ -12471,25 +12472,41 @@ my first<span class="k"> program</span>
 <section id="in-person">
 <h3>445. in-person<a class="headerlink" href="#in-person" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>selective feedback from the in-person students</p></li>
-<li><p>most complaints from the students who relied on recorded lectures</p></li>
-<li><p>but at the end of the day there are three-types of students &amp; i must recognize that</p></li>
+<li><p>selective feedback from the in-person students (offered me realtime, but biased feedback)</p></li>
+<li><p>most complaints from the students who relied on recorded lectures (offered feedback that was too little, too late)</p></li>
+<li><p>but at the end of the day there are three-types of students &amp; i must recognize that (maybe go beyond .01 and consider…)</p></li>
 </ul>
 </section>
 <section id="will-to-power">
 <h3>446. will-to-power<a class="headerlink" href="#will-to-power" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>the code of life &amp; everything else is a decoded “consequence” of this facat</p></li>
-<li><p>some are worthy adversaries (type-i), others whine about unfairness of competition (type-ii), and others are indifferent (type-iii)</p></li>
+<li><p>is the code of life; everything else represents decoded “consequences” of this fact</p></li>
+<li><p>there are:</p>
+<ol class="arabic simple">
+<li><p>worthy adversaries (type-i)</p></li>
+<li><p>others that whine about unfairness of competition (type-ii), and</p></li>
+<li><p>many who are indifferent (type-iii)</p></li>
+</ol>
+</li>
 <li><p>adults will have to choose their lot at some point</p></li>
 </ul>
 </section>
 <section id="in-other-words">
 <h3>447. in-other-words<a class="headerlink" href="#in-other-words" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>unworthy adversaries are the lot of many modern types who consider worthy types as evil incaratus est (type-i)</p></li>
+<li><p>unworthy adversaries are the lot of many modern types who consider worthy types as evil incarnate (type-i)</p></li>
 <li><p>they’re passionate about some cause &amp; have the <code class="docutils literal notranslate"><span class="pre">will-to-whine</span></code> on behalf of the school of resentment (type-ii)</p></li>
 <li><p>make no mistake: they consider indifferent types as a subtle but perhaps more problematic enemy of the two (type-iii)</p></li>
+</ul>
+</section>
+<section id="autoencode-cipher">
+<h3>448. autoencode-cipher<a class="headerlink" href="#autoencode-cipher" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>human condition</p></li>
+<li><p>shakespeare</p></li>
+<li><p>nietzsche</p></li>
+<li><p>philosophy</p></li>
+<li><p>why so hard<a class="reference external" href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm">!</a></p></li>
 </ul>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
@@ -13199,13 +13216,14 @@ my first<span class="k"> program</span>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#psychology">443. psychology</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program">444. program</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata-i-basic-stata-340-600">444.1 stata i (basic stata 340.600)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#foreach-v-of-varlist-intermediate-stata-340-700">444.2 foreach v of varlist (intermediate stata 340.700)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#do-url-ado-advanced-stata-340-800">444.3 do url.ado (advanced stata 340.800)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata-ii-intermediate-stata-340-700">444.2 stata ii (intermediate stata 340.700)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata-iii-advanced-stata-340-800">444.3 stata iii (advanced stata 340.800)</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-person">445. in-person</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#will-to-power">446. will-to-power</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-other-words">447. in-other-words</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoencode-cipher">448. autoencode-cipher</a></li>
 </ul>
 </li>
 </ul>
