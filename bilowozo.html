@@ -1056,7 +1056,16 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id123">06/13/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusitis">482. sinusitis</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id124">483. stata</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lingo">484. lingo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#strike-baltimore-crab-strike"><strike>Baltimore Crab</strike> 🦀</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lingo">484. lingo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id125">485. chatGPT</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic">485.1 basic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improve">485.2 improve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order">485.3 order</a></li>
 </ul>
 </li>
 </ul>
@@ -1121,7 +1130,7 @@ document.write(`
 <li><p>Daytona (Lifeguard)</p></li>
 <li><p>Nina (Lifeguard, Tips for Dolphin 🐬)</p></li>
 <li><p>Daytona (Swimmer, Black weights) ** Mixup with a one Nina?</p></li>
-<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id125" id="id2">1</a></p></li>
+<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id126" id="id2">1</a></p></li>
 <li><p>Aiko (ie Geiko, Japanese-American at SICU, dob 04/24***)</p></li>
 <li><p>Buddy (Jeffs Buddy)</p></li>
 <li><p>Jeff (Red head swims with Buddy)</p></li>
@@ -1504,7 +1513,7 @@ XXX XXX University School of Medicine\</p>
 </ol>
 </section>
 <section id="gitcodehub-2">
-<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id126" id="id7">2</a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
+<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id127" id="id7">2</a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span>
 <span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">unrelated</span><span class="o">-</span><span class="n">histories</span>
@@ -8979,7 +8988,7 @@ Join us today at 3:30pm for our Center on Aging &amp; Health Scientific Seminar 
 <h3>320. world<a class="headerlink" href="#world" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>visible</p></li>
-<li><p><a class="reference external" href="https://www.researchgate.net/publication/320440026_Asceticism_A_Match_Towards_the_Absolute">bridge</a><a class="footnote-reference brackets" href="#id127" id="id84">3</a></p></li>
+<li><p><a class="reference external" href="https://www.researchgate.net/publication/320440026_Asceticism_A_Match_Towards_the_Absolute">bridge</a><a class="footnote-reference brackets" href="#id128" id="id84">3</a></p></li>
 <li><p>eternal</p></li>
 </ul>
 </section>
@@ -13610,7 +13619,7 @@ we are all actors:</p>
 
 Contains data from https:<span class="o">//</span>www<span class="m">.</span>stata<span class="o">-</span>press<span class="m">.</span>com<span class="o">/</span>data<span class="o">/</span>r18<span class="o">/</span>lifeexp<span class="m">.</span>dta
 Observations:            <span class="m">68</span>                  Life expectancy, <span class="m">1998</span>
-Variables:             <span class="m">6</span>                  <span class="m">26</span> Mar <span class="m">2022</span> <span class="m">09</span>:<span class="m">40</span>
+Variables:                <span class="m">6</span>                  <span class="m">26</span> Mar <span class="m">2022</span> <span class="m">09</span>:<span class="m">40</span>
 (_dta has<span class="k"> notes</span>)
 		
 Variable      Storage   Display    Value
@@ -13632,20 +13641,45 @@ Sorted<span class="k"> by</span>:
 <ul class="simple">
 <li><p>perform basic analysis</p></li>
 </ul>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">sort</span> lexp
-<span class="k">gen</span> Country=_n
-<span class="k">twoway scatter</span> lexp Country
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span> 
+<span class="k">describe</span>
+<span class="k">encode</span> country,<span class="k"> gen</span>(Country)
+<span class="k">twoway scatter</span> lexp Country, xscale(off)
 <span class="k">graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
 </pre></div>
 </div>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> sort</span> lexp
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> webuse</span> lifeexp,<span class="k"> clear</span> 
+(Life expectancy, <span class="m">1998</span>)
 
-.<span class="k"> gen</span> Country=_n
+.<span class="k"> describe</span>
 
-.<span class="k"> twoway scatter</span> lexp Country
+Contains data from https:<span class="o">//</span>www<span class="m">.</span>stata<span class="o">-</span>press<span class="m">.</span>com<span class="o">/</span>data<span class="o">/</span>r18<span class="o">/</span>lifeexp<span class="m">.</span>dta
+Observations:            <span class="m">68</span>                  Life expectancy, <span class="m">1998</span>
+Variables:                <span class="m">6</span>                  <span class="m">26</span> Mar <span class="m">2022</span> <span class="m">09</span>:<span class="m">40</span>
+(_dta has<span class="k"> notes</span>)
+		
+Variable      Storage   Display    Value
+name        <span class="k"> type</span>   <span class="k"> format</span>   <span class="k"> label</span>      Variable<span class="k"> label</span>
+		
+region          byte    <span class="nx">%16.0g</span>     region     Region
+country         str28   <span class="nx">%28s</span>                  Country
+popgrowth       float   <span class="nx">%9.0g</span>               <span class="o">*</span> Avg. annual % growth
+lexp            byte    <span class="nx">%9.0g</span>               <span class="o">*</span> Life expectancy at birth
+gnppc           float   <span class="nx">%9.0g</span>               <span class="o">*</span> GNP per capita
+safewater       byte    <span class="nx">%9.0g</span>               <span class="o">*</span> Safe water
+<span class="c1">* indicated variables have	notes</span>
+		
+Sorted<span class="k"> by</span>: 
+
+.<span class="k"> encode</span> country,<span class="k"> gen</span>(Country)
+
+.<span class="k"> twoway scatter</span> lexp Country, xscale(off)
 
 .<span class="k"> graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
 <span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+. 
+<span class="k">end</span> of<span class="k"> do</span><span class="o">-</span>file
 
 . 
 </pre></div>
@@ -14092,6 +14126,11 @@ functions:
 . 
 </pre></div>
 </div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="strike-baltimore-crab-strike">
+<h1><strike>Baltimore Crab</strike> 🦀<a class="headerlink" href="#strike-baltimore-crab-strike" title="Permalink to this heading">#</a></h1>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -14146,9 +14185,8 @@ functions:
 <img alt="_images/76882687b661b69a4d5546a2dc222cfb6a945d370403b89d832c2b9543f01499.png" src="_images/76882687b661b69a4d5546a2dc222cfb6a945d370403b89d832c2b9543f01499.png" />
 </div>
 </div>
-</section>
 <section id="lingo">
-<h3>484. lingo<a class="headerlink" href="#lingo" title="Permalink to this heading">#</a></h3>
+<h2>484. lingo<a class="headerlink" href="#lingo" title="Permalink to this heading">#</a></h2>
 <p>We are going to distinguish between two fundamental things in this class:</p>
 <ul class="simple">
 <li><p>the system; and,</p></li>
@@ -14156,15 +14194,200 @@ functions:
 </ul>
 <p>The system is the <u>Stata application</u> and its a simple noun. It is <strong>not</strong> <strike>STATA</strike>, which gives the impression of being an acronym. I presume you’ve all installed Stata onto your local machines. If not I presume you’ll be doing so very soon or you will be remotely accessing it. The <code class="docutils literal notranslate"><span class="pre">user</span></code> is you, me, the teaching assistants, any collaborator, or stranger.</p>
 <p>Soon, we will begin to write Stata programs and install them into the system folders. Then, it will be helpful to think of your role at as part of the <code class="docutils literal notranslate"><span class="pre">system</span></code>. In your new role as system, it will be helpful to anticipate the needs of the known and unknown future user of your program. This calls for <strong>empathy</strong> (anticipating user needs), <strong>sharing</strong> (your code with others), and <strong>caring</strong> (that its user-friendly).</p>
+</section>
+<section id="id125">
+<h2>485. chatGPT<a class="headerlink" href="#id125" title="Permalink to this heading">#</a></h2>
+<section id="basic">
+<h3>485.1 basic<a class="headerlink" href="#basic" title="Permalink to this heading">#</a></h3>
+<p>Remember this basic analysis?</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span> 
+<span class="k">describe</span>
+<span class="k">encode</span> country,<span class="k"> gen</span>(Country)
+<span class="k">sort</span> lexp
+<span class="k">twoway scatter</span> lexp Country, xscale(off)
+<span class="k">graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> sort</span> lexp
+
+.<span class="k"> gen</span> Country=_n
+
+.<span class="k"> twoway scatter</span> lexp Country
+
+.<span class="k"> graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+. 
+</pre></div>
+</div>
+<p><img alt="" src="_images/lexp_bycountry.png" /></p>
+</section>
+<section id="improve">
+<h3>485.2 improve<a class="headerlink" href="#improve" title="Permalink to this heading">#</a></h3>
+<p>What if you wish to improve this ouput? How may you make it more informative? Ever considered chatGPT?</p>
+<p><img alt="" src="_images/twoway_lexp_country_chatGPT.png" /></p>
+<p>Let’s implement what chatGPT has suggested.</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span> 
+<span class="k">encode</span> country,<span class="k"> gen</span>(Country)
+<span class="k">twoway</span> (scatter lexp Country, mlabel(Country) xscale(off)) 
+<span class="k">graph</span> export lexp_bycountry_withlabels<span class="m">.</span>png,<span class="k"> replace</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> webuse</span> lifeexp,<span class="k"> clear</span> 
+(Life expectancy, <span class="m">1998</span>)
+
+.<span class="k"> encode</span> country,<span class="k"> gen</span>(Country)
+
+.<span class="k"> twoway</span> (scatter lexp Country, mlabel(Country)) xscale(off)
+
+.<span class="k"> graph</span> export lexp_bycountry_withlabels<span class="m">.</span>png
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry_withlabels<span class="m">.</span>png	saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+. 
+</pre></div>
+</div>
+<p><img alt="" src="_images/lexp_bycountry_withlabels.png" /></p>
+</section>
+<section id="order">
+<h3>485.3 order<a class="headerlink" href="#order" title="Permalink to this heading">#</a></h3>
+<p>Now lets <code class="docutils literal notranslate"><span class="pre">sort</span></code> by life expectancy to create a semblance of order. This cost me the better part of 10 hours. I’ve now incorporated <code class="docutils literal notranslate"><span class="pre">subinstr</span></code> into my arsenal. That was the key issue!</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">//chatGPT+vincent</span>
+cls
+<span class="k">clear</span>
+<span class="k">webuse</span> lifeexp
+<span class="k">sort</span> lexp
+<span class="k">g</span> rank=_n
+<span class="k">tostring</span> rank,<span class="k"> replace</span>
+<span class="k">g</span> dx=rank<span class="o">+</span><span class="s">&quot;=&quot;</span><span class="o">+</span>country
+<span class="k">replace</span> dx=<span class="nf">substr</span>(dx,<span class="m">1</span>,<span class="m">31</span>)
+<span class="k">drop</span> country rank
+<span class="k">replace</span> dx=<span class="nf">subinstr</span>(dx,<span class="s">&quot; &quot;</span>,<span class="s">&quot;&quot;</span>,.)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;&quot;, .)</span>
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;(&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;)&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;,&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;/&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+
+<span class="k">levelsof</span> dx,<span class="k"> local</span>(dx_helper)
+<span class="k">foreach</span> i<span class="k"> in</span> <span class="nv">`dx_helper&#39;</span> {
+<span class="k">    tokenize</span> <span class="s">`&quot;</span><span class="nv">`i&#39;</span><span class="s">&quot;&#39;</span>, p(<span class="s">&quot;=&quot;</span>)
+    <span class="c1">//local label_value: di &quot;`1&#39;&quot;</span>
+    <span class="c1">//local label_text: di &quot;`3&#39;&quot;</span>
+<span class="k">	local</span> label_string:<span class="k"> di</span> <span class="s">`&quot;  </span><span class="nv">`label_string&#39;</span><span class="s"> </span><span class="nv">`1&#39;</span><span class="s"> &quot;</span><span class="nv">`3&#39;</span><span class="s">&quot;    &quot;&#39;</span>
+    <span class="c1">//local label_string: di &quot;   `label_string&#39;&quot; `label_value&#39; `&quot;`label_text&#39;&quot;&#39;  &quot;</span>
+	<span class="c1">//local label_string: di &quot;`label_string&#39; `&quot; `label_value&#39; `&quot;`label_text&#39;&quot;&#39;&quot;</span>
+
+<span class="k">	di</span> <span class="nv">`label_string&#39;</span>
+}
+
+<span class="k">global</span> chatgpt:<span class="k"> di</span> <span class="nv">`label_string&#39;</span>
+<span class="k">di</span> <span class="s">&quot;</span><span class="vg">$chatgpt</span><span class="s">&quot;</span>
+<span class="c1">//macro list  </span>
+<span class="k">capture label drop</span> dx
+<span class="k">label</span> define dx <span class="nv">`label_string&#39;</span>
+<span class="k">split</span> dx, p(<span class="s">&quot;=&quot;</span>)
+<span class="k">destring</span> dx1,<span class="k"> replace</span>
+<span class="k">label</span> values dx1 dx
+<span class="k">noi tab</span> dx1
+
+<span class="k">twoway scatter</span> lexp dx1, mlabel(dx1) xscale(off) 
+<span class="k">graph</span> export lexp_bycountry_withlabels_sort<span class="m">.</span>png,<span class="k"> replace</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> clear</span>
+
+.<span class="k"> webuse</span> lifeexp
+(Life expectancy, <span class="m">1998</span>)
+
+.<span class="k"> sort</span> lexp
+
+.<span class="k"> g</span> rank=_n
+
+.<span class="k"> tostring</span> rank,<span class="k"> replace</span>
+rank was float now str2
+
+.<span class="k"> g</span> dx=rank<span class="o">+</span><span class="s">&quot;=&quot;</span><span class="o">+</span>country
+
+.<span class="k"> replace</span> dx=<span class="nf">substr</span>(dx,<span class="m">1</span>,<span class="m">31</span>)
+(<span class="m">0</span> real changes made)
+
+.<span class="k"> drop</span> country rank
+
+.<span class="k"> replace</span> dx=<span class="nf">subinstr</span>(dx,<span class="s">&quot; &quot;</span>,<span class="s">&quot;&quot;</span>,.)
+(<span class="m">13</span> real changes made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;&quot;, .)</span>
+(<span class="m">0</span> real changes made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;(&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;)&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;,&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;/&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+. 
+.<span class="k"> qui levelsof</span> dx,<span class="k"> local</span>(dx_helper)
+
+.<span class="k"> foreach</span> i<span class="k"> in</span> <span class="nv">`dx_helper&#39;</span> {
+<span class="m">2</span>.    <span class="k"> tokenize</span> <span class="s">`&quot;</span><span class="nv">`i&#39;</span><span class="s">&quot;&#39;</span>, p(<span class="s">&quot;=&quot;</span>)
+<span class="m">3</span>.     <span class="c1">//local label_value: di &quot;`1&#39;&quot;</span>
+.     <span class="c1">//local label_text: di &quot;`3&#39;&quot;</span>
+.        <span class="k"> local</span> label_string:<span class="k"> di</span> <span class="s">`&quot;  </span><span class="nv">`label_string&#39;</span><span class="s"> </span><span class="nv">`1&#39;</span><span class="s"> &quot;</span><span class="nv">`3&#39;</span><span class="s">&quot;    &quot;&#39;</span>
+<span class="m">4</span>.     <span class="c1">//local label_string: di &quot;   `label_string&#39;&quot; `label_value&#39; `&quot;`label_text&#39;&quot;&#39;	&quot;</span>
+.         <span class="c1">//local label_string: di &quot;`label_string&#39; `&quot; `label_value&#39; `&quot;`label_text&#39;&quot;&#39;&quot;</span>
+. 
+.         <span class="c1">//di `label_string&#39;</span>
+. }
+
+. 
+.<span class="k"> global</span> chatgpt:<span class="k"> di</span> <span class="nv">`label_string&#39;</span>
+
+. <span class="c1">//di &quot;$chatgpt&quot;</span>
+. <span class="c1">//macro list  </span>
+.<span class="k"> capture label drop</span> dx
+
+.<span class="k"> label</span> define dx <span class="nv">`label_string&#39;</span>
+
+.<span class="k"> split</span> dx, p(<span class="s">&quot;=&quot;</span>)
+variables created<span class="k"> as</span> string: 
+dx1  dx2
+
+.<span class="k"> destring</span> dx1,<span class="k"> replace</span>
+dx1: all characters numeric; replaced<span class="k"> as</span> byte
+
+.<span class="k"> label</span> values dx1 dx
+
+. <span class="c1">//noi tab dx1</span>
+. 
+.<span class="k"> twoway scatter</span> lexp dx1, mlabel(dx1) xscale(off)  
+
+.<span class="k"> graph</span> export lexp_bycountry_withlabels_sort<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry_withlabels_sort<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+. 
+. 
+. 
+<span class="k">end</span> of<span class="k"> do</span><span class="o">-</span>file
+
+. 
+</pre></div>
+</div>
+<p><img alt="" src="_images/lexp_bycountry_withlabels_sort.png" /></p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id125"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id126"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Her thoughts echo these: The Malcontent. — He is one of the brave old warriors: angry with civilisation because he believes that its object is to make all good things — honour, rewards, and fair women — accessible even to cowards.</p>
 </dd>
-<dt class="label" id="id126"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
+<dt class="label" id="id127"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
 <dd><p>solution to a most vexing problem</p>
 </dd>
-<dt class="label" id="id127"><span class="brackets"><a class="fn-backref" href="#id84">3</a></span></dt>
+<dt class="label" id="id128"><span class="brackets"><a class="fn-backref" href="#id84">3</a></span></dt>
 <dd><p><a class="reference external" href="https://www.gutenberg.org/files/52263/52263-h/52263-h.htm">egyptianism</a></p>
 </dd>
 </dl>
@@ -14924,7 +15147,16 @@ functions:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id123">06/13/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinusitis">482. sinusitis</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id124">483. stata</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lingo">484. lingo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#strike-baltimore-crab-strike"><strike>Baltimore Crab</strike> 🦀</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lingo">484. lingo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id125">485. chatGPT</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic">485.1 basic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#improve">485.2 improve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order">485.3 order</a></li>
 </ul>
 </li>
 </ul>
