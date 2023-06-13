@@ -13619,7 +13619,7 @@ we are all actors:</p>
 
 Contains data from https:<span class="o">//</span>www<span class="m">.</span>stata<span class="o">-</span>press<span class="m">.</span>com<span class="o">/</span>data<span class="o">/</span>r18<span class="o">/</span>lifeexp<span class="m">.</span>dta
 Observations:            <span class="m">68</span>                  Life expectancy, <span class="m">1998</span>
-Variables:             <span class="m">6</span>                  <span class="m">26</span> Mar <span class="m">2022</span> <span class="m">09</span>:<span class="m">40</span>
+Variables:                <span class="m">6</span>                  <span class="m">26</span> Mar <span class="m">2022</span> <span class="m">09</span>:<span class="m">40</span>
 (_dta has<span class="k"> notes</span>)
 		
 Variable      Storage   Display    Value
@@ -13644,7 +13644,6 @@ Sorted<span class="k"> by</span>:
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span> 
 <span class="k">describe</span>
 <span class="k">encode</span> country,<span class="k"> gen</span>(Country)
-<span class="k">sort</span> lexp
 <span class="k">twoway scatter</span> lexp Country, xscale(off)
 <span class="k">graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
 </pre></div>
@@ -13673,8 +13672,6 @@ safewater       byte    <span class="nx">%9.0g</span>               <span class=
 Sorted<span class="k"> by</span>: 
 
 .<span class="k"> encode</span> country,<span class="k"> gen</span>(Country)
-
-.<span class="k"> sort</span> lexp
 
 .<span class="k"> twoway scatter</span> lexp Country, xscale(off)
 
@@ -14228,7 +14225,7 @@ functions:
 <section id="improve">
 <h3>485.2 improve<a class="headerlink" href="#improve" title="Permalink to this heading">#</a></h3>
 <p>What if you wish to improve this ouput? How may you make it more informative? Ever considered chatGPT?</p>
-<p><img alt="" src="twoway_lexp_country_chatGPT.png" /></p>
+<p><img alt="" src="_images/twoway_lexp_country_chatGPT.png" /></p>
 <p>Let’s implement what chatGPT has suggested.</p>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span> 
 <span class="k">encode</span> country,<span class="k"> gen</span>(Country)
