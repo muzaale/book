@@ -13519,7 +13519,81 @@ we are all actors:</p>
 <li><p>use  <a class="reference external" href="https://www.stata-press.com/data/r8/lifeexp.dta">https://www.stata-press.com/data/r8/lifeexp.dta</a></p></li>
 </ul>
 </li>
-<li><p>command</p></li>
+<li><p>command</p>
+<ul>
+<li><p>import data into stata</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span>
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> webuse</span> lifeexp,<span class="k"> clear</span>
+(Life expectancy, <span class="m">1998</span>)
+
+. 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>explore the imported data</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">display</span> <span class="nf">c</span>(N) 
+<span class="k">display</span> <span class="nf">c</span>(k)
+<span class="k">describe</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> display</span> <span class="nf">c</span>(N) 
+<span class="m">68</span>
+
+.<span class="k"> display</span> <span class="nf">c</span>(k)
+<span class="m">6</span>
+
+.<span class="k"> describe</span> 
+
+Contains data from https:<span class="o">//</span>www<span class="m">.</span>stata<span class="o">-</span>press<span class="m">.</span>com<span class="o">/</span>data<span class="o">/</span>r18<span class="o">/</span>lifeexp<span class="m">.</span>dta
+Observations:            <span class="m">68</span>                  Life expectancy, <span class="m">1998</span>
+Variables:             <span class="m">6</span>                  <span class="m">26</span> Mar <span class="m">2022</span> <span class="m">09</span>:<span class="m">40</span>
+(_dta has<span class="k"> notes</span>)
+		
+Variable      Storage   Display    Value
+name        <span class="k"> type</span>   <span class="k"> format</span>   <span class="k"> label</span>      Variable<span class="k"> label</span>
+		
+region          byte    <span class="nx">%16.0g</span>     region     Region
+country         str28   <span class="nx">%28s</span>                  Country
+popgrowth       float   <span class="nx">%9.0g</span>               <span class="o">*</span> Avg. annual % growth
+lexp            byte    <span class="nx">%9.0g</span>               <span class="o">*</span> Life expectancy at birth
+gnppc           float   <span class="nx">%9.0g</span>               <span class="o">*</span> GNP per capita
+safewater       byte    <span class="nx">%9.0g</span>               <span class="o">*</span> Safe water
+<span class="c1">* indicated variables have	notes</span>
+		
+Sorted<span class="k"> by</span>: 
+
+. 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>perform basic analysis</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">sort</span> lexp
+<span class="k">gen</span> Country=_n
+<span class="k">twoway scatter</span> lexp Country
+<span class="k">graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> sort</span> lexp
+
+.<span class="k"> gen</span> Country=_n
+
+.<span class="k"> twoway scatter</span> lexp Country
+
+.<span class="k"> graph</span> export lexp_bycountry<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+. 
+</pre></div>
+</div>
+<p><img alt="" src="_images/lexp_bycountry.png" /></p>
+<ul class="simple">
 <li><p>do file</p>
 <ul>
 <li><p>importing data</p></li>
