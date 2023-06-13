@@ -13637,7 +13637,429 @@ Sorted<span class="k"> by</span>:
 </li>
 <li><p>etc</p></li>
 </ul>
-<p>gradually build these concepts beginning with <code class="docutils literal notranslate"><span class="pre">stata</span></code></p>
+<p>gradually build these concepts beginning with <code class="docutils literal notranslate"><span class="pre">sys/user</span></code>:</p>
+<ul class="simple">
+<li><p>system-defined <code class="docutils literal notranslate"><span class="pre">constants</span></code> or c-class commands</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">creturn list</span>
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> creturn list</span>
+
+System values
+
+		
+<span class="nf">c</span>(current_date) = <span class="s">&quot;13 Jun 2023&quot;</span>
+<span class="nf">c</span>(current_time) = <span class="s">&quot;10:43:51&quot;</span>
+<span class="nf">c</span>(rmsg_time) = <span class="m">0</span>	(seconds, from<span class="k"> set</span> rmsg)
+		
+<span class="nf">c</span>(stata_version) = <span class="m">18</span>
+<span class="nf">c</span>(version) = <span class="m">18</span>	(version)
+<span class="nf">c</span>(userversion) = <span class="m">18</span>	(version)
+<span class="nf">c</span>(dyndoc_version) = <span class="m">2</span>	(dyndoc)
+		
+<span class="nf">c</span>(born_date) = <span class="s">&quot;15 May 2023&quot;</span>
+<span class="nf">c</span>(edition) = <span class="s">&quot;BE&quot;</span>
+<span class="nf">c</span>(edition_real) = <span class="s">&quot;SE&quot;</span>
+<span class="nf">c</span>(bit) = <span class="m">64</span>
+<span class="nf">c</span>(SE) = <span class="m">1</span>
+<span class="nf">c</span>(MP) = <span class="m">0</span>
+<span class="nf">c</span>(processors) = <span class="m">1</span>	(Stata<span class="o">/</span>MP,<span class="k"> set</span> processors)
+<span class="nf">c</span>(processors_lic) = <span class="m">1</span>
+<span class="nf">c</span>(processors_mach) = .
+<span class="nf">c</span>(processors_max) = <span class="m">1</span>
+<span class="nf">c</span>(mode) = <span class="s">&quot;&quot;</span>
+<span class="nf">c</span>(console) = <span class="s">&quot;&quot;</span>
+		
+<span class="nf">c</span>(os) = <span class="s">&quot;MacOSX&quot;</span>
+<span class="nf">c</span>(osdtl) = <span class="s">&quot;13.4.0&quot;</span>
+<span class="nf">c</span>(hostname) = <span class="s">&quot;Poseidon.local&quot;</span>
+<span class="nf">c</span>(machine_type) = <span class="s">&quot;Macintosh (Intel ..&quot;</span>
+<span class="nf">c</span>(byteorder) = <span class="s">&quot;lohi&quot;</span>
+<span class="nf">c</span>(username) = <span class="s">&quot;d&quot;</span>
+		
+
+Directories and paths
+
+		
+<span class="nf">c</span>(sysdir_stata) = <span class="s">&quot;/Applications/Sta..&quot;</span>	(sysdir)
+<span class="nf">c</span>(sysdir_base) = <span class="s">&quot;/Applications/Sta..&quot;</span>	(sysdir)
+<span class="nf">c</span>(sysdir_site) = <span class="s">&quot;/Applications/Sta..&quot;</span>	(sysdir)
+<span class="nf">c</span>(sysdir_plus) = <span class="s">&quot;/Users/d/Library/..&quot;</span>	(sysdir)
+<span class="nf">c</span>(sysdir_personal) = <span class="s">&quot;/Users/d/Document..&quot;</span>	(sysdir)
+<span class="nf">c</span>(sysdir_oldplace) = <span class="s">&quot;~/ado/&quot;</span>	(sysdir)
+<span class="nf">c</span>(tmpdir) = <span class="s">&quot;/var/folders/sx/f..&quot;</span>
+		
+<span class="nf">c</span>(adopath) = <span class="s">&quot;BASE;SITE;.;PERSO..&quot;</span>	(adopath)
+<span class="nf">c</span>(pwd) = <span class="s">&quot;/Users/d/Desktop&quot;</span>	(cd)
+<span class="nf">c</span>(dirsep) = <span class="s">&quot;/&quot;</span>
+		
+
+System limits
+
+		
+<span class="nf">c</span>(max_N_theory) = <span class="m">2147483620</span>
+<span class="nf">c</span>(max_k_theory) = <span class="m">5000</span>	(set maxvar)
+<span class="nf">c</span>(max_width_theory) = <span class="m">1048576</span>	(set maxvar)
+		
+<span class="nf">c</span>(max_matdim) = <span class="m">11000</span>
+		
+<span class="nf">c</span>(max_it_cvars) = <span class="m">64</span>
+<span class="nf">c</span>(max_it_fvars) = <span class="m">8</span>
+		
+<span class="nf">c</span>(max_macrolen) = <span class="m">4227143</span>
+<span class="nf">c</span>(macrolen) = <span class="m">645200</span>	(set maxvar)
+<span class="nf">c</span>(charlen) = <span class="m">67783</span>
+<span class="nf">c</span>(max_cmdlen) = <span class="m">4227159</span>
+<span class="nf">c</span>(cmdlen) = <span class="m">645216</span>	(set maxvar)
+<span class="nf">c</span>(namelenbyte) = <span class="m">128</span>
+<span class="nf">c</span>(namelenchar) = <span class="m">32</span>
+<span class="nf">c</span>(eqlen) = <span class="m">1337</span>
+		
+
+Numerical and string limits
+
+		
+<span class="nf">c</span>(mindouble) = <span class="o">-</span><span class="m">8.9884656743e+307</span>
+<span class="nf">c</span>(maxdouble) = <span class="m">8.9884656743e+307</span>
+<span class="nf">c</span>(epsdouble) = <span class="m">2.22044604925e-16</span>
+<span class="nf">c</span>(smallestdouble) = <span class="m">2.2250738585e-308</span>
+		
+<span class="nf">c</span>(minfloat) = <span class="o">-</span><span class="m">1.70141173319e+38</span>
+<span class="nf">c</span>(maxfloat) = <span class="m">1.70141173319e+38</span>
+<span class="nf">c</span>(epsfloat) = <span class="m">1.19209289551e-07</span>
+		
+<span class="nf">c</span>(minlong) = <span class="o">-</span><span class="m">2147483647</span>
+<span class="nf">c</span>(maxlong) = <span class="m">2147483620</span>
+		
+<span class="nf">c</span>(minint) = <span class="o">-</span><span class="m">32767</span>
+<span class="nf">c</span>(maxint) = <span class="m">32740</span>
+		
+<span class="nf">c</span>(minbyte) = <span class="o">-</span><span class="m">127</span>
+<span class="nf">c</span>(maxbyte) = <span class="m">100</span>
+		
+<span class="nf">c</span>(maxstrvarlen) = <span class="m">2045</span>
+<span class="nf">c</span>(maxstrlvarlen) = <span class="m">2000000000</span>
+<span class="nf">c</span>(maxvlabellen) = <span class="m">32000</span>
+		
+
+Current dataset
+
+		
+<span class="nf">c</span>(frame) = <span class="s">&quot;default&quot;</span>
+<span class="nf">c</span>(N) = <span class="m">68</span>
+<span class="nf">c</span>(k) = <span class="m">6</span>
+<span class="nf">c</span>(width) = <span class="m">39</span>
+<span class="nf">c</span>(changed) = <span class="m">0</span>
+<span class="nf">c</span>(filename) = <span class="s">&quot;https://www.stata..&quot;</span>
+<span class="nf">c</span>(filedate) = <span class="s">&quot;26 Mar 2022 09:40&quot;</span>
+		
+
+Memory settings
+
+		
+<span class="nf">c</span>(memory) = <span class="m">33554432</span>
+<span class="nf">c</span>(maxvar) = <span class="m">5000</span>	(set maxvar)
+<span class="nf">c</span>(niceness) = <span class="m">5</span>	(set niceness)
+<span class="nf">c</span>(min_memory) = <span class="m">0</span>	(set min_memory)
+<span class="nf">c</span>(max_memory) = .	(set max_memory)
+<span class="nf">c</span>(segmentsize) = <span class="m">33554432</span>	(set segmentsize)
+<span class="nf">c</span>(adosize) = <span class="m">1000</span>	(set adosize)
+		
+
+Output settings
+
+		
+<span class="nf">c</span>(more) = <span class="s">&quot;off&quot;</span>	(set<span class="k"> more</span>)
+<span class="nf">c</span>(rmsg) = <span class="s">&quot;off&quot;</span>	(set rmsg)
+<span class="nf">c</span>(dp) = <span class="s">&quot;period&quot;</span>	(set dp)
+<span class="nf">c</span>(linesize) = <span class="m">196</span>	(set linesize)
+<span class="nf">c</span>(pagesize) = <span class="m">61</span>	(set pagesize)
+<span class="nf">c</span>(logtype) = <span class="s">&quot;smcl&quot;</span>	(set logtype)
+<span class="nf">c</span>(logmsg) = <span class="s">&quot;on&quot;</span>	(set logmsg)
+<span class="nf">c</span>(noisily) = <span class="m">1</span>
+<span class="nf">c</span>(notifyuser) = <span class="s">&quot;on&quot;</span>	(set notifyuser)
+<span class="nf">c</span>(playsnd) = <span class="s">&quot;off&quot;</span>	(set playsnd)
+<span class="nf">c</span>(include_bitmap) = <span class="s">&quot;on&quot;</span>	(set include_bitmap)
+		
+<span class="nf">c</span>(iterlog) = <span class="s">&quot;on&quot;</span>	(set iterlog)
+		
+<span class="nf">c</span>(level) = <span class="m">95</span>	(set level)
+<span class="nf">c</span>(clevel) = <span class="m">95</span>	(set clevel)
+		
+<span class="nf">c</span>(showbaselevels) = <span class="s">&quot;&quot;</span>	(set showbaselevels)
+<span class="nf">c</span>(showemptycells) = <span class="s">&quot;&quot;</span>	(set showemptycells)
+<span class="nf">c</span>(showomitted) = <span class="s">&quot;&quot;</span>	(set showomitted)
+<span class="nf">c</span>(fvlabel) = <span class="s">&quot;on&quot;</span>	(set fvlabel)
+<span class="nf">c</span>(fvwrap) = <span class="m">1</span>	(set fvwrap)
+<span class="nf">c</span>(fvwrapon) = <span class="s">&quot;word&quot;</span>	(set fvwrapon)
+<span class="nf">c</span>(lstretch) = <span class="s">&quot;&quot;</span>	(set lstretch)
+		
+<span class="nf">c</span>(cformat) = <span class="s">&quot;&quot;</span>	(set cformat)
+<span class="nf">c</span>(sformat) = <span class="s">&quot;&quot;</span>	(set sformat)
+<span class="nf">c</span>(pformat) = <span class="s">&quot;&quot;</span>	(set pformat)
+		
+<span class="nf">c</span>(coeftabresults) = <span class="s">&quot;on&quot;</span>	(set coeftabresults)
+<span class="nf">c</span>(dots) = <span class="s">&quot;on&quot;</span>	(set dots)
+		
+<span class="nf">c</span>(collect_label) = <span class="s">&quot;default&quot;</span>	(set collect_label)
+<span class="nf">c</span>(collect_style) = <span class="s">&quot;default&quot;</span>	(set collect_style)
+<span class="nf">c</span>(table_style) = <span class="s">&quot;table&quot;</span>	(set table_style)
+<span class="nf">c</span>(etable_style) = <span class="s">&quot;etable&quot;</span>	(set etable_style)
+<span class="nf">c</span>(dtable_style) = <span class="s">&quot;dtable&quot;</span>	(set dtable_style)
+<span class="nf">c</span>(collect_warn) = <span class="s">&quot;on&quot;</span>	(set collect_warn)
+		
+
+Interface settings
+
+		
+<span class="nf">c</span>(reventries) = <span class="m">5000</span>	(set reventries)
+<span class="nf">c</span>(revkeyboard) = <span class="s">&quot;on&quot;</span>	(set revkeyboard)
+<span class="nf">c</span>(varkeyboard) = <span class="s">&quot;on&quot;</span>	(set varkeyboard)
+<span class="nf">c</span>(smoothfonts) = <span class="s">&quot;on&quot;</span>	(set smoothfonts)
+<span class="nf">c</span>(linegap) = <span class="m">1</span>	(set linegap)
+<span class="nf">c</span>(scrollbufsize) = <span class="m">204800</span>	(set scrollbufsize)
+<span class="nf">c</span>(maxdb) = <span class="m">50</span>	(set maxdb)
+		
+
+Graphics settings
+
+		
+<span class="nf">c</span>(graphics) = <span class="s">&quot;on&quot;</span>	(set graphics)
+<span class="nf">c</span>(scheme) = <span class="s">&quot;stcolor&quot;</span>	(set scheme)
+<span class="nf">c</span>(printcolor) = <span class="s">&quot;asis&quot;</span>	(set printcolor)
+<span class="nf">c</span>(copycolor) = <span class="s">&quot;asis&quot;</span>	(set copycolor)
+<span class="nf">c</span>(maxbezierpath) = <span class="m">0</span>	(set maxbezierpath)
+<span class="nf">c</span>(min_graphsize) = <span class="m">1</span>	(region_options)
+<span class="nf">c</span>(max_graphsize) = <span class="m">100</span>	(region_options)
+		
+
+Network settings
+
+		
+<span class="nf">c</span>(httpproxy) = <span class="s">&quot;off&quot;</span>	(set httpproxy)
+<span class="nf">c</span>(httpproxyhost) = <span class="s">&quot;&quot;</span>	(set httpproxyhost)
+<span class="nf">c</span>(httpproxyport) = <span class="m">80</span>	(set httpproxyport)
+		
+<span class="nf">c</span>(httpproxyauth) = <span class="s">&quot;off&quot;</span>	(set httpproxyauth)
+<span class="nf">c</span>(httpproxyuser) = <span class="s">&quot;&quot;</span>	(set httpproxyuser)
+<span class="nf">c</span>(httpproxypw) = <span class="s">&quot;&quot;</span>	(set httpproxypw)
+		
+
+Update settings
+
+		
+<span class="nf">c</span>(update_query) = <span class="s">&quot;on&quot;</span>	(set update_query)
+<span class="nf">c</span>(update_interval) = <span class="m">7</span>	(set update_interval)
+<span class="nf">c</span>(update_prompt) = <span class="s">&quot;on&quot;</span>	(set update_prompt)
+		
+
+Trace (program debugging) settings
+
+		
+<span class="nf">c</span>(trace) = <span class="s">&quot;off&quot;</span>	(set trace)
+<span class="nf">c</span>(tracedepth) = <span class="m">32000</span>	(set tracedepth)
+<span class="nf">c</span>(tracesep) = <span class="s">&quot;on&quot;</span>	(set tracesep)
+<span class="nf">c</span>(traceindent) = <span class="s">&quot;on&quot;</span>	(set traceindent)
+<span class="nf">c</span>(traceexpand) = <span class="s">&quot;on&quot;</span>	(set traceexpand)
+<span class="nf">c</span>(tracenumber) = <span class="s">&quot;off&quot;</span>	(set tracenumber)
+<span class="nf">c</span>(tracehilite) = <span class="s">&quot;&quot;</span>	(set tracehilite)
+		
+
+Mata settings
+
+		
+<span class="nf">c</span>(matastrict) = <span class="s">&quot;off&quot;</span>	(set matastrict)
+<span class="nf">c</span>(matalnum) = <span class="s">&quot;off&quot;</span>	(set matalnum)
+<span class="nf">c</span>(mataoptimize) = <span class="s">&quot;on&quot;</span>	(set mataoptimize)
+<span class="nf">c</span>(matafavor) = <span class="s">&quot;space&quot;</span>	(set matafavor)
+<span class="nf">c</span>(matacache) = <span class="m">2000</span>	(set matacache)
+<span class="nf">c</span>(matalibs) = <span class="s">&quot;lmatabase;lmatamc..&quot;</span>	(set matalibs)
+<span class="nf">c</span>(matamofirst) = <span class="s">&quot;off&quot;</span>	(set matamofirst)
+<span class="nf">c</span>(matasolvetol) = .	(set matasolvetol)
+		
+
+Java settings
+
+		
+<span class="nf">c</span>(java_heapmax) = <span class="s">&quot;4096m&quot;</span>	(set java_heapmax)
+<span class="nf">c</span>(java_home) = <span class="s">&quot;/Applications/Sta..&quot;</span>	(set java_home)
+		
+
+LAPACK settings
+
+		
+<span class="nf">c</span>(lapack_mkl) = <span class="s">&quot;on&quot;</span>	(set lapack_mkl)
+<span class="nf">c</span>(lapack_mkl_cnr) = <span class="s">&quot;default&quot;</span>	(set lapack_mkl_cnr)
+		
+
+putdocx settings
+
+		
+<span class="nf">c</span>(docx_hardbreak) = <span class="s">&quot;off&quot;</span>	(set docx_hardbreak)
+<span class="nf">c</span>(docx_paramode) = <span class="s">&quot;off&quot;</span>	(set docx_paramode)
+		
+
+Python settings
+
+		
+<span class="nf">c</span>(python_exec) = <span class="s">&quot;&quot;</span>	(set python_exec)
+<span class="nf">c</span>(python_userpath) = <span class="s">&quot;&quot;</span>	(set python_userpath)
+		
+
+RNG settings
+
+		
+<span class="nf">c</span>(rng) = <span class="s">&quot;default&quot;</span>	(set rng)
+<span class="nf">c</span>(rng_current) = <span class="s">&quot;mt64&quot;</span>
+<span class="nf">c</span>(rngstate) = <span class="s">&quot;XAA00000000000000..&quot;</span>	(set rngstate)
+<span class="nf">c</span>(rngseed_mt64s) = <span class="m">123456789</span>
+<span class="nf">c</span>(rngstream) = <span class="m">1</span>	(set rngstream)
+<span class="k">		</span>
+
+<span class="k">sort</span> settings
+
+		
+<span class="nf">c</span>(sortmethod) = <span class="s">&quot;default&quot;</span>	(set sortmethod)
+<span class="nf">c</span>(sort_current) = <span class="s">&quot;fsort&quot;</span>
+<span class="nf">c</span>(sortrngstate) = <span class="s">&quot;775915113XZA11221..&quot;</span>	(set sortrngstate)
+		
+
+Unicode settings
+
+		
+<span class="nf">c</span>(locale_ui) = <span class="s">&quot;en_US&quot;</span>	(set locale_ui)
+<span class="nf">c</span>(locale_functions) = <span class="s">&quot;en_US&quot;</span>	(set locale_functions)
+<span class="nf">c</span>(locale_icudflt) = <span class="s">&quot;en_US&quot;</span>	(unicode locale)
+		
+
+Other settings
+
+		
+<span class="nf">c</span>(type) = <span class="s">&quot;float&quot;</span>	(set<span class="k"> type</span>)
+<span class="nf">c</span>(maxiter) = <span class="m">300</span>	(set maxiter)
+<span class="nf">c</span>(searchdefault) = <span class="s">&quot;all&quot;</span>	(set searchdefault)
+<span class="nf">c</span>(varabbrev) = <span class="s">&quot;on&quot;</span>	(set varabbrev)
+<span class="nf">c</span>(emptycells) = <span class="s">&quot;keep&quot;</span>	(set emptycells)
+<span class="nf">c</span>(fvtrack) = <span class="s">&quot;term&quot;</span>	(set fvtrack)
+<span class="nf">c</span>(fvbase) = <span class="s">&quot;on&quot;</span>	(set fvbase)
+<span class="nf">c</span>(odbcmgr) = <span class="s">&quot;iodbc&quot;</span>	(set odbcmgr)
+<span class="nf">c</span>(odbcdriver) = <span class="s">&quot;unicode&quot;</span>	(set odbcdriver)
+<span class="nf">c</span>(fredkey) = <span class="s">&quot;&quot;</span>	(set fredkey)
+<span class="nf">c</span>(collect_double) = <span class="s">&quot;on&quot;</span>	(set collect_double)
+<span class="nf">c</span>(dtascomplevel) = <span class="m">1</span>	(set dtascomplevel)
+		
+
+Other system values
+
+		
+<span class="nf">c</span>(pi) = <span class="m">3.141592653589793</span>
+<span class="nf">c</span>(alpha) = <span class="s">&quot;a b c d e f g h i..&quot;</span>
+<span class="nf">c</span>(ALPHA) = <span class="s">&quot;A B C D E F G H I..&quot;</span>
+<span class="nf">c</span>(Mons) = <span class="s">&quot;Jan Feb Mar Apr M..&quot;</span>
+<span class="nf">c</span>(Months) = <span class="s">&quot;January February ..&quot;</span>
+<span class="nf">c</span>(Wdays) = <span class="s">&quot;Sun Mon Tue Wed T..&quot;</span>
+<span class="nf">c</span>(Weekdays) = <span class="s">&quot;Sunday Monday Tue..&quot;</span>
+<span class="nf">c</span>(obs_t) = <span class="s">&quot;byte&quot;</span>
+<span class="nf">c</span>(rc) = <span class="m">0</span>	(capture)
+		
+
+. 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>user-defined <code class="docutils literal notranslate"><span class="pre">return</span></code> or r-class commands</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">webuse</span> lifeexp,<span class="k"> clear</span> 
+<span class="k">sum</span> lexp 
+<span class="k">return list</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> webuse</span> lifeexp,<span class="k"> clear</span> 
+(Life expectancy, <span class="m">1998</span>)
+
+.<span class="k"> sum</span> lexp 
+
+Variable         Obs	Mean    Std. dev.	Min	Max
+			
+lexp          <span class="m">68</span>	<span class="m">72.27941</span>    <span class="m">4.715315</span>	<span class="m">54</span>	<span class="m">79</span>
+
+.<span class="k"> return list</span> 
+
+scalars:
+<span class="nf">r</span>(N) =	<span class="m">68</span>
+<span class="nf">r</span>(sum_w) =	<span class="m">68</span>
+<span class="nf">r</span>(mean) =	<span class="m">72.27941176470588</span>
+<span class="nf">r</span>(Var) =	<span class="m">22.23419666374012</span>
+<span class="nf">r</span>(sd) =	<span class="m">4.715315118180345</span>
+<span class="nf">r</span>(min) =	<span class="m">54</span>
+<span class="nf">r</span>(max) =	<span class="m">79</span>
+<span class="nf">r</span>(sum) =	<span class="m">4915</span>
+
+. 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>stata-estimated <code class="docutils literal notranslate"><span class="pre">ereturn</span></code> or e-class commands</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">regress</span> lexp safewater
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> regress</span> lexp safewater
+
+Source        SS           df       MS     Number of obs   =	<span class="m">40</span>
+                                           <span class="nf">F</span>(<span class="m">1</span>, <span class="m">38</span>)        =	<span class="m">83.97</span>
+   Model    <span class="m">710.45849</span>      <span class="m">1</span>   <span class="m">710.45849</span>   Prob <span class="o">&gt;</span> F        =	<span class="m">0.0000</span>
+Residual    <span class="m">321.51651</span>     <span class="m">38</span>  <span class="m">8.46096078</span>   R<span class="o">-</span>squared       =	<span class="m">0.6884</span>
+                                           Adj R<span class="o">-</span>squared   =	<span class="m">0.6802</span>
+Total     <span class="m">1031.975</span>        <span class="m">39</span>  <span class="m">26.4608974</span>   Root MSE        =	<span class="m">2.9088</span>
+
+_________________________________________________________________________
+     lexp  Coefficient  Std.<span class="k"> err</span>.      t    P<span class="o">&gt;</span>t     [<span class="m">95</span>%<span class="k"> conf</span>.	interval]
+_________________________________________________________________________
+safewater     .<span class="m">238561</span>   .<span class="m">0260339</span>     <span class="m">9.16</span>   <span class="m">0.000</span>      .<span class="m">185858</span>	.<span class="m">291264</span>
+    _cons    <span class="m">53.32051</span>   <span class="m">2.033866</span>    <span class="m">26.22</span>   <span class="m">0.000</span>     <span class="m">49.20316</span>	<span class="m">57.43785</span>
+	
+
+.<span class="k"> ereturn list</span>
+
+scalars:
+<span class="k">e</span>(N) =  <span class="m">40</span>
+<span class="k">e</span>(df_m) =  <span class="m">1</span>
+<span class="k">e</span>(df_r) =  <span class="m">38</span>
+<span class="k">e</span>(F) =  <span class="m">83.96900881198023</span>
+<span class="k">e</span>(r2) =  .<span class="m">6884454471661862</span>
+<span class="k">e</span>(rmse) =  <span class="m">2.908773071338512</span>
+<span class="k">e</span>(mss) =  <span class="m">710.458490339325</span>
+<span class="k">e</span>(rss) =  <span class="m">321.516509660675</span>
+<span class="k">e</span>(r2_a) =  .<span class="m">6802466431442438</span>
+<span class="k">e</span>(ll) =  <span class="o">-</span><span class="m">98.44093013263662</span>
+<span class="k">e</span>(ll_0) =  <span class="o">-</span><span class="m">121.7645466647458</span>
+<span class="k">e</span>(rank) =  <span class="m">2</span>
+
+macros:
+<span class="k">e</span>(cmdline) : <span class="s">&quot;regress lexp safewater&quot;</span>
+<span class="k">e</span>(title) : <span class="s">&quot;Linear regression&quot;</span>
+<span class="k">e</span>(marginsok) : <span class="s">&quot;XB default&quot;</span>
+<span class="k">e</span>(vce) : <span class="s">&quot;ols&quot;</span>
+<span class="k">e</span>(depvar) : <span class="s">&quot;lexp&quot;</span>
+<span class="k">e</span>(cmd) : <span class="s">&quot;regress&quot;</span>
+<span class="k">e</span>(properties) : <span class="s">&quot;b V&quot;</span>
+<span class="k">e</span>(predict) : <span class="s">&quot;regres_p&quot;</span>
+<span class="k">e</span>(model) : <span class="s">&quot;ols&quot;</span>
+<span class="k">e</span>(estat_cmd) : <span class="s">&quot;regress_estat&quot;</span>
+
+matrices:
+<span class="k">e</span>(b) :  <span class="m">1</span> x <span class="m">2</span>
+<span class="k">e</span>(V) :  <span class="m">2</span> x <span class="m">2</span>
+<span class="k">e</span>(beta) :  <span class="m">1</span> x <span class="m">1</span>
+
+functions:
+<span class="k">e</span>(sample)   
+
+. 
+</pre></div>
+</div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
