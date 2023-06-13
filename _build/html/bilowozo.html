@@ -13505,7 +13505,31 @@ we are all actors:</p>
 </li>
 <li><p>local</p>
 <ul>
-<li><p><a class="reference external" href="https://www.stata.com/manuals13/gsw2.pdf#gsw2TheStatauserinterface">menu</a></p></li>
+<li><p><a class="reference external" href="https://www.stata.com/manuals13/gsw2.pdf#gsw2TheStatauserinterface">menu</a></p>
+<ul>
+<li><p>file</p></li>
+<li><p>edit</p></li>
+<li><p>data</p></li>
+<li><p>graphics</p></li>
+<li><p>statistics</p></li>
+<li><p>user</p></li>
+<li><p>window</p>
+<ul>
+<li><p>command ⌘ 1</p></li>
+<li><p>history ⌘ 2</p></li>
+<li><p>results ⌘ 3</p></li>
+<li><p>variables ⌘ 4</p></li>
+<li><p>properties ⌘ 5</p></li>
+<li><p>graph ⌘ 6</p></li>
+<li><p>viewer ⌘ 7</p></li>
+<li><p>editor ⌘ 8</p></li>
+<li><p>do-file ⌘ 9</p></li>
+<li><p>manager ⌘ 10</p></li>
+</ul>
+</li>
+<li><p>help</p></li>
+</ul>
+</li>
 <li><p>command</p>
 <ul>
 <li><p>the very first <code class="docutils literal notranslate"><span class="pre">legitimate</span></code> word you type into the command window or on a line of code in a do file</p></li>
@@ -13514,8 +13538,16 @@ we are all actors:</p>
 <li><p>your collaborators, ta’s, and instructors must be warned to first install the third-party program</p></li>
 </ul>
 </li>
+<li><p>syntax</p>
+<ul>
+<li><p>the arrangement of words <u>after</u> a stata command</p></li>
+<li><p>create well-formed instructions in stata (i.e., <code class="docutils literal notranslate"><span class="pre">the</span> <span class="pre">syntax</span> <span class="pre">of</span> <span class="pre">Stata</span></code>)</p></li>
+<li><p>other terms or synonyms include <code class="docutils literal notranslate"><span class="pre">code</span></code>, <code class="docutils literal notranslate"><span class="pre">stata</span> <span class="pre">code</span></code>, <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">snippet</span></code></p></li>
+</ul>
+</li>
 <li><p>input</p>
 <ul>
+<li><p>menu (outputs command and syntax in results)</p></li>
 <li><p>do files (script with a series of commands)</p></li>
 <li><p>ado files (script with a program or series of programs)</p></li>
 </ul>
@@ -14007,17 +14039,17 @@ scalars:
 </div>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> regress</span> lexp safewater
 
-Source        SS           df       MS     Number of obs   =	<span class="m">40</span>
-                                           <span class="nf">F</span>(<span class="m">1</span>, <span class="m">38</span>)        =	<span class="m">83.97</span>
-   Model    <span class="m">710.45849</span>      <span class="m">1</span>   <span class="m">710.45849</span>   Prob <span class="o">&gt;</span> F        =	<span class="m">0.0000</span>
-Residual    <span class="m">321.51651</span>     <span class="m">38</span>  <span class="m">8.46096078</span>   R<span class="o">-</span>squared       =	<span class="m">0.6884</span>
-                                           Adj R<span class="o">-</span>squared   =	<span class="m">0.6802</span>
-Total     <span class="m">1031.975</span>        <span class="m">39</span>  <span class="m">26.4608974</span>   Root MSE        =	<span class="m">2.9088</span>
-
+Source        SS           df       MS      Number of obs   =	<span class="m">40</span>
+__________________________________________  <span class="nf">F</span>(<span class="m">1</span>, <span class="m">38</span>)        =	<span class="m">83.97</span>
+   Model   <span class="m">710.45849</span>       <span class="m">1</span>  <span class="m">710.45849</span>     Prob <span class="o">&gt;</span> F        =	<span class="m">0.0000</span>
+Residual   <span class="m">321.51651</span>      <span class="m">38</span>    <span class="m">8.46096078</span>  R<span class="o">-</span>squared       =	<span class="m">0.6884</span>
+__________________________________________  Adj R<span class="o">-</span>squared   =	<span class="m">0.6802</span>
+Total     <span class="m">1031.975</span>        <span class="m">39</span>   <span class="m">26.4608974</span>   Root MSE        =	<span class="m">2.9088</span>
+_________________________________________________________________________
 _________________________________________________________________________
      lexp  Coefficient  Std.<span class="k"> err</span>.      t    P<span class="o">&gt;</span>t     [<span class="m">95</span>%<span class="k"> conf</span>.	interval]
 _________________________________________________________________________
-safewater     .<span class="m">238561</span>   .<span class="m">0260339</span>     <span class="m">9.16</span>   <span class="m">0.000</span>      .<span class="m">185858</span>	.<span class="m">291264</span>
+safewater      .<span class="m">238561</span>   .<span class="m">0260339</span>    <span class="m">9.16</span>   <span class="m">0.000</span>       .<span class="m">185858</span>	  .<span class="m">291264</span>
     _cons    <span class="m">53.32051</span>   <span class="m">2.033866</span>    <span class="m">26.22</span>   <span class="m">0.000</span>     <span class="m">49.20316</span>	<span class="m">57.43785</span>
 	
 
@@ -14077,7 +14109,7 @@ functions:
 <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;sys/user&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span> <span class="p">)</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;program&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">960</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">950</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;syntax&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">950</span><span class="p">)</span> <span class="p">)</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;ado&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;do&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;command&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
@@ -14089,7 +14121,7 @@ functions:
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;word&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="o">-</span><span class="mi">475</span><span class="p">))</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;html&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="o">-</span><span class="mi">475</span><span class="p">))</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;publish&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">950</span><span class="p">))</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;program&quot;</span><span class="p">,</span><span class="s2">&quot;ado&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="s2">&quot;do&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;program&quot;</span><span class="p">,</span><span class="s2">&quot;ado&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;syntax&quot;</span><span class="p">,</span> <span class="s2">&quot;do&quot;</span><span class="p">)])</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;ado&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;do&quot;</span><span class="p">,</span> <span class="s2">&quot;queue&quot;</span><span class="p">)</span> <span class="p">])</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;command&quot;</span><span class="p">,</span> <span class="s2">&quot;output&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span> <span class="s2">&quot;output&quot;</span><span class="p">),(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="s2">&quot;excel&quot;</span><span class="p">),(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="s2">&quot;word&quot;</span><span class="p">),(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="s2">&quot;html&quot;</span><span class="p">)])</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="s2">&quot;dta&quot;</span><span class="p">),(</span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="s2">&quot;log&quot;</span><span class="p">)])</span>
@@ -14111,7 +14143,7 @@ functions:
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/fe279ba08fd7fa198fca35de5b625d11819484338cfbb20924ae758bef726d22.png" src="_images/fe279ba08fd7fa198fca35de5b625d11819484338cfbb20924ae758bef726d22.png" />
+<img alt="_images/76882687b661b69a4d5546a2dc222cfb6a945d370403b89d832c2b9543f01499.png" src="_images/76882687b661b69a4d5546a2dc222cfb6a945d370403b89d832c2b9543f01499.png" />
 </div>
 </div>
 </section>
