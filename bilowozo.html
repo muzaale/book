@@ -1068,7 +1068,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order">485.3 order</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-import">486. gh-import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#legibal">485.4 legibal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stratified">485.5 stratified</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id126">486. ghp-import</a></li>
 </ul>
 </li>
 </ul>
@@ -1131,7 +1133,7 @@ document.write(`
 <li><p>Daytona (Lifeguard)</p></li>
 <li><p>Nina (Lifeguard, Tips for Dolphin 🐬)</p></li>
 <li><p>Daytona (Swimmer, Black weights) ** Mixup with a one Nina?</p></li>
-<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id126" id="id2">1</a></p></li>
+<li><p>Liz (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD)<a class="footnote-reference brackets" href="#id127" id="id2">1</a></p></li>
 <li><p>Aiko (ie Geiko, Japanese-American at SICU, dob 04/24***)</p></li>
 <li><p>Buddy (Jeffs Buddy)</p></li>
 <li><p>Jeff (Red head swims with Buddy)</p></li>
@@ -1514,7 +1516,7 @@ XXX XXX University School of Medicine\</p>
 </ol>
 </section>
 <section id="gitcodehub-2">
-<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id127" id="id7">2</a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
+<h3>26. gitcodehub <a class="footnote-reference brackets" href="#id128" id="id7">2</a><a class="headerlink" href="#gitcodehub-2" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span>
 <span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">unrelated</span><span class="o">-</span><span class="n">histories</span>
@@ -8989,7 +8991,7 @@ Join us today at 3:30pm for our Center on Aging &amp; Health Scientific Seminar 
 <h3>320. world<a class="headerlink" href="#world" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>visible</p></li>
-<li><p><a class="reference external" href="https://www.researchgate.net/publication/320440026_Asceticism_A_Match_Towards_the_Absolute">bridge</a><a class="footnote-reference brackets" href="#id128" id="id84">3</a></p></li>
+<li><p><a class="reference external" href="https://www.researchgate.net/publication/320440026_Asceticism_A_Match_Towards_the_Absolute">bridge</a><a class="footnote-reference brackets" href="#id129" id="id84">3</a></p></li>
 <li><p>eternal</p></li>
 </ul>
 </section>
@@ -14382,8 +14384,314 @@ dx1: all characters numeric; replaced<span class="k"> as</span> byte
 <p><img alt="" src="_images/lexp_bycountry_withlabels_sort.png" /></p>
 </section>
 </section>
-<section id="gh-import">
-<h2>486. gh-import<a class="headerlink" href="#gh-import" title="Permalink to this heading">#</a></h2>
+<section id="legibal">
+<h2>485.4 legibal<a class="headerlink" href="#legibal" title="Permalink to this heading">#</a></h2>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>cls
+<span class="k">clear</span>
+<span class="k">webuse</span> lifeexp
+<span class="k">sort</span> lexp
+<span class="k">g</span> rank=_n
+<span class="k">tostring</span> rank,<span class="k"> replace</span>
+<span class="k">g</span> dx=rank<span class="o">+</span><span class="s">&quot;=&quot;</span><span class="o">+</span>country
+<span class="k">replace</span> dx=<span class="nf">substr</span>(dx,<span class="m">1</span>,<span class="m">31</span>)
+<span class="k">drop</span> country rank
+<span class="k">replace</span> dx=<span class="nf">subinstr</span>(dx,<span class="s">&quot; &quot;</span>,<span class="s">&quot;&quot;</span>,.)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;&quot;, .)</span>
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;(&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;)&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;,&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;/&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+
+<span class="k">qui levelsof</span> dx,<span class="k"> local</span>(dx_helper)
+<span class="k">foreach</span> i<span class="k"> in</span> <span class="nv">`dx_helper&#39;</span> {
+<span class="k">    tokenize</span> <span class="s">`&quot;</span><span class="nv">`i&#39;</span><span class="s">&quot;&#39;</span>, p(<span class="s">&quot;=&quot;</span>)
+<span class="k">	local</span> label_string:<span class="k"> di</span> <span class="s">`&quot;  </span><span class="nv">`label_string&#39;</span><span class="s"> </span><span class="nv">`1&#39;</span><span class="s"> &quot;</span><span class="nv">`3&#39;</span><span class="s">&quot;    &quot;&#39;</span>
+	<span class="c1">//di `label_string&#39;</span>
+}
+
+<span class="k">global</span> chatgpt:<span class="k"> di</span> <span class="nv">`label_string&#39;</span>
+<span class="c1">//di &quot;$chatgpt&quot;</span>
+<span class="c1">//macro list  </span>
+<span class="k">capture label drop</span> dx
+<span class="k">label</span> define dx <span class="nv">`label_string&#39;</span>
+<span class="k">split</span> dx, p(<span class="s">&quot;=&quot;</span>)
+<span class="k">destring</span> dx1,<span class="k"> replace</span>
+<span class="k">label</span> values dx1 dx
+<span class="c1">//noi tab dx1</span>
+#delimit ;
+<span class="k">twoway scatter</span> dx1 lexp,<span class="k"> sort</span> 
+   mlabel(dx1) 
+   yscale(off)  
+;
+#delimit cr
+<span class="k">graph</span> export lexp_bycountry_withlabels_sort_horizontal<span class="m">.</span>png,<span class="k"> replace</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> clear</span>
+
+.<span class="k"> webuse</span> lifeexp
+(Life expectancy, <span class="m">1998</span>)
+
+.<span class="k"> sort</span> lexp
+
+.<span class="k"> g</span> rank=_n
+
+.<span class="k"> tostring</span> rank,<span class="k"> replace</span>
+rank was float now str2
+
+.<span class="k"> g</span> dx=rank<span class="o">+</span><span class="s">&quot;=&quot;</span><span class="o">+</span>country
+
+.<span class="k"> replace</span> dx=<span class="nf">substr</span>(dx,<span class="m">1</span>,<span class="m">31</span>)
+(<span class="m">0</span> real changes made)
+
+.<span class="k"> drop</span> country rank
+
+.<span class="k"> replace</span> dx=<span class="nf">subinstr</span>(dx,<span class="s">&quot; &quot;</span>,<span class="s">&quot;&quot;</span>,.)
+(<span class="m">13</span> real changes made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;&quot;, .)</span>
+(<span class="m">0</span> real changes made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;(&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;)&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;,&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;/&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+. 
+.<span class="k"> qui levelsof</span> dx,<span class="k"> local</span>(dx_helper)
+
+.<span class="k"> foreach</span> i<span class="k"> in</span> <span class="nv">`dx_helper&#39;</span> {
+  <span class="m">2</span>.    <span class="k"> tokenize</span> <span class="s">`&quot;</span><span class="nv">`i&#39;</span><span class="s">&quot;&#39;</span>, p(<span class="s">&quot;=&quot;</span>)
+  <span class="m">3</span>.        <span class="k"> local</span> label_string:<span class="k"> di</span> <span class="s">`&quot;  </span><span class="nv">`label_string&#39;</span><span class="s"> </span><span class="nv">`1&#39;</span><span class="s"> &quot;</span><span class="nv">`3&#39;</span><span class="s">&quot;    &quot;&#39;</span>
+  <span class="m">4</span>.         <span class="c1">//di `label_string&#39;</span>
+. }
+
+. 
+.<span class="k"> global</span> chatgpt:<span class="k"> di</span> <span class="nv">`label_string&#39;</span>
+
+. <span class="c1">//di &quot;$chatgpt&quot;</span>
+. <span class="c1">//macro list  </span>
+.<span class="k"> capture label drop</span> dx
+
+.<span class="k"> label</span> define dx <span class="nv">`label_string&#39;</span>
+
+.<span class="k"> split</span> dx, p(<span class="s">&quot;=&quot;</span>)
+variables created<span class="k"> as</span> string: 
+dx1  dx2
+
+.<span class="k"> destring</span> dx1,<span class="k"> replace</span>
+dx1: all characters numeric; replaced<span class="k"> as</span> byte
+
+.<span class="k"> label</span> values dx1 dx
+
+. <span class="c1">//noi tab dx1</span>
+. #delimit ;
+delimiter now ;
+.<span class="k"> twoway scatter</span> dx1 lexp,<span class="k"> sort</span> 
+<span class="o">&gt;</span>    mlabel(dx1) 
+<span class="o">&gt;</span>    yscale(off)  
+<span class="o">&gt;</span> ;
+
+. #delimit cr
+delimiter now cr
+.<span class="k"> graph</span> export lexp_bycountry_withlabels_sort_horizontal<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry_withlabels_sort_horizontal<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+. 
+<span class="k">end</span> of<span class="k"> do</span><span class="o">-</span>file
+
+. 
+</pre></div>
+</div>
+<p><img alt="" src="_images/lexp_bycountry_withlabels_sort_horizontal.png" /></p>
+</section>
+<section id="stratified">
+<h2>485.5 stratified<a class="headerlink" href="#stratified" title="Permalink to this heading">#</a></h2>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">clear</span>
+<span class="k">webuse</span> lifeexp
+<span class="k">sort</span> lexp
+<span class="k">g</span> rank=_n
+<span class="k">tostring</span> rank,<span class="k"> replace</span>
+<span class="k">g</span> dx=rank<span class="o">+</span><span class="s">&quot;=&quot;</span><span class="o">+</span>country
+<span class="k">replace</span> dx=<span class="nf">substr</span>(dx,<span class="m">1</span>,<span class="m">31</span>)
+<span class="k">drop</span> country rank
+<span class="k">replace</span> dx=<span class="nf">subinstr</span>(dx,<span class="s">&quot; &quot;</span>,<span class="s">&quot;&quot;</span>,.)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;&quot;, .)</span>
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;(&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;)&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;,&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+<span class="k">replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;/&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+
+<span class="k">qui levelsof</span> dx,<span class="k"> local</span>(dx_helper)
+<span class="k">foreach</span> i<span class="k"> in</span> <span class="nv">`dx_helper&#39;</span> {
+<span class="k">    tokenize</span> <span class="s">`&quot;</span><span class="nv">`i&#39;</span><span class="s">&quot;&#39;</span>, p(<span class="s">&quot;=&quot;</span>)
+<span class="k">	local</span> label_string:<span class="k"> di</span> <span class="s">`&quot;  </span><span class="nv">`label_string&#39;</span><span class="s"> </span><span class="nv">`1&#39;</span><span class="s"> &quot;</span><span class="nv">`3&#39;</span><span class="s">&quot;    &quot;&#39;</span>
+	<span class="c1">//di `label_string&#39;</span>
+}
+
+<span class="k">global</span> chatgpt:<span class="k"> di</span> <span class="nv">`label_string&#39;</span>
+<span class="c1">//di &quot;$chatgpt&quot;</span>
+<span class="c1">//macro list  </span>
+<span class="k">capture label drop</span> dx
+<span class="k">label</span> define dx <span class="nv">`label_string&#39;</span>
+<span class="k">split</span> dx, p(<span class="s">&quot;=&quot;</span>)
+<span class="k">destring</span> dx1,<span class="k"> replace</span>
+<span class="k">label</span> values dx1 dx
+<span class="c1">//noi tab dx1</span>
+#delimit ;
+<span class="k">twoway</span> (scatter dx1 lexp<span class="k"> if</span> region<span class="o">==</span><span class="m">1</span>, 
+<span class="k">   sort</span> 
+   mlabel(dx1) 
+   yscale(off)
+   title(<span class="s">&quot;Europe &amp; C. Asia&quot;</span>)
+   ); 
+<span class="k">graph save</span> lexp_bycountry1<span class="m">.</span>gph,<span class="k"> replace</span> ; 
+<span class="k">twoway</span> (scatter dx1 lexp<span class="k"> if</span> region<span class="o">==</span><span class="m">2</span>, 
+<span class="k">   sort</span> 
+   mlabel(dx1) 
+   yscale(off)
+   title(<span class="s">&quot;North America&quot;</span>)
+   ); 
+<span class="k">graph save</span> lexp_bycountry2<span class="m">.</span>gph,<span class="k"> replace</span> ; 
+<span class="k">twoway</span> (scatter dx1 lexp<span class="k"> if</span> region<span class="o">==</span><span class="m">3</span>, 
+<span class="k">   sort</span> 
+   mlabel(dx1) 
+   yscale(off)
+   title(<span class="s">&quot;South America&quot;</span>)
+   ); 
+<span class="k">graph save</span> lexp_bycountry3<span class="m">.</span>gph,<span class="k"> replace</span> ; 
+<span class="k">graph</span> combine 
+    lexp_bycountry1<span class="m">.</span>gph 
+    lexp_bycountry2<span class="m">.</span>gph 
+	lexp_bycountry3<span class="m">.</span>gph,
+	xcommon col(<span class="m">3</span>);
+#delimit cr
+<span class="k">graph</span> export lexp_bycountry_combine<span class="m">.</span>png,<span class="k"> replace</span>  
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> clear</span>
+
+.<span class="k"> webuse</span> lifeexp
+(Life expectancy, <span class="m">1998</span>)
+
+.<span class="k"> sort</span> lexp
+
+.<span class="k"> g</span> rank=_n
+
+.<span class="k"> tostring</span> rank,<span class="k"> replace</span>
+rank was float now str2
+
+.<span class="k"> g</span> dx=rank<span class="o">+</span><span class="s">&quot;=&quot;</span><span class="o">+</span>country
+
+.<span class="k"> replace</span> dx=<span class="nf">substr</span>(dx,<span class="m">1</span>,<span class="m">31</span>)
+(<span class="m">0</span> real changes made)
+
+.<span class="k"> drop</span> country rank
+
+.<span class="k"> replace</span> dx=<span class="nf">subinstr</span>(dx,<span class="s">&quot; &quot;</span>,<span class="s">&quot;&quot;</span>,.)
+(<span class="m">13</span> real changes made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;</span><span class="se">\&quot;</span><span class="s">, &quot;&quot;, .)</span>
+(<span class="m">0</span> real changes made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;(&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;)&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;,&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+.<span class="k"> replace</span> dx = <span class="nf">subinstr</span>(dx, <span class="s">&quot;/&quot;</span>, <span class="s">&quot;&quot;</span>, .)
+(<span class="m">1</span> real change made)
+
+. 
+.<span class="k"> qui levelsof</span> dx,<span class="k"> local</span>(dx_helper)
+
+.<span class="k"> foreach</span> i<span class="k"> in</span> <span class="nv">`dx_helper&#39;</span> {
+<span class="m">2</span>.    <span class="k"> tokenize</span> <span class="s">`&quot;</span><span class="nv">`i&#39;</span><span class="s">&quot;&#39;</span>, p(<span class="s">&quot;=&quot;</span>)
+<span class="m">3</span>.        <span class="k"> local</span> label_string:<span class="k"> di</span> <span class="s">`&quot;  </span><span class="nv">`label_string&#39;</span><span class="s">	</span><span class="nv">`1&#39;</span><span class="s"> &quot;</span><span class="nv">`3&#39;</span><span class="s">&quot;    &quot;&#39;</span>
+<span class="m">4</span>.         <span class="c1">//di `label_string&#39;</span>
+. }
+
+. 
+.<span class="k"> global</span> chatgpt:<span class="k"> di</span> <span class="nv">`label_string&#39;</span>
+
+. <span class="c1">//di &quot;$chatgpt&quot;</span>
+. <span class="c1">//macro list  </span>
+.<span class="k"> capture label drop</span> dx
+
+.<span class="k"> label</span> define dx <span class="nv">`label_string&#39;</span>
+
+.<span class="k"> split</span> dx, p(<span class="s">&quot;=&quot;</span>)
+variables created<span class="k"> as</span> string: 
+dx1  dx2
+
+.<span class="k"> destring</span> dx1,<span class="k"> replace</span>
+dx1: all characters numeric; replaced<span class="k"> as</span> byte
+
+.<span class="k"> label</span> values dx1 dx
+
+. <span class="c1">//noi tab dx1</span>
+. #delimit ;
+delimiter now ;
+.<span class="k"> twoway</span> (scatter dx1 lexp<span class="k"> if</span> region<span class="o">==</span><span class="m">1</span>, 
+<span class="o">&gt;</span>   <span class="k"> sort</span> 
+<span class="o">&gt;</span>    mlabel(dx1) 
+<span class="o">&gt;</span>    yscale(off)
+<span class="o">&gt;</span>    title(<span class="s">&quot;Europe &amp; C. Asia&quot;</span>)
+<span class="o">&gt;</span>    );
+
+. <span class="k"> graph save</span> lexp_bycountry1<span class="m">.</span>gph,<span class="k"> replace</span> ;
+<span class="k">file</span> lexp_bycountry1<span class="m">.</span>gph saved
+
+. <span class="k"> twoway</span> (scatter dx1 lexp<span class="k"> if</span> region<span class="o">==</span><span class="m">2</span>, 
+<span class="o">&gt;</span>   <span class="k"> sort</span> 
+<span class="o">&gt;</span>    mlabel(dx1) 
+<span class="o">&gt;</span>    yscale(off)
+<span class="o">&gt;</span>    title(<span class="s">&quot;North America&quot;</span>)
+<span class="o">&gt;</span>    );
+
+. <span class="k"> graph save</span> lexp_bycountry2<span class="m">.</span>gph,<span class="k"> replace</span> ;
+<span class="k">file</span> lexp_bycountry2<span class="m">.</span>gph saved
+
+. <span class="k"> twoway</span> (scatter dx1 lexp<span class="k"> if</span> region<span class="o">==</span><span class="m">3</span>, 
+<span class="o">&gt;</span>   <span class="k"> sort</span> 
+<span class="o">&gt;</span>    mlabel(dx1) 
+<span class="o">&gt;</span>    yscale(off)
+<span class="o">&gt;</span>    title(<span class="s">&quot;South America&quot;</span>)
+<span class="o">&gt;</span>    );
+
+. <span class="k"> graph save</span> lexp_bycountry3<span class="m">.</span>gph,<span class="k"> replace</span> ;
+<span class="k">file</span> lexp_bycountry3<span class="m">.</span>gph saved
+
+. <span class="k"> graph</span> combine 
+<span class="o">&gt;</span>     lexp_bycountry1<span class="m">.</span>gph 
+<span class="o">&gt;</span>     lexp_bycountry2<span class="m">.</span>gph 
+<span class="o">&gt;</span>         lexp_bycountry3<span class="m">.</span>gph,
+<span class="o">&gt;</span>         xcommon col(<span class="m">3</span>);
+
+. #delimit cr
+delimiter now cr
+.<span class="k"> graph</span> export lexp_bycountry_combine<span class="m">.</span>png,<span class="k"> replace</span>  
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>lexp_bycountry_combine<span class="m">.</span>png saved<span class="k">	as</span> PNG<span class="k"> format</span>
+
+. 
+<span class="k">end</span> of<span class="k"> do</span><span class="o">-</span>file
+</pre></div>
+</div>
+<p><img alt="" src="_images/lexp_bycountry_combine.png" /></p>
+</section>
+<section id="id126">
+<h2>486. ghp-import<a class="headerlink" href="#id126" title="Permalink to this heading">#</a></h2>
 <p>if ever it hangs at this point:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
 </pre></div>
@@ -14394,13 +14702,13 @@ dx1: all characters numeric; replaced<span class="k"> as</span> byte
 </div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="id126"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id127"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p>Her thoughts echo these: The Malcontent. — He is one of the brave old warriors: angry with civilisation because he believes that its object is to make all good things — honour, rewards, and fair women — accessible even to cowards.</p>
 </dd>
-<dt class="label" id="id127"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
+<dt class="label" id="id128"><span class="brackets"><a class="fn-backref" href="#id7">2</a></span></dt>
 <dd><p>solution to a most vexing problem</p>
 </dd>
-<dt class="label" id="id128"><span class="brackets"><a class="fn-backref" href="#id84">3</a></span></dt>
+<dt class="label" id="id129"><span class="brackets"><a class="fn-backref" href="#id84">3</a></span></dt>
 <dd><p><a class="reference external" href="https://www.gutenberg.org/files/52263/52263-h/52263-h.htm">egyptianism</a></p>
 </dd>
 </dl>
@@ -15171,7 +15479,9 @@ dx1: all characters numeric; replaced<span class="k"> as</span> byte
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order">485.3 order</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-import">486. gh-import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#legibal">485.4 legibal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stratified">485.5 stratified</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id126">486. ghp-import</a></li>
 </ul>
 </li>
 </ul>
