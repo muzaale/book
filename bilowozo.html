@@ -15840,6 +15840,72 @@ Together they enrich our searching soul.
 </div>
 </div>
 </div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Create a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+
+<span class="c1"># Add nodes and edges</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Quake&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Flood&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Plague&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Weary&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Kyrie Eleison Christ&#39;</span><span class="p">,</span> <span class="s1">&#39;YHWH&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Kyrie Eleison Christ&#39;</span><span class="p">,</span> <span class="s1">&#39;Father&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Kyrie Eleison Christ&#39;</span><span class="p">,</span> <span class="s1">&#39;Son&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Kyrie Eleison Christ&#39;</span><span class="p">,</span> <span class="s1">&#39;Holy Spirit&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Nietzsche&#39;</span><span class="p">,</span> <span class="s1">&#39;George Lucas&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Covenant&#39;</span><span class="p">,</span> <span class="s1">&#39;Lamb&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Covenant&#39;</span><span class="p">,</span> <span class="s1">&#39;Wine&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Covenant&#39;</span><span class="p">,</span> <span class="s1">&#39;Bread&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Ark&#39;</span><span class="p">,</span> <span class="s1">&#39;War&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Ark&#39;</span><span class="p">,</span> <span class="s1">&#39;Requite&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Ark&#39;</span><span class="p">,</span> <span class="s1">&#39;Discord&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Forever&#39;</span><span class="p">,</span> <span class="s1">&#39;God&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Forever&#39;</span><span class="p">,</span> <span class="s1">&#39;With&#39;</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;Forever&#39;</span><span class="p">,</span> <span class="s1">&#39;To Be&#39;</span><span class="p">)</span>
+
+<span class="c1"># Draw the graph</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/ba03ca6c707ac72d992c79cd33838e8e1a022c9d2d5dee980bcadc28533447a5.png" src="_images/ba03ca6c707ac72d992c79cd33838e8e1a022c9d2d5dee980bcadc28533447a5.png" />
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
+<span class="n">A</span> <span class="n">flood</span> <span class="n">of</span> <span class="n">chaos</span><span class="p">,</span> <span class="n">plagues</span> <span class="n">that</span> <span class="n">circle</span> <span class="s1">&#39;round.</span>
+<span class="n">The</span> <span class="n">weary</span> <span class="n">souls</span> <span class="n">seek</span> <span class="n">solace</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">fray</span><span class="p">,</span>
+<span class="n">Kyrie</span> <span class="n">Eleison</span> <span class="n">Christ</span><span class="p">,</span> <span class="n">their</span> <span class="n">voices</span> <span class="n">pray</span><span class="o">.</span>
+
+<span class="n">YHWH</span><span class="p">,</span> <span class="n">Father</span><span class="p">,</span> <span class="n">Son</span><span class="p">,</span> <span class="n">the</span> <span class="n">Holy</span> <span class="n">Ghost</span><span class="p">,</span>
+<span class="n">A</span> <span class="n">trinity</span> <span class="n">embraced</span><span class="p">,</span> <span class="n">their</span> <span class="n">love</span> <span class="n">the</span> <span class="n">most</span><span class="o">.</span>
+<span class="n">Nietzsche</span> <span class="ow">and</span> <span class="n">Lucas</span><span class="p">,</span> <span class="n">minds</span> <span class="n">that</span> <span class="n">intertwine</span><span class="p">,</span>
+<span class="n">Philosophy</span> <span class="ow">and</span> <span class="n">stories</span><span class="p">,</span> <span class="n">art</span> <span class="n">divine</span><span class="o">.</span>
+
+<span class="n">A</span> <span class="n">covenant</span> <span class="n">revealed</span><span class="p">,</span> <span class="n">the</span> <span class="n">Lamb</span> <span class="ow">is</span> <span class="n">near</span><span class="p">,</span>
+<span class="n">With</span> <span class="n">wine</span> <span class="ow">and</span> <span class="n">bread</span><span class="p">,</span> <span class="n">divine</span> <span class="n">grace</span> <span class="n">does</span> <span class="n">appear</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">ark</span> <span class="n">of</span> <span class="n">war</span><span class="p">,</span> <span class="n">requite</span> <span class="ow">and</span> <span class="n">discord</span><span class="s1">&#39;s sound,</span>
+<span class="n">Yet</span> <span class="n">forever</span> <span class="n">God</span><span class="s1">&#39;s love, with us is found.</span>
+
+<span class="n">To</span> <span class="n">be</span><span class="p">,</span> <span class="n">the</span> <span class="n">journey</span> <span class="n">ever</span> <span class="n">intertwined</span><span class="p">,</span>
+<span class="n">The</span> <span class="n">cosmos</span> <span class="n">sings</span><span class="p">,</span> <span class="n">our</span> <span class="n">souls</span> <span class="n">forever</span> <span class="n">bind</span><span class="o">.</span>
+
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id142"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
