@@ -1139,6 +1139,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id139">06/21/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id140">533. nia</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id141">534. requiem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iambic">535. iambic</a></li>
 </ul>
 </li>
 </ul>
@@ -15655,6 +15656,178 @@ And sighed, O, charming Kate!
 <ul class="simple">
 <li><p>make time to listen to Brahms <code class="docutils literal notranslate"><span class="pre">Ein</span> <span class="pre">Deutches</span> <span class="pre">Requiem</span></code>. its been a long time!</p></li>
 </ul>
+</section>
+<section id="iambic">
+<h3>535. iambic<a class="headerlink" href="#iambic" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Cosmos&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Quake&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Flood&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Plague&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Weary&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Kyrie&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Eleison&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Christe&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Yhwh&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">1.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Father&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Son&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Holy&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Ntzsch&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">2.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">4.9</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">1.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Ark&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;War&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Requite&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Discord&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Forever&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;God&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;With&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;Tobe&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Cosmos&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Cosmos&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Cosmos&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Cosmos&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Quake&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Quake&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Quake&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Quake&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Flood&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Flood&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Flood&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Flood&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Plague&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Plague&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Plague&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Plague&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Weary&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Weary&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Weary&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Weary&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Kyrie&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Kyrie&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Kyrie&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Kyrie&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Eleison&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Eleison&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Eleison&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Eleison&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Christe&quot;</span><span class="p">,</span> <span class="s2">&quot;Yhwh&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Christe&quot;</span><span class="p">,</span> <span class="s2">&quot;Father&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Christe&quot;</span><span class="p">,</span> <span class="s2">&quot;Son&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Christe&quot;</span><span class="p">,</span> <span class="s2">&quot;Holy&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Yhwh&quot;</span><span class="p">,</span> <span class="s2">&quot;Ntzsch&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Yhwh&quot;</span><span class="p">,</span> <span class="s2">&quot;Lucas&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Father&quot;</span><span class="p">,</span> <span class="s2">&quot;Ntzsch&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Father&quot;</span><span class="p">,</span> <span class="s2">&quot;Lucas&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Son&quot;</span><span class="p">,</span> <span class="s2">&quot;Ntzsch&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Son&quot;</span><span class="p">,</span> <span class="s2">&quot;Lucas&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Holy&quot;</span><span class="p">,</span> <span class="s2">&quot;Ntzsch&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Holy&quot;</span><span class="p">,</span> <span class="s2">&quot;Lucas&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Ntzsch&quot;</span><span class="p">,</span> <span class="s2">&quot;Covenat&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Ntzsch&quot;</span><span class="p">,</span> <span class="s2">&quot;Lamb&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Ntzsch&quot;</span><span class="p">,</span> <span class="s2">&quot;Wine&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Ntzsch&quot;</span><span class="p">,</span> <span class="s2">&quot;Bread&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="s2">&quot;Covenat&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="s2">&quot;Lamb&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="s2">&quot;Wine&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="s2">&quot;Bread&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;Ark&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;War&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;Requite&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;Discord&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;Forever&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;God&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;With&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Covenat&quot;</span><span class="p">,</span> <span class="s2">&quot;Tobe&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;Ark&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;War&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;Requite&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;Discord&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;Forever&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;God&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;With&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Lamb&quot;</span><span class="p">,</span> <span class="s2">&quot;Tobe&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Ark&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;War&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Requite&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Discord&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Forever&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;God&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;With&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Wine&quot;</span><span class="p">,</span> <span class="s2">&quot;Tobe&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;Ark&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;War&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;Requite&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;Discord&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;Forever&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;God&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;With&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Bread&quot;</span><span class="p">,</span> <span class="s2">&quot;Tobe&quot;</span><span class="p">)])</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/aa9e26c4476bf28e5df8d9532069914f56c3a3aeb80477e6b7a6050ead42567b.png" src="_images/aa9e26c4476bf28e5df8d9532069914f56c3a3aeb80477e6b7a6050ead42567b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poem</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">In Lucas&#39; realm, where dreams and fantasies dwell,</span>
+<span class="s2">He crafted tales that mass appeal would find.</span>
+<span class="s2">With linear narratives he cast his spell,</span>
+<span class="s2">And triumphed as financial riches unwind.</span>
+
+<span class="s2">But Nietzsche, bold and unyielding in his quest,</span>
+<span class="s2">Sought truth and knowledge, unafraid of strife.</span>
+<span class="s2">His Zarathustra, preaching to the crest,</span>
+<span class="s2">Knew followers would be scarce throughout his life.</span>
+
+<span class="s2">Lucas, pragmatic, chose the path of gain,</span>
+<span class="s2">Abandoning bleak themes for fortune&#39;s embrace.</span>
+<span class="s2">His films embraced escapism&#39;s sweet refrain,</span>
+<span class="s2">Leaving deep contemplation in their trace.</span>
+
+<span class="s2">Yet here I stand, a testament to the start,</span>
+<span class="s2">For Lucas&#39; debut was indeed so stark.</span>
+<span class="s2">His lessons learned, pragmatic in his art,</span>
+<span class="s2">But still, his bleakness left a lasting mark.</span>
+
+<span class="s2">In contrast, Nietzsche&#39;s teachings ring profound,</span>
+<span class="s2">Unflinching truths that challenge mind and soul.</span>
+<span class="s2">He sought no wealth, no shallow laurels found,</span>
+<span class="s2">His insights cutting through illusions&#39; toll.</span>
+
+<span class="s2">So, Lucas and Nietzsche, their paths diverge,</span>
+<span class="s2">One driven by profit, the other by truth.</span>
+<span class="s2">Both leave their marks on our cultural verge,</span>
+<span class="s2">One for escape, the other for deeper sleuth.</span>
+
+<span class="s2">In the end, it&#39;s a matter of desire,</span>
+<span class="s2">The yearning for truths or fantasies to chase.</span>
+<span class="s2">Whether financial gains or minds to inspire,</span>
+<span class="s2">Lucas and Nietzsche find their rightful place.</span>
+
+<span class="s2">For in the vast tapestry of human art,</span>
+<span class="s2">Both light and shadow play their crucial role.</span>
+<span class="s2">And though their paths may seem worlds apart,</span>
+<span class="s2">Together they enrich our searching soul.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">poem</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In Lucas&#39; realm, where dreams and fantasies dwell,
+He crafted tales that mass appeal would find.
+With linear narratives he cast his spell,
+And triumphed as financial riches unwind.
+
+But Nietzsche, bold and unyielding in his quest,
+Sought truth and knowledge, unafraid of strife.
+His Zarathustra, preaching to the crest,
+Knew followers would be scarce throughout his life.
+
+Lucas, pragmatic, chose the path of gain,
+Abandoning bleak themes for fortune&#39;s embrace.
+His films embraced escapism&#39;s sweet refrain,
+Leaving deep contemplation in their trace.
+
+Yet here I stand, a testament to the start,
+For Lucas&#39; debut was indeed so stark.
+His lessons learned, pragmatic in his art,
+But still, his bleakness left a lasting mark.
+
+In contrast, Nietzsche&#39;s teachings ring profound,
+Unflinching truths that challenge mind and soul.
+He sought no wealth, no shallow laurels found,
+His insights cutting through illusions&#39; toll.
+
+So, Lucas and Nietzsche, their paths diverge,
+One driven by profit, the other by truth.
+Both leave their marks on our cultural verge,
+One for escape, the other for deeper sleuth.
+
+In the end, it&#39;s a matter of desire,
+The yearning for truths or fantasies to chase.
+Whether financial gains or minds to inspire,
+Lucas and Nietzsche find their rightful place.
+
+For in the vast tapestry of human art,
+Both light and shadow play their crucial role.
+And though their paths may seem worlds apart,
+Together they enrich our searching soul.
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id142"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
@@ -16506,6 +16679,7 @@ And sighed, O, charming Kate!
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id139">06/21/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id140">533. nia</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id141">534. requiem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iambic">535. iambic</a></li>
 </ul>
 </li>
 </ul>
