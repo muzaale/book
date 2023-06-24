@@ -15899,7 +15899,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/090067aa7e6268a3f9f5b650a1fc645d8ae5ece14c7d4788dda42806be682dfb.png" src="_images/090067aa7e6268a3f9f5b650a1fc645d8ae5ece14c7d4788dda42806be682dfb.png" />
+<img alt="_images/96df1a1bfe74e30d59f4cab07779d7592bd7d640d3acca30cd61d9bf73f41dea.png" src="_images/96df1a1bfe74e30d59f4cab07779d7592bd7d640d3acca30cd61d9bf73f41dea.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -16114,15 +16114,16 @@ Together they enrich our searching soul.
 <li><p>interactions among them too</p></li>
 <li><p>therefore adjusted <code class="docutils literal notranslate"><span class="pre">r(estimate)</span></code></p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(Y   =   \b_0   +   \b_1X_1   +   \b_2X_2   +   \cdots   +   \b_NX_N   \pm\varepsilon_i\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+Y = \beta_0  +  \beta_1X_1  +  \beta_2X_2 +  \cdots + \beta_NX_N \pm\varepsilon_i
+\)</span></p>
 <p>var1:</p>
 <ul class="simple">
 <li><p>no predictors</p></li>
 <li><p>average or prevalence</p></li>
 <li><p>obviously unadjusted</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[Y   =   \b_0   \pm\varepsilon_i\]</div>
+<p><span class="math notranslate nohighlight">\(Y =\beta_0  \pm\varepsilon_i\)</span></p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -16176,9 +16177,23 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/d9a11bb98ed7295addf08d455415ec824fdde743bdc016f61916f7e2434b0bfa.png" src="_images/d9a11bb98ed7295addf08d455415ec824fdde743bdc016f61916f7e2434b0bfa.png" />
+<img alt="_images/a956a66890638fc3326dd1df9ff7b4c6c6a2afc58826bb92a5a9d1ec74a49496.png" src="_images/a956a66890638fc3326dd1df9ff7b4c6c6a2afc58826bb92a5a9d1ec74a49496.png" />
 </div>
 </div>
+<p>var2:</p>
+<ul class="simple">
+<li><p>one predictor (binary)</p></li>
+<li><p>intercept is mean when value=0 of predictor (e.g. prev)</p></li>
+<li><p>slope is mean when value=1 of predictor</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(Y =\beta_0  + \beta_1X_1 \pm\varepsilon_i\)</span></p>
+<p>var3:</p>
+<ul class="simple">
+<li><p>one predictor (continuous)</p></li>
+<li><p>intercept is mean when value=0 of predictor (e.g. peak_pra)</p></li>
+<li><p>slope is difference in mean for predictors that differ by 1 unit</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(Y =\beta_0  + \beta_2X_2 \pm\varepsilon_i\)</span></p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id147"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
