@@ -1,0 +1,67 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/z_of_diff_obs_exp.log
+  log type:  text
+ opened on:  25 Jun 2023, 08:31:54
+
+. use transplants, clear
+
+. sum age 
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+         age |      2,000      50.404    15.81062          0         85
+
+. g age_th=rnormal(r(mean),r(sd))
+
+. hist age, ///
+>     fcolor(midblue%30) ///
+>         addplot( ///
+>             hist age_th, ///
+>                     fcolor(orange%30) ///
+>         ) ///
+>         legend( ///
+>             lab(1 "observed") ///
+>                 lab(2 "expected") ///
+>         )
+(bin=33, start=0, width=2.5757576)
+
+. graph export hist_obs_exp_overlap.png, replace 
+file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/hist_obs_exp_overlap.png saved as PNG format
+
+. g diff=age-age_th
+
+. regress diff
+
+      Source |       SS           df       MS      Number of obs   =     2,000
+-------------+----------------------------------   F(0, 1999)      =      0.00
+       Model |           0         0           .   Prob > F        =         .
+    Residual |  1025061.44     1,999  512.787112   R-squared       =    0.0000
+-------------+----------------------------------   Adj R-squared   =    0.0000
+       Total |  1025061.44     1,999  512.787112   Root MSE        =    22.645
+
+------------------------------------------------------------------------------
+        diff | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       _cons |   .3264303   .5063532     0.64   0.519     -.666605    1.319466
+------------------------------------------------------------------------------
+
+. sum diff
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+        diff |      2,000    .3264303     22.6448   -82.7893   65.29453
+
+. g z=diff/r(sd)
+
+. kdensity z
+
+. graph export z_of_diff_obs_exp.png, replace 
+file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/z_of_diff_obs_exp.png saved as PNG format
+
+. log close 
+      name:  <unnamed>
+       log:  /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/z_of_diff_obs_exp.log
+  log type:  text
+ closed on:  25 Jun 2023, 08:31:57
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
