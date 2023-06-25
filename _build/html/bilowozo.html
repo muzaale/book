@@ -15927,7 +15927,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/fae65198a94971626eec279fdd688c9cf644cd45c0be8e27a8057bfe04fcb37f.png" src="_images/fae65198a94971626eec279fdd688c9cf644cd45c0be8e27a8057bfe04fcb37f.png" />
+<img alt="_images/be22961d3c8bd67789bd0948d3136dd45490a86912da5705998e1d591188a861.png" src="_images/be22961d3c8bd67789bd0948d3136dd45490a86912da5705998e1d591188a861.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -16209,7 +16209,7 @@ Y =\beta_0  \pm\varepsilon_i
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/e3b7285aeef4a2610548253cae11399f1f50d00073d6457dd7893a7f685ba5da.png" src="_images/e3b7285aeef4a2610548253cae11399f1f50d00073d6457dd7893a7f685ba5da.png" />
+<img alt="_images/f05e76d4f4b61d317d51e64fc7e5c49cbb896b53365646349dac8dabd770c066.png" src="_images/f05e76d4f4b61d317d51e64fc7e5c49cbb896b53365646349dac8dabd770c066.png" />
 </div>
 </div>
 <p>var2:</p>
@@ -16542,7 +16542,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/44b55c12753ef64101316ea4cbcb2e399435a19664f493716a484d40ac8c71bc.png" src="_images/44b55c12753ef64101316ea4cbcb2e399435a19664f493716a484d40ac8c71bc.png" />
+<img alt="_images/5af0d94e45e76781f04ef5f464b6dd346c59708084c3f17528f1aa7b7252a609.png" src="_images/5af0d94e45e76781f04ef5f464b6dd346c59708084c3f17528f1aa7b7252a609.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -16625,7 +16625,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/4db2fa57db40d845a1c4e87480f16382e3c96fefee3eb8a7379725f25cf469cc.png" src="_images/4db2fa57db40d845a1c4e87480f16382e3c96fefee3eb8a7379725f25cf469cc.png" />
+<img alt="_images/4e22b80082054a4e7a7a337678467dc14859b3deb9a225c500eb5add18cb26f2.png" src="_images/4e22b80082054a4e7a7a337678467dc14859b3deb9a225c500eb5add18cb26f2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -16708,7 +16708,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/49e68c6063169265ec7fb9f8c93ed59672f435bdcf5b6cff5d6642d3e4b2b622.png" src="_images/49e68c6063169265ec7fb9f8c93ed59672f435bdcf5b6cff5d6642d3e4b2b622.png" />
+<img alt="_images/4335e504a28d00a9e490ccba3860eecd9a22452c3712eb2b91d80d5f393783ae.png" src="_images/4335e504a28d00a9e490ccba3860eecd9a22452c3712eb2b91d80d5f393783ae.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -16791,7 +16791,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/28c51f7e2c8087b40614f669af128b94e9c5865bccd3bcacd7faa2402cb1b365.png" src="_images/28c51f7e2c8087b40614f669af128b94e9c5865bccd3bcacd7faa2402cb1b365.png" />
+<img alt="_images/784581a99a6654f2bf1a81e3556528f5d198c398f1120d4b6f3ef224eb301d58.png" src="_images/784581a99a6654f2bf1a81e3556528f5d198c398f1120d4b6f3ef224eb301d58.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -17016,7 +17016,8 @@ Name: age, dtype: float64
 </ul>
 <section id="id155">
 <h4>555.1 stata<a class="headerlink" href="#id155" title="Permalink to this heading">#</a></h4>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> transplants,<span class="k"> clear</span>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">log</span> using z_of_diff_obs_exp<span class="m">.</span>log,<span class="k"> replace</span> 
+<span class="k">use</span> transplants,<span class="k"> clear</span>
 <span class="k">sum</span> age 
 <span class="k">g</span> age_th=<span class="nf">rnormal</span>(<span class="nf">r</span>(mean),<span class="nf">r</span>(sd))
 <span class="k">hist</span> age, <span class="cs">///</span>
@@ -17034,8 +17035,9 @@ Name: age, dtype: float64
 <span class="k">regress</span> diff
 <span class="k">sum</span> diff
 <span class="k">g</span> z=diff<span class="o">/</span><span class="nf">r</span>(sd)
-<span class="k">kdensity</span> z
+<span class="k">kdensity</span> z, addplot(normal)
 <span class="k">graph</span> export z_of_diff_obs_exp<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">log close</span>  
 </pre></div>
 </div>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>.<span class="k"> use</span> transplants,<span class="k"> clear</span>
@@ -17061,7 +17063,7 @@ Name: age, dtype: float64
 (bin=<span class="m">33</span>, start=<span class="m">0</span>, width=<span class="m">2.5757576</span>)
 
 .<span class="k"> graph</span> export hist_obs_exp_overlap<span class="m">.</span>png,<span class="k"> replace</span> 
-<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Dropbox (Personal)<span class="o">/</span>1f<span class="m">.</span>ἡἔρις,κ<span class="o">/</span><span class="m">1.</span>ontology<span class="o">/</span>summer<span class="o">/</span>hist_obs_exp_overlap<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Dropbox (Personal)<span class="o">/</span>4d.∫δυσφορία<span class="m">.</span>dt,ψ<span class="o">/</span><span class="m">4.</span>describe<span class="o">/</span>note<span class="o">/</span>hist_obs_exp_overlap<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
 
 .<span class="k"> g</span> diff=age<span class="o">-</span>age_th
 
@@ -17070,28 +17072,28 @@ Name: age, dtype: float64
       Source |       SS           df       MS      Number of obs   =     <span class="m">2</span>,<span class="m">000</span>
 <span class="o">-------------+----------------------------------</span>   <span class="nf">F</span>(<span class="m">0</span>, <span class="m">1999</span>)      =      <span class="m">0.00</span>
        Model |           <span class="m">0</span>         <span class="m">0</span>           .   Prob <span class="o">&gt;</span> F        =         .
-    Residual |  <span class="m">960238.093</span>     <span class="m">1</span>,<span class="m">999</span>  <span class="m">480.359226</span>   R<span class="o">-</span>squared       =    <span class="m">0.0000</span>
+    Residual |  <span class="m">996804.334</span>     <span class="m">1</span>,<span class="m">999</span>  <span class="m">498.651493</span>   R<span class="o">-</span>squared       =    <span class="m">0.0000</span>
 <span class="o">-------------+----------------------------------</span>   Adj R<span class="o">-</span>squared   =    <span class="m">0.0000</span>
-       Total |  <span class="m">960238.093</span>     <span class="m">1</span>,<span class="m">999</span>  <span class="m">480.359226</span>   Root MSE        =    <span class="m">21.917</span>
+       Total |  <span class="m">996804.334</span>     <span class="m">1</span>,<span class="m">999</span>  <span class="m">498.651493</span>   Root MSE        =    <span class="m">22.331</span>
 
 <span class="o">------------------------------------------------------------------------------</span>
         diff | Coefficient  Std.<span class="k"> err</span>.      t    P<span class="o">&gt;</span>|t|     [<span class="m">95</span>%<span class="k"> conf</span>. interval]
 <span class="o">-------------+----------------------------------------------------------------</span>
-       _cons |  <span class="o">-</span>.<span class="m">7966179</span>   .<span class="m">4900812</span>    <span class="o">-</span><span class="m">1.63</span>   <span class="m">0.104</span>    <span class="o">-</span><span class="m">1.757741</span>    .<span class="m">1645056</span>
+       _cons |  <span class="o">-</span>.<span class="m">2526796</span>   .<span class="m">4993253</span>    <span class="o">-</span><span class="m">0.51</span>   <span class="m">0.613</span>    <span class="o">-</span><span class="m">1.231932</span>    .<span class="m">7265729</span>
 <span class="o">------------------------------------------------------------------------------</span>
 
 .<span class="k"> sum</span> diff
 
     Variable |        Obs        Mean    Std. dev.       Min        Max
 <span class="o">-------------+---------------------------------------------------------</span>
-        diff |      <span class="m">2</span>,<span class="m">000</span>   <span class="o">-</span>.<span class="m">7966179</span>     <span class="m">21.9171</span>  <span class="o">-</span><span class="m">69.72077</span>   <span class="m">58.62278</span>
+        diff |      <span class="m">2</span>,<span class="m">000</span>   <span class="o">-</span>.<span class="m">2526796</span>    <span class="m">22.33051</span>  <span class="o">-</span><span class="m">82.78532</span>   <span class="m">64.87444</span>
 
 .<span class="k"> g</span> z=diff<span class="o">/</span><span class="nf">r</span>(sd)
 
-.<span class="k"> kdensity</span> z
+.<span class="k"> kdensity</span> z, addplot(normal)
 
 .<span class="k"> graph</span> export z_of_diff_obs_exp<span class="m">.</span>png,<span class="k"> replace</span> 
-<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Dropbox (Personal)<span class="o">/</span>1f<span class="m">.</span>ἡἔρις,κ<span class="o">/</span><span class="m">1.</span>ontology<span class="o">/</span>summer<span class="o">/</span>z_of_diff_obs_exp<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Dropbox (Personal)<span class="o">/</span>4d.∫δυσφορία<span class="m">.</span>dt,ψ<span class="o">/</span><span class="m">4.</span>describe<span class="o">/</span>note<span class="o">/</span>z_of_diff_obs_exp<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
 </pre></div>
 </div>
 <p>The p-value of 0.104 suggests a departure from normal at the 90% level of significance</p>
@@ -17105,59 +17107,6 @@ Name: age, dtype: float64
 <li><p>normal</p></li>
 <li><p>simulation</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-
-<span class="c1"># Load the dataset</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s1">&#39;transplants.dta&#39;</span><span class="p">)</span>
-
-<span class="c1"># Summary statistics of age</span>
-<span class="n">age_mean</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">age_sd</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-
-<span class="c1"># Generate a random sample with the same mean and standard deviation as age</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">age_th</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">age_mean</span><span class="p">,</span> <span class="n">age_sd</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-
-<span class="c1"># Histogram of age with overlaid expected values</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#1F77B4&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observed&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">age_th</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;expected&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;hist_obs_exp_overlap.png&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Calculate the difference between observed and expected age</span>
-<span class="n">diff</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">age_th</span>
-
-<span class="c1"># Regression of the difference</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">age_th</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-
-<span class="c1"># Summary statistics of the difference</span>
-<span class="n">diff_mean</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">diff_sd</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-
-<span class="c1"># Calculate z-scores of the difference</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">diff</span> <span class="o">/</span> <span class="n">diff_sd</span>
-
-<span class="c1"># Kernel density plot of z-scores</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;z_of_diff_obs_exp.png&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/d0f5ef27b36f329ee64850d0931b3640c1e269a91ad91358f7303ecec2bddff6.png" src="_images/d0f5ef27b36f329ee64850d0931b3640c1e269a91ad91358f7303ecec2bddff6.png" />
-<img alt="_images/60cfcd8481d4ba5c339537c5dce33522dd86252223b5ba0c2f10ed58825b49fe.png" src="_images/60cfcd8481d4ba5c339537c5dce33522dd86252223b5ba0c2f10ed58825b49fe.png" />
-</div>
-</div>
 </section>
 <section id="python2">
 <h4>555.2 python2<a class="headerlink" href="#python2" title="Permalink to this heading">#</a></h4>
@@ -17215,8 +17164,77 @@ Name: age, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d0f5ef27b36f329ee64850d0931b3640c1e269a91ad91358f7303ecec2bddff6.png" src="_images/d0f5ef27b36f329ee64850d0931b3640c1e269a91ad91358f7303ecec2bddff6.png" />
-<img alt="_images/d093583046041f3b652fe3e7e025156a9845e934650e22a4b325a57dfc21fc36.png" src="_images/d093583046041f3b652fe3e7e025156a9845e934650e22a4b325a57dfc21fc36.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">50</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Load the dataset</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_stata</span><span class="p">(</span><span class="s1">&#39;transplants.dta&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># Summary statistics of age</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">age_mean</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nn">File /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/stata.py:2020,</span> in <span class="ni">read_stata</span><span class="nt">(filepath_or_buffer, convert_dates, convert_categoricals, index_col, convert_missing, preserve_dtypes, columns, order_categoricals, chunksize, iterator, compression, storage_options)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2003</span> <span class="nd">@Appender</span><span class="p">(</span><span class="n">_read_stata_doc</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2004</span> <span class="nd">@deprecate_nonkeyword_arguments</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allowed_args</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;filepath_or_buffer&quot;</span><span class="p">])</span>
+<span class="g g-Whitespace">   </span><span class="mi">2005</span> <span class="k">def</span> <span class="nf">read_stata</span><span class="p">(</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2017</span>     <span class="n">storage_options</span><span class="p">:</span> <span class="n">StorageOptions</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2018</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="n">StataReader</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2020</span>     <span class="n">reader</span> <span class="o">=</span> <span class="n">StataReader</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2021</span>         <span class="n">filepath_or_buffer</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2022</span>         <span class="n">convert_dates</span><span class="o">=</span><span class="n">convert_dates</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2023</span>         <span class="n">convert_categoricals</span><span class="o">=</span><span class="n">convert_categoricals</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2024</span>         <span class="n">index_col</span><span class="o">=</span><span class="n">index_col</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2025</span>         <span class="n">convert_missing</span><span class="o">=</span><span class="n">convert_missing</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2026</span>         <span class="n">preserve_dtypes</span><span class="o">=</span><span class="n">preserve_dtypes</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2027</span>         <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2028</span>         <span class="n">order_categoricals</span><span class="o">=</span><span class="n">order_categoricals</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2029</span>         <span class="n">chunksize</span><span class="o">=</span><span class="n">chunksize</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2030</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2031</span>         <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2032</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2034</span>     <span class="k">if</span> <span class="n">iterator</span> <span class="ow">or</span> <span class="n">chunksize</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2035</span>         <span class="k">return</span> <span class="n">reader</span>
+
+<span class="nn">File /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/stata.py:1163,</span> in <span class="ni">StataReader.__init__</span><span class="nt">(self, path_or_buf, convert_dates, convert_categoricals, index_col, convert_missing, preserve_dtypes, columns, order_categoricals, chunksize, compression, storage_options)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1160</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lines_read</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">   </span><span class="mi">1162</span> <span class="bp">self</span><span class="o">.</span><span class="n">_native_byteorder</span> <span class="o">=</span> <span class="n">_set_endianness</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">byteorder</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1163</span> <span class="k">with</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1164</span>     <span class="n">path_or_buf</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1165</span>     <span class="s2">&quot;rb&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1166</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span>     <span class="n">is_text</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span>     <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span> <span class="p">)</span> <span class="k">as</span> <span class="n">handles</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span>     <span class="c1"># Copy to BytesIO, and ensure no encoding</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span>     <span class="bp">self</span><span class="o">.</span><span class="n">path_or_buf</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_header</span><span class="p">()</span>
+
+<span class="nn">File /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/common.py:865,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
+<span class="ne">--&gt; </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="c1"># Convert BytesIO or file objects passed with an encoding</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;transplants.dta&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">

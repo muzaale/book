@@ -2,7 +2,7 @@
       name:  <unnamed>
        log:  /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/z_of_diff_obs_exp.log
   log type:  text
- opened on:  25 Jun 2023, 08:31:54
+ opened on:  25 Jun 2023, 09:03:56
 
 . use transplants, clear
 
@@ -36,25 +36,25 @@ file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/
       Source |       SS           df       MS      Number of obs   =     2,000
 -------------+----------------------------------   F(0, 1999)      =      0.00
        Model |           0         0           .   Prob > F        =         .
-    Residual |  1025061.44     1,999  512.787112   R-squared       =    0.0000
+    Residual |  996804.334     1,999  498.651493   R-squared       =    0.0000
 -------------+----------------------------------   Adj R-squared   =    0.0000
-       Total |  1025061.44     1,999  512.787112   Root MSE        =    22.645
+       Total |  996804.334     1,999  498.651493   Root MSE        =    22.331
 
 ------------------------------------------------------------------------------
         diff | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
 -------------+----------------------------------------------------------------
-       _cons |   .3264303   .5063532     0.64   0.519     -.666605    1.319466
+       _cons |  -.2526796   .4993253    -0.51   0.613    -1.231932    .7265729
 ------------------------------------------------------------------------------
 
 . sum diff
 
     Variable |        Obs        Mean    Std. dev.       Min        Max
 -------------+---------------------------------------------------------
-        diff |      2,000    .3264303     22.6448   -82.7893   65.29453
+        diff |      2,000   -.2526796    22.33051  -82.78532   64.87444
 
 . g z=diff/r(sd)
 
-. kdensity z
+. kdensity z, addplot(normal)
 
 . graph export z_of_diff_obs_exp.png, replace 
 file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/z_of_diff_obs_exp.png saved as PNG format
@@ -63,5 +63,5 @@ file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/
       name:  <unnamed>
        log:  /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/z_of_diff_obs_exp.log
   log type:  text
- closed on:  25 Jun 2023, 08:31:57
+ closed on:  25 Jun 2023, 09:03:59
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------

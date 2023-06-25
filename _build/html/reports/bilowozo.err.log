@@ -1,118 +1,137 @@
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
-    return just_run(coro(*args, **kwargs))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
-    return loop.run_until_complete(coro)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/d/Library/Python/3.11/lib/python/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import networkx as nx
-import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
-import sklearn as skl
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
 
-#plt.figure(figsize=[2, 2])
-G = nx.DiGraph()
-G.add_node("X1",  pos = (0, 5) )
-G.add_node("X2",  pos = (1, 5) )
-G.add_node("X3",  pos = (2, 5) )
-G.add_node("X4",  pos = (3, 5) )
-G.add_node("X5",  pos = (4, 5) )
-G.add_node("X6",  pos = (5, 5) )
-G.add_node("X7",  pos = (6, 5) )
-G.add_node("X8",  pos = (7, 5) )
+# Load the dataset
+data = pd.read_stata('transplants.dta')
 
-G.add_node("H11",  pos = (1.4, 4) )
-G.add_node("H12",  pos = (2.8, 4) )
-G.add_node("H13",  pos = (4.2, 4) )
-G.add_node("H14",  pos = (5.6, 4) )
+# Summary statistics of age
+age_mean = data['age'].mean()
+age_sd = data['age'].std()
 
-G.add_node("H21",  pos = (2.1, 3) )
-G.add_node("H22",  pos = (4.9, 3) )
+# Generate a random sample with the same mean and standard deviation as age
+np.random.seed(42)
+age_th = np.random.normal(age_mean, age_sd, size=len(data))
 
-G.add_node("H31",  pos = (1.4, 2) )
-G.add_node("H32",  pos = (2.8, 2) )
-G.add_node("H33",  pos = (4.2, 2) )
-G.add_node("H34",  pos = (5.6, 2) )
-
-
-G.add_node("H41",  pos = (0, 1) )
-G.add_node("H42",  pos = (1, 1) )
-G.add_node("H43",  pos = (2, 1) )
-G.add_node("H44",  pos = (3, 1) )
-G.add_node("H45",  pos = (4, 1) )
-G.add_node("H46",  pos = (5, 1) )
-G.add_node("H47",  pos = (6, 1) )
-G.add_node("H48",  pos = (7, 1) )
-
-G.add_edges_from([ ("X1", "H11"),  ("X1", "H12"),  ("X1", "H13"),  ("X1", "H14")])
-G.add_edges_from([ ("X2", "H11"),  ("X2", "H12"),  ("X2", "H13"),  ("X2", "H14")])
-G.add_edges_from([ ("X3", "H11"),  ("X3", "H12"),  ("X3", "H13"),  ("X3", "H14")])
-G.add_edges_from([ ("X4", "H11"),  ("X4", "H12"),  ("X4", "H13"),  ("X4", "H14")])
-G.add_edges_from([ ("X5", "H11"),  ("X5", "H12"),  ("X5", "H13"),  ("X5", "H14")])
-G.add_edges_from([ ("X6", "H11"),  ("X6", "H12"),  ("X6", "H13"),  ("X6", "H14")])
-G.add_edges_from([ ("X7", "H11"),  ("X7", "H12"),  ("X7", "H13"),  ("X7", "H14")])
-G.add_edges_from([ ("X8", "H11"),  ("X8", "H12"),  ("X8", "H13"),  ("X8", "H14")])
-
-G.add_edges_from([ ("H11", "H21"),  ("H11", "H22")])
-G.add_edges_from([ ("H12", "H21"),  ("H12", "H22")])
-G.add_edges_from([ ("H13", "H21"),  ("H13", "H22")])
-G.add_edges_from([ ("H14", "H21"),  ("H14", "H22")])
-
-
-G.add_edges_from([ ("H21", "H31"),  ("H21", "H32"),  ("H21", "H33"),  ("H21", "H34")])
-G.add_edges_from([ ("H22", "H31"),  ("H22", "H32"),  ("H22", "H33"),  ("H22", "H34")])
-
-G.add_edges_from([ ("H31", "H41"),  ("H31", "H42"),  ("H31", "H43"),  ("H31", "H44")])
-G.add_edges_from([ ("H31", "H45"),  ("H31", "H46"),  ("H31", "H47"),  ("H31", "H48")])
-G.add_edges_from([ ("H32", "H41"),  ("H32", "H42"),  ("H32", "H43"),  ("H32", "H44")])
-G.add_edges_from([ ("H32", "H45"),  ("H32", "H46"),  ("H32", "H47"),  ("H32", "H48")])
-G.add_edges_from([ ("H33", "H41"),  ("H33", "H42"),  ("H33", "H43"),  ("H33", "H44")])
-G.add_edges_from([ ("H33", "H45"),  ("H33", "H46"),  ("H33", "H47"),  ("H33", "H48")])
-G.add_edges_from([ ("H34", "H41"),  ("H34", "H42"),  ("H34", "H43"),  ("H34", "H44")])
-G.add_edges_from([ ("H34", "H45"),  ("H34", "H46"),  ("H34", "H47"),  ("H34", "H48")])
-
-
-#G.add_edges_from([("H11", "H21"), ("H11", "H22"), ("H12", "H21"), ("H12", "H22")])
-#G.add_edges_from([("H21", "Y"), ("H22", "Y")])
-nx.draw(G, 
-        nx.get_node_attributes(G, 'pos'), 
-        with_labels=True, 
-        font_weight='bold', 
-        node_size = 1000,
-        node_color = "lightblue",
-        linewidths = 3)
-ax= plt.gca()
-ax.collections[0].set_edgecolor("#000000")
-ax.set_xlim([-.5, 7.5])
-ax.set_ylim([.5, 5.5])
+# Histogram of age with overlaid expected values
+plt.hist(data['age'], color='#1F77B4', alpha=0.3, label='observed')
+plt.hist(age_th, color='orange', alpha=0.3, label='expected')
+plt.legend()
 plt.show()
+
+# Calculate the difference between observed and expected age
+diff = data['age'] - age_th
+
+# Regression of the difference
+X = sm.add_constant(age_th)
+model = sm.OLS(diff, X)
+results = model.fit()
+
+# Summary statistics of the difference
+diff_mean = diff.mean()
+diff_sd = diff.std()
+
+# Calculate z-scores of the difference
+z = diff / diff_sd
+
+# Kernel density plot of z-scores
+sns.kdeplot(z, label='empirical')
+sns.kdeplot(np.random.normal(0, 1, size=len(z)), label='standardized')
+plt.legend()
+plt.show()
+
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[4], line 4[0m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[0;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01msklearn[39;00m [38;5;28;01mas[39;00m [38;5;21;01mskl[39;00m
-[1;32m      6[0m [38;5;66;03m#plt.figure(figsize=[2, 2])[39;00m
-[1;32m      7[0m G [38;5;241m=[39m nx[38;5;241m.[39mDiGraph()
 
-[0;31mModuleNotFoundError[0m: No module named 'sklearn'
-ModuleNotFoundError: No module named 'sklearn'
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[50], line 8[0m
+[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
+[1;32m      7[0m [38;5;66;03m# Load the dataset[39;00m
+[0;32m----> 8[0m data [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_stata[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mtransplants.dta[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m     10[0m [38;5;66;03m# Summary statistics of age[39;00m
+[1;32m     11[0m age_mean [38;5;241m=[39m data[[38;5;124m'[39m[38;5;124mage[39m[38;5;124m'[39m][38;5;241m.[39mmean()
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/util/_decorators.py:331[0m, in [0;36mdeprecate_nonkeyword_arguments.<locals>.decorate.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    325[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(args) [38;5;241m>[39m num_allow_args:
+[1;32m    326[0m     warnings[38;5;241m.[39mwarn(
+[1;32m    327[0m         msg[38;5;241m.[39mformat(arguments[38;5;241m=[39m_format_argument_list(allow_args)),
+[1;32m    328[0m         [38;5;167;01mFutureWarning[39;00m,
+[1;32m    329[0m         stacklevel[38;5;241m=[39mfind_stack_level(),
+[1;32m    330[0m     )
+[0;32m--> 331[0m [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/stata.py:2020[0m, in [0;36mread_stata[0;34m(filepath_or_buffer, convert_dates, convert_categoricals, index_col, convert_missing, preserve_dtypes, columns, order_categoricals, chunksize, iterator, compression, storage_options)[0m
+[1;32m   2003[0m [38;5;129m@Appender[39m(_read_stata_doc)
+[1;32m   2004[0m [38;5;129m@deprecate_nonkeyword_arguments[39m(version[38;5;241m=[39m[38;5;28;01mNone[39;00m, allowed_args[38;5;241m=[39m[[38;5;124m"[39m[38;5;124mfilepath_or_buffer[39m[38;5;124m"[39m])
+[1;32m   2005[0m [38;5;28;01mdef[39;00m [38;5;21mread_stata[39m(
+[0;32m   (...)[0m
+[1;32m   2017[0m     storage_options: StorageOptions [38;5;241m=[39m [38;5;28;01mNone[39;00m,
+[1;32m   2018[0m ) [38;5;241m-[39m[38;5;241m>[39m DataFrame [38;5;241m|[39m StataReader:
+[0;32m-> 2020[0m     reader [38;5;241m=[39m [43mStataReader[49m[43m([49m
+[1;32m   2021[0m [43m        [49m[43mfilepath_or_buffer[49m[43m,[49m
+[1;32m   2022[0m [43m        [49m[43mconvert_dates[49m[38;5;241;43m=[39;49m[43mconvert_dates[49m[43m,[49m
+[1;32m   2023[0m [43m        [49m[43mconvert_categoricals[49m[38;5;241;43m=[39;49m[43mconvert_categoricals[49m[43m,[49m
+[1;32m   2024[0m [43m        [49m[43mindex_col[49m[38;5;241;43m=[39;49m[43mindex_col[49m[43m,[49m
+[1;32m   2025[0m [43m        [49m[43mconvert_missing[49m[38;5;241;43m=[39;49m[43mconvert_missing[49m[43m,[49m
+[1;32m   2026[0m [43m        [49m[43mpreserve_dtypes[49m[38;5;241;43m=[39;49m[43mpreserve_dtypes[49m[43m,[49m
+[1;32m   2027[0m [43m        [49m[43mcolumns[49m[38;5;241;43m=[39;49m[43mcolumns[49m[43m,[49m
+[1;32m   2028[0m [43m        [49m[43morder_categoricals[49m[38;5;241;43m=[39;49m[43morder_categoricals[49m[43m,[49m
+[1;32m   2029[0m [43m        [49m[43mchunksize[49m[38;5;241;43m=[39;49m[43mchunksize[49m[43m,[49m
+[1;32m   2030[0m [43m        [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
+[1;32m   2031[0m [43m        [49m[43mcompression[49m[38;5;241;43m=[39;49m[43mcompression[49m[43m,[49m
+[1;32m   2032[0m [43m    [49m[43m)[49m
+[1;32m   2034[0m     [38;5;28;01mif[39;00m iterator [38;5;129;01mor[39;00m chunksize:
+[1;32m   2035[0m         [38;5;28;01mreturn[39;00m reader
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/stata.py:1163[0m, in [0;36mStataReader.__init__[0;34m(self, path_or_buf, convert_dates, convert_categoricals, index_col, convert_missing, preserve_dtypes, columns, order_categoricals, chunksize, compression, storage_options)[0m
+[1;32m   1160[0m [38;5;28mself[39m[38;5;241m.[39m_lines_read [38;5;241m=[39m [38;5;241m0[39m
+[1;32m   1162[0m [38;5;28mself[39m[38;5;241m.[39m_native_byteorder [38;5;241m=[39m _set_endianness(sys[38;5;241m.[39mbyteorder)
+[0;32m-> 1163[0m [38;5;28;01mwith[39;00m [43mget_handle[49m[43m([49m
+[1;32m   1164[0m [43m    [49m[43mpath_or_buf[49m[43m,[49m
+[1;32m   1165[0m [43m    [49m[38;5;124;43m"[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m   1166[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
+[1;32m   1167[0m [43m    [49m[43mis_text[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
+[1;32m   1168[0m [43m    [49m[43mcompression[49m[38;5;241;43m=[39;49m[43mcompression[49m[43m,[49m
+[1;32m   1169[0m [43m[49m[43m)[49m [38;5;28;01mas[39;00m handles:
+[1;32m   1170[0m     [38;5;66;03m# Copy to BytesIO, and ensure no encoding[39;00m
+[1;32m   1171[0m     [38;5;28mself[39m[38;5;241m.[39mpath_or_buf [38;5;241m=[39m BytesIO(handles[38;5;241m.[39mhandle[38;5;241m.[39mread())
+[1;32m   1173[0m [38;5;28mself[39m[38;5;241m.[39m_read_header()
+
+File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/common.py:865[0m, in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
+[1;32m    856[0m         handle [38;5;241m=[39m [38;5;28mopen[39m(
+[1;32m    857[0m             handle,
+[1;32m    858[0m             ioargs[38;5;241m.[39mmode,
+[0;32m   (...)[0m
+[1;32m    861[0m             newline[38;5;241m=[39m[38;5;124m"[39m[38;5;124m"[39m,
+[1;32m    862[0m         )
+[1;32m    863[0m     [38;5;28;01melse[39;00m:
+[1;32m    864[0m         [38;5;66;03m# Binary mode[39;00m
+[0;32m--> 865[0m         handle [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[43mhandle[49m[43m,[49m[43m [49m[43mioargs[49m[38;5;241;43m.[39;49m[43mmode[49m[43m)[49m
+[1;32m    866[0m     handles[38;5;241m.[39mappend(handle)
+[1;32m    868[0m [38;5;66;03m# Convert BytesIO or file objects passed with an encoding[39;00m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'transplants.dta'
 
