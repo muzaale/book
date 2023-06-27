@@ -18,120 +18,93 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
+import pygame
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import statsmodels.api as sm
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
-# Load the dataset
-data = pd.read_stata('transplants.dta')
+# Game Initialization
+pygame.init()
+width, height = 800, 600
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Adversarial Game")
+clock = pygame.time.Clock()
 
-# Summary statistics of age
-age_mean = data['age'].mean()
-age_sd = data['age'].std()
+# Generator and Discriminator Models
+generator = Sequential([
+    Dense(256, input_shape=(100,), activation='relu'),
+    Dense(512, activation='relu'),
+    Dense(width * height, activation='sigmoid')
+])
 
-# Generate a random sample with the same mean and standard deviation as age
-np.random.seed(42)
-age_th = np.random.normal(age_mean, age_sd, size=len(data))
+discriminator = Sequential([
+    Dense(512, input_shape=(width * height,), activation='relu'),
+    Dense(256, activation='relu'),
+    Dense(1, activation='sigmoid')
+])
 
-# Histogram of age with overlaid expected values
-plt.hist(data['age'], color='#1F77B4', alpha=0.3, label='observed')
-plt.hist(age_th, color='orange', alpha=0.3, label='expected')
-plt.legend()
-plt.show()
+# Training the Adversarial Network
+discriminator.compile(optimizer='adam', loss='binary_crossentropy')
+discriminator.trainable = False
 
-# Calculate the difference between observed and expected age
-diff = data['age'] - age_th
+adversarial = Sequential([generator, discriminator])
+adversarial.compile(optimizer='adam', loss='binary_crossentropy')
 
-# Regression of the difference
-X = sm.add_constant(age_th)
-model = sm.OLS(diff, X)
-results = model.fit()
+batch_size = 32
 
-# Summary statistics of the difference
-diff_mean = diff.mean()
-diff_sd = diff.std()
+def get_real_samples(batch_size):
+    # Generate placeholder real samples (not implemented)
+    return np.zeros((batch_size, width * height))
 
-# Calculate z-scores of the difference
-z = diff / diff_sd
+def train(steps):
+    for step in range(steps):
+        # Generate fake samples
+        noise = np.random.normal(0, 1, (batch_size, 100))
+        fake_samples = generator.predict(noise)
 
-# Kernel density plot of z-scores
-sns.kdeplot(z, label='empirical')
-sns.kdeplot(np.random.normal(0, 1, size=len(z)), label='standardized')
-plt.legend()
-plt.show()
+        # Train discriminator
+        real_samples = get_real_samples(batch_size)
+        discriminator.train_on_batch(real_samples, np.ones((batch_size, 1)))
+        discriminator.train_on_batch(fake_samples, np.zeros((batch_size, 1)))
+
+        # Train generator
+        adversarial.train_on_batch(noise, np.ones((batch_size, 1)))
+
+def game_loop():
+    while True:
+        screen.fill((0, 0, 0))
+
+        # Generate fake samples
+        noise = np.random.normal(0, 1, (1, 100))
+        fake_sample = generator.predict(noise)[0].reshape((height, width))
+
+        # Render the fake sample
+        for y in range(height):
+            for x in range(width):
+                pixel_color = int(fake_sample[y][x] * 255)
+                pygame.draw.rect(screen, (pixel_color, pixel_color, pixel_color), (x, y, 1, 1))
+
+        # Update the screen
+        pygame.display.flip()
+        clock.tick(60)
+
+        # Handle game events
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                return
+
+# Start the game loop
+if __name__ == '__main__':
+# train(1000)
+# game_loop() 
 
 ------------------
 
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[50], line 8[0m
-[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
-[1;32m      7[0m [38;5;66;03m# Load the dataset[39;00m
-[0;32m----> 8[0m data [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_stata[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mtransplants.dta[39;49m[38;5;124;43m'[39;49m[43m)[49m
-[1;32m     10[0m [38;5;66;03m# Summary statistics of age[39;00m
-[1;32m     11[0m age_mean [38;5;241m=[39m data[[38;5;124m'[39m[38;5;124mage[39m[38;5;124m'[39m][38;5;241m.[39mmean()
+[0;36m  Cell [0;32mIn[60], line 80[0;36m[0m
+[0;31m    # game_loop()[0m
+[0m                  ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m incomplete input
 
-File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/util/_decorators.py:331[0m, in [0;36mdeprecate_nonkeyword_arguments.<locals>.decorate.<locals>.wrapper[0;34m(*args, **kwargs)[0m
-[1;32m    325[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(args) [38;5;241m>[39m num_allow_args:
-[1;32m    326[0m     warnings[38;5;241m.[39mwarn(
-[1;32m    327[0m         msg[38;5;241m.[39mformat(arguments[38;5;241m=[39m_format_argument_list(allow_args)),
-[1;32m    328[0m         [38;5;167;01mFutureWarning[39;00m,
-[1;32m    329[0m         stacklevel[38;5;241m=[39mfind_stack_level(),
-[1;32m    330[0m     )
-[0;32m--> 331[0m [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-
-File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/stata.py:2020[0m, in [0;36mread_stata[0;34m(filepath_or_buffer, convert_dates, convert_categoricals, index_col, convert_missing, preserve_dtypes, columns, order_categoricals, chunksize, iterator, compression, storage_options)[0m
-[1;32m   2003[0m [38;5;129m@Appender[39m(_read_stata_doc)
-[1;32m   2004[0m [38;5;129m@deprecate_nonkeyword_arguments[39m(version[38;5;241m=[39m[38;5;28;01mNone[39;00m, allowed_args[38;5;241m=[39m[[38;5;124m"[39m[38;5;124mfilepath_or_buffer[39m[38;5;124m"[39m])
-[1;32m   2005[0m [38;5;28;01mdef[39;00m [38;5;21mread_stata[39m(
-[0;32m   (...)[0m
-[1;32m   2017[0m     storage_options: StorageOptions [38;5;241m=[39m [38;5;28;01mNone[39;00m,
-[1;32m   2018[0m ) [38;5;241m-[39m[38;5;241m>[39m DataFrame [38;5;241m|[39m StataReader:
-[0;32m-> 2020[0m     reader [38;5;241m=[39m [43mStataReader[49m[43m([49m
-[1;32m   2021[0m [43m        [49m[43mfilepath_or_buffer[49m[43m,[49m
-[1;32m   2022[0m [43m        [49m[43mconvert_dates[49m[38;5;241;43m=[39;49m[43mconvert_dates[49m[43m,[49m
-[1;32m   2023[0m [43m        [49m[43mconvert_categoricals[49m[38;5;241;43m=[39;49m[43mconvert_categoricals[49m[43m,[49m
-[1;32m   2024[0m [43m        [49m[43mindex_col[49m[38;5;241;43m=[39;49m[43mindex_col[49m[43m,[49m
-[1;32m   2025[0m [43m        [49m[43mconvert_missing[49m[38;5;241;43m=[39;49m[43mconvert_missing[49m[43m,[49m
-[1;32m   2026[0m [43m        [49m[43mpreserve_dtypes[49m[38;5;241;43m=[39;49m[43mpreserve_dtypes[49m[43m,[49m
-[1;32m   2027[0m [43m        [49m[43mcolumns[49m[38;5;241;43m=[39;49m[43mcolumns[49m[43m,[49m
-[1;32m   2028[0m [43m        [49m[43morder_categoricals[49m[38;5;241;43m=[39;49m[43morder_categoricals[49m[43m,[49m
-[1;32m   2029[0m [43m        [49m[43mchunksize[49m[38;5;241;43m=[39;49m[43mchunksize[49m[43m,[49m
-[1;32m   2030[0m [43m        [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
-[1;32m   2031[0m [43m        [49m[43mcompression[49m[38;5;241;43m=[39;49m[43mcompression[49m[43m,[49m
-[1;32m   2032[0m [43m    [49m[43m)[49m
-[1;32m   2034[0m     [38;5;28;01mif[39;00m iterator [38;5;129;01mor[39;00m chunksize:
-[1;32m   2035[0m         [38;5;28;01mreturn[39;00m reader
-
-File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/stata.py:1163[0m, in [0;36mStataReader.__init__[0;34m(self, path_or_buf, convert_dates, convert_categoricals, index_col, convert_missing, preserve_dtypes, columns, order_categoricals, chunksize, compression, storage_options)[0m
-[1;32m   1160[0m [38;5;28mself[39m[38;5;241m.[39m_lines_read [38;5;241m=[39m [38;5;241m0[39m
-[1;32m   1162[0m [38;5;28mself[39m[38;5;241m.[39m_native_byteorder [38;5;241m=[39m _set_endianness(sys[38;5;241m.[39mbyteorder)
-[0;32m-> 1163[0m [38;5;28;01mwith[39;00m [43mget_handle[49m[43m([49m
-[1;32m   1164[0m [43m    [49m[43mpath_or_buf[49m[43m,[49m
-[1;32m   1165[0m [43m    [49m[38;5;124;43m"[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m"[39;49m[43m,[49m
-[1;32m   1166[0m [43m    [49m[43mstorage_options[49m[38;5;241;43m=[39;49m[43mstorage_options[49m[43m,[49m
-[1;32m   1167[0m [43m    [49m[43mis_text[49m[38;5;241;43m=[39;49m[38;5;28;43;01mFalse[39;49;00m[43m,[49m
-[1;32m   1168[0m [43m    [49m[43mcompression[49m[38;5;241;43m=[39;49m[43mcompression[49m[43m,[49m
-[1;32m   1169[0m [43m[49m[43m)[49m [38;5;28;01mas[39;00m handles:
-[1;32m   1170[0m     [38;5;66;03m# Copy to BytesIO, and ensure no encoding[39;00m
-[1;32m   1171[0m     [38;5;28mself[39m[38;5;241m.[39mpath_or_buf [38;5;241m=[39m BytesIO(handles[38;5;241m.[39mhandle[38;5;241m.[39mread())
-[1;32m   1173[0m [38;5;28mself[39m[38;5;241m.[39m_read_header()
-
-File [0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pandas/io/common.py:865[0m, in [0;36mget_handle[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)[0m
-[1;32m    856[0m         handle [38;5;241m=[39m [38;5;28mopen[39m(
-[1;32m    857[0m             handle,
-[1;32m    858[0m             ioargs[38;5;241m.[39mmode,
-[0;32m   (...)[0m
-[1;32m    861[0m             newline[38;5;241m=[39m[38;5;124m"[39m[38;5;124m"[39m,
-[1;32m    862[0m         )
-[1;32m    863[0m     [38;5;28;01melse[39;00m:
-[1;32m    864[0m         [38;5;66;03m# Binary mode[39;00m
-[0;32m--> 865[0m         handle [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[43mhandle[49m[43m,[49m[43m [49m[43mioargs[49m[38;5;241;43m.[39;49m[43mmode[49m[43m)[49m
-[1;32m    866[0m     handles[38;5;241m.[39mappend(handle)
-[1;32m    868[0m [38;5;66;03m# Convert BytesIO or file objects passed with an encoding[39;00m
-
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'transplants.dta'
 
