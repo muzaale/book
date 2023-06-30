@@ -1,0 +1,98 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/age_o_age_e.log
+  log type:  text
+ opened on:  29 Jun 2023, 21:40:11
+
+. import delimited "https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt", clear
+(encoding automatically selected: ISO-8859-1)
+(26 vars, 2,000 obs)
+
+. sum age, d
+
+                             age
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            5              0
+ 5%           18              0
+10%           28              1       Obs               2,000
+25%           41              1       Sum of wgt.       2,000
+
+50%           53                      Mean             50.404
+                        Largest       Std. dev.      15.81062
+75%           62             82
+90%           68             84       Variance       249.9758
+95%         71.5             84       Skewness      -.7874563
+99%         76.5             85       Kurtosis       3.305851
+
+. set seed 340600
+
+. g age_exp=rt(r(N))*r(sd)+r(mean)
+
+. lab var age "Age at Transplant"
+
+. lab var age_exp "Age at Transplant"
+
+. local age_label : variable label age
+
+. local age_exp_label : variable label age_exp
+
+. hist age, ///
+>    fcolor(midblue%50) ///
+>    xlab(-20(20)100) ///
+>    xtitle("`age_label'") ///
+>    legend( ///
+>       lab(1 "Observed") ///
+>           lab(2 "Expected") ///
+>    ) ///
+>    addplot( ///
+>       hist age_exp, ///
+>              fcolor(orange%30) ///
+>    )
+(bin=33, start=0, width=2.5757576)
+
+. graph export age_o_age_e.png, replace 
+file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/age_o_age_e.png saved as PNG format
+
+. 
+. g age_diff=age-age_exp
+
+. qui sum age_diff, d
+
+. replace age_diff=age_diff/r(sd)
+(2,000 real changes made)
+
+. local z : di %3.1f normal(r(mean))
+
+. kdensity(age_diff), ///
+>    xlab(-3(1)3) ///
+>    text( ///
+>       .15 -.7 "`z'" ///
+>    )
+
+. graph export diff_age_o_age_e.png, replace
+file /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/diff_age_o_age_e.png saved as PNG format
+
+. sum age_diff, d
+
+                          age_diff
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    -2.443087      -3.238876
+ 5%    -1.736415      -3.197536
+10%    -1.344879      -3.179905       Obs               2,000
+25%    -.6358286      -3.057531       Sum of wgt.       2,000
+
+50%     .0216095                      Mean          -.0022007
+                        Largest       Std. dev.             1
+75%     .6932699       2.830941
+90%     1.242049       2.850669       Variance              1
+95%     1.541856       3.060066       Skewness      -.2045423
+99%     2.235151       3.131168       Kurtosis       3.014381
+
+. log close 
+      name:  <unnamed>
+       log:  /Users/d/Dropbox (Personal)/4d.∫δυσφορία.dt,ψ/4.describe/note/age_o_age_e.log
+  log type:  text
+ closed on:  29 Jun 2023, 21:40:14
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
