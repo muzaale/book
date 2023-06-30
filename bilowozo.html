@@ -15982,7 +15982,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/09b3b2870ddd1902cb0de3389ad1149e2cff3cf685d55cf079d3151b35dbd5c3.png" src="_images/09b3b2870ddd1902cb0de3389ad1149e2cff3cf685d55cf079d3151b35dbd5c3.png" />
+<img alt="_images/5d176e200cf7f23d0dd96acf2612e619db878fabcb449294f15ccf3b521fc5ef.png" src="_images/5d176e200cf7f23d0dd96acf2612e619db878fabcb449294f15ccf3b521fc5ef.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -16254,7 +16254,7 @@ Y =\beta_0  \pm\varepsilon_i
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/b7a7d605aaf4f074969937390c9beb178891a7eea5264d8ae293c393fcae4a29.png" src="_images/b7a7d605aaf4f074969937390c9beb178891a7eea5264d8ae293c393fcae4a29.png" />
+<img alt="_images/a792d987e501c8994dbf698aa8c117795b58b3c5cd09ba55cf96eafe02b56d63.png" src="_images/a792d987e501c8994dbf698aa8c117795b58b3c5cd09ba55cf96eafe02b56d63.png" />
 </div>
 </div>
 <p>var2:</p>
@@ -16673,7 +16673,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/79ce7c69796ad157c5a178ebc5175e1d37bb41881743af1e765dfaddb12f46e3.png" src="_images/79ce7c69796ad157c5a178ebc5175e1d37bb41881743af1e765dfaddb12f46e3.png" />
+<img alt="_images/5bb73203633fc137caab60449894c937305b2c828171788e4cefcc45973079ae.png" src="_images/5bb73203633fc137caab60449894c937305b2c828171788e4cefcc45973079ae.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -16756,7 +16756,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/208cce39bf277750bfbced187de140241746077ae695b536a83873044fa3e943.png" src="_images/208cce39bf277750bfbced187de140241746077ae695b536a83873044fa3e943.png" />
+<img alt="_images/b711cd0586b42dfe9f982e3a7b55d8e036e263e210c239ce4b261b22fae0c364.png" src="_images/b711cd0586b42dfe9f982e3a7b55d8e036e263e210c239ce4b261b22fae0c364.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -16839,7 +16839,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/ad61346213eb56c7b0b43a16ccdec0d54266f02d9daf0c3f18d28cfb2d131668.png" src="_images/ad61346213eb56c7b0b43a16ccdec0d54266f02d9daf0c3f18d28cfb2d131668.png" />
+<img alt="_images/edbe53ba169e126a41eaf8f32ca7ef6afa3e4585e7fa3bbf6e66f60b304eb4ba.png" src="_images/edbe53ba169e126a41eaf8f32ca7ef6afa3e4585e7fa3bbf6e66f60b304eb4ba.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -16922,7 +16922,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/34e22283943133f71a34e9dedfa7c39f3500e5bb4a740ba1d1a83ad5442a91a9.png" src="_images/34e22283943133f71a34e9dedfa7c39f3500e5bb4a740ba1d1a83ad5442a91a9.png" />
+<img alt="_images/2663bdeb281899541b7a50718483fbb46bae6ee0e376469bc582debc1edbf8cf.png" src="_images/2663bdeb281899541b7a50718483fbb46bae6ee0e376469bc582debc1edbf8cf.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -19734,6 +19734,75 @@ import delimited <span class="s">&quot;https://raw.githubusercontent.com/jhustat
 </div>
 <p><img alt="" src="_images/age_o_age_e.png" />
 <img alt="" src="_images/diff_age_o_age_e.png" /></p>
+<p>I hope you intuitively recognize that the p-value isn’t capturing what you’ve seen in both tails of the age at transplant distribution:</p>
+<ul class="simple">
+<li><p>More children were observed to be transplanted as compared with the number expected under a t-distribution</p></li>
+<li><p>Less older adults were observed to be transplanted as compared with the number expected under a t-distribution</p></li>
+<li><p>Perhaps a scatter plot with super-imposed mean &amp; 95% CI would do more justice than actual statitical inference?</p></li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Load the data from the local file</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;transplants.txt&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Extract relevant columns</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Calculate mean and standard deviation</span>
+<span class="n">mean_age</span> <span class="o">=</span> <span class="n">age</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">std_age</span> <span class="o">=</span> <span class="n">age</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># Calculate upper and lower bounds for 95% confidence interval</span>
+<span class="n">ub</span> <span class="o">=</span> <span class="n">mean_age</span> <span class="o">+</span> <span class="n">std_age</span> <span class="o">*</span> <span class="mf">1.96</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="n">mean_age</span> <span class="o">-</span> <span class="n">std_age</span> <span class="o">*</span> <span class="mf">1.96</span>
+
+<span class="c1"># Add jitter to x-axis values</span>
+<span class="n">x_jitter</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Scatter plot of age with increased jitter</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_jitter</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Mean point</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="c1"># Confidence interval with thicker line</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="p">[[</span><span class="n">mean_age</span> <span class="o">-</span> <span class="n">lb</span><span class="p">],</span> <span class="p">[</span><span class="n">ub</span> <span class="o">-</span> <span class="n">mean_age</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Styling</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Age at Transplant, y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean &amp; 95% CI&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\beta_0$&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Save the figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;age_m_95ci.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/ab189050fcf1f184802fc585ae53a88eaa89cc9080ef529cacdaf87d682fbd69.png" src="_images/ab189050fcf1f184802fc585ae53a88eaa89cc9080ef529cacdaf87d682fbd69.png" />
+</div>
+</div>
+<p>Which of these plots do you consider the most informative?</p>
+<ul class="simple">
+<li><p>depends on your target audience</p></li>
+<li><p>what are your goals (description vs. inference)?</p></li>
+<li><p>both of the above</p></li>
+<li><p>none of the above</p></li>
+</ul>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id173"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
