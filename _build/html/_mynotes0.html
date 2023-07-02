@@ -1,0 +1,1536 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>545. notes &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_mynotes0';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_mynotes0.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/_mynotes0.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>545. notes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">545. notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11/2011</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">02/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">03/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">06/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">07/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">08/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">09/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">10/2013</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">05/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">06/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">07/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">08/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">09/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">10/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">11/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">12/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">01/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">02/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">03/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">04/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">05/2016</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">07/2016</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="notes">
+<h1>545. notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>11/2011<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>lost all prior 06/2006 - 11/08/2011</p></li>
+<li><p>after the introduction of icloud sync</p></li>
+<li><p>no more itunes-iphone sync necessary</p></li>
+<li><p>first note was on nhanes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">still</span></code> harping on same topic 12y later</p></li>
+<li><p>.</p></li>
+<li><p>‘mukama ye musumba wange’ - 11/2011</p></li>
+<li><p>still harping on annuŋŋamya 12y later</p></li>
+<li><p>guess paper accepted in gastro</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=fcoCtvehKZ4">be smarter or cheat or be first</a> - margin call</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>02/2012<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>“you’ve gotta shut this shit down, it’s fuckyn ridiculous” – submarine</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>03/2012<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>apds</p></li>
+<li><p>pgy1-3</p></li>
+<li><p>v.strng letters</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>06/2012<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>he hath not failed to pester us with reason</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>07/2012<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>woody allen parodies the various forms of illusions human beings chase</p></li>
+<li><p>his fellow tribesman, solomon, hinted at a similar insight in ecclesiastics</p></li>
+<li><p>when he referred to all human dreams of earthly joy as “chasing the wind”</p></li>
+<li><p>.</p></li>
+<li><p><a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=scherzo+from+brecknell%27s+9th+symphony&amp;ie=UTF-8&amp;oe=UTF-8#fpstate=ive&amp;vld=cid:ef8f328a,vid:6wQP5TRnt4U">scherzo</a> from brecknell’s 9th symphony</p></li>
+<li><p>.</p></li>
+<li><p>impotent - rSM - emasculated</p></li>
+<li><p>peace - GJc - estrogen</p></li>
+<li><p>war - EdF - testosterone</p></li>
+<li><p>.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>hahahahaha.. i was going to say touché, but then i realized that i only enact tragedies not romances. at best, farces, if i&#39;m to be easy on myself)
+
+
+On Jul 23, 2012, at 5:03 PM, xxxx xxxxxxxx &lt;pxxxxxgwa@gmail.com&gt; wrote:
+
+You watch romances? Or act them?
+
+-- Peter M. S.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">was</span> <span class="n">going</span> <span class="n">through</span> <span class="n">the</span> <span class="n">park</span> <span class="n">last</span> <span class="n">Sunday</span><span class="p">,</span> <span class="ow">and</span> <span class="n">close</span> <span class="n">by</span> <span class="n">the</span> <span class="n">Marble</span> <span class="n">arch</span> <span class="n">there</span> <span class="n">stood</span> <span class="n">a</span> <span class="n">little</span> <span class="n">crowd</span> <span class="n">of</span> <span class="n">shabby</span><span class="o">-</span><span class="n">looking</span> <span class="n">people</span> <span class="n">listening</span> <span class="n">to</span> <span class="n">some</span> <span class="n">vulgar</span> <span class="n">street</span><span class="o">-</span><span class="n">preacher</span><span class="o">.</span> <span class="n">As</span> <span class="n">I</span> <span class="n">passed</span> <span class="n">by</span><span class="p">,</span> <span class="n">I</span> <span class="n">heard</span> <span class="n">the</span> <span class="n">man</span> <span class="n">yelling</span> <span class="n">out</span> <span class="n">that</span> <span class="n">question</span> <span class="n">to</span> <span class="n">his</span> <span class="n">audience</span><span class="o">.</span> <span class="n">It</span> <span class="n">struck</span> <span class="n">me</span> <span class="k">as</span> <span class="n">being</span> <span class="n">rather</span> <span class="n">dramatic</span><span class="o">.</span> <span class="n">London</span> <span class="ow">is</span> <span class="n">very</span> <span class="n">rich</span> <span class="ow">in</span> <span class="n">curious</span> <span class="n">effects</span> <span class="n">of</span> <span class="n">that</span> <span class="n">kind</span><span class="o">.</span> <span class="n">A</span> <span class="n">wet</span> <span class="n">Sunday</span><span class="p">,</span> <span class="n">an</span> <span class="n">uncouth</span> <span class="n">Christian</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">mackintosh</span><span class="p">,</span> <span class="n">a</span> <span class="n">ring</span> <span class="n">of</span> <span class="n">sickly</span> <span class="n">white</span> <span class="n">faces</span> <span class="n">under</span> <span class="n">a</span> <span class="n">broken</span> <span class="n">roof</span> <span class="n">of</span> <span class="n">dripping</span> <span class="n">umbrellas</span><span class="p">,</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">wonderful</span> <span class="n">phrase</span> <span class="n">flung</span> <span class="n">into</span> <span class="n">the</span> <span class="n">air</span> <span class="n">by</span> <span class="n">shrill</span> <span class="n">hysterical</span> <span class="n">lips</span> <span class="o">--</span> <span class="n">it</span> <span class="n">was</span> <span class="n">really</span> <span class="n">very</span> <span class="n">good</span> <span class="ow">in</span> <span class="n">its</span> <span class="n">way</span><span class="p">,</span> <span class="n">quite</span> <span class="n">a</span> <span class="n">suggestion</span><span class="o">.</span> <span class="n">I</span> <span class="n">thought</span> <span class="n">of</span> <span class="n">telling</span> <span class="n">the</span> <span class="n">prophet</span> <span class="n">that</span> <span class="n">art</span> <span class="n">had</span> <span class="n">a</span> <span class="n">soul</span><span class="p">,</span> <span class="n">but</span> <span class="n">that</span> <span class="n">man</span> <span class="n">had</span> <span class="ow">not</span><span class="o">.</span> <span class="n">I</span> <span class="n">am</span> <span class="n">afraid</span><span class="p">,</span> <span class="n">however</span><span class="p">,</span> <span class="n">he</span> <span class="n">would</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">understood</span> <span class="n">me</span> 
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>08/2012<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>$140 Passport &amp; Passport card</p></li>
+<li><p>.</p></li>
+<li><p>black sea bass on a mushroom risotto</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>09/2012<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<p>Burbage has got my keep, you my heart</p>
+<p>What is a man, If his chief good and market of his time<br />
+Be but to sleep and feed? A beast, no more.</p>
+<p>Latest rankings:</p>
+<ol class="arabic simple">
+<li><p>Sea scallop (neat)</p></li>
+<li><p>Sea scallop (spicey)</p></li>
+<li><p>Salmon</p></li>
+<li><p>Tilapia</p></li>
+<li><p>Codfish</p></li>
+</ol>
+<p>I think it’s necessary to adjudicate using the following criteria:</p>
+<ol class="arabic simple">
+<li><p>Flavor/Spice</p></li>
+<li><p>Feeling/Sorrowfulness**</p></li>
+<li><p>Fullness/Texture</p></li>
+</ol>
+<p>** when you feel a tragic sorrow for the fish, coz you know you’ll be buying it every other day 😊</p>
+<p>Salmon does pretty well in Fullness, Tilapia not</p>
+<p>I’m most certainly against Marijuana; thus, whenever I get the opportunity, I burn it</p>
+<p>.</p>
+<p>The Titan Prometheus - tried to give man 100% knowledge = Gods on Olympus. He was cast away</p>
+<p>The Heritage of Humanity - Geniuses, Art &amp; History</p>
+<p>The Olympians Apollo &amp; Dionysus - will only give man as much knowledge as man seeks</p>
+</section>
+<section id="id8">
+<h2>10/2013<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<p>For never can anything be amiss/<br />
+when simpleness of duty attend it</p>
+<p>For ne-ver can a-ny-thing be a-miss/<br />
+when sim-ple-ness of du-ty a-ttend it</p>
+<p>Iambic Pentameter<br />
+Blank Verse</p>
+<p>For ne<br />
+-ver can<br />
+a-ny<br />
+-thing be<br />
+a-miss/</p>
+<p>when sim<br />
+-ple-ness<br />
+of du<br />
+-ty a-<br />
+ttend it</p>
+<p>Note the dynamic alteration between strong and weak syllable in each “iamb” (two syllables with alternating stress points an iamb make)</p>
+<p>Also note the rhythm of the verse:</p>
+<p>oh why<br />
+oh why<br />
+oh why<br />
+oh why<br />
+oh why</p>
+<p>So the blank-verse..</p>
+<p>For ne-ver can a-ny-thing be a-miss/<br />
+when sim-ple-ness of du-ty a-ttend it</p>
+<p>Connotes a gradual evolution from poetry (Shakespeare’s sonnets), to drama (Shakespeare’s plays) &amp; ultimately to tragedy (Shakespeare’s blank-verse whose rhythm and dynamics that are in the spirit of music - that tragic art)</p>
+<ul class="simple">
+<li><p>She had a high IQ and a low cut dress</p></li>
+</ul>
+<ul class="simple">
+<li><p>On how I met Xxx<br />
+(Whatever Works)</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>04/2015<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<p>Talking about Hoes – before I even check out your video: under the influence of a neat Trappiste Beer, I was driven to the piano to analyze the chord progression, harmony, and melody of Neyo’s “She knows”. Beautiful!</p>
+<p>But since I was sampling the music from YouTube, I found that the video choreography –and absolutely astonishing dancers– matched or even surpassed the sublimity of the music.</p>
+<p>And then I started watching the video on loop. Dude! Never seen more impressive pole dancers. There’s talent in this world!</p>
+<p>.</p>
+<p>pint glass</p>
+<p>.</p>
+<p>Tooth brushes &amp; towels<br />
+Batteries</p>
+<p>.</p>
+</section>
+<section id="id10">
+<h2>05/2015<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
+<p>No rugby, sports<br />
+No heaven-bound, boy-band<br />
+New to Swimming<br />
+And regular gym</p>
+<p>The net effect?<br />
+From social to individual</p>
+<p>Was never a beer drinker<br />
+Natural resourcefulness to be alone but never lonely</p>
+<p>Maladaptive response to two sudden changes:<br />
+Housemate, and long-time friend leaving;<br />
+And a long-term relationship ending, both in Jan 2009</p>
+<p>Perhaps never quite recovered: but rediscovered classical music</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Agency</span></code>-Product-Services
+Investments-Consumption-Export
+Equity-Assets-Bonds-Currencies-Derivatives</p>
+<p>Supply (Revenues-Costs), Qs<br />
+Demand (Household,Firm,Government), Qd
+Price (Earnings Growth Projections), $</p>
+<p>Inventory (Projected Demand), Qi
+Clearance (Utility, Diversity, Preferences), Qc
+Volatility iid ~ N(μ=0, σ=1), $</p>
+<p>.</p>
+<p>If I might don my scholarly hat, I’ll share with you what I’ve read — about income and the things in our early lives that appear to influence how much income we earn decades later — not what I think:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="http://www.thelancet.com/pdfs/journals/langlo/PIIS2214-109X(15)70002-1.pdf">http://www.thelancet.com/pdfs/journals/langlo/PIIS2214-109X(15)70002-1.pdf</a> ;</p></li>
+<li><p><a class="reference external" href="http://www.economist.com/news/business/21651207-book-persistence-elites-unexpected-guide-getting-good-job-how-join">http://www.economist.com/news/business/21651207-book-persistence-elites-unexpected-guide-getting-good-job-how-join</a> ; and, of course,</p></li>
+<li><p><a class="reference external" href="http://www.marketwatch.com/story/skills-not-wealth-drive-us-income-inequality-2015-05-27?page=1">http://www.marketwatch.com/story/skills-not-wealth-drive-us-income-inequality-2015-05-27?page=1</a></p></li>
+</ol>
+<p>To summarize:</p>
+<ol class="arabic simple">
+<li><p>Breast feeding for as long as possible (last borns have the opportunity to push this really, really far) substantially increases IQ and income decades later (#Mummy’sBoy);</p></li>
+<li><p>Daddy attending Yale and the Oval office substantially increases the chance of junior attending Yale and the Oval office decades later (#Pedigree); and, of course,</p></li>
+<li><p>Steve Jobs didn’t breast feed (#Adopted shortly after birth), didn’t attend college (#Can’t write computer code), and we can’t say the stars aligned for him (#First coming in 1976, and #Second coming in 1997).</p></li>
+</ol>
+<p>So, it looks like we choose theories about the determinants of income based on our fields of study. And they are all correct. Many, many things determine IQ and income over the decades.
+And there’s no simple story to tell to Junior. But, we were all born with a natural instinct to preach, and we shall preach to our sons whatever our religion and tribe instructs us to see as the best course possible.</p>
+<p>Thus saith Mr. D</p>
+</section>
+<section id="id11">
+<h2>06/2015<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<p>James Midgley<br />
+-Professional imperialism: Published May 1981, No revised edition ever since
+-Indigenization of social work around the world: Published 1951, Not by Midgley*
+-Social Policy and Change in East Asia
+-Social Policy and Poverty in East Asia
+-Grassroots Social Security in Asia
+-International Perspectives on Welfare to Work Policy (Editor): 2012</p>
+<p>Herman D Stein</p>
+<p>*chapter of book</p>
+<p>.</p>
+<p>We are a bunch of scrappy guys from diverse backgrounds (Jewish, Muslim, Hindu etc) who enjoy outwitting pompous asses like yourself in financial markets globally.</p>
+<p>.</p>
+<p>4.64/5  rDev +11.8%
+look: 4.5 | smell: 4.75 | taste: 4.75 | feel: 4.25 | overall: 4.5</p>
+<p>This was a 330ml bottle that was dated best before end of 2018 and poured into a Chimay goblet.</p>
+<p>Appearance: It poured a very hazy brown colour with a very nice thick cream coloured two finger head that dissipates very slowly but when it does, leaves a nice curtain lacing.</p>
+<p>Aroma: Aromas are fruity, mainly of dark fruits like plum, cherry, and fig. There is also some pear, apple and candied sugar and a hint of nuttiness.</p>
+<p>Taste: Fruity cherry and plum upfront with hints of banana and pear. There’s also some light malt caramel and bready sweetness followed by a nice light bitter finish.</p>
+<p>Mouthfeel: Medium bodied with moderate carbonation. Smooth creamy and slightly sticky.</p>
+<p>Overall: Admittedly, I used to think that this was just ok but I’ve grown to enjoy this beer the more I drink it. When I first tried it maybe ten years ago, Chimay Blue was far and away better and so I mostly bought that. However, clearly my taste changed and the last few years Chimay Red became one of my staple beers.</p>
+<p><a class="reference external" href="https://www.beeradvocate.com/community/members/kitch.868336/">kitch</a>, <a class="reference external" href="https://www.beeradvocate.com/beer/profile/215/672/?ba=kitch">Jun 01, 2015</a></p>
+<p>.</p>
+<p>Henry II<br />
+Edward 0<br />
+Richard I/John 1200</p>
+<p>Henry III<br />
+Edward I-III<br />
+Richard II/John of G 1400</p>
+<p>Henry IV-VI<br />
+Edward IV-V<br />
+Richard III 1500</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Henry VII-Henry VIII<br />
+Edward VI<br />
+Jane Mary Elizabeth 1600</p>
+<p>.</p>
+<p>First off, this first-person narrative style is very elemental, persuasive, and vivid. It leaves one with no doubt that the author is relaying historic facts, true to every detail. Otherwise, the author may be one of the greatest writers of fiction - in the same league as Shakespeare.</p>
+<p>That said, the authors early statement, “..I am one of the world’s biggest fools. I am also a fat black boy raised by a village of fat black women practiced in surviving..” might as well have been copied and pasted from Nietzsche’s ‘Master-Slave Morality’ theme from his book On the Genealogy of Morality. Nietzsche, disagreeing with all prior philosophers, stated that the over-aching drive in man is “The Will to Power”, the urge to be master over others.. slaves. That’s the master morality. And what’s Good is what the master wants. What’s bad and wrong is what the master doesn’t want.</p>
+<p>Slaves, on the other hand, react to this dominant master powerlessly by doing whatever it takes to survive (What all prior philosophers claimed was the driving force of humanity). So.. who ever is afraid of taking risks that might threaten ones survival – but that might also grant one power – has slave mentality; in other words, slave morality is risk-averse. And slave morality is a reaction to the master morality –unlike master morality which is self-determined; not a mere reaction to someone else.</p>
+<p>Our author does an excellent job – in the voice of his fat grandma – showing us this slave mentality (literal and figurative) in the African American. Interestingly, Nietzsche says the master morality which dominated humanity initially was that of the Greek Hero (Achilles) and the Roman Hero (Julius Caesar). But through subversion, the Hebrew morality (Exemplified by Jesus), overcame it’s masters – not by becoming a master itself but by making the master a slave like themselves. Nietzsche concluded that the heir of this slave morality is Christianity – the dominant driving force in the world order today. He declared that the only way man may free himself from slavery is to abandon the Christian morality, which breeds weakness.</p>
+<p>In summary, the authors grandma reached the conclusion that Nietzsche reached: don’t be fooled: you are either a master or slave. Period. As such, my question to my fellow brothers is simple: do you have a “Will to Power” or a “Will to Survive”? Our author knows better.</p>
+<p>.</p>
+<p>Charles Village Pub (CVP)<br />
+-Amanda (We knew that this day would come; we were like Abi is gonna die; you either chose to stop; or it chooses you)</p>
+<p>.</p>
+<p>Fungicidal soap + Hot water<br />
+Wear shoes in locker rooms<br />
+Anti-fungal bathing soap</p>
+<p>.</p>
+<p>Natural resource stolen: Das Ring<br />
+Human resource is exchanged: Erdas Sister<br />
+Social resource is utilized: Breach Contract</p>
+<p>.</p>
+<p>1200; plantaganet<br />
+-henry ii<br />
+-edward 0<br />
+-richard i, john</p>
+<p>1300<br />
+-henry iii<br />
+-edward i-iii<br />
+-richard ii, john of g</p>
+<p>1400; lancaster; york<br />
+-henry iv-vi<br />
+-edward iv-v<br />
+-richard iii</p>
+<p>1500; tudor<br />
+-henry vii-viii<br />
+-edward vi<br />
+-jane, mary, elizabeth</p>
+<p>.</p>
+<p>It’s just as well because the letter was 100% plagiarized from James Joyce. You might have wondered at all the references to Dublin</p>
+<p>.</p>
+<p>Thu, July 2<br />
+Tue, July 7<br />
+Air Canada: Booking Reference PDP4CV</p>
+<p>.</p>
+<p>He is a great dancer. I’ve never met him, but I’ve heard of ‘The legend of Segev.’ President Daniels</p>
+<p>On learning that I worked in the Segev LAB</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Barley</p></li>
+<li><p>Yeast</p></li>
+<li><p>Sugar</p></li>
+<li><p>Hops</p></li>
+<li><p>Flavor</p></li>
+</ol>
+<p>.</p>
+</section>
+<section id="id12">
+<h2>07/2015<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<p>Three composers and their select works (my recommendations)</p>
+<p>Bach, J.S.<br />
+-Goldberg variations<br />
+-Well-tempered clavier<br />
+-Brandenburg concertos<br />
+-The Cello suites<br />
+-Mass in B minor</p>
+<p>Mozart, W.A.<br />
+-Piano concertos 1-27<br />
+-Operas 1-24<br />
+-Große messe (Great Mass in C minor)<br />
+-Vesperae solennes de confessore</p>
+<p>van Beethoven, L<br />
+-Piano sonatas 1-32<br />
+-Symphonies 1-9<br />
+-Missa solemnis</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Chopin (My favorite: Bonus)</p>
+<p>-Nocturnes, Preludes, and Impromptus<br />
+-Etudes</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Some recommended criteria for choosing recordings from iTunes or wherever (the quality of the recording counts a lot)</p>
+<p>Orchestra</p>
+<ol class="arabic simple">
+<li><p>Berlin Symphony Orchestra</p></li>
+<li><p>Vienna Philharmonic</p></li>
+<li><p>Sir Neville Marriner &amp; Academy of St. Martin in the fields</p></li>
+</ol>
+<p>Record label</p>
+<ol class="arabic simple">
+<li><p>Deutsche Grammophon</p></li>
+<li><p>Decca</p></li>
+</ol>
+<p>Conductors</p>
+<ol class="arabic simple">
+<li><p>Leonard Bernstein</p></li>
+<li><p>Von Karajan</p></li>
+</ol>
+<p>Soloists (Piano)<br />
+Glenn Gould<br />
+André Previn<br />
+András Schiff<br />
+Murray Perahia<br />
+Maurizio Pollini<br />
+Vladimir Ashkenazi</p>
+<p>.</p>
+<p>warryn campbell, study his music</p>
+<p>.</p>
+<p>Chimey’s dubel (Prémier) is a red amber, clear ale, gentle–even plain–flavored, dominated by malt. If poured expertly, high carbonation is not a problem at all (less than a quarter finger breadth of froth). The beer suddenly has character when paired with a spiced snack (samosa).</p>
+<p>.</p>
+<p>Did Dorry call your paper “Complex” – but in a complimentary way? Isn’t it rather curious that the notion we bounced around during the analysis and writing of the paper was that of the Labyrinth? Hail to Icarius! Hail to Borges! Hail to being more complex than Steiner!</p>
+<p>.</p>
+<p>Tournament: the dead are rioting,taking sides<br />
+Euripides: weigh tragedy like butchers meat<br />
+Aeschylus: discerning man to be the judge</p>
+<p>.</p>
+<p>We build the product that we wanna use our selves — bill gates thinks these were the most inspirational words steve spoke (in 1983)</p>
+<p>.</p>
+<p>Every child must</p>
+<ol class="arabic simple">
+<li><p>Start a band, and a 1st division league</p></li>
+<li><p>Start a tech company, and a premiership league</p></li>
+<li><p>Start a charity organization, and a champions league</p></li>
+</ol>
+<p>So it be written, and so done</p>
+<p>.</p>
+<p>Strange things, strange things!</p>
+<p>How may a yearning for the gospel music (Commissioned, Fred Hammond, The Winans, Andráe Crouch) that awakened my sensibilities 20 years ago lead me back to that time (1994) but to music I wasn’t listening to then, though it was hitting at the time?</p>
+<p>This is how: from a consummate reggae song by Andráe (Marvelous), my craving for reggae wanted fulfillment. And so I purchased Bob Marley’s complete discography. And now I’ve discovered a song in his 124 song collection (Exodus, in which Bob Marley says “we are going to our fathers land, movement of Jah people) which recalled Lucky Dube’s music (House of Exile, Back to My root, but specifically the Ugandan hit song “Feel Irie”).</p>
+<p>And so this led me to Wikipedia to look for connections, patterns, between Bob Marley’s and Lucky Dube’s Lamentations. And what did I find? This paragraph, “Lucky Dube is considered to be especially remarkable as a Dub Artist due to his lack of a diasporas cultural base. This was particularly due to the nature of Reggae and Dub being a platform for expression of displacement from the homeland. In Prisoner, the South African artist makes the genre his own by applying themes of apartheid and internal displacement… He was revolutionary in so far as he introduced a competing version of Raggae’s constant tendency of <code class="docutils literal notranslate"><span class="pre">romanticizing</span> <span class="pre">the</span> <span class="pre">utopian</span> <span class="pre">homeland</span> <span class="pre">of</span> <span class="pre">Africa</span></code>.”</p>
+<p>My dear, I’m still listening to Marley’s Exodus  (1977) on loop, but in turn with Lucky Dube’s Feel Irie (1994ish). Looks like Dube copied and pasted half of the music from Exodus to make an even better song!</p>
+<p>Beautiful things, beautiful things!</p>
+<p>.</p>
+<p>Assets/commodities, Deflation<br />
+Bonds, Depressed yields<br />
+Currencies, Depreciation against dollar<br />
+Derivatives, ???<br />
+Equity/Private, Funds looking for yield***</p>
+<p>***Mutual-, Hedge-, Sovereign Wealth Funds</p>
+<p>.</p>
+<p>Malum discordæ<br />
+Malum in se<br />
+Malum in prohibitum</p>
+<p>.</p>
+<p>You are not like me, you are not a warrior. If we were members of the same tribe, I’d be out hunting and gathering (V); you’d be home with the women (IV). You are not an adventurer: you are lazy, and passive, and entitled (I). But most of all, best of all: you are a lover</p>
+<p>.</p>
+<p>I want to travel in Europe, Alyosha, I shall set off from here. And yet I know that I am only going to a graveyard, but it’s a most precious graveyard, that’s what it is! Precious are the dead that lie there, every stone over them speaks of such burning life in the past, of such passionate faith in their work, their truth, their struggle and their science, that I know I shall fall on the ground and kiss those stones and weep over them; though I’m convinced in my heart that it’s long been nothing but a graveyard. And I shall not weep from despair, but simply because I shall be happy in my tears, I shall steep my soul in emotion. I love the sticky leaves in spring, the blue sky- that’s all it is. It’s not a matter of intellect or logic, it’s loving with one’s inside, with one’s stomach. One loves the first strength of one’s youth. Do you understand anything of my tirade, Alyosha?</p>
+<p>.</p>
+<p>Big Daddy</p>
+<p>Medium-Rare</p>
+<p>With:<br />
+Swiss Cheese<br />
+Mushrooms<br />
+Fried Onions<br />
+Mayo</p>
+<p>Lettuce
+Tomato</p>
+<p>.</p>
+<p>So what brings a real writer to Santa Monica Cop?</p>
+<p>It was time to grow the fuck up. I needed a real job.</p>
+<p>I also needed a job, but I don’t want to grow up</p>
+<p>.</p>
+</section>
+<section id="id13">
+<h2>08/2015<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<p>Curious to know which instruments you’d consider “special day” or “rare” :-)</p>
+<p>Otherwise, this being the second song of Snarky Puppy that I’ve listened to (but I already own an entire album), I now have a more informed understanding of who they are.</p>
+<p>I think the majority of the instrumentalists don’t draw blood at all. In Lingus, that’s how I felt, until the keyboardists drew some blood midway. The drummer did too.</p>
+<p>As for Shorfukan, it’s only the drummer that drew blood. There’s something premeditated in the music of the trumpeters and guitarists that is remote from the improvisational spirit of Jazz. This is betrayed by the music scores that many of the group members seem to be reading from.</p>
+<p>That’s my humble opinion. As a lover of Jazz from New Orleans, I’d expect a lot more – crazier improvisational riffs – from the the trumpets. There’s a TV show called Tréme, whose sound track and motion picture captures the true soul of New Orléans. Of course, Snarkey Pupply is something modern, something of a blend of genres. But I’ll still judge them for the Jazz artists they seem to hold in high regard</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Horns are solo instruments best suited for melody (and Wilde riffs). Violins are best suited for harmony (and tame variations on a preordained structure). But it’s the double bass – and piano – that typically offer the structure.</p>
+<p>In jazz, the double bass and piano occasionally go Wilde.</p>
+<p>Taking of which, I highly recommend Jon Batiste. He is a native of New Orleans, only 29, but from a famous musical family, which inspired the music on the Tréme TV show. Jon is classically trained also; and at Julliard. He will be the resident musician on the show formerly know as Colbert.</p>
+<p>Preamble: <a class="reference external" href="http://thecolbertreport.cc.com/videos/oeurov/jon-batiste-and-stay-human">http://thecolbertreport.cc.com/videos/oeurov/jon-batiste-and-stay-human</a></p>
+<p>Opening credits:<br />
+<a class="reference external" href="https://m.youtube.com/watch?v=0j9IJvXmB3w">https://m.youtube.com/watch?v=0j9IJvXmB3w</a></p>
+<p>Aspen Institute:<br />
+<a class="reference external" href="https://m.youtube.com/watch?v=HKnr8ovQP1g">https://m.youtube.com/watch?v=HKnr8ovQP1g</a></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Bonus: Wynton<br />
+<a class="reference external" href="https://m.youtube.com/watch?v=ZSWOrntTYRo">https://m.youtube.com/watch?v=ZSWOrntTYRo</a></p>
+<p>.</p>
+<p>Aspen institute does it again<br />
+<a class="reference external" href="https://m.youtube.com/watch?v=rPshEdJvKj4">https://m.youtube.com/watch?v=rPshEdJvKj4</a></p>
+<p>.</p>
+<p>De ideabus non est disputandum</p>
+<p>.</p>
+<p>Dude — I’ve spent the better part of my Sunday afternoon/evening reading as much as I could about Educate! And here’s what I can tell you:</p>
+<ol class="arabic simple">
+<li><p>Its was founded by 3 young New Yorkers: Eric Glustrom, Boris Bulayev, Angelica Towne;</p></li>
+<li><p>They’ve been mentored among Forbes’ 30-under-30 entrepreneurs; and,</p></li>
+<li><p>One website has Boris Bulayev in a photo-op with Bill Clinton.</p></li>
+</ol>
+<p>They seem to be young idealists based on the language they use to describe themselves. But I can’t really figure out what they do. Can’t put a finger on something they’ve done. And they throw around the term “growing aggressively” but its not clear to me what number to look out for to measure this growth. Most discouraging is this juvenile info in their mission statement: e.g. <code class="docutils literal notranslate"><span class="pre">As</span> <span class="pre">the</span> <span class="pre">great</span> <span class="pre">African</span> <span class="pre">proverb</span> <span class="pre">says</span> <span class="pre">“If</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">go</span> <span class="pre">fast,</span> <span class="pre">go</span> <span class="pre">alone.</span> <span class="pre">If</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">go</span> <span class="pre">far,</span> <span class="pre">go</span> <span class="pre">together.”</span></code> Only a 20-something kid from New York, who grew up watching Jon Stewart, could write such a meaningless thing and think they are very much knowledgeable about cultures around the world.</p>
+<p>.</p>
+<p>Included in this email as PDF<br />
+X Clyde White. The problems of knowing in social work (article). October 1956</p>
+<p>X Herman Stein. Putting knowledge to use: a distillation of the literature regarding knowledge transfer (Same title but not by Herman Stein)</p>
+<p>X Encyclopedia of social work (hard copy) ? Edited by Pincus &amp; Mannheim</p>
+<p>Not available electronically<br />
+Thompson 2000. Understanding Social Work: from theory to practice (book) <strong>Priority</strong><br />
+Briar, S. (1981). Needed: A simple definition of social work. Social Work, 26, 83-84</p>
+<p>.</p>
+<p>ECFMG<br />
+07502750</p>
+<p>.</p>
+<p>“I can stand brute force, but brute reason is quite unbearable. There is something unfair about it’s use. It is hitting below the intellect.” The Picture of Dorian Gray</p>
+<p>.</p>
+</section>
+<section id="id14">
+<h2>09/2015<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="http://mythphile.hubpages.com/hub/aeschylus">http://mythphile.hubpages.com/hub/aeschylus</a></p>
+<p>“Aeschylus, the Athenian, Euphorion’s son, is dead. This tomb in Gela’s cornlands covers him. His glorious valour the hallowed field of Marathon could tell, and the longhaired Persians had knowledge of it.”</p>
+<p>.</p>
+<p>Sarah’s dog: Dixie<br />
+Saad’s dog: Rosabelle</p>
+<p>.</p>
+<p>Xxx Xxx
+<a class="reference external" href="mailto:xxx&#37;&#52;&#48;vetpoint&#46;net&#46;nz">xxx<span>&#64;</span>vetpoint<span>&#46;</span>net<span>&#46;</span>nz</a></p>
+<p>Vet article: Outcome of Donor Cats After Unilateral Nephrectomy as Part of a Clinical Kidney Transplant Program</p>
+<p>Cites Perioperative Mortality…</p>
+<p>But sort of seems better connected with Risk of ESRD..</p>
+<p>.</p>
+<p>Kahawa cafe, crested towers bldg?will u be driving?</p>
+<p>.</p>
+<p>mummy’s music:</p>
+<p>dilemma<br />
+As I lay me down<br />
+mother how are you today</p>
+</section>
+<section id="id15">
+<h2>10/2015<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h2>
+<p>UGCC-83541<br />
+reference for my 10GB of data running out randomly</p>
+<p>.</p>
+<p>Front of train<br />
+Barron’s court<br />
+Piccadelly line</p>
+<p>Departed terminal 5 at 9am<br />
+Arrived Barons court at Xam<br />
+Cost me a bloody £11.20</p>
+<p>.</p>
+<p>Hey Lara — sorry for the late response. My initial response to you on Sep 23rd lingered in my outbox without actually being sent. Only learned about this yesterday.</p>
+<p>In way of compensation (perhaps overcompensation, sorry), I decided to read through one more time. See comments. Remember, as I’ve pointed out to your before, your inferences are in conflict with those from another paper we just submitted to AJT. So either our submitted paper has a major type-I error, or this one has a type-II error, or both :-)</p>
+<p>Regardless, I’ve suggested what may cause a type-II error in your inferences in the attached comments. Hope you find my comments useful.</p>
+<p>Xxx</p>
+<p>.</p>
+<p>If you are plain, then what are we? If the rainbow is dull, then what is the shadow? Regardless, I’m delighted by your gratitude.</p>
+<p>I must confess that I was harboring a similar sentiment just these last few days: If I hadn’t met you, life would have been to me like the finest cuisine (French, Belgian, Caribbean, West African, name it) – but without any salt and spice.</p>
+<p>You were the salt and spice. What seemed plain and humdrum in life, you revealed to be savory. So I’m glad that you brought sense (extra sense for flavor) into my life, while I in unmediated exchange brought sensibility (extra sensibility for Germanic tastes) into your artistic life :-)</p>
+<p>.</p>
+<p>13457493 Bridal dress order</p>
+<p>.</p>
+<p>Nov 4 — 15 Capetown</p>
+<p>.</p>
+<p>Boss this is Peter. Tomorrow the crew is having lunch at my house. Please do pass by and and join the fun. Address is
+4 cloverwood ct apt 104
+Essex md 21221. Lunch will be ready by 1:30pm please pass by.</p>
+<p>.</p>
+<p>Fraha, Peter</p>
+<p>.</p>
+<p>Bob loblow</p>
+<p>.</p>
+<p>This is a very tortured meme from the Inglorious basterds – or some other Nazi film, not sure which. I saw dozens of variations on this 6-8 years ago at Hopkins. But this one is the most messed up: one would expect Hilter to voice m7’s outrage, perhaps on learning about Mbabazi’s moves against him in the NRM or on the national scene. But for some weird reason, a Museveni sycophant thought it would be dramatic for the outrage to be directed against an incumbent? Doesn’t make sense. Hitler was the incumbent under attack in this meme</p>
+<p>.</p>
+<p>Bob Dylan - full discography</p>
+<p>Allan, what do you think of The Cutting Edge 1962-1966: The Bootleg Series Vol. 12 (Available Nov 6th)?</p>
+<p>.</p>
+<p>Watching 2 hours of Kanye’s failed attempt to express his feelings and thoughts was very painful. He expresses himself effortlessly through music, but seems to have trouble doing so through the fashion &amp; designs he creates. Guess the interview is his compensation for failure in fashion &amp; design.</p>
+<p>Isn’t it Oscar Wilde who tells us that beauty is greater than genius? Because it needs no explanation? Yeah, Ye’s music is beautiful. No interviews needed to explain it. But his creative forays into fashion &amp; design aren’t genius; thus, the tortured interview in an attempt to make sense of it all. We all don’t get it.</p>
+<p>Otherwise, he sort of confessed that he is bored by music, since he has done it all. Artists like Shakespeare retired at similar points in life. They didn’t try their “genius” at something new. Kanye is suffering from the pangs of success and loss of purpose. Fortunately, it’s very clear from this interview that he really loves his wife and child :-)</p>
+<p>.</p>
+<p>Quincy Jones’ mother had schizophrenia. Remarkable, isn’t it? Or perhaps a mere coincidence that yet another extraordinary talent (others include Einstein, John Nash) had the gene in his family.</p>
+<p>.</p>
+<p>Just read something that I thought I might share, given how much it resonated with a similar experience I had in 2004 when I visited an apartheid museum in Gauteng. The museum outlined, using visuals, how South Africa as a nation formed: starting with native bushmen, followed by Bantu from west Africa, Boers from the Netherlands, the Brits, and a hodgepodge of other groups from Israel, India, heavy African countries, etc. each wave of visitors became native.</p>
+<p>This led me to view the dominance in numbers of Bantu (Sotho and Tswana) as no different from the dominance in economics and politics of the Wazungu (Boers and Brits). Of course, it led me to reflect upon the situation in Uganda: there’ve been moments of Ganda dominance, Acholi dominance, Lugbara dominance, and, lately, Hima dominance.</p>
+<p>In other words, human society will always be divided along whatever convenient lines of division can emerge: geographic origin, skin color, and social privilege. This view preempt any view of an organized conspiracy against any struggling racial subgroup today. Quincy Jones, take it away:</p>
+<p>“It gave you some sense of perspective of past, present and future. It took the myopic conflict between just black and white in the United States and put it on another level because you saw the turmoil between the Armenians and the Turks, and the Cypriots and the Greeks, and the Swedes and the Danes, and the Koreans and the Japanese. Everybody had these hassles, and you saw it was a basic part of human nature, these conflicts. It opened my soul, it opened my mind.”</p>
+<p>.</p>
+<p>I think this song belongs to the late 80s/early 90s: the generation of Divas whose voices could stand almost on their own, with barely any support from instruments. Whitney Houston’s Always love you is the archetypal song of that generation.</p>
+<p>Adele looks prettier than I expected (don’t really know her), and she has a bigger voice than one would expect from someone her size (hadn’t seen her before). And I think with this song, it’s over – we don’t need to wait for the fat lady to sing an opera aria.</p>
+<p>Whoever produced this track did well to emulate Whitney’s Always love you: barely any instrumentation at the beginning, relatively calm spirits; and a dramatic crescendo and more animated spirits as the song grows. Amused to see the kid in the video: he’s from Baltimore, and was barely 16 when he was in the cast of The Wire. Videography was superb, in dramatic effects.</p>
+<p>.</p>
+<p><a class="reference external" href="http://www.economist.com/node/2338542">http://www.economist.com/node/2338542</a></p>
+<p>Sounds accurate, and has been the case for at least 13 years (see article in The Economist from 2004). It’s also believable, given that our Budo cohort comprises mostly entrepreneurs. We few – we non entrepreneurial few – with formal jobs are without a doubt in the minority.</p>
+<p>But this ranking isn’t really a great endorsement, given what is being measured. Indeed, most folks around the world would be very surprised by these rankings because few folks can readily name 3 products &amp; services that this Ugandan entrepreneurial spirit has brought forth for the rest of humanity. Uganda isn’t a nation of exporters. Just one of very creative households.</p>
+<p>We import almost everything we consume, with the exception of Matooke. We even import juice and rice. So our spirit of entrepreneurship is driven more by an urge to survive than to drive humanity forward – which is a harsh judgement on Museveni’s government. Where a nations fury and activity is driven by households, firms, and government, Uganda’s is driven mostly by foreign firms &amp; Ugandan households, with most entrepreneurship taking on a household flavor. So I celebrate Ugandans will to live, under a poorly performing government.</p>
+<p>.</p>
+<p>median<br />
+swiss cheese<br />
+mayo<br />
+mushrooms<br />
+tomato</p>
+<p>.</p>
+<p>Burgers are definitely my favorite coronary artery blockers :-)</p>
+</section>
+<section id="id16">
+<h2>11/2015<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
+<p>Hendrix, a left-hander, played a right-handed guitar without restringing it, a unique stylistic quirk.</p>
+<p>.</p>
+<p>Here’s the article from two weeks ago –pretty decent by any standards –which however Kalyegera believes was poorly written. Like many in Africa’s middle-class, Kalyegera feels patronized by the western medias portrayal of African nations as being on some humiliating audition for membership at the big boys table. Indeed, any African who feels that they’re already at this table may feel slighted – but that’s besides the point because individual pride doesn’t speak for an entire nation or continent populated by poor folk.</p>
+<p>According to imperfect but somewhat reasonable benchmarks, the % of Africans with income &gt; <span class="math notranslate nohighlight">\(10 a day (i.e., middle class) is smaller than the equivalent in other parts of the world. For a continent that mostly imports goods, and in dollars, there's hardly any need to adjust this income for purchasing power parity. Many middle class folks have their costs denominated in dollars (imported cars, household items, air travel, etc). But Kalyegera disagrees and so he compares rent for an apartment in Geneva to one in Jinja, and thinks a \)</span>200 income in Jinja is comparable to a $3000 income in Geneva. It’s like comparing an American with an iPhone 6 to a Ugandan with a Nokia 5110 (both make calls and receive SMS, Kalyegera might say).</p>
+<p>But to truly expose Kalyegera for his more visceral than intellectual response to the Economists article, I’ll quote from it to show how reasonable it was: A few years ago, Shoprite Holdings, South Africa’s largest retailer, envisaged opening 600-800 stores in Nigeria. It currently has 12. Across the continent in Kenya, Cadbury and Coca-Cola have closed factories. “We thought this would be the next Asia”, Nestlé’s chief executive for equatorial Africa said earlier this year. “But we have realised the middle class…is extremely small and it is not really growing.” See? The article is not all about a Ghanaian anecdote. And it founded on fundamentals. Anyways, please read it in it’s entirely if you have the time. And then reread Kalyegera. He’ll be exposed. (He’s inferiority complex is evident when he says “he could have written something better. Why not? Who said he couldn’t???)</p>
+<p><a class="reference external" href="http://www.economist.com/news/middle-east-and-africa/21676774-africans-are-mainly-rich-or-poor-not-middle-class-should-worry?frsc=dg%7Cc">http://www.economist.com/news/middle-east-and-africa/21676774-africans-are-mainly-rich-or-poor-not-middle-class-should-worry?frsc=dg|c</a></p>
+<p>On Nov 2, 2015, at 7:32 AM, Xxx Xxx <a class="reference external" href="mailto:xxx&#46;xxx&#37;&#52;&#48;gmail&#46;com">xxx<span>&#46;</span>xxx<span>&#64;</span>gmail<span>&#46;</span>com</a> wrote:</p>
+<p><a class="reference external" href="http://www.monitor.co.ug/OpEd/Commentary/Measuring-Africas-true-middle-class/-/689364/2936984/-/fqpjbdz/-/index.html">http://www.monitor.co.ug/OpEd/Commentary/Measuring-Africas-true-middle-class/-/689364/2936984/-/fqpjbdz/-/index.html</a></p>
+<p>.</p>
+<p><a class="reference external" href="http://madamenoire.com/412430/10-songs-didnt-know-warryn-campbell-produced/">http://madamenoire.com/412430/10-songs-didnt-know-warryn-campbell-produced/</a></p>
+<p>Just realized that I did a great injustice to Warryn Campbell. I said his work has led to Grammys for album of the year for best Gospel album as well as best R&amp;B. Now that’s an injustice.</p>
+<p>His work has actually led to best album Grammys for 3 genres, at least twice for each: Gospel (Yollanda, Mary Mary), R&amp;B (Jennifer Hudson), and Rap (Late registration, college drop out, and a Missy album).</p>
+<p>To show how influential his work is, even Jay-Z &amp; Pharrell sampled the lyrics he penned for Luther Vandross’ “Excuse me miss” for their hit song “excuse me”. Another illustration of the gospel artists influence on the mainstream, rather than the other way around.</p>
+<p>.</p>
+<p>she’s funny that way</p>
+<p>.</p>
+<p>Midqley James and N Conley: editors of book<br />
+Title: Social work and social development theories and Skills for developmental social work, 2010</p>
+<p>Israel Dec 7-17th</p>
+<p>.</p>
+<p>If the meeting is truly democratic, then here are some suggestions for future agenda – but only for your consumption for now:</p>
+<ol class="arabic simple">
+<li><p>Exhaustive family tree for a complete sense of the commonwealth;</p></li>
+<li><p>Family tree should follow usual conventions that distinguish male from female offspring (actual Mpaata blood irrelevant, in my opinion; just the cultural heritage);</p></li>
+<li><p>A family registry with up-to-date email addresses for each grandchild;</p></li>
+<li><p>Document how much quorum there is at each meeting (expressed as % male grandchildren, % female grandchildren in attendance);</p></li>
+<li><p><a class="reference external" href="http://R.S.V.Ps">R.S.V.Ps</a> for those unable to attend in person &amp; those who were not reached and why;</p></li>
+<li><p>Consider virtual meetings (there are excellent free online services available for these); and,</p></li>
+<li><p>Goals</p></li>
+</ol>
+<p>.</p>
+<p>I’ve just watched the Mallence Bart-Williams TEDtalk: a beautiful story, by a beautiful presenter, of a beautiful nation. However, it reminds me of the story of Jacob and Esau – the only Biblical story that baffled me as a child.</p>
+<p>Why was Jacob rewarded greatly for exploiting his twin brother Esau? We can ask the same of European colonialists of past and present: why have they been rewarded enormously (longer life expectancy, greater quality of life, greater wealth, greater military power, greater interest in harnessing nature for science and technology, etc) for stealing the inheritance of their African brethren?</p>
+<p>A question not to ask: would Africans even care as much for their inheritance (diamonds and gold, for instance) if it weren’t for how much Europeans fuss about it? A question to ask, did Esau not care as much for his inheritance as Jacob did? Should Africa just keep complaining about being exploited or should it take a stand and fight – Like the biblical Gideon did – for its rights and promised land?</p>
+<p>.</p>
+<p>My thoughts are that the key to being a great communicator is to understand your audience. Mallence clearly appeals to emotional-type audiences (the most common ones). But the problem with emotion is that it has a brief half-life and so people can’t follow through to action based on those roused emotions. They’ll be distracted by the next emotional upheaval.</p>
+<p>Some other audiences actually find it unappealing when a speaker tries to approach a subject using emotion. This type of audience resists any appeals to their baser nature</p>
+<p>.</p>
+<p>When a speaker rouses people’s emotions, the goal may be to set them into motion and rouse action and change. But history shows that it’s only those who rouse themselves into an emotional frenzy – with no external help – who follow through with action and change (Museveni did so after losing the 1980 elections).</p>
+<p>So, whereas it’s nice to bring audiences to tears (guarantees that you’ll be invited by other folks who also need inspiration &amp; wish to shed a tear or two), not sure such tears lead to any tangible changes in society.</p>
+<p>It’s the true tears of experience in those with a WILL TO POWER that bring change. But most people are too timid to will such power, because of the clear risks involved. They’d rather complain about their misery – or sing about their blues – rather than offend their oppressors.</p>
+<p>.</p>
+<p>Otherwise, we seem to be on the same page regarding persuasive communication – which some call rhetoric.</p>
+<p>Yes, emotional appeals are a central component to rhetoric (Greeks call it Pathos). But two more components of rhetoric must be mentioned, namely: the appeal to reason (Logos) and the appeal to moral character of the speaker (Ethos). The last one is crucial, and Mallence scored highly on this one: the somber mood with which she presented her talk (one would think she’d missed breakfast), her inky cloak of solemn black (black clothes), and a sort of resignation in her voice (as a daughter of an exploited country). We shall sooner trust her than a different speaker who hasn’t truly experienced the things they are talking about.</p>
+<p>So more than appealing to emotion, a speaker should also appeal to reason, and the audiences sense of trust – that the speaker isn’t fraudulent.</p>
+<p>.</p>
+<p>Assets: rent; non-strategic asset - Lear35<br />
+Bonds: yield/interest rates; basis points<br />
+Currency: appreciate/depreciate; wild card<br />
+Derivatives: in/out-the-money; wild card<br />
+Equity: eps; substantive</p>
+<p>.</p>
+<p>Fluctuat nec mergitur</p>
+<p>.</p>
+<p>Public enemy<br />
+Favor flave</p>
+<p>.</p>
+<p><a class="reference external" href="https://m.youtube.com/watch?v=6n5SqwERoOc">https://m.youtube.com/watch?v=6n5SqwERoOc</a></p>
+<p>Just forward to 2.45min already</p>
+<p>#WTF we love missy :-)</p>
+<p>.</p>
+<p>On the left Mr Osborne is seen as an aristocratic, louche, post-moral dandy. On the Tory right he is considered a metropolitan, louche, post-moral luvvie</p>
+<p>.</p>
+<p>Assets: quantitative easing<br />
+Bonds: lowering interest rates<br />
+Currency: negative deposit rates</p>
+<p>.</p>
+<p>Essays:</p>
+<ol class="arabic simple">
+<li><p>Reasons for executive doctoral in business (goals)</p></li>
+<li><p>Expectations (mediate efforts towards goals)</p></li>
+<li><p>Strategy (timeline: 25hrs/week)</p></li>
+</ol>
+<p>Management styles (Non-inferiority):</p>
+<p>Global private sector (for profit) vs. International non governmental organizations (not for profit)</p>
+<p>B Income: yield desired strategic goals (cross-over lessons)<br />
+FO Financial Management: Resource/Revenue<br />
+OO Management Style: global for profit vs. iNGO*<br />
+HRO Human Resource: people* &amp; technology<br />
+EO Program Design: and management</p>
+<p>1)Examine how success is measured<br />
+2)Does quick rate of investment (for profit) have any adv/disadva<br />
+3)Long-term sustainability approached of iNGO more holistic?</p>
+<p>Essays:</p>
+<p>Career as chief executive of iNGO<br />
+My experience, What I lacked, Looks like y’all have it<br />
+Specifically, these classes, in these terms, by this teacher</p>
+<p>.</p>
+<p>Bevi e fuggi … te’n prego, o Gennaro!<br />
+Corriamo, fuggiamo<br />
+Fuggiam gli ardori inospiti</p>
+</section>
+<section id="id17">
+<h2>12/2015<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h2>
+<p>Tyler combined powerful, passionate vocals that would range from a conspiratorial whisper to vein-popping screams in the course of a few words, and was constantly accelerating and decelerating his delivery. The sound was new, but not unprecedented, as Tyler’s vocals were reminiscent of R&amp;B screamers like Little Richard and James Brown, using piano and saxophone sounds to accentuate the delivery.</p>
+<p>.</p>
+<p>Ciara - I bet you ; love the bridge!!!</p>
+<p>.</p>
+<p>Agnus Dei/Logos, Inferences/Régime<br />
+Credo/Ethos, Model/Conspirator<br />
+Kyrie/Pathos, Data/Whistleblower</p>
+<p>.</p>
+<p>Why are you marrying him?<br />
+Because he asked.</p>
+<p>.</p>
+<p>The wine source</p>
+<p>.</p>
+<p>Hollywood’s ambivalence towards finance—and capitalism in general—sits oddly with an industry marked by high salaries, huge corporations and product merchandising. But actors, directors and scriptwriters are creative types who like to feel they are rebelling. They favour stories where the little guy triumphs; audiences feel the same way. “The Big Short” wins because Mr McKay gives this cliché an entertaining and sophisticated twist.</p>
+<p>.</p>
+<p>Boarding Ugandans was always a daunting task for the crew of BA flight 63 to EBB. Usually took 2 hours, bags often left on Tamark, etc. Looks like KL XX to EBB deals with the the very same problem. Briefly, folks are trying to change seats, trying to stow the super-sized luggage they sneaked past, etc. has taken us 2 hours to board.</p>
+<p>.</p>
+<p>In Amsterdam I met a Ugandan-German orthopedic surgeon from Stuttgart, who told me he migrated from Uganda to southern Germany in the 70s. Most striking to me was his intact Ugandan accent of his generation, the black-red-stripped neck tie (no yellow), and his general style of dress which was akin to the peers he left behind – perhaps in west Nile.</p>
+<p>.</p>
+<p>3,439 exchange rate on 12/12/15</p>
+<p>.</p>
+<p>What is <a class="reference external" href="https://churchofuganda.org/blog/2007/08/01/what-is-anglicanism-the-most-rev-henry-luke-orombi-writing-in-first-things/">Anglicanism</a>? The Most Rev. Henry Luke Orombi writing in First ThingsChurch of Uganda | Church of Uganda</p>
+<p>.</p>
+<p>Emotions have been observed in animals<br />
+They have motions in response to these emotions<br />
+And may develop notions about various things</p>
+<p>They have the biological basis for consciousness<br />
+Many have languages and communicate<br />
+Cultural inheritance of artifacts and history may be observed</p>
+<p>Family units clearly exist<br />
+Organizational arrangements in bees are well known<br />
+Governmental hierarchies are perverse (e.g. Alpha-Male)</p>
+<p>Use of tokens to procure food can be learned<br />
+But strategic use of financial markets to advance needs?<br />
+And leveraging of economic power for personal gain?</p>
+<p>Yields from such strategies would be the best evidence<br />
+Distributive justice and beneficence for sake of less endowed<br />
+Political systems that debate this distributive justice</p>
+<p>.</p>
+<p>We might sell the mythology of Mandela<br />
+But we don’t wish for an Orthodoxy<br />
+Multiple narratives are what we need</p>
+<p>X</p>
+<p>Mandela’s Archivist</p>
+<p>.</p>
+<p>Christmas Specials | The Ottoman caliphate</p>
+<p><a class="reference external" href="https://www.economist.com/christmas-specials/2015/12/16/straddling-two-worlds?frsc=dg%7Cc">Straddling two worlds</a></p>
+<p>Worldly, pluralist, hedonistic—and Muslim, too</p>
+<p>ORHAN OSMANOGLU cradles a French handkerchief embossed with the letter H. “This is all I have left that’s my great-great-grandfather’s, the caliph’s,” he says. His family has fallen far since those illustrious days. Abdulhamid II lived in a palace, Yildiz, in the heart of Ottoman Istanbul; Orhan lives in a high-rise at the end of an Istanbul bus route. Europe’s royals flocked to caliphal functions, but when Orhan’s daughter married, Turkey’s present rulers stayed away. Worst of all, an Iraqi impostor has stolen the title his family bore for hundreds of years. Abu Bakr al-Baghdadi’s barbaric outfit, Islamic State (IS), promises to restore the caliphate. Does Mr Baghdadi know what he is talking about?</p>
+<p>For 1,300 years the caliphs, or “successors”, prided themselves on developing the Islamic community the Prophet Muhammad left behind. The Ottoman Empire, which rivalled the Roman one in longevity, came to include not only the Middle East, but north Africa, much of the north Black Sea coast, and south-eastern Europe all the way to the gates of Vienna. Ruling from Istanbul, the caliphs kept polyglot courts, reflecting the multiple religions and races represented there. French was a lingua franca at the Ottoman court; Persian, Armenian and Arabic were also spoken.</p>
+<p>The caliphs were far from doctrinaire. Abdulhamid II, who ruled from 1876 to 1909, was one of the more Islamist, but he loved music (forbidden by IS) with a passion. He grew up in a court where the princesses played a piano coated in gold leaf given by Napoleon III, and Layla Hanoum taught the princes the cello. On Thursday evenings he would accompany Sufi masters in reciting the dhikr (rhythmic repetition of the name of God), and his imperial orchestra would play Offenbach on the way back from Friday prayers at the mosque. At state banquets the orchestra would match each course to a different concerto, including some by “Pasha” Giuseppe Donizetti, Gaetano’s older brother, who was the court composer. The last caliph, Abdulmecid II, played the violin, entertaining a mixed audience of men and women at concerts.</p>
+<p>Far from reading only the Koran and the Muslim Sunnah, Abdulhamid II had a taste for spy novels and Sarah Bernhardt, the greatest actress of her age, whom he brought several times to his private theatre. “In politics Abdulhamid was conservative,” says Suraiya Farooqi, a professor of Ottoman history at Istanbul’s Bilgi University. “In private, his tastes were distinctly Verdi.” The Ottomans paraded in the latest fashions, often imported from Venice. Photographs in the vaults of the old Ottoman Bank show their clerks in pristine English frock-coats. In 1894 the governor of Smyrna, now Izmir, even banned the baggy trousers worn by mountain zeybeks (militias) because he found them uncouth.</p>
+<p>In their efforts to emulate other European rulers, the caliphs commissioned Europe’s leading architects to design new palaces. Abdulhamid II’s father, Abdulmecid I, abandoned the Topkapi Palace, perched on the heights overlooking the city, and moved to the Dolmabahce, a neo-baroque edifice with marble steps that were washed by the waves of the Bosporus. Passengers on liners sailing past could glimpse through the windows its crystal balustrades and its chandelier, the world’s largest, made in Birmingham. “The 19th-century caliph projected himself as a European emperor, like the Habsburgs or Romanovs,” says Mehmet Kentel, the head librarian at Koc University’s Research Centre for Anatolian Civilisations. Money was no object: Abdulhamid II’s descendants are seeking to recover a legacy, excluding his estates, that they estimate at $30 billion.</p>
+<p>The iconoclasts of IS sledgehammer human likenesses; the last caliphs fashioned them. Abdulhamid II appointed Pierre Désiré Guillemet, a French painter, and his wife to establish the empire’s first arts school, and Fausto Zonaro, an Italian, as his in-house palace painter. Zonaro’s students included Abdulhamid II, whose paintings are still in the Dolmabahce. In “The Pondering” Abdulmecid II painted his wife Sehsuvar reclining, unveiled, reading Goethe’s “Faust” (pictured above). Another of his paintings, “Beethoven in the Harem”, depicts her unveiled again, playing the violin, with a trio that includes one of his Circassian consorts on the piano and a male accompanist on the cello. The setting, again, is continental, with European furnishings and a bust of Beethoven. Neither the orientalist fantasy of the harem nor the zealously segregated purdah of the capital of IS, Raqqa, are anywhere to be seen.</p>
+<p>Nor was Western culture confined to the palace. Abdulmecid I hired two Swiss architects, the Fossati brothers, to renovate the Hagia Sophia—the former seat of the Patriarch of Constantinople that became a mosque and is now a museum—installing a gallery for non-Muslims to observe the worshippers below. They designed the country’s first opera house, its first university and new law courts, which are still in use. A Greek architect, Nikolai Kalfa, designed Abdulhamid II’s favourite mosque, Yildiz Hamidiye. So many playhouses, shadow-theatres and concert halls surfaced in the city that “The Encyclopaedia of Istanbul Theatres” fills three volumes. Despite traditional opposition to football, the last caliph’s son, Omer Faruk, was president of Istanbul’s premier team, Fenerbahce, while the city was under British occupation.</p>
+<p>Under the 19th-century caliphs, Istanbul became “a metropolis of modernisation”, says Philip Mansel in his book, “Constantinople: City of the World’s Desire, 1453-1924”, which spans the five centuries the Ottomans ruled the city. The first official newspaper, Moniteur Ottoman, appeared in 1831, first in French and then in Ottoman Turkish, as well as Greek, Armenian, Persian and Arabic. Abdulhamid II Westernised oriental concepts of time by erecting clocktowers across his empire, often at the entrance to mosques. He furnished Istanbul with an underground metro, the second in Europe. And he introduced the telegraph, an intelligence service and a rail network. The first Oriental Express steamed from Paris to Constantinople in 1889, almost two decades before the Ottomans completed their pilgrimage railway to Medina.</p>
+<p>Ottoman attitudes to religiosity could be disarmingly liberal, too. The caliphs maintained multi-tier legal codes for their different communities. From 1839 Abdulmecid I revamped the legal system, introducing secular law alongside sharia. He gave non-Muslims equal rights with Muslims, abolished the right of the sultan to execute members of his court without trial, banned the slave trade and allowed the opening of taverns, which filled with European painters and composers on court stipends. Diplomatic diaries from the time record caliphal scions enjoying a tipple, particularly of drinks that had not existed in the Prophet’s time and were therefore, according to more liberal readings, permitted. Mahmoud II was spotted sipping champagne at society balls.</p>
+<p><strong>Enjoying a tipple</strong>
+Such practices were not aberrations. Drinking was a fundamental part of the pre-Ottoman early medieval caliphal courts, particularly Tamerlane’s, says Hugh Kennedy, a professor of Arabic at London University’s School of Oriental and African Studies, who is writing a book on their wanton ways. The greatest caliph of all, Harun al-Rashid (786-809), presided over an intellectual awakening and oversaw the translation of Greek Sophists in his House of Wisdom in Baghdad, but also partied with his debauched bard, Abu Nawwas, who composed drinking ditties as well as some of the Arab world’s finest classical verse. Drunken dervishes roam “The One Thousand and One Nights”, compiled during his reign.</p>
+<p>Occasionally puritans howled. Caliph Walid II was killed in 744 after allegations he had organised drinking parties in Mecca. But dissolution was mostly taken as par for the course. Selim II (1566-75), who conquered Cyprus and Tunisia, died in a drunken stupor, after smashing his head on his Turkish bath.</p>
+<p>For all that, the caliphs could be profoundly reverential. They saw themselves as defenders of the multiple faiths that sought their protection, not just Islam. When Spain’s Christian rulers expelled their Jews, Bayezid, the then-caliph, sent boats to rescue them. Istanbul was an Armenian and Orthodox capital as well as an Islamic one. (In the Ottoman army, too, Iraqis fought alongside Albanians and Chechens.) Obedience was expected: Abdulhamid II is reputed to have slaughtered 30,000 Armenians to suppress a revolt around Adana, on the north-eastern Mediterranean. But those who proved docile and useful were welcome, whatever their origin. Abdulhamid II’s foreign minister for a quarter-century was Armenian, as were the architect of his palace and the designer, along with Jean-Paul Garnier, of the clocktowers that became his hallmark across the empire.</p>
+<p>Sisli’s Darulaceze, the hospice for the homeless Abdulhamid II built in 1896, is easily missed. A highway zips past above the Golden Horn, too fast to catch the golden Arabic herald over the mahogany doors. But for those who pause there, the long courtyard shaded with cypress trees offers not just an escape from modern Istanbul’s frenzy but a time capsule of caliphal values. It contains a mosque to the south, and a church and a synagogue, with stars of David, to the north. Even as Orthodox Christians and Zionists were seeking to slough off Ottoman rule and govern themselves, the caliph was still building them holy places.</p>
+<p>Ultimately, of course, the caliphate, along with eastern Europe’s other dynastic empires, the Habsburgs and Romanovs, was dissolved. After the first world war the British and French occupied Istanbul, along with all the caliph’s remaining Arab lands. Turkish nationalists under Mustafa Kemal, an army general, took the Anatolian rump that remained. Had Russia not fallen prey to its own revolution, its army too might have held eastern Anatolia.</p>
+<p>By that point, the caliphs were powerless. In 1923 Mustafa Kemal abolished the Ottoman Empire, proclaimed a republic and made himself president. A year later he abolished the title of caliph. Even a titular role was too threatening for the republicans—and for the British, who feared that a Muslim revival in the Middle East might have repercussions for their rule in India. He stripped the imperial family of its Turkish nationality and possessions, took the Dolmabahce for himself and went on to proclaim himself “Ataturk”, father of the Turks.</p>
+<p>Turkish history books ridiculed the country’s former leaders as anti-Western, anti-women, tyrannical and obscurantist. The family lived in penury, strewn across the world. Two became taxi-drivers in Beirut; another played the zither in Lebanese nightclubs. Only half a century later, in 1974, did Turkey let the first male relatives back. Mr Osmanoglu returned from Damascus, recovered his Turkish nationality in 1985, and opened an import-export business trading with bits of his forefathers’ former empire. When Hosni Mubarak was toppled in Egypt, thugs broke into the ports and pillaged his containers, leaving him bankrupt.</p>
+<p>Recently, under the Islamist-leaning president, Recep Tayyip Erdogan, Turkey has seemed to relent a little. Textbooks are less derisive. State television sometimes shows interviews with members of the clan. Mr Erdogan is pushing the country to reconnect with its Ottoman past. “Over the last decade people have begun to respect us more,” says Mr Osmanoglu. The day your correspondent met him he had come from Bursa, a four-hour drive away, where he had taken part in the opening of the mausoleum of Murad II, an ancestor who ruled in the 15th century, before the Ottomans had even taken Istanbul. Still, he worries about raising his profile too much, lest Mr Erdogan covet the caliphate for himself. “If the Christians can have their pope, why can’t we have our caliph?” asks the curator of Abdulmecid II’s study in the Dolmabahce.</p>
+<p>Mr Osmanoglu has toyed with forming a political party, if only he had the money. The last Ottoman leader stood for election in 1922, he notes, winning office for the first time in six centuries by the people’s formal consent. Perhaps, he says, a little nostalgia for the family and the stability they brought the region remains.</p>
+<p>In one of his last paintings, Abdulmecid II depicted a history tutorial. On the table lies a map of Rumelia, today’s Balkans. The tutor covers his face with his hand, too grief-stricken or embarrassed to account for its loss. A ginger-haired girl stares at the map and a boy in a starched collar, cravat and suit points at it, determined to win it back. Beneath the frame, the caliph has added the caution: “Forget those who have caused you personal problems, but don’t forgive the insult to your homeland.”</p>
+<p>When Mustafa Kemal dissolved the caliphate, the guards sent to give the household their marching orders are said to have found the caliph in his study beside his easel, perusing volumes of his favourite magazine. It was La Revue des Deux Mondes, exemplifying the Ottoman knack for straddling two worlds that has created such problems ever since. Within 24 hours he had boarded the Orient Express at Stambouli station, heading west to Europe.</p>
+</section>
+<section id="id18">
+<h2>01/2016<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
+<p>Confession and absolution (Kyrie)<br />
+Praise and worship (Gloria)<br />
+Creed and intercession (Credo)<br />
+Benediction (Sanctus)<br />
+(Agnus Dei)</p>
+<p>.</p>
+<p>An excellent piece on Britishness:</p>
+<ol class="arabic simple">
+<li><p>A polity of muddling through;</p></li>
+<li><p>Opposition to wide-eyed ideas; and,</p></li>
+<li><p>Long history of slow &amp; patchy changes to society</p></li>
+</ol>
+<p>Evidenced by:</p>
+<p>Incrementalism (EU, Euro, Schengen, etc);<br />
+Lack of a written constitution; and,<br />
+Creation and devolution of the Union</p>
+<p>Britain | Bagehot<br />
+Bring on the tempest<br />
+Britain’s interlocking political dramas may be just what the country needs</p>
+<p>BRITONS have much to look forward to in 2016. Street parties will take place on the queen’s 90th birthday. The English, Welsh and Northern Irish football teams will all contest the European Championship. The Royal Shakespeare Company is promising the biggest-ever celebration of the Bard’s work to mark the 400th anniversary of his death, and the Globe theatre will stage a new production of “The Tempest”.</p>
+<p>Yet in politics, as in the skies, storms loom. Jeremy Corbyn, the far-left leader of the Labour Party, is consolidating his grip on the opposition. In an imminent shadow-cabinet reshuffle he will show moderates the business end of his proverbial ice-axe. North of the border, the pro-independence Scottish National Party will consolidate its political hegemony at elections in May. Another vote on separation is now only a matter of time. London’s mayoral election, also in May, will accentuate the growing divide between the rich, worldly capital and the rest of Britain. And with its EU referendum expected to take place as early as June, the country’s status as a leading European power hangs by a thread.</p>
+<p>Small wonder, then, that its allies are perturbed. Barack Obama privately talks of Britain’s “mid-life crisis”. As a commentary in the New York Times in 2014 put it: “Britain is having a kind of nervous breakdown, and its friends aren’t sure whether to say something or just look away.” Such observers are right to imply that the traumas were long in the making; more than freak intrusions on a country that has been calm and stable for decades.</p>
+<p>Why? Each polity has its pathology and Britain’s, as Walter Bagehot noted, is muddling through. Just as its people pride themselves on their—only partly imagined—“mustn’t grumble” stoicism, its leaders possess the institutional equivalent of the stiff upper lip: a preference for patching and fudging over abolishing and remaking. It has no written constitution; its union is the messy product of years of tweaks; its political bodies, from local councils to the Lords, are great mounds of sticking plasters.</p>
+<p>This predilection has its pros and cons. On the one hand, Britons’ mistrust of wide-eyed ideas (“Don’t you know it’s gonna be all right”, the Beatles sang in their sceptical hit, “Revolution”) explains their historical aversion to political extremism. It steers the country away from risky ventures like, some would argue, the euro. Thomas Kielinger, a veteran German correspondent in London, claims Britain’s seafaring history has made it flexible but cautious; more comfortable tacking with the winds than its uncompromising continental neighbours.</p>
+<p>On the other hand, a penchant for the zigzag and the gentle curve over the straight line comes at a cost. Consider the Palace of Westminster. Bombed during the war, it was quickly repaired and is now crumbling. A rolling programme of restoration struggles to keep up with its decay. Muddling through, in other words, can leave big problems unresolved. It stores up contradictions that occasionally unleash thoroughly un-British political earthquakes: the Labour landslide of 1945 would have been unthinkable without the hemming and hawing of pre-war governments, just as Margaret Thatcher’s economic revolution would have been without her predecessors’ procrastinations.</p>
+<p>The same pattern is in evidence now. Thatcherism created doubts about Britain’s place in Europe, divided England from other parts of the union, propelled London towards vast wealth and presented socialists with an existential challenge. Labour inherited these tensions when it came to power in 1997, but a combination of political skill and benign economic circumstances allowed it to fudge them. It sought European integration without convincing voters of the need for it; devolved powers to Edinburgh, Cardiff and Belfast without reforming the architecture of the union; encouraged the capital to boom without building up a counterweight and made its peace with markets without finally defeating anti-capitalists on the left. Today’s crises are, in other words, Tony Blair’s unfinished business.</p>
+<p>O brave new world<br />
+Thus Britain’s current period of upheaval is not just overdue. It is necessary. The EU referendum forces pro-Europeans to make the gutsy case for continental co-operation. If they succeed, the vote should give British leaders a fresh mandate to build and wield influence in Brussels. Scotland’s swerve towards independence, and the accompanying grievances in England, should push politicians to transform Britain into a federation, at last putting the union on a stable footing. This should also precipitate the long-overdue decentralisation of England (a process that has already begun; Manchester will run its own health service from April). Lastly, Mr Corbyn’s leadership should force his moderate MPs to take on a reality that even Mr Blair ducked: Labour has always been two parties, one social democratic and the other anti-capitalist. Over the years it has muddled through, as concessions, feints and tactical battles have postponed a decisive confrontation. No longer: as Mr Corbyn bears down on the moderates, they will have to decide whether to push back, concede the party to him or quit—en masse, not in a dribble, as did their predecessors in 1981 when Labour last swung left—and form a new party.</p>
+<p>Britain’s crises may yet go to waste. But today’s flux gives the country a rare chance: to forge happier relations with continental Europe, to federalise the union and to update creaky institutions (asked to vote on a painfully expensive renovation of the Palace of Westminster in the spring, MPs should demand that Parliament move to a new, modern building). It is a test not just of Britain’s ability to evolve, but also of the very practice of muddling through. A political entity can only be sceptical and incremental most of the time if, when events demand it, it can bring about a sea-change. So let Britain’s leaders take in “The Tempest” and heed its wisdom: storms may be destructive, but they can also bring redemption.</p>
+<p>.</p>
+<p>Culture | Non-Western classical music<br />
+<a class="reference external" href="https://www.economist.com/books-and-arts/2015/12/30/voyages-of-discovery?frsc=dg%7Cc">Voyages of discovery</a>
+Classical music that no one talks about</p>
+<p>The Other Classical Musics: Fifteen Great Traditions. Edited by Michael Church. Boydell Press; 426 pages; £25.</p>
+<p>ANY self-respecting arts-lover living in America or Europe is familiar with a smattering of writers, painters and sculptors from outside the West. But few cultural buffs could name a single composer from, say, China or Turkey, let alone give any detail about them. A collection of essays, entitled “The Other Classical Musics”, shows how much they are missing.</p>
+<p>Intelligently edited by Michael Church, a British critic, the book looks at the canons of different parts of the world (India and China are deemed worthy of two chapters each, though Latin America is ignored). Written by different scholars, each chapter has a common structure, with a concise outline of the instruments, the style and the social relations behind the music. Lots of beautiful pictures and extracts of musical notation break up the text.</p>
+<p>The chapters on Indian classical music will be of particular interest to many readers, who may already have a vague understanding of it through the works of Ravi Shankar, a sitar-player (pictured). The book shows important differences between north (Hindustani) and south (Carnatic) Indian styles. For instance, tablas—drums with heads usually fashioned from goat skin—are more commonly used in Hindustani music; Carnatic melodies tend to contain more flourishes. (Shankar played largely Hindustani music.)</p>
+<p>Such characterisations are helpful for the lay reader; but the contributors also show a keen eye for historical nuance. Many of them question the usefulness of the term “classical”, arguing that what people may now perceive to be traditional has in fact constantly changed over time. In the chapter on classical Japanese music there is a wonderful illustration of two sheets of musical notation, one from 1303 and the other from the present day; their different styles hint at how the form has evolved.</p>
+<p>Classical Iranian music has likewise seen much change. During the 1950s it fell under the sway of European musical practices, but as the government grew concerned about Westernisation it sponsored efforts to reassert a Persian flavour. As for India, before the 20th century the country’s music was no more than “a variety of musical traditions performed in different places by different social groups”. Some historians argue that Indian “classical” music was really a cobbling together of different traditions by 20th-century nationalists.</p>
+<p>Alongside other chapters on places like Tajikistan, north Africa and Java, the book has one on European classical music. For many readers this chapter will be rather familiar; but for those who know little about composers like Pérotin (who was born in Paris and active in the late 12th century, when he came to be known as Pérotin the Great) or John Dunstable (c.1390-1453), a celebrated English composer of polyphonic music, it will be just as interesting as the others. And in fewer than 30 pages it offers as good a summary of the Western canon as can be found anywhere.</p>
+<p>Readers should not try and digest the whole book in one go; far better to use it for reference. Indeed, the best way to appreciate it is to read it while listening to the music under discussion (your reviewer searched for the relevant compositions on YouTube and played the extracts of notation on the piano). There is a treasure trove of underappreciated music out there; this book will convince many to explore it.</p>
+<p>.</p>
+<p>How did the two articulate Doctor kasente’s, God-fearing, beget many girls who, in brief, turned out to be anything but scholars, pious – but perhaps xxxs</p>
+<p>.</p>
+<p>+256772712552 <a class="reference external" href="mailto:muhororo&#37;&#52;&#48;gmail&#46;com">muhororo<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>.</p>
+<p>Van Gogh’s quarrel with Gaugin was all about – Gaugin’s dependence on imagination and Van Gogh’s insistence on reality as – what the true reference and origins of art should be</p>
+<p>.</p>
+<p>Winners are typically cheats. You may want to remind yourselves about the biblical story in which Jacob cheated his twin Brother Esau into selling him the inheritance due to Esau. For this evil move, Jacob was blessed.</p>
+<p>.</p>
+<p>International | Global Pentecostalism<br />
+<a class="reference external" href="https://www.economist.com/international/2016/01/23/ecstasy-and-exodus">Ecstasy and exodus</a><br />
+Charismatic Christianity thrives among people on the move</p>
+<p>TEJU HASSAN has come far, and so have most of his flock. Born near Lagos 50 years ago, he converted to Christianity as a young man and now ministers in the far north of Ireland to a multinational congregation. Like many a “reverse missionary” from the devout developing world to the secular north, he sees his task as repaying the lands that exported Christianity. “The Gospel was brought to Africa by English and Irish priests. White people also did bitter things, but we are still grateful for the faith and we are bringing it back.”</p>
+<p>His 100 followers are an outpost of Christendom’s fastest-growing segment: people who seek an ecstatic experience described as “baptism in the Holy Spirit” and insist that biblical feats, from healing to exorcism to speaking in tongues, should be part of present-day worship. They are sometimes described as “charismatic” or “renewalist”. Within this category are Pentecostal churches that stem from a revival begun in America over a century ago; subgroups within established churches, which after 1960 began worshipping in a similar way; and newer churches that use Pentecostal style and language, with a fresh stress on prosperity. This can mean offering business tips, involving the faithful in ventures or telling them that God will enrich them if they donate money.</p>
+<p>Todd Johnson of America’s Centre for the Study of Global Christianity reckons that as of 2010, these charismatic worshippers amounted to a quarter of the world’s 2.3 billion Christians; by 2025 he expects their number to reach 800m (see chart). It is often noted by religion-watchers that Christianity globally is becoming more southern and exuberant. But the success of Pentecostalism and its imitators also highlights a more subtle point: the need for a kind of religion that is flexible enough to suit people in transit, whether between the southern hemisphere and the northern, between the countryside and the city, or between poverty and wealth.</p>
+<p><strong>Speaking in tongues</strong><br />
+For uprooted peasants, too, coping with the anonymity of a megacity slum, charismatic churches provide a paradoxical blend of social support, discipline and emotional release. As Don Miller of the University of Southern California puts it: “Pentecostal worship is joyous, ecstatic and offers a sense of self-transcendence that fills a void in the lives of migrants—and exorcising demons, literally or metaphorically, can be a way of gaining control over individual or family problems.” Migrants travelling between countries need the same balance of solidarity and catharsis, and are well served by the loose structure of charismatic churches, which can spring up quickly wherever the need arises.</p>
+<p>Pastor Teju’s is a typical tale. His chance to migrate came when the multinational firm he worked for as an accountant sent him from Lagos to England for training. Hearing that Ireland’s economy was booming (in 2000), he got a job there. As his career progressed, so did his spare-time role as a pastor with another successful multinational concern, the Redeemed Christian Church of God (RCCG), a Nigeria-based organisation that ministers to the country’s diaspora and all other comers.</p>
+<p>His flock includes people from across Africa, and a few Irish looking for an alternative to Catholicism. His church claims to have thousands of communities worldwide. Though a prolonged slump means the pool of recruits in Ireland’s northwestern tip may be drying up, globally it seems on track. In Nigeria its Redemption Camp attracts millions to its annual meetings. A 10,000-seat stadium in Texas acts as a hub in America and last year David Cameron paid a pre-election visit to its London gathering, where the faithful cheered the prime minister as he lauded the family, the Bible and self-improvement.</p>
+<p>“Our people are very practical,” says Pastor Teju. So too is his brand of religion. Like migrants in search of safety and prosperity, charismatic Christianity has proved adaptable, almost chameleonic. To people whose lives are in flux, it offers a mix of ecstasy, discipline and professional and personal support. In Brazil an initially sober kind of Pentecostalism has been replaced by a brasher kind (see article). In South Korea (see article), a style of worship that suited a poorish, insecure country has been replaced by one that flaunts success.</p>
+<p>Whatever their style, Pentecostal pastors are culturally closer to their flock than are the learned clerics of the Catholic or Lutheran churches; and they are numerous. A study in 2007 found that in Brazil Pentecostal churches had 18 times more clerics per believer than the majority Catholics. As Mr Miller points out, older churches move slowly because they are lumbered with hierarchies and rules; the Pentecostal world is one of quick startups, low barriers to entry and instant reaction to change.</p>
+<p>At worst, this flexibility shades into opportunism. In every country where Pentecostalism has thrived, its leading practitioners have faced investigations of their finances. In 2011 Forbes magazine estimated the combined worth of five Nigerian pastors as at least $200m. In Brazil the faithful seem tolerant of pastors who are light-fingered with their tithes; many see giving as a virtuous act, regardless of the money’s ultimate destination. Estevam Hernandes, one of Brazil’s best-known preachers, cheerfully resumed his career after returning, in 2009, from five months in an American jail for smuggling undeclared cash.</p>
+<p>Some, though, have emerged unscathed. Last year Britain’s Charity Commission gave a clean bill of health to the British branch of one of Nigeria’s richest churches, the Winners’ Chapel. Or take Sunday Adelaja, a Nigerian-born cleric who is a player in the affairs of Ukraine. His Embassy of God church claims 25,000 followers (almost all white) in Kiev and outposts in over 20 countries. In 2009 he was questioned over the collapse of an investment firm which had touted for business in his church; he satisfied the police that he was not responsible.</p>
+<p>In the past migrating religious groups either merged into their host societies or else pickled the culture of the old country in aspic. Thanks to technology, today’s roaming worshippers have no such dilemma; a Nigerian or Brazilian in transit can adapt while maintaining contact with home. Globally dispersed Pentecostal churches meet both those needs. An outlying branch of the RCCG can offer job advice and a way to keep links with home. Global charismatic movements act as transmission belts along which ideas and worship styles can travel quickly. “A hymn can be composed in one continent and sung in another a few days later,” says Allan Anderson of Birmingham University.</p>
+<p>Like water, charismatic religion takes the path of least resistance. Philip Jenkins, a scholar of global Christianity, cites several little-noticed examples. Dubai is now a bastion of Pentecostal-style worship, among migrants; the Muslim authorities do not mind as long as local Emiratis are not proselytised. Thanks to a shared language, Brazilian neo-Pentecostal churches do well in Angola and Mozambique. And though Filipino Christianity is almost entirely Catholic, the export variety, adapted to the diaspora’s needs, is intensely charismatic, offering a combination of mysticism and practical advice. One movement, El Shaddai, claims 8m members across the world. Worshippers at its Manila base wave their passports in the air as they pray for successful travels.</p>
+<p>Politically, too, Pentecostal churches tend to be pragmatic rather than consistently conservative. Brazil’s globally successful Universal Church of the Kingdom of God (UCKG) initially resisted the rise of the centre-left Workers’ Party, but went on to back its presidential candidates, including Dilma Rousseff, the incumbent. In Ukraine Mr Adelaja was close to the 2004 Orange revolution but also wooed the pro-Russian president, Viktor Yanukovych. Peru’s right-wing authoritarian leader, Alberto Fujimori, enjoyed Pentecostal support, but in El Salvador, Pentecostal preachers strike a leftist tone. In America Latino Protestants (mostly charismatic) are contested electoral terrain. Almost all Pentecostal churches are anti-abortion and anti-gay, but the UCKG has made statements that are pro-choice and comparatively gay-friendly.</p>
+<p>Predicting the future of such a volatile phenomenon is difficult. But wherever people are on the move, and are culturally receptive to Christianity in some form, charismatic religion will surely follow.</p>
+<p>.</p>
+<p>Doesn’t Abe look like Don Cheadle?</p>
+<p>.</p>
+<p>mozart’s g minor symphony<br />
+free chromaticity (half-steps)<br />
+elegantly contained in diatonic (circle of fifths)<br />
+utterly controlled (marvel of ambiguity: diatonic containment of chr<br />
+a work of utmost passion (dominant seeking tonic..)</p>
+<p>.</p>
+<p>DURING the crisis of 2008-09, Warren Buffett made two big bets in the midst of the panic. He bought a slug of preferred stock in Goldman Sachs. And he took over BNSF, a huge railway. Goldman’s 32,500 bankers and BSNF’s 32,000 miles of tracks, stretching from the Pacific to Texas, had nothing in common, except that it was impossible to imagine American capitalism without them.</p>
+</section>
+<section id="id19">
+<h2>02/2016<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h2>
+<p>I’ve exciting news for you – exciting because it will invoke schadenfreude: I splintered my iPhone screen :-)</p>
+<p>First time in 9 years that it would’ve made sense for me to have a phone case.</p>
+<p>Forgot the bloody phone in my jeans and when I hurled them off.. it flew to its death on the grounds of my bathroom.</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=HpoIcXfToVs">highland park 12</a></p>
+<p>.</p>
+<p>who killed <a class="reference external" href="https://www.youtube.com/watch?v=KEoGrbKAyKE">captain alex</a>? (comedy is all about being so off-topic, in a manner very clearly apparent to the audience but not to the characters on stage)</p>
+</section>
+<section id="id20">
+<h2>03/2016<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h2>
+<p>Voters under 30-years-old have lived in a country governed by the House of Bush and the House of Clinton; the last 8 years under Obama being a mere anomaly</p>
+<p>Thus, with the end of Obama’s term, the Houses drew their swords, the battle lines were drawn, and recruitment of supporters  was began in earnest. Jeb Bush was to lead</p>
+<p>Unbeknownst to them, decades of rule had left them out of touch with those they ruled (recommending cake in lieu). Popular upstarts, in the form of Donald Trump to the right and Bernie Sanders to the left, have roused the discontentment lurking in the hurts of the common man</p>
+<p>.</p>
+<p>Reproduce analysis in ARIC, CARDIA, and LIVE DONORS<br />
+Is Black race associated with higher eGFR???<br />
+Ask Xun and Coresh about it!</p>
+<p>.</p>
+<p>Chemin des Palettes 33, 1212 Grand Lancy</p>
+<p>.</p>
+<p>131 Rue du Fontaillon<br />
+01170 Segny<br />
+France</p>
+<p>.</p>
+<p>Gare Cornavin, Tram 15<br />
+Riive, Bus 10<br />
+Bel Air, Bus 1 (Tram 12)</p>
+<p>.</p>
+<p>Hi Christophe — can we please meet at XXX at 8pm? We are carrying only 2 small laptop bags with us.</p>
+<p>Thanks!</p>
+<p>.</p>
+<p>131 Rue du Fontaillon</p>
+<p>.</p>
+<p>Vittor Pisani<br />
+Milano Centralo<br />
+Dela Republica<br />
+Giuseppe Ferrari</p>
+<p>Greco Roverto<br />
+Sempione via Arona<br />
+<a class="reference external" href="http://P.za">P.za</a> Castelli</p>
+<p>Domodossola FN M5</p>
+<p>Alessandro Manzzoni<br />
+Via Mercanti<br />
+Piazza Duomo</p>
+<p>Grazi, Reggo<br />
+Merci, Dorian</p>
+<p>.</p>
+<p>107 room Venice</p>
+<p>.</p>
+<p>perfect! We are close to Termini station: only 3 minute walk!  Take the left exit in via Giolitti, when you are in via Giolitti go to the left, then take the first on the right ( via Gioberti ), and then via Principe Amedeo (our street ) is the 2nd on the left, number 85A is on the right side of our street.</p>
+<p>.</p>
+<p>Batisnini<br />
+Valle Aurelia/Cornelia</p>
+<p>.</p>
+<p>519<br />
+Bus 246<br />
+Andrea Pulone, Shift Officer<br />
+Midas Hotel, Aurelia 800, Rome<br />
+Bravofly 132, Chiasso</p>
+<p>.</p>
+<p>160 RomeP<br />
+130 VeniceH<br />
+220 MilanT<br />
+160 RomeH<br />
+120 MilanH<br />
+160 Blah blah</p>
+<p>960</p>
+<p>35 Vatican<br />
+31 Airport<br />
+23 Meal<br />
+30 Roma<br />
+30 Roma<br />
+30 Roma</p>
+<p>170</p>
+<p>80 ParisS<br />
+120 ParisH<br />
+100 ParisM<br />
+100 MilanM<br />
+120FlorenceH<br />
+100 FlorenceM<br />
+80 VeniceT<br />
+100 VeniceM<br />
+80 FlorenceT<br />
+80 RomeT</p>
+<p>960</p>
+<p>.</p>
+<p>We’ve created very beautiful memories over the last two weeks</p>
+<p>They were sincere, fun, and in the spirit of camaraderie</p>
+<p>It’s a pity you now think they were made up of lies.</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>Having moreorless absconded from work for two weeks just to spend quality time with you in a different continent, I know that only one thing was of utmost important to me and trumped everything else: how happy my visit might make you. And how much stronger a bond we might secure between us with time spent gallivanting across Southern Europe.</p>
+<p>But your farewell message to me was that I’m better off returning to an Ex that I’ve very carefully avoided over the last year – a year in which she has lived in Xxx (close to our ASTS venue); and visited southern Maryland (close to where I live). One of the last messages she sent me after returning to Xx (which is one of the very first messages you must’ve read) laments the fact that she didn’t get the chance to meet me.</p>
+<p>I’ve not been with ANYONE but you since 2012!</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>You spent a good deal of our precious time in Rome and Segny trying to figure out who I was chatting with at 3am on some random night of our Eurotrip. As I’d explained to you, I was attending to work duties I’d neglected in Baltimore! Hope that was one of your discoveries.</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>But if your feelings are what matter to me the most, then I’ve clearly failed miserably in what I set myself up to 3.5 years ago — caring for you. I’ve failed to make you feel secure enough. But because of the wealth of things we share (beautiful memories, effortless fun together, tête-à-têtes, love for art, banter, hourly-long chats on a daily basis, etc), because of the even greater things we could share in the future, and, above all, because you are my very best friend, I want you to know that I want to care for you better than I have thus far. I’m not asking you to make any urgent decision, I’m just letting you know what I wish you already knew: that I love you.</p>
+<p>.</p>
+<p>“Kakati ntegedde nti omwana siwange”. What does he mean by that?</p>
+<p>.</p>
+<p>Weave your life’s story into a narrative that is very detailed, plausible, and, as such, believable</p>
+<p>.</p>
+<p>Similarly, you were interested in catching the spirit of Florence: the panoramic view, the various cathedrals, the narrow streets, the bridges, the rivers, the piazza’s, old Florentine villas just outside the city limits, and juxtaposing that with its modern and vibrant life</p>
+</section>
+<section id="id21">
+<h2>04/2016<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h2>
+<p>“Donald Trump has had several foreign wives. It turns out that there really are jobs Americans won’t do.”<br />
+Mitt Romney works on his stand-up routine</p>
+<p>.</p>
+<p>Sylvester, Pam’s husband</p>
+<p>.</p>
+<p>Faith’s Malteses<br />
+Ivy — black, dramatic<br />
+Poppy — white, deaf</p>
+<p>.</p>
+<p>Quentin Tarantino (pictured) and the Coen Brothers, for instance, are not only film-makers themselves but also students of film, their work informed by countless hours spent analysing images on the flickering screen. “A work of art is itself a piece of criticism,” Mr Scott asserts.</p>
+</section>
+<section id="id22">
+<h2>05/2016<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
+<p>May 23 — thats my day<br />
+Will be in NYC May 20 — May 23 (maybe 22)</p>
+<p>Likely to be in Bermuda June 2 — 6</p>
+<p>And in Boston June 11 — 18</p>
+<p>May 16,  2pm</p>
+<p>.</p>
+<p>iweight — try it (allan’s suggestion)</p>
+<p>because you didn’t get exactly 1:5 match</p>
+<p>wouldn’t be a thing if you did (as with the propensity scores)</p>
+<p>.</p>
+<p>The cheesecake tart is divine!</p>
+<p>.</p>
+<p>Hey Pam – Patrick, my brother, had fallen off the grid for a day. But he’s back!</p>
+<p>I’ve told him to expect you perhaps today? You can communicate directly with him via whatsApp on +256 772 423377. He’s a jolly fellow :-)</p>
+<p>He’s at “No. 5 Chemin Taverne 1218 Grand Sacconex”</p>
+<p>Thanks!</p>
+<p>.</p>
+<p>“who are you working for?” coen brothers</p>
+<p>.</p>
+<p>Sorry to be prosaic<br />
+But before we save republic<br />
+Octavian to defeat: Mouths2Feed<br />
+We ride to save republic<br />
+No poetry in you</p>
+<p>.</p>
+<p>It seems you feel slighted about this paper, and I apologize for that. But remember that this was a time we had a ton of papers to get out, many of which involved the national datasets that you were driving the bus for; we weren’t sure about the reliability of ascertainment of the WHOLE data; and you were on a less-than-one-paper-a-year trajectory. Also remember you had a first-authored JAMA paper that year, so it’s not like we haven’t let you take the lead on exciting things :-) Hopefully Allan will get this paper out soon.</p>
+<p>.</p>
+<p>It’s cool. For the record, I don’t feel slighted; however, I do feel misunderstood at times.</p>
+<p>Because I’m more excited about writing biologically coherent analyses, rather than the agnostic-empirical kind that one might produce just because they have data &amp; sophisticated analytical skills, I spend an inordinate amount of time studying transplant and non-transplant literature.</p>
+<p>At first glance, this may come off as lack of productivity</p>
+<p>.</p>
+<p>the verb, transplantation vs. the noun Transplant</p>
+<p>We’ve noted that at all instances when we used the noun Transplant (e.g. previous transplant; that is, a previous transplant graft), it has been changed to the verb transplantation (e.g. following transplantation of grafts) in these proofs</p>
+<p>We wish to clarify that we meant “transplant” wherever we’ve indicated so in the attached document</p>
+<p>Thanks!</p>
+<p>.</p>
+<p>Wamwenderaki her telephone<br />
+Nasamba wants to know how she is</p>
+<p>.</p>
+<p>Get under armour swim cap, suit, goggles, and running shoes :-)</p>
+<p>.</p>
+<p>As a reader of “have you heard”, a gossip column in New Vision, Uganda’s leading newspaper, your correspondent gets a sense of the kind of heroes modern day Uganda lionizes: roguish thugs with mysteriously acquired wealth whose only discernible aspiration is conspicuous consumption. Michael Ezra, a 39-year-old tycoon, who… , is the latest sensation in the city.</p>
+<p>He is believed to have</p>
+<p>.</p>
+<p>.. and in the end, Britain, which had colonized the world, destroyed itself in fantasies that it was being colonized in turn</p>
+<p>.</p>
+<p>Softly and tenderly<br />
+Jesus is calling<br />
+Calling for you and for me<br />
+See on the portals<br />
+He’s waiting and watching<br />
+Watching for you and for me.</p>
+<p>Come home, come home<br />
+Ye who are weary, come home<br />
+Earnestly, tenderly Jesus is calling<br />
+Calling, Oh sinners come home.</p>
+<p>Why should we tarry<br />
+When Jesus is pleading<br />
+Pleading for you and for me<br />
+Why should we linger<br />
+And heed not his mercies<br />
+Mercies for you and for me.</p>
+<p>Come home, come home<br />
+Ye who are weary, come home<br />
+Earnestly, tenderly Jesus is calling<br />
+Calling, Oh sinners come home.</p>
+<p>Come home, come home<br />
+Ye who are weary, come home<br />
+Earnestly, tenderly Jesus is calling<br />
+Calling, Oh sinners come home.</p>
+<p>Calling, Oh sinners come home…Th</p>
+<p>.</p>
+<p><a class="reference external" href="mailto:gdk&#37;&#52;&#48;jhu&#46;edu">gdk<span>&#64;</span>jhu<span>&#46;</span>edu</a></p>
+<p>Hi Greg,</p>
+<p>I hope this finds you well. Quick question: is it at all possible for you to share my postdoc NIDA diversity supplement grant #? I’m updating my CV as I join the faculty of the School of Medicine/Department of Surgery this Friday. Also, I’m working on a grant due tomorrow and I just realized that I have no record of that #.</p>
+<p>That said, thanks in part to you, and in part to serendipity, I’ve ended up leading a NA-ACCORD/NHANES-III analysis that quantifies the Risk of ESRD in Potential HIV+ live kidney donors vs. Potential HIV- live kidney donors. While working on this specific project, I’ve developed an analytic approach that might be well-suited for ALIVE analyses (especially those I initiated a while back but didn’t complete).</p>
+<p>If at all you think its ok for me to complete those analyses some time over the next couple of months, I’ll be very much obliged.</p>
+<p>Abi</p>
+</section>
+</section>
+<section id="id23">
+<h1>07/2016<a class="headerlink" href="#id23" title="Permalink to this heading">#</a></h1>
+<p>Concerto - Parent Grant<br />
+Solo - Candidate Summary (affiliation with Concerto)<br />
+Codetta - Relation of Supplement to Parent Grant<br />
+Development - Anticipated Benefits to Candidates Career Development<br />
+Coda - Description of Mentorship and Training<br />
+Fine - Budget and Administrative Costs</p>
+<p>.</p>
+<p>o Budget
+o Budget Justification
+X Training and Research Plan
+o IRB
+o Ethnicity statement
+o Human subjects research CERTIFICATE
+o Conflict of interest
+X Project Summary
+X Project Narrative
+X Research Strategy
+X Biosketch
+X Specific Aims
+X Bibliography and references cited</p>
+<p>.</p>
+<p>a time not to fight the tide of history but to take that tide at the flood and sail on to fortune</p>
+<p>.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">545. notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">11/2011</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">02/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">03/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">06/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">07/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">08/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">09/2012</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">10/2013</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">05/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">06/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">07/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">08/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">09/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">10/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">11/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">12/2015</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">01/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">02/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">03/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">04/2016</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">05/2016</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">07/2016</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
