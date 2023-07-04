@@ -1317,6 +1317,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id217">07/04/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#washington">627. washington</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls">628. urls</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
 </ul>
 </li>
 </ul>
@@ -22760,6 +22761,41 @@ import delimited url<span class="m">.</span>txt,<span class="k"> clear</span>
 import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </pre></div>
 </div>
+</section>
+<section id="prime">
+<h3>629. prime<a class="headerlink" href="#prime" title="Permalink to this heading">#</a></h3>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture program drop</span> prime
+<span class="k">program</span> define prime 
+<span class="k">    capture syntax</span>,<span class="k"> n</span>(numlist)
+<span class="k">    if</span> _rc <span class="o">!=</span> <span class="m">0</span> {
+<span class="k">		local</span> rc1 <span class="s">&quot;Let&#39;s talk about&quot;</span>
+<span class="k">		local</span> rc2 <span class="s">&quot;real numbers&quot;</span>
+<span class="k">		local</span> rc3 <span class="s">&quot;natural numbers&quot;</span>
+<span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`rc1&#39;</span><span class="s"> </span><span class="nv">`rc2&#39;</span><span class="s">, </span><span class="nv">`rc3&#39;</span><span class="s">, etc.&quot;</span>
+	}
+<span class="k">	else if</span> <span class="nv">`n&#39;</span> <span class="o">&lt;=</span> <span class="m">1</span> {
+<span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`n&#39;</span><span class="s"> is not a natural number greater than 1&quot;</span>
+	}
+<span class="k">	else if</span> <span class="nf">mod</span>(<span class="nv">`n&#39;</span> <span class="o">-</span> <span class="m">1</span>, <span class="m">2</span>) <span class="o">-</span> <span class="nf">round</span>(<span class="nf">mod</span>(<span class="nv">`n&#39;</span> <span class="o">-</span> <span class="m">1</span>, <span class="m">2</span>)) <span class="o">!=</span> <span class="m">0</span> {
+<span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`n&#39;</span><span class="s"> is a fraction&quot;</span>
+	}
+<span class="k">	else if</span> <span class="nf">mod</span>(<span class="nv">`n&#39;</span>, <span class="m">2</span>) <span class="o">==</span> <span class="m">0</span> {
+<span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`n&#39;</span><span class="s"> is an even number &quot;</span> 
+	} 
+<span class="k">	else if</span> <span class="nf">mod</span>(<span class="nv">`n&#39;</span> <span class="o">-</span> <span class="m">1</span>, <span class="m">2</span>) <span class="o">==</span> <span class="m">0</span> {
+<span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`n&#39;</span><span class="s"> is a prime number &quot;</span> 
+	}
+
+<span class="k">end</span> 
+
+prime,<span class="k"> n</span>(boy)
+prime,<span class="k"> n</span>(<span class="o">-</span><span class="m">5</span>)
+prime,<span class="k"> n</span>(<span class="m">100</span>)
+prime,<span class="k"> n</span>(<span class="m">109</span>) 
+prime,<span class="k"> n</span>(<span class="m">1</span>)
+prime,<span class="k"> n</span>(<span class="nv">`c(pi)&#39;</span>)
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id218" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -23794,6 +23830,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id217">07/04/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#washington">627. washington</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls">628. urls</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
 </ul>
 </li>
 </ul>
