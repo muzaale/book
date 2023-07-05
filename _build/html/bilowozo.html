@@ -22951,19 +22951,23 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  N (\mu,  \sigma)}
 \)</span></p>
 <p>sources:</p>
-<p><span class="math notranslate nohighlight">\(Y_i, X_i\)</span> ascertainment error (design)</p>
+<p><span class="math notranslate nohighlight">\(Y_i, X_i\)</span>  ascertainment error (design)</p>
 <ul class="simple">
 <li><p>beyond biological variation</p></li>
 <li><p>calibration error</p></li>
 <li><p>rounding error</p></li>
-<li><p>duration of followup and censoring
-<span class="math notranslate nohighlight">\(\beta_i\)</span> estimation error (analysis)</p></li>
+<li><p>duration of followup and censoring</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\beta_i\)</span> estimation error (analysis)</p>
+<ul class="simple">
 <li><p>number of covariates included in models</p></li>
 <li><p>variance inflation factors</p></li>
 <li><p>missingness of included covariates</p></li>
 <li><p>handling of missingness of covariates</p></li>
-<li><p>sample size of complete dataset
-<span class="math notranslate nohighlight">\(\epsilon_i\)</span> model error (science)</p></li>
+<li><p>sample size of complete dataset</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\epsilon_i\)</span> model error (science)</p>
+<ul class="simple">
 <li><p>outcome distribution</p>
 <ul>
 <li><p>model specification</p>
@@ -22992,10 +22996,14 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 <li><p>categorical</p></li>
 </ul>
 </li>
-<li><p>unsupervised machine learning not utilized</p>
+<li><p>interaction insufficiently modelled</p>
+<ul>
+<li><p>human limits (i.e., unsupervised machine learning not utilized)</p>
 <ul>
 <li><p>principal component analysis when c(k) &gt; c(N)</p></li>
 <li><p>autoencoders</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
