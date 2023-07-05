@@ -1318,6 +1318,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#washington">627. washington</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls">628. urls</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate">630. simulate</a></li>
 </ul>
 </li>
 </ul>
@@ -22801,6 +22802,33 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </pre></div>
 </div>
 <p>codify non-prime odd numbers later</p>
+</section>
+<section id="simulate">
+<h3>630. simulate<a class="headerlink" href="#simulate" title="Permalink to this heading">#</a></h3>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">local</span> id=<span class="m">1</span>
+<span class="k">foreach</span> num<span class="k"> in</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span> {
+<span class="k">	clear</span> 
+<span class="k">    set</span> obs <span class="nv">`num&#39;</span>
+<span class="k">	local mean</span>=<span class="m">20</span>
+<span class="k">	g</span> x=<span class="nf">rnormal</span>(<span class="nv">`mean&#39;</span>)
+<span class="k">	g</span> id=<span class="nv">`id&#39;</span>
+<span class="k">	save</span> dat_<span class="nv">`num&#39;</span>,<span class="k"> replace</span> 
+<span class="k">	local</span> id=<span class="nv">`id&#39;</span> <span class="o">+</span> <span class="m">1</span>
+}
+<span class="k">clear</span> 
+<span class="k">foreach</span> num<span class="k"> in</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span> {
+<span class="k">	append</span> using dat_<span class="nv">`num&#39;</span>
+}
+<span class="k">twoway</span> <span class="cs">///</span>
+   (lowess x i) <span class="cs">///</span>
+   (scatter x i, <span class="cs">///</span>
+      jitter(<span class="m">10</span>) <span class="cs">///</span>
+      ms(.<span class="m">1</span>) <span class="cs">///</span>
+	  xlab( <span class="m">0</span> <span class="s">&quot; &quot;</span> <span class="m">1</span> <span class="s">&quot;5&quot;</span> <span class="m">2</span> <span class="s">&quot;20&quot;</span> <span class="m">3</span> <span class="s">&quot;100&quot;</span> <span class="m">4</span> <span class="s">&quot;1000&quot;</span> <span class="m">5</span> <span class="s">&quot;&quot;</span>) <span class="cs">///</span>
+   )
+   
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id218" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -23836,6 +23864,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#washington">627. washington</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls">628. urls</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate">630. simulate</a></li>
 </ul>
 </li>
 </ul>
