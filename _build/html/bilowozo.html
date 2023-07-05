@@ -1319,6 +1319,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls">628. urls</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate">630. simulate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xlab">631. xlab 🚧</a></li>
 </ul>
 </li>
 </ul>
@@ -22863,6 +22864,18 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <span class="k">qui</span> sampmean,<span class="k"> n</span>(<span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span>)<span class="k"> mean</span>(<span class="m">20</span>) sd(<span class="m">1.2</span>)
 </pre></div>
 </div>
+</section>
+<section id="xlab">
+<h3>631. xlab 🚧<a class="headerlink" href="#xlab" title="Permalink to this heading">#</a></h3>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui local numlist</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span>
+<span class="k">local n</span>:<span class="k"> di</span> <span class="nf">wordcount</span>(<span class="s">&quot;</span><span class="nv">`numlist&#39;</span><span class="s">&quot;</span>)
+<span class="k">forvalues</span> i=<span class="m">1</span><span class="o">/</span><span class="nv">`n&#39;</span> {
+<span class="k">	local</span> xval:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="nv">`numlist&#39;</span><span class="s">&quot;</span>, <span class="nv">`i&#39;</span>)
+<span class="k">	local</span> xlab:<span class="k"> di</span>  <span class="s">`&quot;</span><span class="nv">`xlab&#39;</span><span class="s"> </span><span class="nv">`i&#39;</span><span class="s"> &quot;</span><span class="nv">`xval&#39;</span><span class="s">&quot;&quot;&#39;</span>
+}
+<span class="k">di</span> <span class="s">&quot;</span><span class="nv">`xlab&#39;</span><span class="s">&quot;</span>
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id218" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -23899,6 +23912,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urls">628. urls</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate">630. simulate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xlab">631. xlab 🚧</a></li>
 </ul>
 </li>
 </ul>
