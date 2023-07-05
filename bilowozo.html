@@ -1320,6 +1320,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate">630. simulate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xlab">631. xlab 🚧</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tw">632. tw</a></li>
 </ul>
 </li>
 </ul>
@@ -22876,6 +22877,58 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <span class="k">di</span> <span class="s">`&quot;</span><span class="nv">`xlab&#39;</span><span class="s">&quot;&#39;</span>
 </pre></div>
 </div>
+</section>
+<section id="tw">
+<h3>632. tw<a class="headerlink" href="#tw" title="Permalink to this heading">#</a></h3>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture program drop</span> _all
+
+<span class="k">program</span> define sampmean
+
+<span class="k">    syntax</span>,<span class="k"> n</span>(numlist)<span class="k"> mean</span>(numlist) sd(numlist)
+
+<span class="k">    local</span> id = <span class="m">1</span>
+
+<span class="k">    foreach</span> num<span class="k"> in</span> <span class="nv">`n&#39;</span> {
+<span class="k">        clear</span>
+<span class="k">        set</span> obs <span class="nv">`num&#39;</span>
+<span class="k">        set</span> seed <span class="m">2</span>
+<span class="k">        local mean</span> = <span class="nv">`mean&#39;</span>
+<span class="k">        gen</span> x = <span class="nf">rnormal</span>(<span class="nv">`mean&#39;</span>,<span class="nv">`sd&#39;</span>)
+<span class="k">        gen</span> id = <span class="nv">`id&#39;</span>
+<span class="k">        save</span> dat_<span class="nv">`num&#39;</span>,<span class="k"> replace</span>
+<span class="k">        local</span> id = <span class="nv">`id&#39;</span> <span class="o">+</span> <span class="m">1</span>
+    }
+
+<span class="k">    clear</span>
+
+<span class="k">    foreach</span> num<span class="k"> in</span> <span class="nv">`n&#39;</span> {
+<span class="k">        append</span> using dat_<span class="nv">`num&#39;</span>
+    }
+
+<span class="k">    forvalues</span> i = <span class="m">1</span><span class="o">/</span><span class="m">4</span> {
+<span class="k">        sum</span> x<span class="k"> if</span> id <span class="o">==</span> <span class="nv">`i&#39;</span>
+<span class="k">        local mean</span><span class="nv">`i&#39;</span>:<span class="k"> di</span> <span class="nx">%3.2f</span> <span class="nf">r</span>(mean)
+    }
+
+<span class="k">    local</span> ytext = <span class="nv">`mean&#39;</span> <span class="o">+</span> <span class="m">3</span>
+<span class="k">	</span>
+<span class="k">	</span>
+<span class="k">    qui local numlist</span> <span class="nv">`n&#39;</span>
+<span class="k">    local n</span>:<span class="k"> di</span> <span class="nf">wordcount</span>(<span class="s">&quot;</span><span class="nv">`numlist&#39;</span><span class="s">&quot;</span>)
+<span class="k">    forvalues</span> i=<span class="m">1</span><span class="o">/</span><span class="nv">`n&#39;</span> {
+<span class="k">	    local</span> xval:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="nv">`numlist&#39;</span><span class="s">&quot;</span>, <span class="nv">`i&#39;</span>)
+<span class="k">	    local</span> xlab:<span class="k"> di</span>  <span class="s">`&quot;</span><span class="nv">`xlab&#39;</span><span class="s"> </span><span class="nv">`i&#39;</span><span class="s"> &quot;</span><span class="nv">`xval&#39;</span><span class="s">&quot;&quot;&#39;</span>
+    }
+<span class="k">    di</span> <span class="s">`&quot;</span><span class="nv">`xlab&#39;</span><span class="s">&quot;&#39;</span>
+
+
+<span class="k">	local tw</span>:<span class="k"> di</span> <span class="s">`&quot;twoway (scatter x i, mcolor(midblue) jitter(5) msize(.2)  xscale(range(0 5)) xti(&quot;&quot;) text(</span><span class="nv">`ytext&#39;</span><span class="s"> 1 &quot;Mean=</span><span class="nv">`mean1&#39;</span><span class="s">&quot;) text(</span><span class="nv">`ytext&#39;</span><span class="s"> 2 &quot;Mean=</span><span class="nv">`mean2&#39;</span><span class="s">&quot;)  text(</span><span class="nv">`ytext&#39;</span><span class="s"> 3 &quot;Mean=</span><span class="nv">`mean3&#39;</span><span class="s">&quot;) text(</span><span class="nv">`ytext&#39;</span><span class="s"> 4 &quot;Mean=</span><span class="nv">`mean4&#39;</span><span class="s">&quot;) legend(off)) (lowess x i,lwidth(1.2))&quot;&#39;</span> 
+    <span class="nv">`tw&#39;</span>
+<span class="k">end</span>
+
+<span class="k">qui</span> sampmean,<span class="k"> n</span>(<span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span>)<span class="k"> mean</span>(<span class="m">20</span>) sd(<span class="m">1.2</span>)
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id218" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
@@ -23913,6 +23966,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prime">629. prime</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulate">630. simulate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xlab">631. xlab 🚧</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tw">632. tw</a></li>
 </ul>
 </li>
 </ul>
