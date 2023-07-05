@@ -22764,14 +22764,18 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </section>
 <section id="prime">
 <h3>629. prime<a class="headerlink" href="#prime" title="Permalink to this heading">#</a></h3>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture program drop</span> prime
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>cls
+<span class="k">capture program drop</span> prime
 <span class="k">program</span> define prime 
 <span class="k">    capture syntax</span>,<span class="k"> n</span>(numlist)
 <span class="k">    if</span> _rc <span class="o">!=</span> <span class="m">0</span> {
+
 <span class="k">		local</span> rc1 <span class="s">&quot;Let&#39;s talk about&quot;</span>
 <span class="k">		local</span> rc2 <span class="s">&quot;real numbers&quot;</span>
 <span class="k">		local</span> rc3 <span class="s">&quot;natural numbers&quot;</span>
 <span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`rc1&#39;</span><span class="s"> </span><span class="nv">`rc2&#39;</span><span class="s">, </span><span class="nv">`rc3&#39;</span><span class="s">, etc.&quot;</span>
+
+		
 	}
 <span class="k">	else if</span> <span class="nv">`n&#39;</span> <span class="o">&lt;=</span> <span class="m">1</span> {
 <span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`n&#39;</span><span class="s"> is not a natural number greater than 1&quot;</span>
@@ -22785,17 +22789,18 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <span class="k">	else if</span> <span class="nf">mod</span>(<span class="nv">`n&#39;</span> <span class="o">-</span> <span class="m">1</span>, <span class="m">2</span>) <span class="o">==</span> <span class="m">0</span> {
 <span class="k">		di</span> <span class="s">&quot;</span><span class="nv">`n&#39;</span><span class="s"> is a prime number &quot;</span> 
 	}
-
+<span class="k">   else</span> {
+<span class="k">        di in</span> red <span class="s">&quot;undocumented category&quot;</span>
+   }
 <span class="k">end</span> 
 
-prime,<span class="k"> n</span>(boy)
-prime,<span class="k"> n</span>(<span class="o">-</span><span class="m">5</span>)
-prime,<span class="k"> n</span>(<span class="m">100</span>)
-prime,<span class="k"> n</span>(<span class="m">109</span>) 
-prime,<span class="k"> n</span>(<span class="m">1</span>)
-prime,<span class="k"> n</span>(<span class="nv">`c(pi)&#39;</span>)
+
+<span class="k">foreach</span> num<span class="k"> in pwd</span> <span class="o">-</span><span class="m">5</span> <span class="m">100</span> <span class="m">109</span> <span class="m">1</span> <span class="nv">`c(pi)&#39;</span> . <span class="m">999</span> {
+	prime,<span class="k"> n</span>(<span class="nv">`num&#39;</span>)
+}
 </pre></div>
 </div>
+<p>codify non-prime odd numbers later</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="id218" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
