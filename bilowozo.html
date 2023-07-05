@@ -22805,49 +22805,62 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </section>
 <section id="simulate">
 <h3>630. simulate<a class="headerlink" href="#simulate" title="Permalink to this heading">#</a></h3>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">local</span> id = <span class="m">1</span>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture program drop</span> _all
 
-<span class="k">foreach</span> num<span class="k"> in</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span> {
+<span class="k">program</span> define sampmean
+
+<span class="k">    syntax</span>,<span class="k"> n</span>(numlist)<span class="k"> mean</span>(numlist) sd(numlist)
+
+<span class="k">    local</span> id = <span class="m">1</span>
+
+<span class="k">    foreach</span> num<span class="k"> in</span> <span class="nv">`n&#39;</span> {
+<span class="k">        clear</span>
+<span class="k">        set</span> obs <span class="nv">`num&#39;</span>
+<span class="k">        set</span> seed <span class="m">2</span>
+<span class="k">        local mean</span> = <span class="nv">`mean&#39;</span>
+<span class="k">        gen</span> x = <span class="nf">rnormal</span>(<span class="nv">`mean&#39;</span>,<span class="nv">`sd&#39;</span>)
+<span class="k">        gen</span> id = <span class="nv">`id&#39;</span>
+<span class="k">        save</span> dat_<span class="nv">`num&#39;</span>,<span class="k"> replace</span>
+<span class="k">        local</span> id = <span class="nv">`id&#39;</span> <span class="o">+</span> <span class="m">1</span>
+    }
+
 <span class="k">    clear</span>
-<span class="k">    set</span> obs <span class="nv">`num&#39;</span>
-<span class="k">	set</span> seed <span class="m">2</span>
-<span class="k">    local mean</span> = <span class="m">20</span>
-<span class="k">    gen</span> x = <span class="nf">rnormal</span>(<span class="nv">`mean&#39;</span>)
-<span class="k">    gen</span> id = <span class="nv">`id&#39;</span>
-<span class="k">    save</span> dat_<span class="nv">`num&#39;</span>,<span class="k"> replace</span>
-<span class="k">    local</span> id = <span class="nv">`id&#39;</span> <span class="o">+</span> <span class="m">1</span>
-}
 
-<span class="k">clear</span>
+<span class="k">    foreach</span> num<span class="k"> in</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span> {
+<span class="k">        append</span> using dat_<span class="nv">`num&#39;</span>
+    }
 
-<span class="k">foreach</span> num<span class="k"> in</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span> {
-<span class="k">    append</span> using dat_<span class="nv">`num&#39;</span>
-}
-<span class="k">forvalues</span> i=<span class="m">1</span><span class="o">/</span><span class="m">4</span> {
-<span class="k">	sum</span> x<span class="k"> if</span> id<span class="o">==</span><span class="nv">`i&#39;</span>
-<span class="k">	local mean</span><span class="nv">`i&#39;</span>:<span class="k"> di</span> <span class="nx">%3.2f</span> <span class="nf">r</span>(mean)
-}
-<span class="k">local</span> ytext=<span class="nv">`mean&#39;</span> <span class="o">+</span> <span class="m">3</span>
-#delimit ;
-<span class="k">twoway</span> 
-    (scatter x i, 
-	    mcolor(midblue) 
-        jitter(<span class="m">5</span>) 
-		msize(.<span class="m">2</span>) 
-        xlab(<span class="m">1</span> <span class="s">&quot;5&quot;</span> <span class="m">2</span> <span class="s">&quot;20&quot;</span> <span class="m">3</span> <span class="s">&quot;100&quot;</span> <span class="m">4</span> <span class="s">&quot;1000&quot;</span>) 
-		xscale(range(<span class="m">0</span> <span class="m">5</span>)) 
-		xti(<span class="s">&quot;&quot;</span>) 
-		text(<span class="nv">`ytext&#39;</span> <span class="m">1</span> <span class="s">&quot;Mean=</span><span class="nv">`mean1&#39;</span><span class="s">&quot;</span>) 
-		text(<span class="nv">`ytext&#39;</span> <span class="m">2</span> <span class="s">&quot;Mean=</span><span class="nv">`mean2&#39;</span><span class="s">&quot;</span>) 
-		text(<span class="nv">`ytext&#39;</span> <span class="m">3</span> <span class="s">&quot;Mean=</span><span class="nv">`mean3&#39;</span><span class="s">&quot;</span>) 
-		text(<span class="nv">`ytext&#39;</span> <span class="m">4</span> <span class="s">&quot;Mean=</span><span class="nv">`mean4&#39;</span><span class="s">&quot;</span>) 
-		legend(off) 
-    ) 
-	(lowess x i,
-	   lwidth(<span class="m">1.2</span>)   
-	)
-;
-#delimit cr
+<span class="k">    forvalues</span> i = <span class="m">1</span><span class="o">/</span><span class="m">4</span> {
+<span class="k">        sum</span> x<span class="k"> if</span> id <span class="o">==</span> <span class="nv">`i&#39;</span>
+<span class="k">        local mean</span><span class="nv">`i&#39;</span>:<span class="k"> di</span> <span class="nx">%3.2f</span> <span class="nf">r</span>(mean)
+    }
+
+<span class="k">    local</span> ytext = <span class="nv">`mean&#39;</span> <span class="o">+</span> <span class="m">3</span>
+
+    #delimit ;
+<span class="k">    twoway</span> 
+        (scatter x i, 
+            mcolor(midblue) 
+            jitter(<span class="m">5</span>) 
+            msize(.<span class="m">2</span>) 
+            xlab(<span class="m">1</span> <span class="s">&quot;5&quot;</span> <span class="m">2</span> <span class="s">&quot;20&quot;</span> <span class="m">3</span> <span class="s">&quot;100&quot;</span> <span class="m">4</span> <span class="s">&quot;1000&quot;</span>) 
+            xscale(range(<span class="m">0</span> <span class="m">5</span>)) 
+            xti(<span class="s">&quot;&quot;</span>) 
+            text(<span class="nv">`ytext&#39;</span> <span class="m">1</span> <span class="s">&quot;Mean=</span><span class="nv">`mean1&#39;</span><span class="s">&quot;</span>) 
+            text(<span class="nv">`ytext&#39;</span> <span class="m">2</span> <span class="s">&quot;Mean=</span><span class="nv">`mean2&#39;</span><span class="s">&quot;</span>) 
+            text(<span class="nv">`ytext&#39;</span> <span class="m">3</span> <span class="s">&quot;Mean=</span><span class="nv">`mean3&#39;</span><span class="s">&quot;</span>) 
+            text(<span class="nv">`ytext&#39;</span> <span class="m">4</span> <span class="s">&quot;Mean=</span><span class="nv">`mean4&#39;</span><span class="s">&quot;</span>) 
+            legend(off)
+        ) 
+        (lowess x i,
+            lwidth(<span class="m">1.2</span>)
+        )
+    ;
+    #delimit cr
+
+<span class="k">end</span>
+
+<span class="k">qui</span> sampmean,<span class="k"> n</span>(<span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span>)<span class="k"> mean</span>(<span class="m">20</span>) sd(<span class="m">1.2</span>)
 </pre></div>
 </div>
 <hr class="footnotes docutils" />
